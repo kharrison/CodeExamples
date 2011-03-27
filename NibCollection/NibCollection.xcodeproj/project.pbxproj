@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		531F4488133CFA39009C195B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 531F4487133CFA39009C195B /* UIKit.framework */; };
+		531F448A133CFA39009C195B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 531F4489133CFA39009C195B /* Foundation.framework */; };
+		531F448C133CFA39009C195B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 531F448B133CFA39009C195B /* CoreGraphics.framework */; };
+		531F4492133CFA39009C195B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 531F4490133CFA39009C195B /* InfoPlist.strings */; };
+		531F4495133CFA39009C195B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 531F4494133CFA39009C195B /* main.m */; };
+		531F4498133CFA39009C195B /* NibCollectionAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 531F4497133CFA39009C195B /* NibCollectionAppDelegate.m */; };
+		531F449B133CFA39009C195B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 531F4499133CFA39009C195B /* MainWindow.xib */; };
+		531F449E133CFA39009C195B /* NibCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531F449D133CFA39009C195B /* NibCollectionViewController.m */; };
+		531F44A1133CFA39009C195B /* NibCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 531F449F133CFA39009C195B /* NibCollectionViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		531F4483133CFA39009C195B /* NibCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NibCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		531F4487133CFA39009C195B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		531F4489133CFA39009C195B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		531F448B133CFA39009C195B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		531F448F133CFA39009C195B /* NibCollection-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NibCollection-Info.plist"; sourceTree = "<group>"; };
+		531F4491133CFA39009C195B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		531F4493133CFA39009C195B /* NibCollection-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NibCollection-Prefix.pch"; sourceTree = "<group>"; };
+		531F4494133CFA39009C195B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		531F4496133CFA39009C195B /* NibCollectionAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NibCollectionAppDelegate.h; sourceTree = "<group>"; };
+		531F4497133CFA39009C195B /* NibCollectionAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NibCollectionAppDelegate.m; sourceTree = "<group>"; };
+		531F449A133CFA39009C195B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		531F449C133CFA39009C195B /* NibCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NibCollectionViewController.h; sourceTree = "<group>"; };
+		531F449D133CFA39009C195B /* NibCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NibCollectionViewController.m; sourceTree = "<group>"; };
+		531F44A0133CFA39009C195B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NibCollectionViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		531F4480133CFA39009C195B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				531F4488133CFA39009C195B /* UIKit.framework in Frameworks */,
+				531F448A133CFA39009C195B /* Foundation.framework in Frameworks */,
+				531F448C133CFA39009C195B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		531F4478133CFA38009C195B = {
+			isa = PBXGroup;
+			children = (
+				531F448D133CFA39009C195B /* NibCollection */,
+				531F4486133CFA39009C195B /* Frameworks */,
+				531F4484133CFA39009C195B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		531F4484133CFA39009C195B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				531F4483133CFA39009C195B /* NibCollection.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		531F4486133CFA39009C195B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				531F4487133CFA39009C195B /* UIKit.framework */,
+				531F4489133CFA39009C195B /* Foundation.framework */,
+				531F448B133CFA39009C195B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		531F448D133CFA39009C195B /* NibCollection */ = {
+			isa = PBXGroup;
+			children = (
+				531F4496133CFA39009C195B /* NibCollectionAppDelegate.h */,
+				531F4497133CFA39009C195B /* NibCollectionAppDelegate.m */,
+				531F4499133CFA39009C195B /* MainWindow.xib */,
+				531F449C133CFA39009C195B /* NibCollectionViewController.h */,
+				531F449D133CFA39009C195B /* NibCollectionViewController.m */,
+				531F449F133CFA39009C195B /* NibCollectionViewController.xib */,
+				531F448E133CFA39009C195B /* Supporting Files */,
+			);
+			path = NibCollection;
+			sourceTree = "<group>";
+		};
+		531F448E133CFA39009C195B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				531F448F133CFA39009C195B /* NibCollection-Info.plist */,
+				531F4490133CFA39009C195B /* InfoPlist.strings */,
+				531F4493133CFA39009C195B /* NibCollection-Prefix.pch */,
+				531F4494133CFA39009C195B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		531F4482133CFA39009C195B /* NibCollection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 531F44A4133CFA39009C195B /* Build configuration list for PBXNativeTarget "NibCollection" */;
+			buildPhases = (
+				531F447F133CFA39009C195B /* Sources */,
+				531F4480133CFA39009C195B /* Frameworks */,
+				531F4481133CFA39009C195B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NibCollection;
+			productName = NibCollection;
+			productReference = 531F4483133CFA39009C195B /* NibCollection.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		531F447A133CFA38009C195B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 531F447D133CFA38009C195B /* Build configuration list for PBXProject "NibCollection" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 531F4478133CFA38009C195B;
+			productRefGroup = 531F4484133CFA39009C195B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				531F4482133CFA39009C195B /* NibCollection */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		531F4481133CFA39009C195B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				531F4492133CFA39009C195B /* InfoPlist.strings in Resources */,
+				531F449B133CFA39009C195B /* MainWindow.xib in Resources */,
+				531F44A1133CFA39009C195B /* NibCollectionViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		531F447F133CFA39009C195B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				531F4495133CFA39009C195B /* main.m in Sources */,
+				531F4498133CFA39009C195B /* NibCollectionAppDelegate.m in Sources */,
+				531F449E133CFA39009C195B /* NibCollectionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		531F4490133CFA39009C195B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				531F4491133CFA39009C195B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		531F4499133CFA39009C195B /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				531F449A133CFA39009C195B /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		531F449F133CFA39009C195B /* NibCollectionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				531F44A0133CFA39009C195B /* en */,
+			);
+			name = NibCollectionViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		531F44A2133CFA39009C195B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		531F44A3133CFA39009C195B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		531F44A5133CFA39009C195B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NibCollection/NibCollection-Prefix.pch";
+				INFOPLIST_FILE = "NibCollection/NibCollection-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		531F44A6133CFA39009C195B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NibCollection/NibCollection-Prefix.pch";
+				INFOPLIST_FILE = "NibCollection/NibCollection-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		531F447D133CFA38009C195B /* Build configuration list for PBXProject "NibCollection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				531F44A2133CFA39009C195B /* Debug */,
+				531F44A3133CFA39009C195B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		531F44A4133CFA39009C195B /* Build configuration list for PBXNativeTarget "NibCollection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				531F44A5133CFA39009C195B /* Debug */,
+				531F44A6133CFA39009C195B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 531F447A133CFA38009C195B /* Project object */;
+}
