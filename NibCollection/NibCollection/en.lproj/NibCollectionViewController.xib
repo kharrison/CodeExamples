@@ -354,7 +354,7 @@
 						<reference key="destination" ref="913653748"/>
 						<string key="cachedDesigntimeCollectionClassName">NSArray</string>
 					</object>
-					<int key="connectionID">36</int>
+					<int key="connectionID">37</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -398,41 +398,49 @@
 						<int key="objectID">8</int>
 						<reference key="object" ref="911294365"/>
 						<reference key="parent" ref="774585933"/>
+						<string key="objectName">Switch1</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">9</int>
 						<reference key="object" ref="376345786"/>
 						<reference key="parent" ref="774585933"/>
+						<string key="objectName">Switch2</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">10</int>
 						<reference key="object" ref="896023902"/>
 						<reference key="parent" ref="774585933"/>
+						<string key="objectName">Switch3</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">11</int>
 						<reference key="object" ref="904203490"/>
 						<reference key="parent" ref="774585933"/>
+						<string key="objectName">Switch4</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">12</int>
 						<reference key="object" ref="814325650"/>
 						<reference key="parent" ref="774585933"/>
+						<string key="objectName">Switch5</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">13</int>
 						<reference key="object" ref="53002004"/>
 						<reference key="parent" ref="774585933"/>
+						<string key="objectName">Switch6</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">14</int>
 						<reference key="object" ref="650869197"/>
 						<reference key="parent" ref="774585933"/>
+						<string key="objectName">Switch7</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">15</int>
 						<reference key="object" ref="913653748"/>
 						<reference key="parent" ref="774585933"/>
+						<string key="objectName">Switch8</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">17</int>
@@ -488,7 +496,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">36</int>
+			<int key="maxID">39</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -532,7 +540,7 @@
 						<string key="NS.key.0">switchCollection</string>
 						<object class="IBToManyOutletInfo" key="NS.object.0">
 							<string key="name">switchCollection</string>
-							<string key="candidateClassName">UISwitch</string>
+							<string key="candidateClassName">id</string>
 							<string key="collectionClassName">NSArray</string>
 						</object>
 					</object>
