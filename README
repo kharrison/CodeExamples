@@ -3,13 +3,14 @@
 
   See http://useyourloaf.com for details
 
-  This README last updated: 27-March-2011
+  This README last updated: 15-Jun-2011
 =======================================================================
 
 + INDEX
 
   NibCollection - Example use of IBOutletCollection
   TCNibLoad     - Example use of UINib class
+  TwitterSearch - Example of using NSURLConnection to query Twitter API
 
 =======================================================================
 
