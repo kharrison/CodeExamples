@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5310096F13E73E49008FC50D /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310096D13E73E49008FC50D /* WebViewController.m */; };
+		5310097013E73E49008FC50D /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5310096E13E73E49008FC50D /* WebViewController.xib */; };
+		5310097813E74913008FC50D /* UYLGenericPrintPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310097713E74913008FC50D /* UYLGenericPrintPageRenderer.m */; };
+		5336C32713E46620007FB510 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5336C32613E46620007FB510 /* UIKit.framework */; };
+		5336C32913E46620007FB510 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5336C32813E46620007FB510 /* Foundation.framework */; };
+		5336C32B13E46620007FB510 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5336C32A13E46620007FB510 /* CoreGraphics.framework */; };
+		5336C33113E46620007FB510 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5336C32F13E46620007FB510 /* InfoPlist.strings */; };
+		5336C33313E46620007FB510 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5336C33213E46620007FB510 /* main.m */; };
+		5336C33713E46620007FB510 /* AirPrinterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5336C33613E46620007FB510 /* AirPrinterAppDelegate.m */; };
+		5336C33A13E46620007FB510 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5336C33813E46620007FB510 /* MainWindow.xib */; };
+		5336C33D13E46620007FB510 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5336C33C13E46620007FB510 /* RootViewController.m */; };
+		5336C34013E46620007FB510 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5336C33E13E46620007FB510 /* RootViewController.xib */; };
+		5336C34913E4663E007FB510 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5336C34713E4663E007FB510 /* MainWindow-iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5310096C13E73E49008FC50D /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		5310096D13E73E49008FC50D /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		5310096E13E73E49008FC50D /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		5310097613E74913008FC50D /* UYLGenericPrintPageRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLGenericPrintPageRenderer.h; sourceTree = "<group>"; };
+		5310097713E74913008FC50D /* UYLGenericPrintPageRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLGenericPrintPageRenderer.m; sourceTree = "<group>"; };
+		5336C32213E46620007FB510 /* AirPrinter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirPrinter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5336C32613E46620007FB510 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5336C32813E46620007FB510 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5336C32A13E46620007FB510 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5336C32E13E46620007FB510 /* AirPrinter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AirPrinter-Info.plist"; sourceTree = "<group>"; };
+		5336C33013E46620007FB510 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5336C33213E46620007FB510 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5336C33413E46620007FB510 /* AirPrinter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirPrinter-Prefix.pch"; sourceTree = "<group>"; };
+		5336C33513E46620007FB510 /* AirPrinterAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AirPrinterAppDelegate.h; sourceTree = "<group>"; };
+		5336C33613E46620007FB510 /* AirPrinterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirPrinterAppDelegate.m; sourceTree = "<group>"; };
+		5336C33913E46620007FB510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		5336C33B13E46620007FB510 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		5336C33C13E46620007FB510 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		5336C33F13E46620007FB510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		5336C34813E4663E007FB510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5336C31F13E46620007FB510 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5336C32713E46620007FB510 /* UIKit.framework in Frameworks */,
+				5336C32913E46620007FB510 /* Foundation.framework in Frameworks */,
+				5336C32B13E46620007FB510 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5310097913E7494C008FC50D /* PrintPageRenderer */ = {
+			isa = PBXGroup;
+			children = (
+				5310097713E74913008FC50D /* UYLGenericPrintPageRenderer.m */,
+				5310097613E74913008FC50D /* UYLGenericPrintPageRenderer.h */,
+			);
+			name = PrintPageRenderer;
+			sourceTree = "<group>";
+		};
+		5310097A13E74971008FC50D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5336C33B13E46620007FB510 /* RootViewController.h */,
+				5336C33C13E46620007FB510 /* RootViewController.m */,
+				5310096C13E73E49008FC50D /* WebViewController.h */,
+				5310096D13E73E49008FC50D /* WebViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5336C31713E46620007FB510 = {
+			isa = PBXGroup;
+			children = (
+				5336C32C13E46620007FB510 /* AirPrinter */,
+				5336C32513E46620007FB510 /* Frameworks */,
+				5336C32313E46620007FB510 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5336C32313E46620007FB510 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5336C32213E46620007FB510 /* AirPrinter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5336C32513E46620007FB510 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5336C32613E46620007FB510 /* UIKit.framework */,
+				5336C32813E46620007FB510 /* Foundation.framework */,
+				5336C32A13E46620007FB510 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5336C32C13E46620007FB510 /* AirPrinter */ = {
+			isa = PBXGroup;
+			children = (
+				5336C34C13E46924007FB510 /* Classes */,
+				5336C34B13E468E8007FB510 /* Resources */,
+				5336C32D13E46620007FB510 /* Supporting Files */,
+			);
+			path = AirPrinter;
+			sourceTree = "<group>";
+		};
+		5336C32D13E46620007FB510 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5336C32E13E46620007FB510 /* AirPrinter-Info.plist */,
+				5336C32F13E46620007FB510 /* InfoPlist.strings */,
+				5336C33213E46620007FB510 /* main.m */,
+				5336C33413E46620007FB510 /* AirPrinter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5336C34613E4663C007FB510 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				5336C34713E4663E007FB510 /* MainWindow-iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		5336C34B13E468E8007FB510 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5336C33813E46620007FB510 /* MainWindow.xib */,
+				5310096E13E73E49008FC50D /* WebViewController.xib */,
+				5336C33E13E46620007FB510 /* RootViewController.xib */,
+				5336C34613E4663C007FB510 /* iPad */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5336C34C13E46924007FB510 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5310097A13E74971008FC50D /* ViewControllers */,
+				5310097913E7494C008FC50D /* PrintPageRenderer */,
+				5336C33513E46620007FB510 /* AirPrinterAppDelegate.h */,
+				5336C33613E46620007FB510 /* AirPrinterAppDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5336C32113E46620007FB510 /* AirPrinter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5336C34313E46620007FB510 /* Build configuration list for PBXNativeTarget "AirPrinter" */;
+			buildPhases = (
+				5336C31E13E46620007FB510 /* Sources */,
+				5336C31F13E46620007FB510 /* Frameworks */,
+				5336C32013E46620007FB510 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirPrinter;
+			productName = AirPrinter;
+			productReference = 5336C32213E46620007FB510 /* AirPrinter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5336C31913E46620007FB510 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 5336C31C13E46620007FB510 /* Build configuration list for PBXProject "AirPrinter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5336C31713E46620007FB510;
+			productRefGroup = 5336C32313E46620007FB510 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5336C32113E46620007FB510 /* AirPrinter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5336C32013E46620007FB510 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5336C33113E46620007FB510 /* InfoPlist.strings in Resources */,
+				5336C33A13E46620007FB510 /* MainWindow.xib in Resources */,
+				5336C34013E46620007FB510 /* RootViewController.xib in Resources */,
+				5336C34913E4663E007FB510 /* MainWindow-iPad.xib in Resources */,
+				5310097013E73E49008FC50D /* WebViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5336C31E13E46620007FB510 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5336C33313E46620007FB510 /* main.m in Sources */,
+				5336C33713E46620007FB510 /* AirPrinterAppDelegate.m in Sources */,
+				5336C33D13E46620007FB510 /* RootViewController.m in Sources */,
+				5310096F13E73E49008FC50D /* WebViewController.m in Sources */,
+				5310097813E74913008FC50D /* UYLGenericPrintPageRenderer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5336C32F13E46620007FB510 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5336C33013E46620007FB510 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5336C33813E46620007FB510 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5336C33913E46620007FB510 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		5336C33E13E46620007FB510 /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5336C33F13E46620007FB510 /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+		5336C34713E4663E007FB510 /* MainWindow-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5336C34813E4663E007FB510 /* en */,
+			);
+			name = "MainWindow-iPad.xib";
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5336C34113E46620007FB510 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DUYL_DEBUG";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5336C34213E46620007FB510 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5336C34413E46620007FB510 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirPrinter/AirPrinter-Prefix.pch";
+				INFOPLIST_FILE = "AirPrinter/AirPrinter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5336C34513E46620007FB510 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirPrinter/AirPrinter-Prefix.pch";
+				INFOPLIST_FILE = "AirPrinter/AirPrinter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5336C31C13E46620007FB510 /* Build configuration list for PBXProject "AirPrinter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5336C34113E46620007FB510 /* Debug */,
+				5336C34213E46620007FB510 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5336C34313E46620007FB510 /* Build configuration list for PBXNativeTarget "AirPrinter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5336C34413E46620007FB510 /* Debug */,
+				5336C34513E46620007FB510 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5336C31913E46620007FB510 /* Project object */;
+}
