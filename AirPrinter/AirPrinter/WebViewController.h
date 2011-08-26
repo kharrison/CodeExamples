@@ -32,11 +32,17 @@
 
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface WebViewController : UIViewController <UIWebViewDelegate>
+@interface WebViewController : UIViewController <UIWebViewDelegate,
+                                                 UIActionSheetDelegate, 
+                                                 UIPrintInteractionControllerDelegate,
+                                                 MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, copy) NSString *query;
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
-@property (nonatomic, retain) UIBarButtonItem *printButton;
+@property (nonatomic, retain) UIBarButtonItem *actionButton;
+@property (nonatomic, retain) UIActionSheet *actionSheet;
+@property (nonatomic, assign, getter = isPicVisible) BOOL picVisible;
 
 @end

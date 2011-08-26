@@ -20,6 +20,7 @@
 		5336C33D13E46620007FB510 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5336C33C13E46620007FB510 /* RootViewController.m */; };
 		5336C34013E46620007FB510 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5336C33E13E46620007FB510 /* RootViewController.xib */; };
 		5336C34913E4663E007FB510 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5336C34713E4663E007FB510 /* MainWindow-iPad.xib */; };
+		53B8321C14069CB300E052A4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B8321B14069CB300E052A4 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		5336C33C13E46620007FB510 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		5336C33F13E46620007FB510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 		5336C34813E4663E007FB510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		53B8321B14069CB300E052A4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53B8321C14069CB300E052A4 /* MessageUI.framework in Frameworks */,
 				5336C32713E46620007FB510 /* UIKit.framework in Frameworks */,
 				5336C32913E46620007FB510 /* Foundation.framework in Frameworks */,
 				5336C32B13E46620007FB510 /* CoreGraphics.framework in Frameworks */,
@@ -82,6 +85,7 @@
 		5336C31713E46620007FB510 = {
 			isa = PBXGroup;
 			children = (
+				53B8321B14069CB300E052A4 /* MessageUI.framework */,
 				5336C32C13E46620007FB510 /* AirPrinter */,
 				5336C32513E46620007FB510 /* Frameworks */,
 				5336C32313E46620007FB510 /* Products */,

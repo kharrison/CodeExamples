@@ -30,6 +30,9 @@
 //  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
 
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
+
 #import "WebViewController.h"
 #import "UYLGenericPrintPageRenderer.h"
 
@@ -37,7 +40,9 @@
 
 @synthesize query=_query;
 @synthesize webView=_webView;
-@synthesize printButton=_printButton;
+@synthesize actionButton=_actionButton;
+@synthesize actionSheet=_actionSheet;
+@synthesize picVisible;
 
 #pragma mark -
 #pragma mark === View Setup ===
@@ -60,23 +65,23 @@
         [url release];
     }
     
-    if ([UIPrintInteractionController isPrintingAvailable]) {
-        UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
-                                                                                   target:self 
-                                                                                   action:@selector(printWebView:)];
-        
-        [self.navigationItem setRightBarButtonItem:barButton animated:NO];
-        self.printButton = barButton;
-        [barButton release];
-    }
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                                                               target:self 
+                                                                               action:@selector(performAction:)];
+    
+    [self.navigationItem setRightBarButtonItem:barButton animated:NO];
+    self.actionButton = barButton;
+    [barButton release];
+
+    self.picVisible = NO;
 }
 
 - (void)viewDidUnload
 {
-
     [super viewDidUnload];
+    self.actionSheet = nil;
     self.query = nil;
-    self.printButton = nil;
+    self.actionButton = nil;
     
     self.webView.delegate = nil;
     self.webView = nil;
@@ -93,9 +98,14 @@
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         
-        if ([UIPrintInteractionController isPrintingAvailable]) {
+        if ([self isPicVisible]) {
             UIPrintInteractionController *pc = [UIPrintInteractionController sharedPrintController];
             [pc dismissAnimated:animated];
+            self.picVisible = NO;
+        }
+        
+        if ([self.actionSheet isVisible]) {
+            [self.actionSheet dismissWithClickedButtonIndex:-1 animated:NO];
         }
     }
 }
@@ -109,7 +119,8 @@
     self.webView.delegate = nil;
     [_webView release];
     
-    [_printButton release];
+    [_actionSheet release];
+    [_actionButton release];
     [_query release];
     [super dealloc];
 }
@@ -136,6 +147,38 @@
                              @"<html><center><font size=+5 color='blue'>An error occurred:<br>%@</font></center></html>",
                              error.localizedDescription];
     [self.webView loadHTMLString:errorString baseURL:nil];
+}
+
+#pragma mark -
+#pragma mark === External Actions ===
+#pragma mark -
+
+- (void)openInBrowser {
+    
+    NSURL *url = [[self.webView request] URL];
+    
+    if (url) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+}
+
+- (void)openInEmail {
+    
+    if ([MFMailComposeViewController canSendMail]) {
+
+        MFMailComposeViewController *viewController = [[MFMailComposeViewController alloc] init];
+        viewController.mailComposeDelegate = self;
+        
+        [viewController setSubject:@"AirPrinter link"];
+        [viewController setMessageBody:self.query isHTML:NO];      
+        [self presentModalViewController:viewController animated:YES];
+        [viewController release];
+    }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error 
+{	
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark -
@@ -172,9 +215,10 @@
 //}
 
 // Printing using a Print Page Renderer
-- (void)printWebView:(id)sender {
+- (void)printWebView {
     
     UIPrintInteractionController *pc = [UIPrintInteractionController sharedPrintController];
+    pc.delegate = self;
     
     UIPrintInfo *printInfo = [UIPrintInfo printInfo];
     printInfo.outputType = UIPrintInfoOutputGeneral;
@@ -199,9 +243,93 @@
     };
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        [pc presentFromBarButtonItem:self.printButton animated:YES completionHandler:completionHandler];
+        [pc presentFromBarButtonItem:self.actionButton animated:YES completionHandler:completionHandler];
     } else {
         [pc presentAnimated:YES completionHandler:completionHandler];
+    }
+}
+
+- (void)printInteractionControllerDidPresentPrinterOptions:(UIPrintInteractionController *)printInteractionController {
+    self.picVisible = YES;
+}
+
+- (void)printInteractionControllerDidDismissPrinterOptions:(UIPrintInteractionController *)printInteractionController {
+    self.picVisible = NO;
+}
+
+#pragma mark -
+#pragma mark === Present system actions menu ===
+#pragma mark -
+
+- (UIActionSheet *)actionSheet {
+    
+    if (_actionSheet == nil) {
+
+        NSString *cancelButtonTitle = @"Cancel";
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            cancelButtonTitle = nil;
+        }
+
+        if ([UIPrintInteractionController isPrintingAvailable]) {
+            _actionSheet = [[UIActionSheet alloc]
+                            initWithTitle:nil
+                            delegate:self
+                            cancelButtonTitle:cancelButtonTitle
+                            destructiveButtonTitle:nil
+                            otherButtonTitles:@"Open in Safari", @"E-mail link", @"Print", nil];
+        } else {
+            _actionSheet = [[UIActionSheet alloc]
+                            initWithTitle:nil
+                            delegate:self
+                            cancelButtonTitle:cancelButtonTitle
+                            destructiveButtonTitle:nil
+                            otherButtonTitles:@"Open in Safari", @"E-mail link", nil];            
+        }
+    }
+    
+    return _actionSheet;
+}
+
+- (void)performAction:(id)sender {
+    
+    if ([self.actionSheet isVisible]) {
+        [self.actionSheet dismissWithClickedButtonIndex:-1 animated:NO];
+
+    } else if ([self isPicVisible]) {
+        UIPrintInteractionController *pc = [UIPrintInteractionController sharedPrintController];
+        [pc dismissAnimated:YES];
+        self.picVisible = NO;
+        
+    } else {
+    
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            
+            [self.actionSheet showFromBarButtonItem:self.actionButton animated:NO];
+            
+        } else {
+            
+            [self.actionSheet showInView:[self view]];
+        }
+	}
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    switch (buttonIndex) {
+        case 0:
+            [self openInBrowser];
+            break;
+            
+        case 1:
+            [self openInEmail];
+            break;
+            
+        case 2:
+            [self printWebView];
+            break;
+            
+        default:
+            break;
     }
 }
 
