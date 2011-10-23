@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53DA6A4D1454A1C300368AB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DA6A4C1454A1C300368AB3 /* UIKit.framework */; };
+		53DA6A4F1454A1C300368AB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DA6A4E1454A1C300368AB3 /* Foundation.framework */; };
+		53DA6A511454A1C300368AB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DA6A501454A1C300368AB3 /* CoreGraphics.framework */; };
+		53DA6A571454A1C300368AB3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53DA6A551454A1C300368AB3 /* InfoPlist.strings */; };
+		53DA6A591454A1C300368AB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DA6A581454A1C300368AB3 /* main.m */; };
+		53DA6A5D1454A1C300368AB3 /* UYLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DA6A5C1454A1C300368AB3 /* UYLAppDelegate.m */; };
+		53DA6A601454A1C400368AB3 /* UYLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DA6A5F1454A1C400368AB3 /* UYLViewController.m */; };
+		53DA6A631454A1C400368AB3 /* UYLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53DA6A611454A1C400368AB3 /* UYLViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		53DA6A481454A1C300368AB3 /* SyncMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SyncMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53DA6A4C1454A1C300368AB3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		53DA6A4E1454A1C300368AB3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		53DA6A501454A1C300368AB3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		53DA6A541454A1C300368AB3 /* SyncMe-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SyncMe-Info.plist"; sourceTree = "<group>"; };
+		53DA6A561454A1C300368AB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		53DA6A581454A1C300368AB3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		53DA6A5A1454A1C300368AB3 /* SyncMe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SyncMe-Prefix.pch"; sourceTree = "<group>"; };
+		53DA6A5B1454A1C300368AB3 /* UYLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UYLAppDelegate.h; sourceTree = "<group>"; };
+		53DA6A5C1454A1C300368AB3 /* UYLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UYLAppDelegate.m; sourceTree = "<group>"; };
+		53DA6A5E1454A1C300368AB3 /* UYLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UYLViewController.h; sourceTree = "<group>"; };
+		53DA6A5F1454A1C400368AB3 /* UYLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UYLViewController.m; sourceTree = "<group>"; };
+		53DA6A621454A1C400368AB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UYLViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53DA6A451454A1C300368AB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53DA6A4D1454A1C300368AB3 /* UIKit.framework in Frameworks */,
+				53DA6A4F1454A1C300368AB3 /* Foundation.framework in Frameworks */,
+				53DA6A511454A1C300368AB3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53DA6A3D1454A1C300368AB3 = {
+			isa = PBXGroup;
+			children = (
+				53DA6A521454A1C300368AB3 /* SyncMe */,
+				53DA6A4B1454A1C300368AB3 /* Frameworks */,
+				53DA6A491454A1C300368AB3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		53DA6A491454A1C300368AB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53DA6A481454A1C300368AB3 /* SyncMe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53DA6A4B1454A1C300368AB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53DA6A4C1454A1C300368AB3 /* UIKit.framework */,
+				53DA6A4E1454A1C300368AB3 /* Foundation.framework */,
+				53DA6A501454A1C300368AB3 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53DA6A521454A1C300368AB3 /* SyncMe */ = {
+			isa = PBXGroup;
+			children = (
+				53DA6A5B1454A1C300368AB3 /* UYLAppDelegate.h */,
+				53DA6A5C1454A1C300368AB3 /* UYLAppDelegate.m */,
+				53DA6A5E1454A1C300368AB3 /* UYLViewController.h */,
+				53DA6A5F1454A1C400368AB3 /* UYLViewController.m */,
+				53DA6A611454A1C400368AB3 /* UYLViewController.xib */,
+				53DA6A531454A1C300368AB3 /* Supporting Files */,
+			);
+			path = SyncMe;
+			sourceTree = "<group>";
+		};
+		53DA6A531454A1C300368AB3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				53DA6A541454A1C300368AB3 /* SyncMe-Info.plist */,
+				53DA6A551454A1C300368AB3 /* InfoPlist.strings */,
+				53DA6A581454A1C300368AB3 /* main.m */,
+				53DA6A5A1454A1C300368AB3 /* SyncMe-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53DA6A471454A1C300368AB3 /* SyncMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53DA6A661454A1C400368AB3 /* Build configuration list for PBXNativeTarget "SyncMe" */;
+			buildPhases = (
+				53DA6A441454A1C300368AB3 /* Sources */,
+				53DA6A451454A1C300368AB3 /* Frameworks */,
+				53DA6A461454A1C300368AB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SyncMe;
+			productName = SyncMe;
+			productReference = 53DA6A481454A1C300368AB3 /* SyncMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53DA6A3F1454A1C300368AB3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 53DA6A421454A1C300368AB3 /* Build configuration list for PBXProject "SyncMe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 53DA6A3D1454A1C300368AB3;
+			productRefGroup = 53DA6A491454A1C300368AB3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53DA6A471454A1C300368AB3 /* SyncMe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53DA6A461454A1C300368AB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53DA6A571454A1C300368AB3 /* InfoPlist.strings in Resources */,
+				53DA6A631454A1C400368AB3 /* UYLViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53DA6A441454A1C300368AB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53DA6A591454A1C300368AB3 /* main.m in Sources */,
+				53DA6A5D1454A1C300368AB3 /* UYLAppDelegate.m in Sources */,
+				53DA6A601454A1C400368AB3 /* UYLViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		53DA6A551454A1C300368AB3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53DA6A561454A1C300368AB3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		53DA6A611454A1C400368AB3 /* UYLViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53DA6A621454A1C400368AB3 /* en */,
+			);
+			name = UYLViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		53DA6A641454A1C400368AB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		53DA6A651454A1C400368AB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		53DA6A671454A1C400368AB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SyncMe/SyncMe-Prefix.pch";
+				INFOPLIST_FILE = "SyncMe/SyncMe-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		53DA6A681454A1C400368AB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SyncMe/SyncMe-Prefix.pch";
+				INFOPLIST_FILE = "SyncMe/SyncMe-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53DA6A421454A1C300368AB3 /* Build configuration list for PBXProject "SyncMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53DA6A641454A1C400368AB3 /* Debug */,
+				53DA6A651454A1C400368AB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53DA6A661454A1C400368AB3 /* Build configuration list for PBXNativeTarget "SyncMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53DA6A671454A1C400368AB3 /* Debug */,
+				53DA6A681454A1C400368AB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53DA6A3F1454A1C300368AB3 /* Project object */;
+}
