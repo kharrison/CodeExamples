@@ -78,11 +78,13 @@ NSString *kUYLKVStoreBackgroundColorKey = @"backgroundColor";
     [self changeBackgroundColor];
     
     NSUbiquitousKeyValueStore* store = [NSUbiquitousKeyValueStore defaultStore];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(storeChanged:)
-                                                 name:NSUbiquitousKeyValueStoreDidChangeExternallyNotification
-                                               object:store];
-    [store synchronize];
+    if (store) {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(storeChanged:)
+                                                     name:NSUbiquitousKeyValueStoreDidChangeExternallyNotification
+                                                   object:store];
+        [store synchronize];
+    }
 
 }
 
@@ -103,9 +105,10 @@ NSString *kUYLKVStoreBackgroundColorKey = @"backgroundColor";
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:color forKey:kUYLKVStoreBackgroundColorKey];
     
-    NSUbiquitousKeyValueStore *defaultStore = [NSUbiquitousKeyValueStore defaultStore];
-    [defaultStore setObject:color forKey:kUYLKVStoreBackgroundColorKey];
-    
+    NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
+    if (store) {
+        [store setObject:color forKey:kUYLKVStoreBackgroundColorKey];
+    }
     [self changeBackgroundColor];
 }
 
