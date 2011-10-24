@@ -48,9 +48,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSDictionary *appDefaults = [NSDictionary dictionaryWithObject:[NSNumber numberWithInteger:0] forKey:@"backgroundColor"];
+    NSDictionary *appDefaults = [NSDictionary dictionaryWithObject:[NSNumber numberWithInteger:0] forKey:kUYLKVStoreBackgroundColorKey];
     [defaults registerDefaults:appDefaults];
-    [defaults synchronize];
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     self.viewController = [[[UYLViewController alloc] initWithNibName:@"UYLViewController" bundle:nil] autorelease];

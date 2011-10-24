@@ -34,4 +34,6 @@
 
 @interface UYLViewController : UIViewController
 - (IBAction)colourChange:(id)sender;
+
+extern NSString *kUYLKVStoreBackgroundColorKey;
 @end

@@ -31,6 +31,7 @@
 		53DA6A5E1454A1C300368AB3 /* UYLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UYLViewController.h; sourceTree = "<group>"; };
 		53DA6A5F1454A1C400368AB3 /* UYLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UYLViewController.m; sourceTree = "<group>"; };
 		53DA6A621454A1C400368AB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UYLViewController.xib; sourceTree = "<group>"; };
+		53DA6A771454B39300368AB3 /* SyncMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SyncMe.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,7 @@
 		53DA6A521454A1C300368AB3 /* SyncMe */ = {
 			isa = PBXGroup;
 			children = (
+				53DA6A771454B39300368AB3 /* SyncMe.entitlements */,
 				53DA6A5B1454A1C300368AB3 /* UYLAppDelegate.h */,
 				53DA6A5C1454A1C300368AB3 /* UYLAppDelegate.m */,
 				53DA6A5E1454A1C300368AB3 /* UYLViewController.h */,
@@ -208,6 +210,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -234,6 +237,7 @@
 		53DA6A671454A1C400368AB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SyncMe/SyncMe.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SyncMe/SyncMe-Prefix.pch";
 				INFOPLIST_FILE = "SyncMe/SyncMe-Info.plist";
@@ -245,6 +249,7 @@
 		53DA6A681454A1C400368AB3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SyncMe/SyncMe.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SyncMe/SyncMe-Prefix.pch";
 				INFOPLIST_FILE = "SyncMe/SyncMe-Info.plist";

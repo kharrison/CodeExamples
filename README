@@ -3,13 +3,14 @@
 
   See http://useyourloaf.com for details
 
-  This README last updated: 03-August-2011
+  This README last updated: 24-October-2011
 =======================================================================
 
 + INDEX
 
   AirPrinter    - Example of how to print from iOS
   NibCollection - Example use of IBOutletCollection
+  SyncMe        - Example use of iCloud Key-value Storage
   TCNibLoad     - Example use of UINib class
   TwitterSearch - Example of using NSURLConnection to query Twitter API
 

@@ -35,13 +35,17 @@
 @implementation UYLViewController
 
 typedef enum { UYLblack, UYLblue, UYLgreen, UYLpurple, UYLred, UYLyellow } UYLcolor;
+NSString *kUYLKVStoreBackgroundColorKey = @"backgroundColor";
 
 #pragma mark -
 #pragma mark === Set the view background ===
 #pragma mark -
 
-- (void)changeBackgroundColor:(UYLcolor)color {
+- (void)changeBackgroundColor {
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    UYLcolor color = [defaults integerForKey:kUYLKVStoreBackgroundColorKey];
+
     switch (color) {
         case UYLblue:
             self.view.backgroundColor = [UIColor blueColor];
@@ -71,9 +75,15 @@ typedef enum { UYLblack, UYLblue, UYLgreen, UYLpurple, UYLred, UYLyellow } UYLco
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    UYLcolor color = [defaults integerForKey:@"backgroundColor"];
-    [self changeBackgroundColor:color];
+    [self changeBackgroundColor];
+    
+    NSUbiquitousKeyValueStore* store = [NSUbiquitousKeyValueStore defaultStore];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(storeChanged:)
+                                                 name:NSUbiquitousKeyValueStoreDidChangeExternallyNotification
+                                               object:store];
+    [store synchronize];
+
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -87,12 +97,48 @@ typedef enum { UYLblack, UYLblue, UYLgreen, UYLpurple, UYLred, UYLyellow } UYLco
 
 - (IBAction)colourChange:(id)sender {
     
-    UYLcolor color = [sender tag];
-    [self changeBackgroundColor:color];
+    UYLcolor colorTag = [sender tag];
+    NSNumber *color = [NSNumber numberWithInteger:colorTag];
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setInteger:color forKey:@"backgroundColor"];
-    [defaults synchronize];
+    [defaults setObject:color forKey:kUYLKVStoreBackgroundColorKey];
+    
+    NSUbiquitousKeyValueStore *defaultStore = [NSUbiquitousKeyValueStore defaultStore];
+    [defaultStore setObject:color forKey:kUYLKVStoreBackgroundColorKey];
+    
+    [self changeBackgroundColor];
+}
+
+#pragma mark -
+#pragma mark === iCloud Key-Value Store ===
+#pragma mark -
+
+- (void)storeChanged:(NSNotification*)notification {
+
+    NSDictionary *userInfo = [notification userInfo];
+    NSNumber *reason = [userInfo objectForKey:NSUbiquitousKeyValueStoreChangeReasonKey];
+
+    if (reason) {
+
+        NSInteger reasonValue = [reason integerValue];
+        NSLog(@"storeChanged with reason %d", reasonValue);
+
+        if ((reasonValue == NSUbiquitousKeyValueStoreServerChange) ||
+            (reasonValue == NSUbiquitousKeyValueStoreInitialSyncChange)) {
+
+            NSArray *keys = [userInfo objectForKey:NSUbiquitousKeyValueStoreChangedKeysKey];
+            NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
+            NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+
+            for (NSString *key in keys) {
+                id value = [store objectForKey:key];
+                [userDefaults setObject:value forKey:key];
+                NSLog(@"storeChanged updated value for %@",key);
+            }
+
+            [self changeBackgroundColor];
+        }
+    }    
 }
 
 @end
