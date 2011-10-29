@@ -93,6 +93,11 @@ NSString *kUYLKVStoreBackgroundColorKey = @"backgroundColor";
     return YES;
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [super dealloc];
+}
+
 #pragma mark -
 #pragma mark === Button Action ===
 #pragma mark -
