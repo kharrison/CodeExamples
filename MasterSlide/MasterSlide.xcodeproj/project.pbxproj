@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53A76163146C7E9600B4F8F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A76162146C7E9600B4F8F6 /* UIKit.framework */; };
+		53A76165146C7E9600B4F8F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A76164146C7E9600B4F8F6 /* Foundation.framework */; };
+		53A76167146C7E9600B4F8F6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A76166146C7E9600B4F8F6 /* CoreGraphics.framework */; };
+		53A7616D146C7E9600B4F8F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53A7616B146C7E9600B4F8F6 /* InfoPlist.strings */; };
+		53A7616F146C7E9600B4F8F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A7616E146C7E9600B4F8F6 /* main.m */; };
+		53A76173146C7E9600B4F8F6 /* UYLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A76172146C7E9600B4F8F6 /* UYLAppDelegate.m */; };
+		53A76176146C7E9600B4F8F6 /* UYLMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A76175146C7E9600B4F8F6 /* UYLMasterViewController.m */; };
+		53A76179146C7E9600B4F8F6 /* UYLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A76178146C7E9600B4F8F6 /* UYLDetailViewController.m */; };
+		53A7617C146C7E9700B4F8F6 /* UYLMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A7617A146C7E9700B4F8F6 /* UYLMasterViewController.xib */; };
+		53A7617F146C7E9700B4F8F6 /* UYLDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A7617D146C7E9700B4F8F6 /* UYLDetailViewController.xib */; };
+		53FF8C19146F264400005E54 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53FF8C18146F264400005E54 /* MainWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		53A7615E146C7E9600B4F8F6 /* masterslide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = masterslide.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53A76162146C7E9600B4F8F6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		53A76164146C7E9600B4F8F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		53A76166146C7E9600B4F8F6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		53A7616A146C7E9600B4F8F6 /* masterslide-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "masterslide-Info.plist"; sourceTree = "<group>"; };
+		53A7616C146C7E9600B4F8F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		53A7616E146C7E9600B4F8F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		53A76170146C7E9600B4F8F6 /* masterslide-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "masterslide-Prefix.pch"; sourceTree = "<group>"; };
+		53A76171146C7E9600B4F8F6 /* UYLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UYLAppDelegate.h; sourceTree = "<group>"; };
+		53A76172146C7E9600B4F8F6 /* UYLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UYLAppDelegate.m; sourceTree = "<group>"; };
+		53A76174146C7E9600B4F8F6 /* UYLMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UYLMasterViewController.h; sourceTree = "<group>"; };
+		53A76175146C7E9600B4F8F6 /* UYLMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UYLMasterViewController.m; sourceTree = "<group>"; };
+		53A76177146C7E9600B4F8F6 /* UYLDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UYLDetailViewController.h; sourceTree = "<group>"; };
+		53A76178146C7E9600B4F8F6 /* UYLDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UYLDetailViewController.m; sourceTree = "<group>"; };
+		53A7617B146C7E9700B4F8F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UYLMasterViewController.xib; sourceTree = "<group>"; };
+		53A7617E146C7E9700B4F8F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UYLDetailViewController.xib; sourceTree = "<group>"; };
+		53FF8C18146F264400005E54 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53A7615B146C7E9600B4F8F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A76163146C7E9600B4F8F6 /* UIKit.framework in Frameworks */,
+				53A76165146C7E9600B4F8F6 /* Foundation.framework in Frameworks */,
+				53A76167146C7E9600B4F8F6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53A76153146C7E9600B4F8F6 = {
+			isa = PBXGroup;
+			children = (
+				53A76168146C7E9600B4F8F6 /* masterslide */,
+				53A76161146C7E9600B4F8F6 /* Frameworks */,
+				53A7615F146C7E9600B4F8F6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		53A7615F146C7E9600B4F8F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53A7615E146C7E9600B4F8F6 /* masterslide.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53A76161146C7E9600B4F8F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53A76162146C7E9600B4F8F6 /* UIKit.framework */,
+				53A76164146C7E9600B4F8F6 /* Foundation.framework */,
+				53A76166146C7E9600B4F8F6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53A76168146C7E9600B4F8F6 /* masterslide */ = {
+			isa = PBXGroup;
+			children = (
+				53FF8C15146F222300005E54 /* Controllers */,
+				53FF8C13146F220300005E54 /* Resources */,
+				53A76171146C7E9600B4F8F6 /* UYLAppDelegate.h */,
+				53A76172146C7E9600B4F8F6 /* UYLAppDelegate.m */,
+				53A76169146C7E9600B4F8F6 /* Supporting Files */,
+			);
+			path = masterslide;
+			sourceTree = "<group>";
+		};
+		53A76169146C7E9600B4F8F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				53A7616A146C7E9600B4F8F6 /* masterslide-Info.plist */,
+				53A7616B146C7E9600B4F8F6 /* InfoPlist.strings */,
+				53A7616E146C7E9600B4F8F6 /* main.m */,
+				53A76170146C7E9600B4F8F6 /* masterslide-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		53FF8C13146F220300005E54 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53A7617A146C7E9700B4F8F6 /* UYLMasterViewController.xib */,
+				53A7617D146C7E9700B4F8F6 /* UYLDetailViewController.xib */,
+				53FF8C18146F264400005E54 /* MainWindow.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		53FF8C15146F222300005E54 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				53A76174146C7E9600B4F8F6 /* UYLMasterViewController.h */,
+				53A76175146C7E9600B4F8F6 /* UYLMasterViewController.m */,
+				53A76177146C7E9600B4F8F6 /* UYLDetailViewController.h */,
+				53A76178146C7E9600B4F8F6 /* UYLDetailViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53A7615D146C7E9600B4F8F6 /* masterslide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53A76182146C7E9700B4F8F6 /* Build configuration list for PBXNativeTarget "masterslide" */;
+			buildPhases = (
+				53A7615A146C7E9600B4F8F6 /* Sources */,
+				53A7615B146C7E9600B4F8F6 /* Frameworks */,
+				53A7615C146C7E9600B4F8F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = masterslide;
+			productName = masterslide;
+			productReference = 53A7615E146C7E9600B4F8F6 /* masterslide.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53A76155146C7E9600B4F8F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 53A76158146C7E9600B4F8F6 /* Build configuration list for PBXProject "masterslide" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 53A76153146C7E9600B4F8F6;
+			productRefGroup = 53A7615F146C7E9600B4F8F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53A7615D146C7E9600B4F8F6 /* masterslide */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53A7615C146C7E9600B4F8F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A7616D146C7E9600B4F8F6 /* InfoPlist.strings in Resources */,
+				53A7617C146C7E9700B4F8F6 /* UYLMasterViewController.xib in Resources */,
+				53A7617F146C7E9700B4F8F6 /* UYLDetailViewController.xib in Resources */,
+				53FF8C19146F264400005E54 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53A7615A146C7E9600B4F8F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A7616F146C7E9600B4F8F6 /* main.m in Sources */,
+				53A76173146C7E9600B4F8F6 /* UYLAppDelegate.m in Sources */,
+				53A76176146C7E9600B4F8F6 /* UYLMasterViewController.m in Sources */,
+				53A76179146C7E9600B4F8F6 /* UYLDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		53A7616B146C7E9600B4F8F6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53A7616C146C7E9600B4F8F6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		53A7617A146C7E9700B4F8F6 /* UYLMasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53A7617B146C7E9700B4F8F6 /* en */,
+			);
+			name = UYLMasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		53A7617D146C7E9700B4F8F6 /* UYLDetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53A7617E146C7E9700B4F8F6 /* en */,
+			);
+			name = UYLDetailViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		53A76180146C7E9700B4F8F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		53A76181146C7E9700B4F8F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		53A76183146C7E9700B4F8F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "masterslide/masterslide-Prefix.pch";
+				INFOPLIST_FILE = "masterslide/masterslide-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		53A76184146C7E9700B4F8F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "masterslide/masterslide-Prefix.pch";
+				INFOPLIST_FILE = "masterslide/masterslide-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53A76158146C7E9600B4F8F6 /* Build configuration list for PBXProject "masterslide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53A76180146C7E9700B4F8F6 /* Debug */,
+				53A76181146C7E9700B4F8F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53A76182146C7E9700B4F8F6 /* Build configuration list for PBXNativeTarget "masterslide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53A76183146C7E9700B4F8F6 /* Debug */,
+				53A76184146C7E9700B4F8F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53A76155146C7E9600B4F8F6 /* Project object */;
+}
