@@ -39,6 +39,9 @@
 - (void)showMasterView;
 - (void)hideMasterView;
 - (void)configureView;
+- (void)handleSwipeLeft;
+- (void)handleSwipeRight;
+- (void)handleTap;
 @end
 
 @implementation UYLDetailViewController
@@ -69,6 +72,10 @@
     [self.view addGestureRecognizer:swipeRight];
     [swipeRight release];
 
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap)];
+    [self.view addGestureRecognizer:tap];
+    [tap release];
+    
     if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation))
     {
         [self addMasterButton];
@@ -202,6 +209,14 @@
     {
         [self showMasterView];
     }
+}
+
+- (void)handleTap
+{
+    if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation))
+    {
+        [self hideMasterView];
+    }    
 }
 
 #pragma mark -
