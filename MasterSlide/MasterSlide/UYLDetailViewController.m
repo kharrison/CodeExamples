@@ -39,9 +39,9 @@
 - (void)showMasterView;
 - (void)hideMasterView;
 - (void)configureView;
-- (void)handleSwipeLeft;
-- (void)handleSwipeRight;
-- (void)handleTap;
+- (IBAction)handleTap:(UITapGestureRecognizer *)sender;
+- (IBAction)handleSwipeRight:(UISwipeGestureRecognizer *)sender;
+- (IBAction)handleSwipeLeft:(UISwipeGestureRecognizer *)sender;
 @end
 
 @implementation UYLDetailViewController
@@ -61,21 +61,7 @@
     [super viewDidLoad];
     
     self.masterIsVisible = NO;
-    
-    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeLeft)];
-    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
-    [self.view addGestureRecognizer:swipeLeft];
-    [swipeLeft release];
-
-    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeRight)];
-    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-    [self.view addGestureRecognizer:swipeRight];
-    [swipeRight release];
-
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap)];
-    [self.view addGestureRecognizer:tap];
-    [tap release];
-    
+   
     if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation))
     {
         [self addMasterButton];
@@ -133,7 +119,7 @@
     [items insertObject:barButtonItem atIndex:0];
     [self.toolbar setItems:items animated:YES];
     [items release];
-    [barButtonItem release];    
+    [barButtonItem release];
 }
 
 - (void)removeMasterButton
@@ -195,7 +181,7 @@
 #pragma mark === Gesture Handlers ===
 #pragma mark -
 
-- (void)handleSwipeLeft
+- (IBAction)handleSwipeLeft:(UISwipeGestureRecognizer *)sender
 {
     if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation))
     {
@@ -203,7 +189,7 @@
     }
 }
 
-- (void)handleSwipeRight
+- (IBAction)handleSwipeRight:(UISwipeGestureRecognizer *)sender
 {
     if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation))
     {
@@ -211,7 +197,7 @@
     }
 }
 
-- (void)handleTap
+- (IBAction)handleTap:(UITapGestureRecognizer *)sender
 {
     if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation))
     {
