@@ -34,6 +34,7 @@
 @interface SearchViewController ()
 - (void)loadQuery;
 - (void)handleError:(NSError *)error;
+- (void)cancelConnection;
 @end
 
 @implementation SearchViewController
@@ -58,17 +59,17 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    
-    [self.connection cancel];
-    
-    self.connection = nil;
-    self.buffer = nil;
-    self.results = nil;
+    [self cancelConnection];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self cancelConnection];
 }
 
 - (void)dealloc
 {
-    [self.connection cancel];
+    [self cancelConnection];
     [_connection release];
     [_buffer release];
     [_results release];
@@ -202,6 +203,17 @@
                                               otherButtonTitles:nil];
     [alertView show];
     [alertView release];
+}
+
+- (void)cancelConnection
+{
+    if (self.connection != nil)
+    {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        [self.connection cancel];
+        self.connection = nil;
+        self.buffer = nil;
+    }    
 }
 
 @end
