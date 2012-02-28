@@ -72,6 +72,8 @@
 }
 
 - (void)dealloc {
+    counter = nil;
+    stepper = nil;
     [counter release];
     [stepper release];
     [super dealloc];
