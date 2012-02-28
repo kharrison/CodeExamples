@@ -71,11 +71,4 @@
     self.counter.text = [NSString stringWithFormat:@"%03d",value];
 }
 
-- (void)dealloc {
-    counter = nil;
-    stepper = nil;
-    [counter release];
-    [stepper release];
-    [super dealloc];
-}
 @end

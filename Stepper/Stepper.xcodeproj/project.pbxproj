@@ -124,7 +124,7 @@
 		53CA1FAE14B3B08500432C8E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 53CA1FB114B3B08500432C8E /* Build configuration list for PBXProject "Stepper" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -234,6 +234,7 @@
 		53CA1FD614B3B08500432C8E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Stepper/Stepper-Prefix.pch";
 				INFOPLIST_FILE = "Stepper/Stepper-Info.plist";
@@ -245,6 +246,7 @@
 		53CA1FD714B3B08500432C8E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Stepper/Stepper-Prefix.pch";
 				INFOPLIST_FILE = "Stepper/Stepper-Info.plist";
@@ -272,6 +274,7 @@
 				53CA1FD714B3B08500432C8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

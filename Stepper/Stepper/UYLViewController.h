@@ -34,6 +34,6 @@
 
 @interface UYLViewController : UIViewController
 
-@property (retain, nonatomic) IBOutlet UIStepper *stepper;
-@property (retain, nonatomic) IBOutlet UILabel *counter;
+@property ( nonatomic) IBOutlet UIStepper *stepper;
+@property ( nonatomic) IBOutlet UILabel *counter;
 @end
