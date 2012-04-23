@@ -3,7 +3,7 @@
 
   See http://useyourloaf.com for details
 
-  This README last updated: 04-January-2012
+  This README last updated: 23-April-2012
 =======================================================================
 
 + INDEX
@@ -13,6 +13,7 @@
   MasterSlide   - Implementing a mail app style split view controller
   NibCollection - Example use of IBOutletCollection
   SyncMe        - Example use of iCloud Key-value Storage
+  TaskTimer     - Example of UIAccessibility Support
   TCNibLoad     - Example use of UINib class
   TwitterSearch - Example of using NSURLConnection to query Twitter API
   Stepper       - Example use of UIStepper control
