@@ -3,7 +3,7 @@
 
   See http://useyourloaf.com for details
 
-  This README last updated: 23-April-2012
+  This README last updated: 07-May-2012
 =======================================================================
 
 + INDEX
@@ -12,6 +12,7 @@
   AlertView     - Demo iOS 5 changes to UIAlertView
   MasterSlide   - Implementing a mail app style split view controller
   NibCollection - Example use of IBOutletCollection
+  StaticTable   - Using a storyboard to implement static table views
   SyncMe        - Example use of iCloud Key-value Storage
   TaskTimer     - Example of UIAccessibility Support
   TCNibLoad     - Example use of UINib class
