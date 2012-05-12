@@ -108,6 +108,11 @@
     [self saveContext];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self becomeFirstResponder];
+}
+
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
@@ -160,6 +165,31 @@
     }
 	[textField resignFirstResponder];
 	return YES;
+}
+
+#pragma mark -
+#pragma mark === UIResponder Respond to motion events ===
+#pragma mark -
+
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (self.task)
+    {
+        self.running = NO;
+        self.taskTimer = nil;
+
+        self.task.duration = [NSNumber numberWithInteger:0];
+        self.task.complete = [NSNumber numberWithBool:NO];
+        
+        self.taskCounterView.secondsCounter = 0;
+        self.taskCounterView.counterEnabled = YES;
+    }
+
 }
 
 #pragma mark -
