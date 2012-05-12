@@ -5,7 +5,11 @@ Version 1.0		7-May-2012			Initial version
 
 ---
 
-The StaticTable App is an example of how to implement static table views by adding a storyboard to an existing App. It is based on the tabbed application Xcode template which provides a tabbed bar controller containing two Nib based views controllers. In this example the second view controller is replaced by a storyboard implementing a view hierarchy composed of static table views.
+The StaticTable App is an example of how to implement static table views by
+adding a storyboard to an existing App. It is based on the tabbed application 
+Xcode template which provides a tabbed bar controller containing two Nib based 
+views controllers. In this example the second view controller is replaced by a 
+storyboard implementing a view hierarchy composed of static table views.
 
 A full explanation of this example App can be found in the following blog post:
 

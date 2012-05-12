@@ -18,7 +18,7 @@
 		532B11F8154F362C004B4780 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 532B11F7154F362C004B4780 /* second.png */; };
 		532B11FA154F362C004B4780 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 532B11F9154F362C004B4780 /* second@2x.png */; };
 		532B1207154F3712004B4780 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532B1206154F3712004B4780 /* Settings.storyboard */; };
-		53ACC43315582581005E26DC /* README in Resources */ = {isa = PBXBuildFile; fileRef = 53ACC43215582581005E26DC /* README */; };
+		53ACC43315582581005E26DC /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 53ACC43215582581005E26DC /* README.markdown */; };
 		53F33DE415508DBE0094277E /* UYLGeneralSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F33DE315508DBE0094277E /* UYLGeneralSettingsTableViewController.m */; };
 		53F33DEB15509B360094277E /* UYLAdvancedSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F33DEA15509B360094277E /* UYLAdvancedSettingsViewController.m */; };
 		53FD894F1551B45300477DFF /* UYLFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FD894D1551B45300477DFF /* UYLFirstViewController.m */; };
@@ -42,7 +42,7 @@
 		532B11F7154F362C004B4780 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		532B11F9154F362C004B4780 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		532B1206154F3712004B4780 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
-		53ACC43215582581005E26DC /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		53ACC43215582581005E26DC /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; path = README.markdown; sourceTree = "<group>"; };
 		53F33DE215508DBE0094277E /* UYLGeneralSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLGeneralSettingsTableViewController.h; sourceTree = "<group>"; };
 		53F33DE315508DBE0094277E /* UYLGeneralSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLGeneralSettingsTableViewController.m; sourceTree = "<group>"; };
 		53F33DE915509B360094277E /* UYLAdvancedSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLAdvancedSettingsViewController.h; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		532B11CC154F362C004B4780 = {
 			isa = PBXGroup;
 			children = (
-				53ACC43215582581005E26DC /* README */,
+				53ACC43215582581005E26DC /* README.markdown */,
 				532B11E1154F362C004B4780 /* StaticTable */,
 				532B11DA154F362C004B4780 /* Frameworks */,
 				532B11D8154F362C004B4780 /* Products */,
@@ -221,7 +221,7 @@
 				532B11FA154F362C004B4780 /* second@2x.png in Resources */,
 				532B1207154F3712004B4780 /* Settings.storyboard in Resources */,
 				53FD89501551B45300477DFF /* UYLFirstViewController.xib in Resources */,
-				53ACC43315582581005E26DC /* README in Resources */,
+				53ACC43315582581005E26DC /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
