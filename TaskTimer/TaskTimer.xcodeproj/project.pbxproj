@@ -15,6 +15,7 @@
 		532DD9761530CA6400ED5845 /* UYLTaskListViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532DD96F1530CA6400ED5845 /* UYLTaskListViewController_iPhone.xib */; };
 		532DD9771530CA6400ED5845 /* UYLTaskViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532DD9711530CA6400ED5845 /* UYLTaskViewController_iPad.xib */; };
 		532DD9781530CA6400ED5845 /* UYLTaskViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532DD9731530CA6400ED5845 /* UYLTaskViewController_iPhone.xib */; };
+		534644A5155F083D00B20849 /* redbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 534644A4155F083D00B20849 /* redbutton.png */; };
 		536270F6152E0A55009732E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536270F5152E0A55009732E1 /* UIKit.framework */; };
 		536270F8152E0A55009732E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536270F7152E0A55009732E1 /* Foundation.framework */; };
 		536270FA152E0A55009732E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536270F9152E0A55009732E1 /* CoreGraphics.framework */; };
@@ -47,6 +48,7 @@
 		532DD9701530CA6400ED5845 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UYLTaskListViewController_iPhone.xib; sourceTree = "<group>"; };
 		532DD9721530CA6400ED5845 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UYLTaskViewController_iPad.xib; sourceTree = "<group>"; };
 		532DD9741530CA6400ED5845 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UYLTaskViewController_iPhone.xib; sourceTree = "<group>"; };
+		534644A4155F083D00B20849 /* redbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redbutton.png; sourceTree = "<group>"; };
 		536270F1152E0A55009732E1 /* TaskTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		536270F5152E0A55009732E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		536270F7152E0A55009732E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -179,6 +181,7 @@
 		53627146152E0C72009732E1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				534644A4155F083D00B20849 /* redbutton.png */,
 				53BD55A21533880300BCFB33 /* checked.png */,
 				53BD55A31533880300BCFB33 /* checked@2x.png */,
 				53BD55A41533880300BCFB33 /* start.png */,
@@ -264,6 +267,7 @@
 				53BD55AF1533880300BCFB33 /* stop@2x.png in Resources */,
 				53BD55B01533880300BCFB33 /* unchecked.png in Resources */,
 				53BD55B11533880300BCFB33 /* unchecked@2x.png in Resources */,
+				534644A5155F083D00B20849 /* redbutton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

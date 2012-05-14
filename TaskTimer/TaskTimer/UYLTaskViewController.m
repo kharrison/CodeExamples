@@ -37,9 +37,12 @@
 @property (assign, nonatomic) BOOL running;
 @property (strong, nonatomic) NSTimer *taskTimer;
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+@property (weak, nonatomic) IBOutlet UIButton *taskResetButton;
 
 - (void)configureView;
 - (void)saveContext;
+- (IBAction)taskResetAction;
+- (void)voiceOverStatusChanged;
 
 @end
 
@@ -48,6 +51,7 @@
 @synthesize task=_task;
 @synthesize taskNote=_taskNote;
 @synthesize taskCounterView=_taskCounterView;
+@synthesize taskResetButton=_taskResetButton;
 @synthesize running=_running;
 @synthesize taskTimer=_taskTimer;
 @synthesize masterPopoverController = _masterPopoverController;
@@ -99,6 +103,11 @@
     [super viewDidLoad];
     self.taskCounterView.delegate = self;
     [self configureView];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(voiceOverStatusChanged)
+                                                 name:UIAccessibilityVoiceOverStatusChanged 
+                                               object:nil];
 }
 
 - (void)viewDidUnload
@@ -106,6 +115,8 @@
     [super viewDidUnload];
     self.taskTimer = nil;
     [self saveContext];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -129,6 +140,11 @@
 {
     // The accessibility elements should be recalculated when the orientation changes
     self.taskCounterView.accessibleElements = nil;
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark -
@@ -178,18 +194,7 @@
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
-    if (self.task)
-    {
-        self.running = NO;
-        self.taskTimer = nil;
-
-        self.task.duration = [NSNumber numberWithInteger:0];
-        self.task.complete = [NSNumber numberWithBool:NO];
-        
-        self.taskCounterView.secondsCounter = 0;
-        self.taskCounterView.counterEnabled = YES;
-    }
-
+    [self taskResetAction];
 }
 
 #pragma mark -
@@ -254,7 +259,8 @@
             self.taskCounterView.counterEnabled = YES;
         }
     }
-    self.taskCounterView.secondsCounter = duration;
+    self.taskCounterView.secondsCounter = duration;    
+    self.taskResetButton.hidden = ! UIAccessibilityIsVoiceOverRunning();
 }
 
 - (void)saveContext
@@ -268,6 +274,26 @@
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         } 
     }
+}
+
+- (IBAction)taskResetAction
+{
+    if (self.task)
+    {
+        self.running = NO;
+        self.taskTimer = nil;
+        
+        self.task.duration = [NSNumber numberWithInteger:0];
+        self.task.complete = [NSNumber numberWithBool:NO];
+        
+        self.taskCounterView.secondsCounter = 0;
+        self.taskCounterView.counterEnabled = YES;
+    }    
+}
+
+- (void)voiceOverStatusChanged
+{
+    self.taskResetButton.hidden = ! UIAccessibilityIsVoiceOverRunning();
 }
 
 @end
