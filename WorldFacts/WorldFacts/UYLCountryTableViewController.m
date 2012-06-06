@@ -39,13 +39,6 @@
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSNumberFormatter *decimalFormatter;
 
-// The following two properties are no longer required with iOS 5 since
-// we can directly register a NIB with the table view or use a stroyboard
-// to create the table view and load the cell NIB for us.
-
-@property (strong, nonatomic) UINib *countryCellNib;
-@property (strong, nonatomic) IBOutlet UITableViewCell *countryCell;
-
 @end
 
 @implementation UYLCountryTableViewController
@@ -53,8 +46,6 @@
 @synthesize managedObjectContext=__managedObjectContext;
 @synthesize fetchedResultsController=__fetchedResultsController;
 @synthesize decimalFormatter=_decimalFormatter;
-@synthesize countryCellNib=_countryCellNib;
-@synthesize countryCell=_countryCell;
 
 static NSString *UYLCountryCellIdentifier = @"UYLCountryCellIdentifier";
 
@@ -71,16 +62,14 @@ static NSString *UYLCountryCellIdentifier = @"UYLCountryCellIdentifier";
     [super viewDidLoad];
     self.title = NSLocalizedString(@"World", @"World");
 
-//    UINib *countryNib = [UINib nibWithNibName:@"CountryCell" bundle:nil];
-//    [self.tableView registerNib:countryNib forCellReuseIdentifier:UYLCountryCellIdentifier];
+    UINib *countryNib = [UINib nibWithNibName:@"CountryCell" bundle:nil];
+    [self.tableView registerNib:countryNib forCellReuseIdentifier:UYLCountryCellIdentifier];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     self.decimalFormatter = nil;
-    self.countryCellNib = nil;
-    self.countryCell = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -102,19 +91,6 @@ static NSString *UYLCountryCellIdentifier = @"UYLCountryCellIdentifier";
     return _decimalFormatter;
 }
 
-// The following accessor is no longer required with iOS 5 and was only 
-// included to provide an example of iOS 4 usage of UINib to load anc
-// cache the table view cell NIB.
-
-- (UINib *)countryCellNib
-{
-    if (!_countryCellNib)
-    {
-        _countryCellNib = [UINib nibWithNibName:@"CountryCell" bundle:nil];
-    }
-    return _countryCellNib;
-}
-
 #pragma mark -
 #pragma mark === UITableViewDataSource Delegate Methods ===
 #pragma mark -
@@ -133,21 +109,6 @@ static NSString *UYLCountryCellIdentifier = @"UYLCountryCellIdentifier";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:UYLCountryCellIdentifier];
-    
-    // The following code is now removed as with iOS 5 we can either
-    // register a NIB or use a Storyboard to load our custom cells.
-    
-    if (cell == nil)
-    {
-        // For iOS 4 we could use UINib to load and cache our table view cell and
-        // instantiate new instances. Prior to UINib it was necessary to load
-        // the cell Nib file each time:
-        // [[NSBundle mainBundle] loadNibNamed:@"CountryCell" owner:self options:nil];
-        
-        [self.countryCellNib instantiateWithOwner:self options:nil];
-        cell = self.countryCell;
-        self.countryCell = nil;
-    }
     
     Country *country = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
