@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11E53" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Country" representedClassName="Country" syncable="YES">
+        <attribute name="area" optional="YES" attributeType="Float" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="capital" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="continent" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="population" optional="YES" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="tld" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Country" positionX="160" positionY="192" width="128" height="165"/>
+    </elements>
+</model>

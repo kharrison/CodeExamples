@@ -1,0 +1,85 @@
+=======================================================================
+WorldFacts
+
+Version 1.0 6 June 2012     Initial Version
+=======================================================================
+
+The WorldFacts App demonstrates how to use Storyboards to create a 
+dynamic table view cell using a prototype cell. This is a big
+improvement over iOS 4 where it was necessary to design the cell
+in a separate NIB and then manually load it and instantiate each
+cell.
+
+For further details see:
+
+useyourloaf.com/blog/2012/06/06/prototype-cells-and-storyboards.html
+
+The geographic data used in this App is from GeoNames and used under
+the Creative Commons Attributions License (see www.geonames.org).
+
+=======================================================================
+Model
+=======================================================================
+
+WorldFacts.xcdatamodeld
+
+The core data model definition contains a single entity for the Country
+managed object.
+
+Country.h
+Country.m
+
+The generated NSManagedObject subclass
+
+Country+Extensions.h
+Country+Extensions.m
+
+Private class extensions for the Country NSManagedObject subclass to
+generate the section title used by the NSFetchedResultsController and
+to import an initial set of geographic data from countries.plist.
+
+=======================================================================
+View
+=======================================================================
+
+Country.storyboard
+The storyboard file used to create the table view and custom prototype
+cell.
+
+UYLCountryTableViewController.xib
+Traditional NIB file used to load the country table view when not using
+a storyboard. This NIB file is not used in the final version of the App
+but is included for reference.  If you want to revert back to
+using this NIB you will need to add it to the target.
+
+CountryCell.xib
+Traditional NIB file used to create the custom table view cell when not
+using a storyboard. This NIB file is not used in the final version of
+the App but is included for reference. If you want to revert back to
+using this NIB you will need to add it to the target.
+
+=======================================================================
+Controllers
+=======================================================================
+
+UYLCountryTableViewController.h
+UYLCountryTableViewController.m
+
+The table view controller used to show the list of countries with
+details on the capital and population in a custom cell layout. The 
+table view controller implementation is a standard implementation of
+an NSFetchResultsController.
+
+The key code showing how the cell NIB is loaded is contained in the
+method -tableView:cellForRowAtIndexPath:.
+
+=======================================================================
+App Delegate
+=======================================================================
+
+UYLAppDelegate.h
+UYLAppDelegate.m
+
+The App delegate is largely unmodified from the template code. It creates
+the root view controller using a storyboard and initialises the core data
+stack.
