@@ -6,7 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
-        <!--Country Table View Controller - World-->
+        <!--Country Table View Controller-->
         <scene sceneID="I61-og-j9n">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kez-8v-7FT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -54,10 +54,10 @@
                             <outlet property="delegate" destination="aQu-Jc-6o6" id="PNP-eh-FKG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="World" id="KCg-Ns-WYz"/>
+                    <navigationItem key="navigationItem" id="KCg-Ns-WYz"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="860" y="182"/>
+            <point key="canvasLocation" x="905" y="182"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="peP-4f-w1V">
@@ -75,7 +75,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="351" y="182"/>
+            <point key="canvasLocation" x="439" y="182"/>
         </scene>
     </scenes>
     <classes>

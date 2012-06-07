@@ -49,16 +49,17 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-//    UIStoryboard *countryStoryboard = [UIStoryboard storyboardWithName:@"Country" bundle:nil];
-//    UINavigationController *navController = [countryStoryboard instantiateInitialViewController];
-//    UYLCountryTableViewController *countryViewController = (UYLCountryTableViewController *)navController.topViewController;
+    UIStoryboard *countryStoryboard = [UIStoryboard storyboardWithName:@"Country" bundle:nil];
+    UINavigationController *navController = [countryStoryboard instantiateInitialViewController];
+    UYLCountryTableViewController *countryViewController = (UYLCountryTableViewController *)navController.topViewController;
 
-    UYLCountryTableViewController *countryViewController = [[UYLCountryTableViewController alloc]
-                                                            initWithNibName:@"UYLCountryTableViewController"
-                                                            bundle:nil];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:countryViewController];
-    countryViewController.managedObjectContext = self.managedObjectContext;   
+//  The following two lines are used to create the view controllers when not using storyboards
+//    UYLCountryTableViewController *countryViewController = [[UYLCountryTableViewController alloc]
+//                                                            initWithNibName:@"UYLCountryTableViewController"
+//                                                            bundle:nil];
+//    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:countryViewController];
     
+    countryViewController.managedObjectContext = self.managedObjectContext;   
     [Country importDataToMoc:self.managedObjectContext];
     
     self.window.rootViewController = navController;

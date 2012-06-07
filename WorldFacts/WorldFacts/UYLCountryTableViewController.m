@@ -62,8 +62,10 @@ static NSString *UYLCountryCellIdentifier = @"UYLCountryCellIdentifier";
     [super viewDidLoad];
     self.title = NSLocalizedString(@"World", @"World");
 
-    UINib *countryNib = [UINib nibWithNibName:@"CountryCell" bundle:nil];
-    [self.tableView registerNib:countryNib forCellReuseIdentifier:UYLCountryCellIdentifier];
+// When not using storyboards the following two lines load and register the NIB
+// for the country cell
+//    UINib *countryNib = [UINib nibWithNibName:@"CountryCell" bundle:nil];
+//    [self.tableView registerNib:countryNib forCellReuseIdentifier:UYLCountryCellIdentifier];
 }
 
 - (void)viewDidUnload
