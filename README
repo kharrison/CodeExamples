@@ -18,5 +18,5 @@
   TCNibLoad     - Example use of UINib class
   TwitterSearch - Example of using NSURLConnection to query Twitter API
   Stepper       - Example use of UIStepper control
-  WorldAtlas    - Using storyboards for dynamic table views
+  WorldFacts    - Using storyboards for dynamic table views
 =======================================================================
