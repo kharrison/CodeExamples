@@ -32,6 +32,7 @@
 
 
 #import "UYLCountryTableViewController.h"
+#import "UYLCountryViewController.h"
 #import "Country+Extensions.h"
 
 @interface UYLCountryTableViewController () <NSFetchedResultsControllerDelegate>
@@ -141,6 +142,18 @@ static NSString *UYLCountryCellIdentifier = @"UYLCountryCellIdentifier";
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
 {
     return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
+}
+
+#pragma mark -
+#pragma mark === UITableViewDelegate Methods ===
+#pragma mark -
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Country *country = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    UYLCountryViewController *viewController = [[UYLCountryViewController alloc] initWithNibName:@"UYLCountryViewController" bundle:nil];
+    viewController.country = country;
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 #pragma mark -
