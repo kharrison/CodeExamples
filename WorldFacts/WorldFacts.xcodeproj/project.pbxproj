@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		532CADEB158D1286002BEDC8 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 532CADEA158D1286002BEDC8 /* README */; };
 		538A797D157E567F0007B8A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538A797C157E567F0007B8A5 /* UIKit.framework */; };
 		538A797F157E567F0007B8A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538A797E157E567F0007B8A5 /* Foundation.framework */; };
 		538A7981157E567F0007B8A5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538A7980157E567F0007B8A5 /* CoreGraphics.framework */; };
@@ -22,10 +23,10 @@
 		53A87BF1157FAD42000DBAC9 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A87BF0157FAD42000DBAC9 /* Country.m */; };
 		53A87BF9157FC55A000DBAC9 /* UYLCountryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A87BF8157FC55A000DBAC9 /* UYLCountryTableViewController.xib */; };
 		53A87BFB157FD530000DBAC9 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A87BFA157FD530000DBAC9 /* CountryCell.xib */; };
-		53A87C051580074B000DBAC9 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 53A87C041580074B000DBAC9 /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		532CADEA158D1286002BEDC8 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		538A7978157E567F0007B8A5 /* WorldFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		538A797C157E567F0007B8A5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		538A797E157E567F0007B8A5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -48,7 +49,6 @@
 		53A87BF0157FAD42000DBAC9 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
 		53A87BF8157FC55A000DBAC9 /* UYLCountryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UYLCountryTableViewController.xib; sourceTree = "<group>"; };
 		53A87BFA157FD530000DBAC9 /* CountryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
-		53A87C041580074B000DBAC9 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +69,7 @@
 		538A796D157E567E0007B8A5 = {
 			isa = PBXGroup;
 			children = (
+				532CADEA158D1286002BEDC8 /* README */,
 				538A7984157E567F0007B8A5 /* WorldFacts */,
 				538A797B157E567F0007B8A5 /* Frameworks */,
 				538A7979157E567F0007B8A5 /* Products */,
@@ -97,7 +98,6 @@
 		538A7984157E567F0007B8A5 /* WorldFacts */ = {
 			isa = PBXGroup;
 			children = (
-				53A87C041580074B000DBAC9 /* README */,
 				538A798D157E567F0007B8A5 /* UYLAppDelegate.h */,
 				538A798E157E567F0007B8A5 /* UYLAppDelegate.m */,
 				538A7999157E56B60007B8A5 /* Model */,
@@ -207,7 +207,7 @@
 				538A79B2157E80D40007B8A5 /* countries.plist in Resources */,
 				53A87BF9157FC55A000DBAC9 /* UYLCountryTableViewController.xib in Resources */,
 				53A87BFB157FD530000DBAC9 /* CountryCell.xib in Resources */,
-				53A87C051580074B000DBAC9 /* README in Resources */,
+				532CADEB158D1286002BEDC8 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
