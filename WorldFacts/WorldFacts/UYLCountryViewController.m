@@ -64,6 +64,7 @@
 {
     [super viewDidLoad];
     
+    self.title = self.country.name;
     self.area.text = [NSNumberFormatter localizedStringFromNumber:self.country.area numberStyle:NSNumberFormatterDecimalStyle];
     self.population.text = [NSNumberFormatter localizedStringFromNumber:self.country.population numberStyle:NSNumberFormatterDecimalStyle];
 

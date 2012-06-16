@@ -49,6 +49,7 @@
 @synthesize decimalFormatter=_decimalFormatter;
 
 static NSString *UYLCountryCellIdentifier = @"UYLCountryCellIdentifier";
+static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
 
 #define UYL_COUNTRYCELLTAG_NAME     100
 #define UYL_COUNTRYCELLTAG_CAPITAL  200
@@ -78,6 +79,17 @@ static NSString *UYLCountryCellIdentifier = @"UYLCountryCellIdentifier";
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return YES;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{ 
+    if ([segue.identifier isEqualToString:UYLSegueShowCountry])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        Country *country = [self.fetchedResultsController objectAtIndexPath:indexPath];        
+        UYLCountryViewController *viewController = segue.destinationViewController;
+        viewController.country = country;
+    }
 }
 
 #pragma mark -
@@ -148,13 +160,13 @@ static NSString *UYLCountryCellIdentifier = @"UYLCountryCellIdentifier";
 #pragma mark === UITableViewDelegate Methods ===
 #pragma mark -
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    Country *country = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    UYLCountryViewController *viewController = [[UYLCountryViewController alloc] initWithNibName:@"UYLCountryViewController" bundle:nil];
-    viewController.country = country;
-    [self.navigationController pushViewController:viewController animated:YES];
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    Country *country = [self.fetchedResultsController objectAtIndexPath:indexPath];
+//    UYLCountryViewController *viewController = [[UYLCountryViewController alloc] initWithNibName:@"UYLCountryViewController" bundle:nil];
+//    viewController.country = country;
+//    [self.navigationController pushViewController:viewController animated:YES];
+//}
 
 #pragma mark -
 #pragma mark === Fetched Results Controller ===

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		532CADEB158D1286002BEDC8 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 532CADEA158D1286002BEDC8 /* README */; };
-		532CADF1158D1690002BEDC8 /* UYLCountryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532CADF0158D1690002BEDC8 /* UYLCountryViewController.xib */; };
 		532CADF5158D19D1002BEDC8 /* UYLCountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532CADF4158D19D1002BEDC8 /* UYLCountryViewController.m */; };
 		538A797D157E567F0007B8A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538A797C157E567F0007B8A5 /* UIKit.framework */; };
 		538A797F157E567F0007B8A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538A797E157E567F0007B8A5 /* Foundation.framework */; };
@@ -23,8 +22,6 @@
 		538A79B2157E80D40007B8A5 /* countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = 538A79B1157E80D40007B8A5 /* countries.plist */; };
 		53A87BE7157FA30A000DBAC9 /* Country+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A87BE6157FA30A000DBAC9 /* Country+Extensions.m */; };
 		53A87BF1157FAD42000DBAC9 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A87BF0157FAD42000DBAC9 /* Country.m */; };
-		53A87BF9157FC55A000DBAC9 /* UYLCountryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A87BF8157FC55A000DBAC9 /* UYLCountryTableViewController.xib */; };
-		53A87BFB157FD530000DBAC9 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A87BFA157FD530000DBAC9 /* CountryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -213,10 +210,7 @@
 				538A7989157E567F0007B8A5 /* InfoPlist.strings in Resources */,
 				538A79A9157E5ABD0007B8A5 /* Country.storyboard in Resources */,
 				538A79B2157E80D40007B8A5 /* countries.plist in Resources */,
-				53A87BF9157FC55A000DBAC9 /* UYLCountryTableViewController.xib in Resources */,
-				53A87BFB157FD530000DBAC9 /* CountryCell.xib in Resources */,
 				532CADEB158D1286002BEDC8 /* README in Resources */,
-				532CADF1158D1690002BEDC8 /* UYLCountryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
