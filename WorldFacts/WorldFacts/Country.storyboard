@@ -48,7 +48,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="4xJ-vC-W4h" kind="push" identifier="showCountry" id="dAh-XF-3i7"/>
+                                    <segue destination="4xJ-vC-W4h" kind="push" identifier="UYLSegueShowCountry" id="qcu-fI-o1d"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
