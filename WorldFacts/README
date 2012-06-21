@@ -1,7 +1,8 @@
 =======================================================================
 WorldFacts
 
-Version 1.0 6 June 2012     Initial Version
+Version 1.1 21 June 2012    Add Storyboard segue to country view
+Version 1.0  6 June 2012    Initial Version
 =======================================================================
 
 The WorldFacts App demonstrates how to use Storyboards to create a 
@@ -14,8 +15,14 @@ For further details see:
 
 useyourloaf.com/blog/2012/06/06/prototype-cells-and-storyboards.html
 
+For details on adding a storyboard segue to show the country detailed
+view see the following post:
+
+useyourloaf.com/blog/2012/06/21/stroyboard-segues.html
+
 The geographic data used in this App is from GeoNames and used under
 the Creative Commons Attributions License (see www.geonames.org).
+
 
 =======================================================================
 Model
@@ -58,6 +65,12 @@ using a storyboard. This NIB file is not used in the final version of
 the App but is included for reference. If you want to revert back to
 using this NIB you will need to add it to the target.
 
+UYLCountryViewController.xib
+Traditional NIB file used to show the country detail view when not using
+a storyboard. This NIB file is not used in the final version of the App
+but is included for reference. If you want to revert back to using this
+NIB you will need to add it to the target.
+
 =======================================================================
 Controllers
 =======================================================================
@@ -72,6 +85,13 @@ an NSFetchResultsController.
 
 The key code showing how the cell NIB is loaded is contained in the
 method -tableView:cellForRowAtIndexPath:.
+
+UYLCountryViewController.h
+UYLCountryViewController.m
+
+The view controller used to show the detailed country view. This view
+controller does almost nothing other than set up the view from the
+Country object it is passed.
 
 =======================================================================
 App Delegate
