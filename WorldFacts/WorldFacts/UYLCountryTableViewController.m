@@ -44,9 +44,9 @@
 
 @implementation UYLCountryTableViewController
 
-@synthesize managedObjectContext=__managedObjectContext;
-@synthesize fetchedResultsController=__fetchedResultsController;
-@synthesize decimalFormatter=_decimalFormatter;
+//@synthesize managedObjectContext=__managedObjectContext;
+//@synthesize fetchedResultsController=__fetchedResultsController;
+//@synthesize decimalFormatter=_decimalFormatter;
 
 static NSString *UYLCountryCellIdentifier = @"UYLCountryCellIdentifier";
 static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
@@ -174,9 +174,9 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
 
 - (NSFetchedResultsController *)fetchedResultsController
 {
-    if (__fetchedResultsController != nil)
+    if (_fetchedResultsController != nil)
     {
-        return __fetchedResultsController;
+        return _fetchedResultsController;
     }
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -200,7 +200,7 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
 	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 	}
     
-    return __fetchedResultsController;
+    return _fetchedResultsController;
 }    
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller

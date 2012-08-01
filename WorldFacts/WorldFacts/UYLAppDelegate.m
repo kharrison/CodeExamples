@@ -36,7 +36,7 @@
 
 @implementation UYLAppDelegate
 
-@synthesize window = _window;
+// @synthesize window = _window;
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;

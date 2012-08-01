@@ -47,14 +47,14 @@
 
 @implementation UYLCountryViewController
 
-@synthesize country=_country;
-@synthesize area=_area;
-@synthesize capital=_capital;
-@synthesize continent=_continent;
-@synthesize currency=_currency;
-@synthesize phone=_phone;
-@synthesize population=_population;
-@synthesize tld=_tld;
+//@synthesize country=_country;
+//@synthesize area=_area;
+//@synthesize capital=_capital;
+//@synthesize continent=_continent;
+//@synthesize currency=_currency;
+//@synthesize phone=_phone;
+//@synthesize population=_population;
+//@synthesize tld=_tld;
 
 #pragma mark -
 #pragma mark === View Life Cycle Management ===
