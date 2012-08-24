@@ -1,0 +1,71 @@
+=======================================================================
+Styles
+
+Version 1.0 24 August 2012    Initial Version
+=======================================================================
+
+The Styles App is an example of how to use the UIAppearance protocol to
+customise the appearance of common UIKit controls.
+
+For further details see:
+
+useyourloaf.com/blog/2012/08/24/using-appearance-proxy-to-style-apps.html
+
+
+=======================================================================
+App Delegate
+=======================================================================
+
+UYLAppDelegate.h
+UYLAppDelegate.m
+
+The App delegate is largely unmodified from the template code. The use of
+a storyboard to configure and load the UI means there is not much for the
+app delegate to do in this simple app other than setup the appearance.
+
+=======================================================================
+Style Controller
+=======================================================================
+
+The core of the appearance code is contained in the custom UYLStyleController
+class. This class has a single public class method +applyStyle which
+contains all of the UIAppearance related code. Refer to the blog post
+for a full description.
+
+=======================================================================
+Views
+=======================================================================
+
+MainStoryboard.storyboard
+
+The storyboard file defines the user interface for the application. It 
+uses a navigation controller with a static table view as the root view
+to list each of the UIKit control views.
+
+UYLOkButton.h
+UYLOkButton.m
+UYLResetButton.h
+UYLResetButton.m
+UYLZeroButton.h
+UYLZeroButton.m
+
+These classes are UIButton sub-classes that do nothing other than define
+a custom subclass used to allow the appearance of specific buttons to be
+modified.
+
+=======================================================================
+Controllers
+=======================================================================
+
+UYLListViewController.h
+UYLListViewController.m
+
+This is a subclass of UITableViewController used for the static table view
+containing the list of UIKit controls. The only method that the subclass
+actually contains is to enable interface rotation.
+
+UYLRotatingViewController.h
+UYLRotatingViewController.m
+
+This is a container class used for all of the UIKit control views. The viewDidLoad method is used to set the view background. It also implements
+the standard method to enable interface orientation.
