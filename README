@@ -3,7 +3,7 @@
 
   See http://useyourloaf.com for details
 
-  This README last updated: 07-June-2012
+  This README last updated: 24-August-2012
 =======================================================================
 
 + INDEX
@@ -18,5 +18,6 @@
   TCNibLoad     - Example use of UINib class
   TwitterSearch - Example of using NSURLConnection to query Twitter API
   Stepper       - Example use of UIStepper control
+  Styles        - Using UIAppearance proxy to style UIKit controls
   WorldFacts    - Using storyboards for dynamic table views
 =======================================================================
