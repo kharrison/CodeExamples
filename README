@@ -12,6 +12,7 @@
   AlertView     - Demo iOS 5 changes to UIAlertView
   MasterSlide   - Implementing a mail app style split view controller
   NibCollection - Example use of IBOutletCollection
+  RemindMe      - Scheduling local notifications with UILocaNotification
   StaticTable   - Using a storyboard to implement static table views
   SyncMe        - Example use of iCloud Key-value Storage
   TaskTimer     - Example of UIAccessibility Support

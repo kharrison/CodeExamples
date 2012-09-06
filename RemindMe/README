@@ -1,0 +1,18 @@
+=======================================================================
+RemindMe
+
+Version 1.0 31 July 2010     Initial release
+Version 1.1 06 September 2012 Minor updates to remove iOS 3 support
+=======================================================================
+
+The RemindMe App is a demonstration on how to schedule local notifications
+using the UILocalNotification class. The following blog post provides
+further details:
+
+useyourloaf.com/blog/2010/07/31/adding-local-notifications-with-ios-4.html
+
+Since the original posting the example code has been updated to set the
+minimum deployment target to be iOS 4.2. This has allowed some of the code
+required to protect from unknown classes when deploying to iOS 3.x to be
+removed. This project has been built using Xcode 4.4.1 building with a base SDK of iOS 5.1. It uses manual (non-ARC) based memory management.
+=======================================================================
