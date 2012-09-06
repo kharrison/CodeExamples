@@ -1,6 +1,7 @@
 =======================================================================
 WorldFacts
 
+Version 1.3  6 Sep  2012    Add a search bar
 Version 1.2  1 Aug  2012    Use default synthesis of ivars
 Version 1.1 21 June 2012    Add Storyboard segue to country view
 Version 1.0  6 June 2012    Initial Version
@@ -14,12 +15,17 @@ cell.
 
 For further details see:
 
-useyourloaf.com/blog/2012/06/06/prototype-cells-and-storyboards.html
+useyourloaf.com/blog/2012/06/07/prototype-cells-and-storyboards.html
 
 For details on adding a storyboard segue to show the country detailed
 view see the following post:
 
 useyourloaf.com/blog/2012/06/21/storyboard-segues.html
+
+The steps to add a search bar to the table view controller are covered
+in the following post:
+
+useyourloaf.com/blog/2012/09/06/search-bar-table-view-storyboard.html
 
 The geographic data used in this App is from GeoNames and used under
 the Creative Commons Attributions License (see www.geonames.org).

@@ -35,10 +35,19 @@
 #import "UYLCountryViewController.h"
 #import "Country+Extensions.h"
 
-@interface UYLCountryTableViewController () <NSFetchedResultsControllerDelegate>
+@interface UYLCountryTableViewController () <NSFetchedResultsControllerDelegate, UISearchDisplayDelegate, UISearchBarDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSNumberFormatter *decimalFormatter;
+@property (strong, nonatomic) NSArray *filteredList;
+@property (strong, nonatomic) NSFetchRequest *searchFetchRequest;
+
+typedef enum
+{
+    searchScopeCountry = 0,
+    searchScopeCapital = 1
+    
+} UYLWorldFactsSearchScope;
 
 @end
 
@@ -85,11 +94,25 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
 { 
     if ([segue.identifier isEqualToString:UYLSegueShowCountry])
     {
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-        Country *country = [self.fetchedResultsController objectAtIndexPath:indexPath];        
+        Country *country = nil;
+        if (self.searchDisplayController.isActive)
+        {
+            NSIndexPath *indexPath = [self.searchDisplayController.searchResultsTableView indexPathForCell:sender];
+            country = [self.filteredList objectAtIndex:indexPath.row];
+        }
+        else
+        {
+            NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+            country = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        }
         UYLCountryViewController *viewController = segue.destinationViewController;
         viewController.country = country;
     }
+}
+
+- (void)didReceiveMemoryWarning
+{
+    self.searchFetchRequest = nil;
 }
 
 #pragma mark -
@@ -106,26 +129,71 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
     return _decimalFormatter;
 }
 
+- (NSFetchRequest *)searchFetchRequest
+{
+    if (_searchFetchRequest != nil)
+    {
+        return _searchFetchRequest;
+    }
+    
+    _searchFetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Country" inManagedObjectContext:self.managedObjectContext];
+    [_searchFetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
+    [_searchFetchRequest setSortDescriptors:sortDescriptors];
+    
+    return _searchFetchRequest;
+}
+
 #pragma mark -
 #pragma mark === UITableViewDataSource Delegate Methods ===
 #pragma mark -
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [[self.fetchedResultsController sections] count];
+    if (tableView == self.tableView)
+    {
+        return [[self.fetchedResultsController sections] count];
+    }
+    else
+    {
+        return 1;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo numberOfObjects];
+    if (tableView == self.tableView)
+    {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+        return [sectionInfo numberOfObjects];
+    }
+    else
+    {
+        return [self.filteredList count];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:UYLCountryCellIdentifier];
+    // Note that here we are not using the tableView parameter to retrieve a new table view cell. Instead
+    // we always use self.tableView. This is necessary as our custom table view cell defined in the
+    // storyboard and is not registered with the search results table view but only with the original
+    // table.
     
-    Country *country = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:UYLCountryCellIdentifier];
+    
+    Country *country = nil;
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        country = [self.filteredList objectAtIndex:indexPath.row];
+    }
+    else
+    {
+        country = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    }
     
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:UYL_COUNTRYCELLTAG_NAME];
     nameLabel.text = country.name;
@@ -142,18 +210,56 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo name];
+    if (tableView == self.tableView)
+    {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+        return [sectionInfo name];
+    }
+    else
+    {
+        return nil;
+    }
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
-    return [self.fetchedResultsController sectionIndexTitles];
+    if (tableView == self.tableView)
+    {
+        NSMutableArray *index = [NSMutableArray arrayWithObject:UITableViewIndexSearch];
+        NSArray *initials = [self.fetchedResultsController sectionIndexTitles];
+        [index addObjectsFromArray:initials];
+        return index;
+    }
+    else
+    {
+        return nil;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
 {
-    return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
+    if (tableView == self.tableView)
+    {
+        if (index > 0)
+        {
+            // The index is offset by one to allow for the extra search icon inserted at the front
+            // of the index
+            
+            return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index-1];
+        }
+        else
+        {
+            // The first entry in the index is for the search icon so we return section not found
+            // and force the table to scroll to the top.
+            
+            self.tableView.contentOffset = CGPointZero;
+            return NSNotFound;
+        }
+    }
+    else
+    {
+        return 0;
+    }
 }
 
 #pragma mark -
@@ -206,6 +312,53 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
     [self.tableView reloadData];
+}
+
+#pragma mark -
+#pragma mark === UISearchDisplayDelegate ===
+#pragma mark -
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    UYLWorldFactsSearchScope scopeKey = controller.searchBar.selectedScopeButtonIndex;
+    [self searchForText:searchString scope:scopeKey];
+    return YES;
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
+{
+    NSString *searchString = controller.searchBar.text;
+    [self searchForText:searchString scope:searchOption];
+    return YES;
+}
+
+- (void)searchDisplayController:(UISearchDisplayController *)controller didLoadSearchResultsTableView:(UITableView *)tableView
+{
+    tableView.rowHeight = 64;
+}
+
+- (void)searchForText:(NSString *)searchText scope:(UYLWorldFactsSearchScope)scopeOption
+{
+    if (self.managedObjectContext)
+    {
+        NSString *predicateFormat = @"%K BEGINSWITH[cd] %@";
+        NSString *searchAttribute = @"name";
+        
+        if (scopeOption == searchScopeCapital)
+        {
+            searchAttribute = @"capital";
+        }
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateFormat, searchAttribute, searchText];
+        [self.searchFetchRequest setPredicate:predicate];
+        
+        NSError *error = nil;
+        self.filteredList = [self.managedObjectContext executeFetchRequest:self.searchFetchRequest error:&error];
+        if (error)
+        {
+            NSLog(@"searchFetchRequest failed: %@",[error localizedDescription]);
+        }
+    }
 }
 
 @end
