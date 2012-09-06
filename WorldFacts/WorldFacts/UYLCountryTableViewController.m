@@ -186,13 +186,13 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:UYLCountryCellIdentifier];
     
     Country *country = nil;
-    if (tableView == self.searchDisplayController.searchResultsTableView)
+    if (tableView == self.tableView)
     {
-        country = [self.filteredList objectAtIndex:indexPath.row];
+        country = [self.fetchedResultsController objectAtIndexPath:indexPath];
     }
     else
     {
-        country = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        country = [self.filteredList objectAtIndex:indexPath.row];
     }
     
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:UYL_COUNTRYCELLTAG_NAME];
