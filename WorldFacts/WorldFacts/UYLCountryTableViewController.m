@@ -42,6 +42,9 @@
 @property (strong, nonatomic) NSArray *filteredList;
 @property (strong, nonatomic) NSFetchRequest *searchFetchRequest;
 
+@property (strong, nonatomic) IBOutlet UITableViewCell *countryCell;
+@property (strong, nonatomic) UINib *countryCellNib;
+
 typedef enum
 {
     searchScopeCountry = 0,
@@ -52,10 +55,6 @@ typedef enum
 @end
 
 @implementation UYLCountryTableViewController
-
-//@synthesize managedObjectContext=__managedObjectContext;
-//@synthesize fetchedResultsController=__fetchedResultsController;
-//@synthesize decimalFormatter=_decimalFormatter;
 
 static NSString *UYLCountryCellIdentifier = @"UYLCountryCellIdentifier";
 static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
@@ -73,10 +72,11 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
     [super viewDidLoad];
     self.title = NSLocalizedString(@"World", @"World");
 
-// When not using storyboards the following two lines load and register the NIB
-// for the country cell
-//    UINib *countryNib = [UINib nibWithNibName:@"CountryCell" bundle:nil];
-//    [self.tableView registerNib:countryNib forCellReuseIdentifier:UYLCountryCellIdentifier];
+    // When not using storyboards the following two lines load and register the NIB
+    // for the country cell.
+    
+    // UINib *countryNib = [UINib nibWithNibName:@"CountryCell" bundle:nil];
+    // [self.tableView registerNib:countryNib forCellReuseIdentifier:UYLCountryCellIdentifier];
 }
 
 - (void)viewDidUnload
@@ -118,6 +118,15 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
 #pragma mark -
 #pragma mark === Accessors ===
 #pragma mark -
+
+- (UINib *)countryCellNib
+{
+    if (!_countryCellNib)
+    {
+        _countryCellNib = [UINib nibWithNibName:@"CountryCell" bundle:nil];
+    }
+    return _countryCellNib;
+}
 
 - (NSNumberFormatter *)decimalFormatter
 {
@@ -184,6 +193,16 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
     // table.
     
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:UYLCountryCellIdentifier];
+    
+    // A bug in iOS 5 causes the above call to not return with a new cell when VoiceOver is active.
+    // We therefore fallback to the old mechanism of manually loading the cell from the NIB file.
+    
+    if (cell == nil)
+    {
+        [self.countryCellNib instantiateWithOwner:self options:nil];
+        cell = self.countryCell;
+        self.countryCell = nil;
+    }
     
     Country *country = nil;
     if (tableView == self.tableView)
@@ -261,18 +280,6 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
         return 0;
     }
 }
-
-#pragma mark -
-#pragma mark === UITableViewDelegate Methods ===
-#pragma mark -
-
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    Country *country = [self.fetchedResultsController objectAtIndexPath:indexPath];
-//    UYLCountryViewController *viewController = [[UYLCountryViewController alloc] initWithNibName:@"UYLCountryViewController" bundle:nil];
-//    viewController.country = country;
-//    [self.navigationController pushViewController:viewController animated:YES];
-//}
 
 #pragma mark -
 #pragma mark === Fetched Results Controller ===

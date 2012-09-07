@@ -22,6 +22,7 @@
 		538A79B2157E80D40007B8A5 /* countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = 538A79B1157E80D40007B8A5 /* countries.plist */; };
 		53A87BE7157FA30A000DBAC9 /* Country+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A87BE6157FA30A000DBAC9 /* Country+Extensions.m */; };
 		53A87BF1157FAD42000DBAC9 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A87BF0157FAD42000DBAC9 /* Country.m */; };
+		53AE171015FA5BBE00911A7C /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A87BFA157FD530000DBAC9 /* CountryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -211,6 +212,7 @@
 				538A79A9157E5ABD0007B8A5 /* Country.storyboard in Resources */,
 				538A79B2157E80D40007B8A5 /* countries.plist in Resources */,
 				532CADEB158D1286002BEDC8 /* README in Resources */,
+				53AE171015FA5BBE00911A7C /* CountryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +253,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Keith Harrison (WT6HWP7T28)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -266,6 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "74BAAD79-977D-4BCF-BDFF-9A8D817AF82E";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
