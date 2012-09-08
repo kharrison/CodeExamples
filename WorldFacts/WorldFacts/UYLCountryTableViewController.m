@@ -56,6 +56,7 @@ typedef enum
 
 @implementation UYLCountryTableViewController
 
+static NSString *UYLNibCountryCellIdentifier = @"UYLNibCountryCellIdentifier";
 static NSString *UYLCountryCellIdentifier = @"UYLCountryCellIdentifier";
 static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
 
@@ -91,7 +92,8 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{ 
+{
+    NSLog(@"prepareForSeqgue: %@ - %@",segue.identifier, [sender reuseIdentifier]);
     if ([segue.identifier isEqualToString:UYLSegueShowCountry])
     {
         Country *country = nil;
@@ -194,17 +196,36 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
     // table.
     
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:UYLCountryCellIdentifier];
-    
+
+    // *******************************************************************************
+    // If you are targetting iOS 5 there is a serious bug here with VoiceOver active!!
+    // *******************************************************************************
+
     // A bug in iOS 5 causes the above call to not return with a new cell when VoiceOver is active.
     // We therefore fallback to the old mechanism of manually loading the cell from the NIB file.
+
+    // Unfortunately this has two side effects. Firstly we need to manually perform the segue
+    // when the row is selected. To ensure we only do that for the cells loaded manually we
+    // need to use a different reuseIdentifer.
     
+    // More seriously since the reuse mechanism does not work when VoiceOver is active
+    // new cells are allocated each time the table is reloaded or scrolled and never reused.
+
     if (cell == nil)
     {
-        [self.countryCellNib instantiateWithOwner:self options:nil];
-        cell = self.countryCell;
-        self.countryCell = nil;
+        // The following call should return cells for reuse but when VoiceOver is active
+        // it always returns nil
+        
+        cell = [self.tableView dequeueReusableCellWithIdentifier:UYLNibCountryCellIdentifier];
+        
+        if (cell == nil)
+        {
+            [self.countryCellNib instantiateWithOwner:self options:nil];
+            cell = self.countryCell;
+            self.countryCell = nil;
+        }
     }
-    
+
     Country *country = nil;
     if (tableView == self.tableView)
     {
@@ -279,6 +300,23 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
     else
     {
         return 0;
+    }
+}
+
+#pragma mark -
+#pragma mark === UITableViewDelegate ===
+#pragma mark -
+
+// The following method is implemented as a workaround for the iOS 5 bug when dequeuing
+// cells with VoiceOver active. When the cell is not loaded from the storyboard
+// we need to manually perform the segue.
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if ([cell.reuseIdentifier isEqualToString:UYLNibCountryCellIdentifier])
+    {
+        [self performSegueWithIdentifier:UYLSegueShowCountry sender:cell];
     }
 }
 
