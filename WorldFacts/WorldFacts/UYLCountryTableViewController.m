@@ -113,6 +113,7 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
 - (void)didReceiveMemoryWarning
 {
     self.searchFetchRequest = nil;
+    [super didReceiveMemoryWarning];
 }
 
 #pragma mark -
