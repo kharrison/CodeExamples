@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		532CADEB158D1286002BEDC8 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 532CADEA158D1286002BEDC8 /* README */; };
 		532CADF5158D19D1002BEDC8 /* UYLCountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532CADF4158D19D1002BEDC8 /* UYLCountryViewController.m */; };
+		53524B401691E77100719AF8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53524B391691E77100719AF8 /* Default-568h@2x.png */; };
+		53524B411691E77100719AF8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 53524B3A1691E77100719AF8 /* Default.png */; };
+		53524B421691E77100719AF8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53524B3B1691E77100719AF8 /* Default@2x.png */; };
+		53524B431691E77100719AF8 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 53524B3C1691E77100719AF8 /* Icon-Small.png */; };
+		53524B441691E77100719AF8 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53524B3D1691E77100719AF8 /* Icon-Small@2x.png */; };
+		53524B451691E77100719AF8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 53524B3E1691E77100719AF8 /* Icon.png */; };
+		53524B461691E77100719AF8 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53524B3F1691E77100719AF8 /* Icon@2x.png */; };
 		538A797D157E567F0007B8A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538A797C157E567F0007B8A5 /* UIKit.framework */; };
 		538A797F157E567F0007B8A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538A797E157E567F0007B8A5 /* Foundation.framework */; };
 		538A7981157E567F0007B8A5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538A7980157E567F0007B8A5 /* CoreGraphics.framework */; };
@@ -30,6 +37,13 @@
 		532CADF0158D1690002BEDC8 /* UYLCountryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UYLCountryViewController.xib; sourceTree = "<group>"; };
 		532CADF3158D19D1002BEDC8 /* UYLCountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLCountryViewController.h; sourceTree = "<group>"; };
 		532CADF4158D19D1002BEDC8 /* UYLCountryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLCountryViewController.m; sourceTree = "<group>"; };
+		53524B391691E77100719AF8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		53524B3A1691E77100719AF8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		53524B3B1691E77100719AF8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		53524B3C1691E77100719AF8 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		53524B3D1691E77100719AF8 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		53524B3E1691E77100719AF8 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		53524B3F1691E77100719AF8 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		538A7978157E567F0007B8A5 /* WorldFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		538A797C157E567F0007B8A5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		538A797E157E567F0007B8A5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -69,6 +83,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53524B241691D45C00719AF8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53524B391691E77100719AF8 /* Default-568h@2x.png */,
+				53524B3A1691E77100719AF8 /* Default.png */,
+				53524B3B1691E77100719AF8 /* Default@2x.png */,
+				53524B3C1691E77100719AF8 /* Icon-Small.png */,
+				53524B3D1691E77100719AF8 /* Icon-Small@2x.png */,
+				53524B3E1691E77100719AF8 /* Icon.png */,
+				53524B3F1691E77100719AF8 /* Icon@2x.png */,
+			);
+			name = Resources;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		538A796D157E567E0007B8A5 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +136,7 @@
 				538A799A157E56BF0007B8A5 /* Views */,
 				538A7998157E56A30007B8A5 /* Controllers */,
 				538A7985157E567F0007B8A5 /* Supporting Files */,
+				53524B241691D45C00719AF8 /* Resources */,
 			);
 			path = WorldFacts;
 			sourceTree = "<group>";
@@ -213,6 +243,13 @@
 				538A79B2157E80D40007B8A5 /* countries.plist in Resources */,
 				532CADEB158D1286002BEDC8 /* README in Resources */,
 				53AE171015FA5BBE00911A7C /* CountryCell.xib in Resources */,
+				53524B401691E77100719AF8 /* Default-568h@2x.png in Resources */,
+				53524B411691E77100719AF8 /* Default.png in Resources */,
+				53524B421691E77100719AF8 /* Default@2x.png in Resources */,
+				53524B431691E77100719AF8 /* Icon-Small.png in Resources */,
+				53524B441691E77100719AF8 /* Icon-Small@2x.png in Resources */,
+				53524B451691E77100719AF8 /* Icon.png in Resources */,
+				53524B461691E77100719AF8 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "74BAAD79-977D-4BCF-BDFF-9A8D817AF82E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E74808E4-A667-47F3-9D3D-467AE6C6A08A";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;

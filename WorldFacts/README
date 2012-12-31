@@ -1,6 +1,8 @@
 =======================================================================
 WorldFacts
 
+Version 1.4 31 Dec  2012    Add default launch images to support retina
+                            4 inch display
 Version 1.3  6 Sep  2012    Add a search bar
 Version 1.2  1 Aug  2012    Use default synthesis of ivars
 Version 1.1 21 June 2012    Add Storyboard segue to country view
