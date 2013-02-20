@@ -112,7 +112,7 @@
         return __persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"WorldFacts.sqlite"];
+    NSURL *storeURL = [[self applicationSupportDirectory] URLByAppendingPathComponent:@"WorldFacts.sqlite"];
     
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
@@ -138,10 +138,12 @@
     }
 }
 
-- (NSURL *)applicationDocumentsDirectory
+- (NSURL *)applicationSupportDirectory
 {
-    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory
-                                                   inDomains:NSUserDomainMask] lastObject];
+    NSError *error = nil;
+    NSFileManager *fileManager = [[NSFileManager alloc] init];
+    NSURL *appSupportDir = [fileManager URLForDirectory:NSApplicationSupportDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:&error];
+    return appSupportDir;
 }
 
 @end
