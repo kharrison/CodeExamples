@@ -1,0 +1,29 @@
+=======================================================================
+Restore - State Preservation and Restoration of Table View
+
+Version 1.0     07 April 2013   Initial version.
+=======================================================================
+
+This is a example project to reproduce a bug in the iOS 6 state preservation
+and restoration code. The state of a table view is not restored when the table
+is embedded in a navigation controller.
+
+The project contains two storyboards to demonstrate state restoration of a table
+view both when it is the root view and when it is embedded in a navigation
+controller:
+
+If the Target settings are used to set the Main Storyboad to NavStoryboard the 
+user inteface consists of UITableView embedded in a Navigation Controller. In 
+this use case the table view state is not restored.
+
+If the Target settings are used to set the Main Storyboard to MainStoryboard the 
+user interface consists of a single UITableView which does have state restored 
+as expected.
+
+For further details see the following blog post:
+
+http://useyourloaf.com/blog/2013/04/07/bug-table-view-state-not-restored-when-embedded-in-navigation-controller.html
+
+**************************************************************************
+*** This bug has been tested and reproduced for iOS 6.0 and iOS 6.1.3. ***
+**************************************************************************
