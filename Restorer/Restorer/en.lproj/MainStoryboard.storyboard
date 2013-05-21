@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="15">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nB4-WC-JIG" kind="relationship" relationship="viewControllers" id="4dp-Rn-P7M"/>
+                        <segue destination="hd0-3g-mQA" kind="relationship" relationship="viewControllers" id="GQj-bz-Lck"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78" y="272"/>
+        </scene>
+        <!--Table View Controller - Countries-->
+        <scene sceneID="ldb-MY-62c">
+            <objects>
+                <tableViewController storyboardIdentifier="CountryTVCID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fow-qg-25e" customClass="UYLTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="CountryTVID" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cqd-FH-55v">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UYLCountryCell" textLabel="tul-He-xcy" style="IBUITableViewCellStyleDefault" id="4rd-48-mh7">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tul-He-xcy">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="Acu-ec-qdP" kind="push" identifier="UYLSegueShowCountry" id="4sR-Xs-uTo"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Fow-qg-25e" id="Cjm-H1-n4f"/>
+                            <outlet property="delegate" destination="Fow-qg-25e" id="j9L-rZ-26v"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Countries" id="vZK-WB-62N"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUv-Kw-6pN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180" y="-190"/>
+        </scene>
+        <!--Settings View Controller - Settings-->
+        <scene sceneID="T55-3p-5de">
+            <objects>
+                <viewController storyboardIdentifier="SettingsVCID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k3p-EJ-PDh" customClass="UYLSettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sm9-Yd-mOH">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Amazing  Feature" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X8N-Lq-Ehr">
+                                <rect key="frame" x="20" y="73" width="185" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="gqL-c4-fzz">
+                                <rect key="frame" x="223" y="70" width="79" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="amazingAction" destination="k3p-EJ-PDh" eventType="valueChanged" id="NxE-Fi-v7e"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="Vfo-ND-8ez"/>
+                    <connections>
+                        <outlet property="amazingSwitch" destination="gqL-c4-fzz" id="fWb-Fs-vzb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PCE-sF-fGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1209" y="743"/>
+        </scene>
+        <!--Country View Controller - Capital-->
+        <scene sceneID="WpS-aC-YbB">
+            <objects>
+                <viewController storyboardIdentifier="CountryVCID" title="Capital" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Acu-ec-qdP" customClass="UYLCountryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hSO-cB-KC3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Capital" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mov-eZ-ZFu">
+                                <rect key="frame" x="20" y="60" width="280" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Capital City" id="zej-oX-Y1g"/>
+                    <connections>
+                        <outlet property="capitalLabel" destination="Mov-eZ-ZFu" id="hnx-Ze-F9z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3oI-kS-ag7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1736" y="-190"/>
+        </scene>
+        <!--Navigation Controller - Countries-->
+        <scene sceneID="mGh-Ad-M8f">
+            <objects>
+                <navigationController storyboardIdentifier="CountryNCID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nB4-WC-JIG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Countries" image="first.png" id="Wdl-4f-IlF"/>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="buu-qO-hTB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fow-qg-25e" kind="relationship" relationship="rootViewController" id="q8H-LV-Tzp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OYi-Ps-Ezo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="615" y="-190"/>
+        </scene>
+        <!--Navigation Controller - Settings-->
+        <scene sceneID="FlU-TW-8Oi">
+            <objects>
+                <navigationController storyboardIdentifier="SettingsNCID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hd0-3g-mQA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="second.png" id="kvk-Gd-s0r"/>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="v3T-Z6-gJb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="k3p-EJ-PDh" kind="relationship" relationship="rootViewController" id="ZK5-fy-Qee"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fH-SG-Ioo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="629" y="743"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first.png" width="30" height="30"/>
+        <image name="second.png" width="30" height="30"/>
+    </resources>
+    <classes>
+        <class className="UYLCountryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UYLCountryViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="capitalLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="UYLSettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UYLSettingsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="amazingSwitch" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+        <class className="UYLTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UYLTableViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

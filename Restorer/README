@@ -1,0 +1,16 @@
+=======================================================================
+Restorer
+
+Verison 1.0 21 May 2012   Initial Version
+=======================================================================
+
+The Restorer App demonstrates how to add support for State Preservation and
+Restoration to an iOS 6 App.
+
+For further details see:
+
+http://localhost:4000/blog/2013/05/21/state-preservation-and-restoration.html
+
+
+The geographic data used in this App is from GeoNames and used under
+the Creative Commons Attributions License (see www.geonames.org).
