@@ -1,6 +1,8 @@
 =======================================================================
 Restorer
 
+Version 1.1 23 May 2013   Added example of using a restoration class 
+                          with a UIWebView
 Version 1.0 21 May 2012   Initial Version
 =======================================================================
 

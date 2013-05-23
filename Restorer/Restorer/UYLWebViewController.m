@@ -1,5 +1,5 @@
 //
-//  UYLTextViewController.m
+//  UYLWebViewController.m
 //  Restorer
 //
 // Created by Keith Harrison http://useyourloaf.com
@@ -31,55 +31,60 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-#import "UYLSettingsViewController.h"
 #import "UYLWebViewController.h"
-#import "UYLAppDelegate.h"
 
-@interface UYLSettingsViewController ()
-@property (nonatomic, weak) IBOutlet UISwitch *amazingSwitch;
+@interface UYLWebViewController () <UIViewControllerRestoration>
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (nonatomic) BOOL restoringState;
 @end
 
-@implementation UYLSettingsViewController
+@implementation UYLWebViewController
 
 #pragma mark -
 #pragma mark === View Life Cycle Management ===
 #pragma mark -
-
-- (void)viewDidLoad
-{
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    self.amazingSwitch.on = [defaults boolForKey:kUYLSettingsAmazingKey];
-}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return YES;
 }
 
-- (void)didDismissPresentedView
+- (void)viewDidAppear:(BOOL)animated
 {
-	[self.presentedViewController dismissViewControllerAnimated:YES completion:NULL];
+    [super viewDidAppear:animated];
+    if (self.restoringState)
+    {
+        [self.webView reload];
+        self.restoringState = NO;
+    }
+}
+
+- (void)showPage:(NSString *)urlString
+{
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+    [self.webView loadRequest:request];
 }
 
 #pragma mark -
-#pragma mark === Target-Actions ===
+#pragma mark === State Restoration ===
 #pragma mark -
 
-- (IBAction)amazingAction
+- (void)decodeRestorableStateWithCoder:(NSCoder *)coder
 {
-    BOOL amazingEnabled = self.amazingSwitch.isOn;
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setBool:amazingEnabled forKey:kUYLSettingsAmazingKey];
-    [defaults synchronize];
+    [super decodeRestorableStateWithCoder:coder];
+    self.restoringState = YES;
 }
 
-- (IBAction)pushMe
+#pragma mark -
+#pragma mark === UIViewControllerRestoration Protocol ===
+#pragma mark -
+
++ (UIViewController *)viewControllerWithRestorationIdentifierPath:(NSArray *)identifierComponents coder:(NSCoder *)coder
 {
-    UYLWebViewController *wvc = [[UYLWebViewController alloc] initWithNibName:@"UYLWebViewController" bundle:nil];
-    wvc.restorationIdentifier = @"UYLWebViewController";
-    wvc.restorationClass = [UYLWebViewController class];
-    [self.navigationController pushViewController:wvc animated:YES];
-    [wvc showPage:@"http://useyourloaf.com"];
+    UIViewController *viewController = [[UYLWebViewController alloc] initWithNibName:@"UYLWebViewController" bundle:nil];
+    viewController.restorationIdentifier = [identifierComponents lastObject];
+    viewController.restorationClass = [UYLWebViewController class];
+    return viewController;
 }
 
 @end

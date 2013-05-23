@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		531447D3174EBE2400E1AE4F /* UYLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531447D2174EBE2400E1AE4F /* UYLWebViewController.m */; };
+		531447D5174EBE4B00E1AE4F /* UYLWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 531447D4174EBE4B00E1AE4F /* UYLWebViewController.xib */; };
 		535CDCD2174C2E440021AE7F /* README in Resources */ = {isa = PBXBuildFile; fileRef = 535CDCD1174C2E440021AE7F /* README */; };
 		53844B4016F7B2E0007B7561 /* countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53844B3F16F7B2E0007B7561 /* countries.plist */; };
 		53844B4316F7B7F0007B7561 /* UYLCountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53844B4216F7B7F0007B7561 /* UYLCountryViewController.m */; };
@@ -29,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		531447D1174EBE2400E1AE4F /* UYLWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLWebViewController.h; sourceTree = "<group>"; };
+		531447D2174EBE2400E1AE4F /* UYLWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLWebViewController.m; sourceTree = "<group>"; };
+		531447D4174EBE4B00E1AE4F /* UYLWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UYLWebViewController.xib; sourceTree = "<group>"; };
 		535CDCD1174C2E440021AE7F /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		53844B3F16F7B2E0007B7561 /* countries.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = countries.plist; sourceTree = "<group>"; };
 		53844B4116F7B7F0007B7561 /* UYLCountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLCountryViewController.h; sourceTree = "<group>"; };
@@ -128,6 +133,7 @@
 		53EA99DD16F7B0290005DF78 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				531447D4174EBE4B00E1AE4F /* UYLWebViewController.xib */,
 				53844B9816F7CFC3007B7561 /* first.png */,
 				53844B9916F7CFC3007B7561 /* first@2x.png */,
 				53844B9A16F7CFC3007B7561 /* second.png */,
@@ -147,6 +153,8 @@
 				53844B4216F7B7F0007B7561 /* UYLCountryViewController.m */,
 				53844B4416F7BE98007B7561 /* UYLSettingsViewController.h */,
 				53844B4516F7BE98007B7561 /* UYLSettingsViewController.m */,
+				531447D1174EBE2400E1AE4F /* UYLWebViewController.h */,
+				531447D2174EBE2400E1AE4F /* UYLWebViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -214,6 +222,7 @@
 				53844B9E16F7CFC4007B7561 /* second.png in Resources */,
 				53844B9F16F7CFC4007B7561 /* second@2x.png in Resources */,
 				535CDCD2174C2E440021AE7F /* README in Resources */,
+				531447D5174EBE4B00E1AE4F /* UYLWebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +238,7 @@
 				53EA99E116F7B06A0005DF78 /* UYLTableViewController.m in Sources */,
 				53844B4316F7B7F0007B7561 /* UYLCountryViewController.m in Sources */,
 				53844B4616F7BE98007B7561 /* UYLSettingsViewController.m in Sources */,
+				531447D3174EBE2400E1AE4F /* UYLWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

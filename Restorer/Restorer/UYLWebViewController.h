@@ -1,5 +1,5 @@
 //
-//  UYLTextViewController.m
+//  UYLWebViewController.h
 //  Restorer
 //
 // Created by Keith Harrison http://useyourloaf.com
@@ -31,55 +31,8 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-#import "UYLSettingsViewController.h"
-#import "UYLWebViewController.h"
-#import "UYLAppDelegate.h"
+#import <UIKit/UIKit.h>
 
-@interface UYLSettingsViewController ()
-@property (nonatomic, weak) IBOutlet UISwitch *amazingSwitch;
-@end
-
-@implementation UYLSettingsViewController
-
-#pragma mark -
-#pragma mark === View Life Cycle Management ===
-#pragma mark -
-
-- (void)viewDidLoad
-{
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    self.amazingSwitch.on = [defaults boolForKey:kUYLSettingsAmazingKey];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
-}
-
-- (void)didDismissPresentedView
-{
-	[self.presentedViewController dismissViewControllerAnimated:YES completion:NULL];
-}
-
-#pragma mark -
-#pragma mark === Target-Actions ===
-#pragma mark -
-
-- (IBAction)amazingAction
-{
-    BOOL amazingEnabled = self.amazingSwitch.isOn;
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setBool:amazingEnabled forKey:kUYLSettingsAmazingKey];
-    [defaults synchronize];
-}
-
-- (IBAction)pushMe
-{
-    UYLWebViewController *wvc = [[UYLWebViewController alloc] initWithNibName:@"UYLWebViewController" bundle:nil];
-    wvc.restorationIdentifier = @"UYLWebViewController";
-    wvc.restorationClass = [UYLWebViewController class];
-    [self.navigationController pushViewController:wvc animated:YES];
-    [wvc showPage:@"http://useyourloaf.com"];
-}
-
+@interface UYLWebViewController : UIViewController
+- (void)showPage:(NSString *)utlString;
 @end
