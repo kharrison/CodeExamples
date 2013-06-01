@@ -37,6 +37,8 @@
 
 NSString *kUYLSettingsAmazingKey = @"amazing";
 
+#define BUNDLEMINVERSION 2
+
 // Common initilisation code for backward compatibility with iOS 5
 - (void)commonFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -77,7 +79,7 @@ NSString *kUYLSettingsAmazingKey = @"amazing";
     // have made significant changes to the view hierarchy.
     
     NSString *restorationBundleVersion = [coder decodeObjectForKey:UIApplicationStateRestorationBundleVersionKey];
-    if ([restorationBundleVersion integerValue] < 2)
+    if ([restorationBundleVersion integerValue] < BUNDLEMINVERSION)
     {
         NSLog(@"Ignoring restoration data for bundle version: %@",restorationBundleVersion);
         return NO;
