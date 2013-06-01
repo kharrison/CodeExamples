@@ -1,9 +1,11 @@
 =======================================================================
 Restorer
 
+Version 1.2 01 Jun 2013   Added checks for bundle version and user
+                          interface idiom when restoring.
 Version 1.1 23 May 2013   Added example of using a restoration class 
                           with a UIWebView
-Version 1.0 21 May 2012   Initial Version
+Version 1.0 21 May 2013   Initial Version
 =======================================================================
 
 The Restorer App demonstrates how to add support for State Preservation and
