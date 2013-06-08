@@ -33,10 +33,6 @@
 
 @implementation RootViewController
 
-- (void)dealloc
-{
-    [super dealloc];
-}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return YES;
@@ -52,7 +48,6 @@
         SearchViewController *viewController = [[SearchViewController alloc] initWithNibName:@"SearchViewController" bundle:nil];
         viewController.query = [NSString stringWithFormat:@"%@", textField.text];
         [[self navigationController] pushViewController:viewController animated:YES];
-        [viewController release];
     }
 	[textField resignFirstResponder];
 	return YES;

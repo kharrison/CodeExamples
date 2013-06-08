@@ -29,7 +29,6 @@
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
 
 #import "SearchViewController.h"
-#import "SBJSON.h"
 
 @interface SearchViewController ()
 - (void)loadQuery;
@@ -70,11 +69,6 @@
 - (void)dealloc
 {
     [self cancelConnection];
-    [_connection release];
-    [_buffer release];
-    [_results release];
-    [_query release];
-    [super dealloc];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -105,9 +99,9 @@
     if ((count == 0) && (indexPath.row == 0)) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LoadCellIdentifier];
         if (cell == nil) {
-            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
-                                           reuseIdentifier:LoadCellIdentifier] autorelease];
-            cell.textLabel.textAlignment = UITextAlignmentCenter;
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
+                                           reuseIdentifier:LoadCellIdentifier];
+            cell.textLabel.textAlignment = NSTextAlignmentCenter;
         }
         
         if (self.connection) {
@@ -120,8 +114,8 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ResultCellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
-                                       reuseIdentifier:ResultCellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
+                                       reuseIdentifier:ResultCellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.textLabel.numberOfLines = 0;
         cell.textLabel.font = [UIFont systemFontOfSize:14.0];
@@ -154,7 +148,7 @@
                             RESULTS_PERPAGE,self.query];
     path = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:path]];
-    self.connection = [[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease];    
+    self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];    
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 }
 
@@ -173,11 +167,10 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     self.connection = nil;
     
-    NSString *jsonString = [[NSString alloc] initWithData:self.buffer encoding:NSUTF8StringEncoding];
-    NSDictionary *jsonResults = [jsonString JSONValue];
+    NSError *jsonParsingError = nil;
+    NSDictionary *jsonResults = [NSJSONSerialization JSONObjectWithData:self.buffer options:0 error:&jsonParsingError];
     self.results = [jsonResults objectForKey:@"results"];
     
-    [jsonString release];
     self.buffer = nil;
     [self.tableView reloadData];
     [self.tableView flashScrollIndicators];
@@ -202,7 +195,6 @@
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
     [alertView show];
-    [alertView release];
 }
 
 - (void)cancelConnection
