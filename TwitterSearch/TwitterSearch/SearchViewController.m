@@ -30,18 +30,7 @@
 
 #import "SearchViewController.h"
 
-@interface SearchViewController ()
-- (void)loadQuery;
-- (void)handleError:(NSError *)error;
-- (void)cancelConnection;
-@end
-
 @implementation SearchViewController
-
-@synthesize query=_query;
-@synthesize connection=_connection;
-@synthesize buffer=_buffer;
-@synthesize results=_results;
 
 #pragma mark -
 #pragma mark === View Setup ===
@@ -55,14 +44,9 @@
     [self loadQuery];
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    [self cancelConnection];
-}
-
 - (void)viewWillDisappear:(BOOL)animated
 {
+    [super viewWillDisappear:animated];
     [self cancelConnection];
 }
 
