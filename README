@@ -12,7 +12,7 @@
   AlertView     - Demo iOS 5 changes to UIAlertView
   MasterSlide   - Implementing a mail app style split view controller
   NibCollection - Example use of IBOutletCollection
-  Refresh		- Using a UIRefreshControl in a table view controller
+  Refresh       - Using a UIRefreshControl in a table view controller
   RemindMe      - Scheduling local notifications with UILocaNotification
   Restorer      - State Preservation and Restoration
   StaticTable   - Using a storyboard to implement static table views
