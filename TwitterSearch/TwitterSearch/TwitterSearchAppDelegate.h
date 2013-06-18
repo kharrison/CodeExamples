@@ -30,11 +30,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TwitterSearchAppDelegate : NSObject <UIApplicationDelegate> {
+@interface TwitterSearchAppDelegate : NSObject <UIApplicationDelegate>
 
-}
-
-@property (nonatomic, strong) IBOutlet UIWindow *window;
-@property (nonatomic, strong) IBOutlet UINavigationController *navigationController;
+@property (nonatomic, strong) UIWindow *window;
 
 @end

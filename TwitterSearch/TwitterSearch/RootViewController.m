@@ -34,7 +34,8 @@
 @implementation RootViewController
 
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
     return YES;
 }
 
@@ -42,15 +43,28 @@
 #pragma mark === Text field delegate methods ===
 #pragma mark -
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    
-    if (textField.text) {
-        SearchViewController *viewController = [[SearchViewController alloc] initWithNibName:@"SearchViewController" bundle:nil];
-        viewController.query = [NSString stringWithFormat:@"%@", textField.text];
-        [[self navigationController] pushViewController:viewController animated:YES];
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField.text)
+    {
+        [self performSegueWithIdentifier:@"SegueSearchView" sender:textField];
     }
 	[textField resignFirstResponder];
 	return YES;
+}
+
+#pragma mark -
+#pragma mark === Segue ===
+#pragma mark -
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"SegueSearchView"])
+    {
+        UITextField *textField = sender;
+        SearchViewController *viewController = segue.destinationViewController;
+        viewController.query = [NSString stringWithFormat:@"%@", textField.text];
+    }
 }
 
 @end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53432FE8176E71DF0015F986 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53432FE7176E71DF0015F986 /* Storyboard.storyboard */; };
+		53852EDA176B9A6900EC1107 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53852ED9176B9A6900EC1107 /* Social.framework */; };
+		53852EDC176BA6DA00EC1107 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53852EDB176BA6DA00EC1107 /* Accounts.framework */; };
 		53CB80FE139D70FF0030ADD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CB80FD139D70FF0030ADD7 /* UIKit.framework */; };
 		53CB8100139D70FF0030ADD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CB80FF139D70FF0030ADD7 /* Foundation.framework */; };
 		53CB8102139D70FF0030ADD7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CB8101139D70FF0030ADD7 /* CoreGraphics.framework */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53432FE7176E71DF0015F986 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		53852ED9176B9A6900EC1107 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		53852EDB176BA6DA00EC1107 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		53CB80F9139D70FF0030ADD7 /* TwitterSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53CB80FD139D70FF0030ADD7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		53CB80FF139D70FF0030ADD7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -55,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53852EDC176BA6DA00EC1107 /* Accounts.framework in Frameworks */,
+				53852EDA176B9A6900EC1107 /* Social.framework in Frameworks */,
 				53CB80FE139D70FF0030ADD7 /* UIKit.framework in Frameworks */,
 				53CB8100139D70FF0030ADD7 /* Foundation.framework in Frameworks */,
 				53CB8102139D70FF0030ADD7 /* CoreGraphics.framework in Frameworks */,
@@ -84,6 +92,8 @@
 		53CB80FC139D70FF0030ADD7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				53852EDB176BA6DA00EC1107 /* Accounts.framework */,
+				53852ED9176B9A6900EC1107 /* Social.framework */,
 				53CB80FD139D70FF0030ADD7 /* UIKit.framework */,
 				53CB80FF139D70FF0030ADD7 /* Foundation.framework */,
 				53CB8101139D70FF0030ADD7 /* CoreGraphics.framework */,
@@ -128,6 +138,7 @@
 				53CB810F139D70FF0030ADD7 /* MainWindow.xib */,
 				53CB8115139D70FF0030ADD7 /* RootViewController.xib */,
 				53CB812C139D73C00030ADD7 /* SearchViewController.xib */,
+				53432FE7176E71DF0015F986 /* Storyboard.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -191,6 +202,7 @@
 				53D3D83F1763C232001E5C7C /* Icon@2x.png in Resources */,
 				53D3D8411763C238001E5C7C /* Default.png in Resources */,
 				53D3D8431763C23C001E5C7C /* Default@2x.png in Resources */,
+				53432FE8176E71DF0015F986 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

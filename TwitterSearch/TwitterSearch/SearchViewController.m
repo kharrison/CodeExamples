@@ -1,7 +1,7 @@
 //
 //  SearchViewController.m
 //  Created by Keith Harrison on 06-June-2011 http://useyourloaf.com
-//  Copyright (c) 2011 Keith Harrison. All rights reserved.
+//  Copyright (c) 2013 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -29,8 +29,61 @@
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
 
 #import "SearchViewController.h"
+#import <Accounts/Accounts.h>
+#import <Social/Social.h>
+
+typedef NS_ENUM(NSUInteger, UYLTwitterSearchState)
+{
+    UYLTwitterSearchStateLoading,
+    UYLTwitterSearchStateNotFound,
+    UYLTwitterSearchStateRefused,
+    UYLTwitterSearchStateFailed
+};
+
+@interface SearchViewController ()
+
+@property (nonatomic,strong) NSURLConnection *connection;
+@property (nonatomic,strong) NSMutableData *buffer;
+@property (nonatomic,strong) NSMutableArray *results;
+@property (nonatomic,strong) ACAccountStore *accountStore;
+@property (nonatomic,assign) UYLTwitterSearchState searchState;
+
+@end
 
 @implementation SearchViewController
+
+- (ACAccountStore *)accountStore
+{
+    if (_accountStore == nil)
+    {
+        _accountStore = [[ACAccountStore alloc] init];
+    }
+    return _accountStore;
+}
+
+- (NSString *)searchMessageForState:(UYLTwitterSearchState)state
+{
+    switch (state)
+    {
+        case UYLTwitterSearchStateLoading:
+            return @"Loading...";
+            break;
+        case UYLTwitterSearchStateNotFound:
+            return @"No results found";
+            break;
+        case UYLTwitterSearchStateRefused:
+            return @"Twitter Access Refused";
+            break;
+        default:
+            return @"Not Available";
+            break;
+    }
+}
+
+- (IBAction)refreshSearchResults
+{
+    [self loadQuery];
+}
 
 #pragma mark -
 #pragma mark === View Setup ===
@@ -39,6 +92,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Add the target action to the refresh control as it seems not to take
+    // effect when set in the storyboard.
+    
+    [self.refreshControl addTarget:self action:@selector(refreshSearchResults) forControlEvents:UIControlEventValueChanged];
     
     self.title = self.query;
     [self loadQuery];
@@ -55,7 +113,8 @@
     [self cancelConnection];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
     return YES;
 }
 
@@ -80,42 +139,27 @@
     static NSString *LoadCellIdentifier = @"LoadingCell";
     
     NSUInteger count = [self.results count];
-    if ((count == 0) && (indexPath.row == 0)) {
+    if ((count == 0) && (indexPath.row == 0))
+    {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LoadCellIdentifier];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
-                                           reuseIdentifier:LoadCellIdentifier];
-            cell.textLabel.textAlignment = NSTextAlignmentCenter;
-        }
-        
-        if (self.connection) {
-            cell.textLabel.text = @"Loading...";
-        } else {
-            cell.textLabel.text = @"Not available";
-        }
+        cell.textLabel.text = [self searchMessageForState:self.searchState];
         return cell;
     }
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ResultCellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
-                                       reuseIdentifier:ResultCellIdentifier];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.textLabel.numberOfLines = 0;
-        cell.textLabel.font = [UIFont systemFontOfSize:14.0];
-    }
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ResultCellIdentifier];    
     NSDictionary *tweet = [self.results objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@: %@", [tweet objectForKey:@"from_user"],
-                           [tweet objectForKey:@"text"]];
+    cell.textLabel.text = [tweet objectForKey:@"text"];
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (indexPath.row & 1) {
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{   
+    if (indexPath.row & 1)
+    {
         cell.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
-    } else {
+    }
+    else
+    {
         cell.backgroundColor = [UIColor whiteColor];
     }
 }
@@ -124,20 +168,50 @@
 #pragma mark === Private methods ===
 #pragma mark -
 
-#define RESULTS_PERPAGE 100
+#define RESULTS_PERPAGE @"100"
 
-- (void)loadQuery {
+- (void)loadQuery
+{
+    self.searchState = UYLTwitterSearchStateLoading;
+    NSString *encodedQuery = [self.query stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
-    NSString *path = [NSString stringWithFormat:@"http://search.twitter.com/search.json?rpp=%d&q=%@",
-                            RESULTS_PERPAGE,self.query];
-    path = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:path]];
-    self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];    
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    ACAccountType *accountType = [self.accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+    [self.accountStore requestAccessToAccountsWithType:accountType
+                                               options:NULL
+                                            completion:^(BOOL granted, NSError *error)
+     {
+         if (granted)
+         {
+             NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json"];
+             NSDictionary *parameters = @{@"count" : RESULTS_PERPAGE,
+                                          @"q" : encodedQuery};
+             
+             SLRequest *slRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter
+                                                     requestMethod:SLRequestMethodGET
+                                                               URL:url
+                                                        parameters:parameters];
+             
+             NSArray *accounts = [self.accountStore accountsWithAccountType:accountType];
+             slRequest.account = [accounts lastObject];             
+             NSURLRequest *request = [slRequest preparedURLRequest];
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+                 [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+             });
+         }
+         else
+         {
+             NSLog(@"Access refused: %@",[error localizedDescription]);
+             self.searchState = UYLTwitterSearchStateRefused;
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 [self.tableView reloadData];
+             });
+         }
+     }];
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
     self.buffer = [NSMutableData data];
 }
 
@@ -146,25 +220,41 @@
     [self.buffer appendData:data];
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     self.connection = nil;
     
     NSError *jsonParsingError = nil;
     NSDictionary *jsonResults = [NSJSONSerialization JSONObjectWithData:self.buffer options:0 error:&jsonParsingError];
-    self.results = [jsonResults objectForKey:@"results"];
+    
+    self.results = [jsonResults objectForKey:@"statuses"];
+    if ([self.results count] == 0)
+    {
+        NSArray *errors = [jsonResults objectForKey:@"errors"];
+        if ([errors count])
+        {
+            self.searchState = UYLTwitterSearchStateFailed;
+            NSLog(@"%@",errors);
+        }
+        else
+        {
+            self.searchState = UYLTwitterSearchStateNotFound;
+        }
+    }
     
     self.buffer = nil;
+    [self.refreshControl endRefreshing];
     [self.tableView reloadData];
     [self.tableView flashScrollIndicators];
 }
 
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{    
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     self.connection = nil;
     self.buffer = nil;
+    self.searchState = UYLTwitterSearchStateFailed;
     
     [self handleError:error];
     [self.tableView reloadData];
