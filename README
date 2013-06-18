@@ -3,7 +3,7 @@
 
   See http://useyourloaf.com for details
 
-  This README last updated: 21-May-2013
+  This README last updated: 18-June-2013
 =======================================================================
 
 + INDEX
@@ -12,6 +12,7 @@
   AlertView     - Demo iOS 5 changes to UIAlertView
   MasterSlide   - Implementing a mail app style split view controller
   NibCollection - Example use of IBOutletCollection
+  Refresh		- Using a UIRefreshControl in a table view controller
   RemindMe      - Scheduling local notifications with UILocaNotification
   Restorer      - State Preservation and Restoration
   StaticTable   - Using a storyboard to implement static table views
