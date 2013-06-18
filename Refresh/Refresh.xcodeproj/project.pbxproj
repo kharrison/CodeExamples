@@ -18,6 +18,7 @@
 		530A6047176F8FBF004F85D9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 530A6046176F8FBF004F85D9 /* Default-568h@2x.png */; };
 		530A604A176F8FBF004F85D9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530A6048176F8FBF004F85D9 /* MainStoryboard.storyboard */; };
 		530A6058176F9081004F85D9 /* UYLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 530A6057176F9081004F85D9 /* UYLTableViewController.m */; };
+		5332463F177104D400BED81A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5332463E177104D400BED81A /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		530A6049176F8FBF004F85D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		530A6056176F9081004F85D9 /* UYLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLTableViewController.h; sourceTree = "<group>"; };
 		530A6057176F9081004F85D9 /* UYLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLTableViewController.m; sourceTree = "<group>"; };
+		5332463E177104D400BED81A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		530A6024176F8FBF004F85D9 = {
 			isa = PBXGroup;
 			children = (
+				5332463E177104D400BED81A /* README.md */,
 				530A6036176F8FBF004F85D9 /* Refresh */,
 				530A602F176F8FBF004F85D9 /* Frameworks */,
 				530A602E176F8FBF004F85D9 /* Products */,
@@ -164,6 +167,7 @@
 				530A6045176F8FBF004F85D9 /* Default@2x.png in Resources */,
 				530A6047176F8FBF004F85D9 /* Default-568h@2x.png in Resources */,
 				530A604A176F8FBF004F85D9 /* MainStoryboard.storyboard in Resources */,
+				5332463F177104D400BED81A /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +303,7 @@
 				530A6052176F8FBF004F85D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
