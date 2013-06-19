@@ -147,8 +147,8 @@ typedef NS_ENUM(NSUInteger, UYLTwitterSearchState)
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ResultCellIdentifier];    
-    NSDictionary *tweet = [self.results objectAtIndex:indexPath.row];
-    cell.textLabel.text = [tweet objectForKey:@"text"];
+    NSDictionary *tweet = (self.results)[indexPath.row];
+    cell.textLabel.text = tweet[@"text"];
     return cell;
 }
 
@@ -228,10 +228,10 @@ typedef NS_ENUM(NSUInteger, UYLTwitterSearchState)
     NSError *jsonParsingError = nil;
     NSDictionary *jsonResults = [NSJSONSerialization JSONObjectWithData:self.buffer options:0 error:&jsonParsingError];
     
-    self.results = [jsonResults objectForKey:@"statuses"];
+    self.results = jsonResults[@"statuses"];
     if ([self.results count] == 0)
     {
-        NSArray *errors = [jsonResults objectForKey:@"errors"];
+        NSArray *errors = jsonResults[@"errors"];
         if ([errors count])
         {
             self.searchState = UYLTwitterSearchStateFailed;
