@@ -16,11 +16,8 @@
 		53CB8108139D70FF0030ADD7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53CB8106139D70FF0030ADD7 /* InfoPlist.strings */; };
 		53CB810B139D70FF0030ADD7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CB810A139D70FF0030ADD7 /* main.m */; };
 		53CB810E139D70FF0030ADD7 /* TwitterSearchAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CB810D139D70FF0030ADD7 /* TwitterSearchAppDelegate.m */; };
-		53CB8111139D70FF0030ADD7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CB810F139D70FF0030ADD7 /* MainWindow.xib */; };
 		53CB8114139D70FF0030ADD7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CB8113139D70FF0030ADD7 /* RootViewController.m */; };
-		53CB8117139D70FF0030ADD7 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CB8115139D70FF0030ADD7 /* RootViewController.xib */; };
 		53CB812B139D73810030ADD7 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CB812A139D73810030ADD7 /* SearchViewController.m */; };
-		53CB812D139D73C00030ADD7 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53CB812C139D73C00030ADD7 /* SearchViewController.xib */; };
 		53D3D83B1763BBA9001E5C7C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D3D83A1763BBA9001E5C7C /* Default-568h@2x.png */; };
 		53D3D83D1763C22C001E5C7C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D3D83C1763C22C001E5C7C /* Icon.png */; };
 		53D3D83F1763C232001E5C7C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D3D83E1763C232001E5C7C /* Icon@2x.png */; };
@@ -42,13 +39,10 @@
 		53CB810A139D70FF0030ADD7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		53CB810C139D70FF0030ADD7 /* TwitterSearchAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwitterSearchAppDelegate.h; sourceTree = "<group>"; };
 		53CB810D139D70FF0030ADD7 /* TwitterSearchAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwitterSearchAppDelegate.m; sourceTree = "<group>"; };
-		53CB8110139D70FF0030ADD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		53CB8112139D70FF0030ADD7 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		53CB8113139D70FF0030ADD7 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		53CB8116139D70FF0030ADD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 		53CB8129139D73800030ADD7 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		53CB812A139D73810030ADD7 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		53CB812C139D73C00030ADD7 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		53D3D83A1763BBA9001E5C7C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		53D3D83C1763C22C001E5C7C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		53D3D83E1763C232001E5C7C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
@@ -135,9 +129,6 @@
 				53D3D83E1763C232001E5C7C /* Icon@2x.png */,
 				53D3D83C1763C22C001E5C7C /* Icon.png */,
 				53D3D83A1763BBA9001E5C7C /* Default-568h@2x.png */,
-				53CB810F139D70FF0030ADD7 /* MainWindow.xib */,
-				53CB8115139D70FF0030ADD7 /* RootViewController.xib */,
-				53CB812C139D73C00030ADD7 /* SearchViewController.xib */,
 				53432FE7176E71DF0015F986 /* Storyboard.storyboard */,
 			);
 			name = Resources;
@@ -194,9 +185,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				53CB8108139D70FF0030ADD7 /* InfoPlist.strings in Resources */,
-				53CB8111139D70FF0030ADD7 /* MainWindow.xib in Resources */,
-				53CB8117139D70FF0030ADD7 /* RootViewController.xib in Resources */,
-				53CB812D139D73C00030ADD7 /* SearchViewController.xib in Resources */,
 				53D3D83B1763BBA9001E5C7C /* Default-568h@2x.png in Resources */,
 				53D3D83D1763C22C001E5C7C /* Icon.png in Resources */,
 				53D3D83F1763C232001E5C7C /* Icon@2x.png in Resources */,
@@ -229,22 +217,6 @@
 				53CB8107139D70FF0030ADD7 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		53CB810F139D70FF0030ADD7 /* MainWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				53CB8110139D70FF0030ADD7 /* en */,
-			);
-			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		53CB8115139D70FF0030ADD7 /* RootViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				53CB8116139D70FF0030ADD7 /* en */,
-			);
-			name = RootViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
