@@ -82,6 +82,7 @@ typedef NS_ENUM(NSUInteger, UYLTwitterSearchState)
 
 - (IBAction)refreshSearchResults
 {
+    [self cancelConnection];
     [self loadQuery];
 }
 
@@ -201,7 +202,6 @@ typedef NS_ENUM(NSUInteger, UYLTwitterSearchState)
          }
          else
          {
-             NSLog(@"Access refused: %@",[error localizedDescription]);
              self.searchState = UYLTwitterSearchStateRefused;
              dispatch_async(dispatch_get_main_queue(), ^{
                  [self.tableView reloadData];
@@ -235,7 +235,6 @@ typedef NS_ENUM(NSUInteger, UYLTwitterSearchState)
         if ([errors count])
         {
             self.searchState = UYLTwitterSearchStateFailed;
-            NSLog(@"%@",errors);
         }
         else
         {
@@ -254,6 +253,7 @@ typedef NS_ENUM(NSUInteger, UYLTwitterSearchState)
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     self.connection = nil;
     self.buffer = nil;
+    [self.refreshControl endRefreshing];
     self.searchState = UYLTwitterSearchStateFailed;
     
     [self handleError:error];
