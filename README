@@ -10,6 +10,7 @@
 
   AirPrinter    - Example of how to print from iOS
   AlertView     - Demo iOS 5 changes to UIAlertView
+  Collection    - Simple collection view with popovers
   MasterSlide   - Implementing a mail app style split view controller
   NibCollection - Example use of IBOutletCollection
   Refresh       - Using a UIRefreshControl in a table view controller
