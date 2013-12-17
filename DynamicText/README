@@ -1,0 +1,12 @@
+=======================================================================
+DynamicText - Responding to text size changes
+
+Version 1.0   06 October 2013   Initial version.
+=======================================================================
+
+This is a example project showing how to respond to the user changing
+the preferred text size.
+
+For further details see the following blog post:
+
+http://useyourloaf.com/blog/2013/12/17/supporting-dynamic-type.html

@@ -3,7 +3,7 @@
 
   See http://useyourloaf.com for details
 
-  This README last updated: 18-June-2013
+  This README last updated: 06-October-2013
 =======================================================================
 
 + INDEX
@@ -11,6 +11,7 @@
   AirPrinter    - Example of how to print from iOS
   AlertView     - Demo iOS 5 changes to UIAlertView
   Collection    - Simple collection view with popovers
+  DynamicText   - Supporting dynamic text size changes
   MasterSlide   - Implementing a mail app style split view controller
   NibCollection - Example use of IBOutletCollection
   Refresh       - Using a UIRefreshControl in a table view controller

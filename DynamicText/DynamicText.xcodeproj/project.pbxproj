@@ -20,7 +20,7 @@
 		5393B54F17F83CB600AD2292 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5393B53117F83CB600AD2292 /* UIKit.framework */; };
 		5393B55717F83CB600AD2292 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5393B55517F83CB600AD2292 /* InfoPlist.strings */; };
 		5393B55917F83CB600AD2292 /* DynamicTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5393B55817F83CB600AD2292 /* DynamicTextTests.m */; };
-		5393B56417F83DB000AD2292 /* UYLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5393B56317F83DB000AD2292 /* UYLTableViewController.m */; };
+		5393B56417F83DB000AD2292 /* UYLTextStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5393B56317F83DB000AD2292 /* UYLTextStyleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5325F8AD18020B0B0000A32A /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		5393B52A17F83CB600AD2292 /* DynamicText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5393B52D17F83CB600AD2292 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5393B52F17F83CB600AD2292 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -51,8 +52,8 @@
 		5393B55417F83CB600AD2292 /* DynamicTextTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DynamicTextTests-Info.plist"; sourceTree = "<group>"; };
 		5393B55617F83CB600AD2292 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5393B55817F83CB600AD2292 /* DynamicTextTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicTextTests.m; sourceTree = "<group>"; };
-		5393B56217F83DB000AD2292 /* UYLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLTableViewController.h; sourceTree = "<group>"; };
-		5393B56317F83DB000AD2292 /* UYLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLTableViewController.m; sourceTree = "<group>"; };
+		5393B56217F83DB000AD2292 /* UYLTextStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLTextStyleViewController.h; sourceTree = "<group>"; };
+		5393B56317F83DB000AD2292 /* UYLTextStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLTextStyleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 		5393B52117F83CB600AD2292 = {
 			isa = PBXGroup;
 			children = (
+				5325F8AD18020B0B0000A32A /* README */,
 				5393B53317F83CB600AD2292 /* DynamicText */,
 				5393B55217F83CB600AD2292 /* DynamicTextTests */,
 				5393B52C17F83CB600AD2292 /* Frameworks */,
@@ -114,8 +116,8 @@
 			children = (
 				5393B53C17F83CB600AD2292 /* UYLAppDelegate.h */,
 				5393B53D17F83CB600AD2292 /* UYLAppDelegate.m */,
-				5393B56217F83DB000AD2292 /* UYLTableViewController.h */,
-				5393B56317F83DB000AD2292 /* UYLTableViewController.m */,
+				5393B56217F83DB000AD2292 /* UYLTextStyleViewController.h */,
+				5393B56317F83DB000AD2292 /* UYLTextStyleViewController.m */,
 				5393B53F17F83CB600AD2292 /* Main.storyboard */,
 				5393B54517F83CB600AD2292 /* Images.xcassets */,
 				5393B53417F83CB600AD2292 /* Supporting Files */,
@@ -251,7 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5393B53A17F83CB600AD2292 /* main.m in Sources */,
-				5393B56417F83DB000AD2292 /* UYLTableViewController.m in Sources */,
+				5393B56417F83DB000AD2292 /* UYLTextStyleViewController.m in Sources */,
 				5393B53E17F83CB600AD2292 /* UYLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +463,7 @@
 				5393B55E17F83CB600AD2292 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5393B55F17F83CB600AD2292 /* Build configuration list for PBXNativeTarget "DynamicTextTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +472,7 @@
 				5393B56117F83CB600AD2292 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

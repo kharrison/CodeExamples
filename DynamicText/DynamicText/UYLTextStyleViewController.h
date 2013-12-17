@@ -1,5 +1,5 @@
 //
-//  UYLTableViewController.m
+//  UYLTableViewController.h
 //  DynamicText
 //
 // Created by Keith Harrison http://useyourloaf.com
@@ -31,54 +31,8 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-#import "UYLTableViewController.h"
+#import <UIKit/UIKit.h>
 
-@implementation UYLTableViewController
-
-- (void)viewDidLoad
-{
-	[super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(didChangePreferredContentSize:)
-                                                 name:UIContentSizeCategoryDidChangeNotification
-                                               object:nil];
-}
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-#pragma mark -
-#pragma mark === Notification Methods ===
-#pragma mark -
-
-- (void)didChangePreferredContentSize:(NSDictionary *)userInfo
-{
-    [self.tableView reloadData];
-}
-
-#pragma mark -
-#pragma mark === UITableViewDataSource ===
-#pragma mark -
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 10;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *UYLTableViewBasicCellName = @"UYLBasicCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:UYLTableViewBasicCellName forIndexPath:indexPath];
-
-    cell.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
-    cell.detailTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
-
-    cell.textLabel.text = [cell.textLabel.font familyName];
-    cell.detailTextLabel.text = [[UIApplication sharedApplication] preferredContentSizeCategory];
-
-    return cell;
-}
+@interface UYLTextStyleViewController : UIViewController
 
 @end
