@@ -46,6 +46,10 @@
 
 @implementation UYLTextStyleViewController
 
+#pragma mark -
+#pragma mark === View Life Cycle ===
+#pragma mark -
+
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
@@ -66,20 +70,6 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-#pragma mark -
-#pragma mark === Notification Methods ===
-#pragma mark -
-
-- (void)didChangePreferredContentSize:(NSDictionary *)userInfo
-{
-    [self configureView];
-}
-
-#pragma mark -
-#pragma mark === UITableViewDataSource ===
-#pragma mark -
-
-
 - (void)configureView
 {
     self.title = [[UIApplication sharedApplication] preferredContentSizeCategory];
@@ -89,6 +79,15 @@
     self.caption1Label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
     self.caption2Label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption2];
     self.footnoteLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote];
+}
+
+#pragma mark -
+#pragma mark === Notification Methods ===
+#pragma mark -
+
+- (void)didChangePreferredContentSize:(NSDictionary *)userInfo
+{
+    [self configureView];
 }
 
 @end
