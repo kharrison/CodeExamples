@@ -35,4 +35,12 @@
 
 @interface UYLTextStyleViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *textSizeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *headlineLabel;
+@property (weak, nonatomic) IBOutlet UILabel *subheadLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bodyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *caption1Label;
+@property (weak, nonatomic) IBOutlet UILabel *caption2Label;
+@property (weak, nonatomic) IBOutlet UILabel *footnoteLabel;
+
 @end

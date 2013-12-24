@@ -1,5 +1,5 @@
 //
-//  UYLTableViewController.m
+//  UYLFont.m
 //  DynamicText
 //
 // Created by Keith Harrison http://useyourloaf.com
@@ -30,53 +30,24 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+#import "UYLFont.h"
 
-#import "UYLTextStyleViewController.h"
+@implementation UYLFont
 
-@implementation UYLTextStyleViewController
-
-#pragma mark -
-#pragma mark === View Life Cycle ===
-#pragma mark -
-
-- (void)viewDidLoad
++ (UIFont *)preferredFontForTextStyle:(NSString *)style scale:(CGFloat)scaleFactor
 {
-	[super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(didChangePreferredContentSize:)
-                                                 name:UIContentSizeCategoryDidChangeNotification
-                                               object:nil];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    [self configureView];
-}
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)configureView
-{
-    self.textSizeLabel.text = [[UIApplication sharedApplication] preferredContentSizeCategory];
-    self.headlineLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
-    self.subheadLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
-    self.bodyLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-    self.caption1Label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
-    self.caption2Label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption2];
-    self.footnoteLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote];
-}
-
-#pragma mark -
-#pragma mark === Notification Methods ===
-#pragma mark -
-
-- (void)didChangePreferredContentSize:(NSDictionary *)userInfo
-{
-    [self configureView];
+    UIFontDescriptor *descriptor = [UIFontDescriptor preferredFontDescriptorWithTextStyle:style];
+    
+    // Changing the font family or face of the descriptor has no effect when a text
+    // style has been set. Can only change symbolic traits.
+    // UIFontDescriptor *myDescriptor = [defaultDescriptor fontDescriptorWithFamily:@"Verdana"];
+    
+    // Example of changing the symbolic traits of the descriptor
+    // UIFontDescriptor *myDescriptor = [defaultDescriptor fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitItalic];
+    
+    CGFloat pointSize = descriptor.pointSize * scaleFactor;
+    UIFont *font = [UIFont fontWithDescriptor:descriptor size:pointSize];
+    return font;
 }
 
 @end
