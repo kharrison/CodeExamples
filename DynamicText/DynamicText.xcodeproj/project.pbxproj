@@ -22,7 +22,7 @@
 		5393B55717F83CB600AD2292 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5393B55517F83CB600AD2292 /* InfoPlist.strings */; };
 		5393B55917F83CB600AD2292 /* DynamicTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5393B55817F83CB600AD2292 /* DynamicTextTests.m */; };
 		5393B56417F83DB000AD2292 /* UYLTextStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5393B56317F83DB000AD2292 /* UYLTextStyleViewController.m */; };
-		53B8D3861869EF4C00AA7903 /* UYLFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B8D3851869EF4C00AA7903 /* UYLFont.m */; };
+		53FE524C1871CDB700DE5F24 /* UIFont+UYLScaledFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FE524B1871CDB700DE5F24 /* UIFont+UYLScaledFont.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +58,8 @@
 		5393B55817F83CB600AD2292 /* DynamicTextTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicTextTests.m; sourceTree = "<group>"; };
 		5393B56217F83DB000AD2292 /* UYLTextStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLTextStyleViewController.h; sourceTree = "<group>"; };
 		5393B56317F83DB000AD2292 /* UYLTextStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLTextStyleViewController.m; sourceTree = "<group>"; };
-		53B8D3841869EF4C00AA7903 /* UYLFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLFont.h; sourceTree = "<group>"; };
-		53B8D3851869EF4C00AA7903 /* UYLFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLFont.m; sourceTree = "<group>"; };
+		53FE524A1871CDB700DE5F24 /* UIFont+UYLScaledFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+UYLScaledFont.h"; sourceTree = "<group>"; };
+		53FE524B1871CDB700DE5F24 /* UIFont+UYLScaledFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+UYLScaledFont.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +126,8 @@
 				5393B56317F83DB000AD2292 /* UYLTextStyleViewController.m */,
 				531B32081861EFB6005F2332 /* UYLScaledTextStyleViewController.h */,
 				531B32091861EFB6005F2332 /* UYLScaledTextStyleViewController.m */,
-				53B8D3841869EF4C00AA7903 /* UYLFont.h */,
-				53B8D3851869EF4C00AA7903 /* UYLFont.m */,
+				53FE524A1871CDB700DE5F24 /* UIFont+UYLScaledFont.h */,
+				53FE524B1871CDB700DE5F24 /* UIFont+UYLScaledFont.m */,
 				5393B53F17F83CB600AD2292 /* Main.storyboard */,
 				5393B54517F83CB600AD2292 /* Images.xcassets */,
 				5393B53417F83CB600AD2292 /* Supporting Files */,
@@ -263,9 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5393B53A17F83CB600AD2292 /* main.m in Sources */,
-				53B8D3861869EF4C00AA7903 /* UYLFont.m in Sources */,
 				5393B56417F83DB000AD2292 /* UYLTextStyleViewController.m in Sources */,
 				5393B53E17F83CB600AD2292 /* UYLAppDelegate.m in Sources */,
+				53FE524C1871CDB700DE5F24 /* UIFont+UYLScaledFont.m in Sources */,
 				531B320A1861EFB6005F2332 /* UYLScaledTextStyleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

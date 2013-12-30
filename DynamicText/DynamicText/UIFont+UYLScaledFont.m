@@ -1,5 +1,5 @@
 //
-//  UYLFont.m
+//  UIFont+UYLScaledFont.m
 //  DynamicText
 //
 // Created by Keith Harrison http://useyourloaf.com
@@ -30,21 +30,14 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#import "UYLFont.h"
 
-@implementation UYLFont
+#import "UIFont+UYLScaledFont.h"
 
-+ (UIFont *)preferredFontForTextStyle:(NSString *)style scale:(CGFloat)scaleFactor
+@implementation UIFont (UYLScaledFont)
+
++ (UIFont *)uylPreferredFontForTextStyle:(NSString *)style scale:(CGFloat)scaleFactor
 {
     UIFontDescriptor *descriptor = [UIFontDescriptor preferredFontDescriptorWithTextStyle:style];
-    
-    // Changing the font family or face of the descriptor has no effect when a text
-    // style has been set. Can only change symbolic traits.
-    // UIFontDescriptor *myDescriptor = [defaultDescriptor fontDescriptorWithFamily:@"Verdana"];
-    
-    // Example of changing the symbolic traits of the descriptor
-    // UIFontDescriptor *myDescriptor = [defaultDescriptor fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitItalic];
-    
     CGFloat pointSize = descriptor.pointSize * scaleFactor;
     UIFont *font = [UIFont fontWithDescriptor:descriptor size:pointSize];
     return font;
