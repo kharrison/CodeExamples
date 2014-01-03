@@ -1,0 +1,19 @@
+=======================================================================
+Motion - Adding motion effects to views
+Version 1.0   03 January 2013   Initial version.
+=======================================================================
+
+This is a example project showing how to add motion effects to a view
+to create a sense of depth.
+
+For further details see the following blog post:
+http://useyourloaf.com/blog/2013/12/17/supporting-dynamic-type.html
+
+
+The UYLScaledTextStyleViewController extends the basic approach by
+showing how to scale the preferred fonts using a UIFontDescriptor.
+A convenience method to return the scaled font is added as a
+category of UIFont for this purpose.
+
+For further details see the following blog post:
+http://useyourloaf.com/blog/2014/01/03/motion-effects.html
