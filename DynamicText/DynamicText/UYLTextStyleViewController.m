@@ -74,7 +74,7 @@
 #pragma mark === Notification Methods ===
 #pragma mark -
 
-- (void)didChangePreferredContentSize:(NSDictionary *)userInfo
+- (void)didChangePreferredContentSize:(NSNotification *)notification
 {
     [self configureView];
 }
