@@ -56,12 +56,6 @@
 
 - (void)addHorizontalTilt:(CGFloat)x verticalTilt:(CGFloat)y ToView:(UIView *)view
 {
-    UIInterpolatingMotionEffect *xTilt = nil;
-    UIInterpolatingMotionEffect *yTilt = nil;
-    UIMotionEffectGroup *group = [[UIMotionEffectGroup alloc] init];
-    group.motionEffects = @[xTilt, yTilt];
-    [view addMotionEffect:group];
-    
     UIInterpolatingMotionEffect *xAxis = nil;
     UIInterpolatingMotionEffect *yAxis = nil;
     
