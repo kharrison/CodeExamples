@@ -1,0 +1,11 @@
+=======================================================================
+SpeakEasy - Text to speech synthesis
+Version 1.0   08 January 2013   Initial version.
+=======================================================================
+
+Demonstration of the AVSpeechSynthesizer and related classes to perform
+text to speech synthesis. Makes use of custom voices, pitch, rate and text
+highlighting.
+
+For further details see the following blog post:
+http://useyourloaf.com/blog/2014/01/08/synthesized-speech-from-text.html
