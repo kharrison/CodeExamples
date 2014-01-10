@@ -202,7 +202,7 @@ NSString *UYLKeySpeechText = @"UYLKeySpeechText";
 
 - (IBAction)speak:(UIButton *)sender
 {
-    if (self.textInput.text)
+    if (self.textInput.text && !self.synthesizer.isSpeaking)
     {
         AVSpeechSynthesisVoice *voice = [AVSpeechSynthesisVoice voiceWithLanguage:self.selectedLanguage];
         AVSpeechUtterance *utterance = [[AVSpeechUtterance alloc] initWithString:self.textInput.text];
