@@ -80,11 +80,12 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
     // [self.tableView registerNib:countryNib forCellReuseIdentifier:UYLCountryCellIdentifier];
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    self.decimalFormatter = nil;
-}
+// viewDidUnload is deprecated in iOS 6
+//- (void)viewDidUnload
+//{
+//    [super viewDidUnload];
+//    self.decimalFormatter = nil;
+//}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -93,7 +94,6 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"prepareForSeqgue: %@ - %@",segue.identifier, [sender reuseIdentifier]);
     if ([segue.identifier isEqualToString:UYLSegueShowCountry])
     {
         Country *country = nil;
