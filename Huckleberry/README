@@ -1,0 +1,14 @@
+=======================================================================
+Huckleberry - Auto layout table view cells with varying row heights
+Version 1.0   14 February 2014   Initial version.
+=======================================================================
+
+Example of how to implement table view cells with varying row heights
+using auto layout constraints and a dummy prototype cell.
+
+The source data for the table view is taken from the first 15 chapters
+of Huckleberry Finn as found on Project Gutenberg. This gives nearly
+2000 rows of data.
+
+For further details see the following blog post:
+http://useyourloaf.com/blog/2014/02/14/table-view-cellls-with-varying-row-heights.html

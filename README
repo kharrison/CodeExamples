@@ -3,7 +3,7 @@
 
   See http://useyourloaf.com for details
 
-  This README last updated: 08-January-2014
+  This README last updated: 14-February-2014
 =======================================================================
 
 + INDEX
@@ -12,6 +12,7 @@
   AlertView     - Demo iOS 5 changes to UIAlertView
   Collection    - Simple collection view with popovers
   DynamicText   - Supporting dynamic text size changes
+  Huckleberry   - Auto layout table view cells with varying row heights
   MasterSlide   - Implementing a mail app style split view controller
   Motion        - Adding motion effects to views
   NibCollection - Example use of IBOutletCollection
