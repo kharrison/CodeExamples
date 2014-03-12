@@ -1,5 +1,6 @@
 =======================================================================
 Huckleberry - Auto layout table view cells with varying row heights
+Version 1.1   12 March 2014      Added Quick Look Debug
 Version 1.0   14 February 2014   Initial version.
 =======================================================================
 
@@ -12,3 +13,9 @@ of Huckleberry Finn as found on Project Gutenberg. This gives nearly
 
 For further details see the following blog post:
 http://useyourloaf.com/blog/2014/02/14/table-view-cells-with-varying-row-heights.html
+
+The custom table view class (UYLTextCell) includes an implementation
+of debugQuickLookObject to support Quick Look view of the cell in the
+Xcode debugger (requires Xcode 5.1). See the following post for details:
+
+http://useyourloaf.com/blog/2014/03/12/xcode-debugger-quick-look.html

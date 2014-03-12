@@ -35,5 +35,15 @@
 
 @implementation UYLTextCell
 
+- (id)debugQuickLookObject
+{
+    // NSString *result = [NSString stringWithFormat:@"%@: %@",self.numberLabel.text,self.lineLabel.text];
+    
+    NSAttributedString *cr = [[NSAttributedString alloc] initWithString:@"\n"];
+    NSMutableAttributedString *result = [[NSMutableAttributedString alloc] initWithAttributedString:self.numberLabel.attributedText];
+    [result appendAttributedString:cr];
+    [result appendAttributedString:self.lineLabel.attributedText];
+    return result;
+}
 
 @end
