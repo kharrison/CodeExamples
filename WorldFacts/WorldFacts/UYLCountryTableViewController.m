@@ -45,12 +45,11 @@
 @property (strong, nonatomic) IBOutlet UITableViewCell *countryCell;
 @property (strong, nonatomic) UINib *countryCellNib;
 
-typedef enum
+typedef NS_ENUM(NSInteger, UYLWorldFactsSearchScope)
 {
     searchScopeCountry = 0,
     searchScopeCapital = 1
-    
-} UYLWorldFactsSearchScope;
+};
 
 @end
 
