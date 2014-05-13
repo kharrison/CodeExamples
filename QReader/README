@@ -1,0 +1,8 @@
+=======================================================================
+QReader - Reading QR Codes
+Version 1.0   12 May 2014   Initial version.
+=======================================================================
+
+Example of how to use AVFoundation to capture QR codes. See the following post for details:
+
+http://useyourloaf.com/blog/2014/05/13/reading-qr-codes.html

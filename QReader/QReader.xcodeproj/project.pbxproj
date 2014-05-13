@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5309FFAE19183E2800ADB15A /* UYLTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5309FFAD19183E2800ADB15A /* UYLTextCell.m */; };
+		532884FD19197D6C00E44C28 /* UYLCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532884FC19197D6C00E44C28 /* UYLCaptureViewController.m */; };
+		5344A59918DF769400C61776 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5344A59818DF769400C61776 /* Foundation.framework */; };
+		5344A59B18DF769400C61776 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5344A59A18DF769400C61776 /* CoreGraphics.framework */; };
+		5344A59D18DF769400C61776 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5344A59C18DF769400C61776 /* UIKit.framework */; };
+		5344A5A318DF769400C61776 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5344A5A118DF769400C61776 /* InfoPlist.strings */; };
+		5344A5A518DF769400C61776 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5344A5A418DF769400C61776 /* main.m */; };
+		5344A5A918DF769400C61776 /* UYLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5344A5A818DF769400C61776 /* UYLAppDelegate.m */; };
+		5344A5AC18DF769400C61776 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5344A5AA18DF769400C61776 /* Main_iPhone.storyboard */; };
+		5344A5AF18DF769400C61776 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5344A5AD18DF769400C61776 /* Main_iPad.storyboard */; };
+		5344A5B218DF769400C61776 /* UYLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5344A5B118DF769400C61776 /* UYLTableViewController.m */; };
+		5344A5B418DF769400C61776 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5344A5B318DF769400C61776 /* Images.xcassets */; };
+		537EB39F18E231FE006B6FF5 /* UYLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 537EB39E18E231FE006B6FF5 /* UYLWebViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5309FFAC19183E2800ADB15A /* UYLTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLTextCell.h; sourceTree = "<group>"; };
+		5309FFAD19183E2800ADB15A /* UYLTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLTextCell.m; sourceTree = "<group>"; };
+		53191C0C1922A774000DCCBB /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		532884FB19197D6C00E44C28 /* UYLCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLCaptureViewController.h; sourceTree = "<group>"; };
+		532884FC19197D6C00E44C28 /* UYLCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLCaptureViewController.m; sourceTree = "<group>"; };
+		5344A59518DF769400C61776 /* QReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5344A59818DF769400C61776 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5344A59A18DF769400C61776 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5344A59C18DF769400C61776 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5344A5A018DF769400C61776 /* QReader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QReader-Info.plist"; sourceTree = "<group>"; };
+		5344A5A218DF769400C61776 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5344A5A418DF769400C61776 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5344A5A618DF769400C61776 /* QReader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QReader-Prefix.pch"; sourceTree = "<group>"; };
+		5344A5A718DF769400C61776 /* UYLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UYLAppDelegate.h; sourceTree = "<group>"; };
+		5344A5A818DF769400C61776 /* UYLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UYLAppDelegate.m; sourceTree = "<group>"; };
+		5344A5AB18DF769400C61776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		5344A5AE18DF769400C61776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		5344A5B018DF769400C61776 /* UYLTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UYLTableViewController.h; sourceTree = "<group>"; };
+		5344A5B118DF769400C61776 /* UYLTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UYLTableViewController.m; sourceTree = "<group>"; };
+		5344A5B318DF769400C61776 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5344A5BA18DF769400C61776 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		537EB39D18E231FE006B6FF5 /* UYLWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLWebViewController.h; sourceTree = "<group>"; };
+		537EB39E18E231FE006B6FF5 /* UYLWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLWebViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5344A59218DF769400C61776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5344A59B18DF769400C61776 /* CoreGraphics.framework in Frameworks */,
+				5344A59D18DF769400C61776 /* UIKit.framework in Frameworks */,
+				5344A59918DF769400C61776 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		532884FE19197D7A00E44C28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5309FFAC19183E2800ADB15A /* UYLTextCell.h */,
+				5309FFAD19183E2800ADB15A /* UYLTextCell.m */,
+				5344A5AD18DF769400C61776 /* Main_iPad.storyboard */,
+				5344A5AA18DF769400C61776 /* Main_iPhone.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		532884FF19197D8F00E44C28 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				537EB39D18E231FE006B6FF5 /* UYLWebViewController.h */,
+				537EB39E18E231FE006B6FF5 /* UYLWebViewController.m */,
+				5344A5B018DF769400C61776 /* UYLTableViewController.h */,
+				5344A5B118DF769400C61776 /* UYLTableViewController.m */,
+				532884FB19197D6C00E44C28 /* UYLCaptureViewController.h */,
+				532884FC19197D6C00E44C28 /* UYLCaptureViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5344A58C18DF769400C61776 = {
+			isa = PBXGroup;
+			children = (
+				53191C0C1922A774000DCCBB /* README */,
+				5344A59E18DF769400C61776 /* QReader */,
+				5344A59718DF769400C61776 /* Frameworks */,
+				5344A59618DF769400C61776 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5344A59618DF769400C61776 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5344A59518DF769400C61776 /* QReader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5344A59718DF769400C61776 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5344A59818DF769400C61776 /* Foundation.framework */,
+				5344A59A18DF769400C61776 /* CoreGraphics.framework */,
+				5344A59C18DF769400C61776 /* UIKit.framework */,
+				5344A5BA18DF769400C61776 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5344A59E18DF769400C61776 /* QReader */ = {
+			isa = PBXGroup;
+			children = (
+				532884FF19197D8F00E44C28 /* Controller */,
+				532884FE19197D7A00E44C28 /* View */,
+				5344A5B318DF769400C61776 /* Images.xcassets */,
+				5344A59F18DF769400C61776 /* Supporting Files */,
+			);
+			path = QReader;
+			sourceTree = "<group>";
+		};
+		5344A59F18DF769400C61776 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5344A5A718DF769400C61776 /* UYLAppDelegate.h */,
+				5344A5A818DF769400C61776 /* UYLAppDelegate.m */,
+				5344A5A018DF769400C61776 /* QReader-Info.plist */,
+				5344A5A118DF769400C61776 /* InfoPlist.strings */,
+				5344A5A418DF769400C61776 /* main.m */,
+				5344A5A618DF769400C61776 /* QReader-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5344A59418DF769400C61776 /* QReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5344A5CA18DF769400C61776 /* Build configuration list for PBXNativeTarget "QReader" */;
+			buildPhases = (
+				5344A59118DF769400C61776 /* Sources */,
+				5344A59218DF769400C61776 /* Frameworks */,
+				5344A59318DF769400C61776 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QReader;
+			productName = QReader;
+			productReference = 5344A59518DF769400C61776 /* QReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5344A58D18DF769400C61776 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = UYL;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Keith Harrison";
+				TargetAttributes = {
+					5344A59418DF769400C61776 = {
+						DevelopmentTeam = LCC2J94N44;
+					};
+				};
+			};
+			buildConfigurationList = 5344A59018DF769400C61776 /* Build configuration list for PBXProject "QReader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5344A58C18DF769400C61776;
+			productRefGroup = 5344A59618DF769400C61776 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5344A59418DF769400C61776 /* QReader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5344A59318DF769400C61776 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5344A5AF18DF769400C61776 /* Main_iPad.storyboard in Resources */,
+				5344A5B418DF769400C61776 /* Images.xcassets in Resources */,
+				5344A5AC18DF769400C61776 /* Main_iPhone.storyboard in Resources */,
+				5344A5A318DF769400C61776 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5344A59118DF769400C61776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				537EB39F18E231FE006B6FF5 /* UYLWebViewController.m in Sources */,
+				5344A5A518DF769400C61776 /* main.m in Sources */,
+				5309FFAE19183E2800ADB15A /* UYLTextCell.m in Sources */,
+				5344A5A918DF769400C61776 /* UYLAppDelegate.m in Sources */,
+				532884FD19197D6C00E44C28 /* UYLCaptureViewController.m in Sources */,
+				5344A5B218DF769400C61776 /* UYLTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5344A5A118DF769400C61776 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5344A5A218DF769400C61776 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5344A5AA18DF769400C61776 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5344A5AB18DF769400C61776 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		5344A5AD18DF769400C61776 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5344A5AE18DF769400C61776 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5344A5C818DF769400C61776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5344A5C918DF769400C61776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5344A5CB18DF769400C61776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QReader/QReader-Prefix.pch";
+				INFOPLIST_FILE = "QReader/QReader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5344A5CC18DF769400C61776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QReader/QReader-Prefix.pch";
+				INFOPLIST_FILE = "QReader/QReader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5344A59018DF769400C61776 /* Build configuration list for PBXProject "QReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5344A5C818DF769400C61776 /* Debug */,
+				5344A5C918DF769400C61776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5344A5CA18DF769400C61776 /* Build configuration list for PBXNativeTarget "QReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5344A5CB18DF769400C61776 /* Debug */,
+				5344A5CC18DF769400C61776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5344A58D18DF769400C61776 /* Project object */;
+}

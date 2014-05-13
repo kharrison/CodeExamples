@@ -3,7 +3,7 @@
 
   See http://useyourloaf.com for details
 
-  This README last updated: 14-February-2014
+  This README last updated: 12-May-2014
 =======================================================================
 
 + INDEX
@@ -16,6 +16,7 @@
   MasterSlide   - Implementing a mail app style split view controller
   Motion        - Adding motion effects to views
   NibCollection - Example use of IBOutletCollection
+  QReader       - Capturing and decoding QR Codes
   Refresh       - Using a UIRefreshControl in a table view controller
   RemindMe      - Scheduling local notifications with UILocaNotification
   Restorer      - State Preservation and Restoration
