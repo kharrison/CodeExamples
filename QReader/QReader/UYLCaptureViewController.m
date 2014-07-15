@@ -65,8 +65,6 @@ static NSString *UYLSegueToTableView = @"UYLSegueToTableView";
 {
     if (!_captureSession)
     {
-        _captureSession = [[AVCaptureSession alloc] init];
-
         NSError *error = nil;
         AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
         if (device.isAutoFocusRangeRestrictionSupported)
@@ -78,36 +76,42 @@ static NSString *UYLSegueToTableView = @"UYLSegueToTableView";
             }
         }
         
+        // The first time AVCaptureDeviceInput creation will present a dialog to the user
+        // requesting camera access. If the user refuses the creation fails.
+        // See WWDC 2013 session #610 for details, but note this behaviour does not seem to
+        // be enforced on iOS 7 where as it is with iOS 8.
+        
         AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:device error:&error];
         if (deviceInput)
         {
+            _captureSession = [[AVCaptureSession alloc] init];
             if ([_captureSession canAddInput:deviceInput])
             {
                 [_captureSession addInput:deviceInput];
             }
+            
+            AVCaptureMetadataOutput *metadataOutput = [[AVCaptureMetadataOutput alloc] init];
+            if ([_captureSession canAddOutput:metadataOutput])
+            {
+                [_captureSession addOutput:metadataOutput];
+                [metadataOutput setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
+                [metadataOutput setMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
+            }
+            
+            self.previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:_captureSession];
+            self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+            self.previewLayer.frame = self.view.bounds;
+            [self.view.layer addSublayer:self.previewLayer];
+            
+            self.targetLayer = [CALayer layer];
+            self.targetLayer.frame = self.view.bounds;
+            [self.view.layer addSublayer:self.targetLayer];
+            
         }
         else
         {
             NSLog(@"Input Device error: %@",[error localizedDescription]);
         }
-
-        AVCaptureMetadataOutput *metadataOutput = [[AVCaptureMetadataOutput alloc] init];
-        if ([_captureSession canAddOutput:metadataOutput])
-        {
-            [_captureSession addOutput:metadataOutput];
-            [metadataOutput setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
-            [metadataOutput setMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
-        }
-
-        self.previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:_captureSession];
-        self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-        self.previewLayer.frame = self.view.bounds;
-        [self.view.layer addSublayer:self.previewLayer];
-        
-        self.targetLayer = [CALayer layer];
-        self.targetLayer.frame = self.view.bounds;
-        [self.view.layer addSublayer:self.targetLayer];
-        
     }
     return _captureSession;
 }
