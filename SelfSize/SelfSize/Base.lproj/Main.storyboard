@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Xmq-7s-xh3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6205"/>
+    </dependencies>
+    <scenes>
+        <!--Huckleberry-->
+        <scene sceneID="xUB-n3-qes">
+            <objects>
+                <tableViewController title="Huckleberry" id="gFG-f5-qc3" customClass="UYLTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="sFT-H1-9Fb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UYLTextCell" id="IaH-6G-Iq1" customClass="UYLTextCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IaH-6G-Iq1" id="48e-px-e2T">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Line 123" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uC-5F-tP2">
+                                            <rect key="frame" x="20" y="20" width="560" height="14"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sentence goes here." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="560" translatesAutoresizingMaskIntoConstraints="NO" id="wVn-Be-UzL">
+                                            <rect key="frame" x="20" y="42" width="560" height="37"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="9uC-5F-tP2" secondAttribute="trailing" constant="20" symbolic="YES" id="Eiq-7m-gqS"/>
+                                        <constraint firstItem="wVn-Be-UzL" firstAttribute="leading" secondItem="48e-px-e2T" secondAttribute="leading" constant="20" symbolic="YES" id="Pjm-Mq-8wT"/>
+                                        <constraint firstItem="9uC-5F-tP2" firstAttribute="top" secondItem="48e-px-e2T" secondAttribute="top" constant="20" symbolic="YES" id="WEH-7R-Nru"/>
+                                        <constraint firstItem="9uC-5F-tP2" firstAttribute="leading" secondItem="48e-px-e2T" secondAttribute="leading" constant="20" symbolic="YES" id="awI-1Z-0xU"/>
+                                        <constraint firstAttribute="bottom" secondItem="wVn-Be-UzL" secondAttribute="bottom" constant="20" symbolic="YES" id="ixB-1d-xy1"/>
+                                        <constraint firstItem="wVn-Be-UzL" firstAttribute="top" secondItem="9uC-5F-tP2" secondAttribute="bottom" constant="8" symbolic="YES" id="qzO-Qc-FjB"/>
+                                        <constraint firstAttribute="trailing" secondItem="wVn-Be-UzL" secondAttribute="trailing" constant="20" symbolic="YES" id="yqO-YT-0bH"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lineLabel" destination="wVn-Be-UzL" id="03d-Wc-oT5"/>
+                                    <outlet property="numberLabel" destination="9uC-5F-tP2" id="0nl-5f-NVW"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gFG-f5-qc3" id="ExM-S1-muo"/>
+                            <outlet property="delegate" destination="gFG-f5-qc3" id="3vh-I6-1K8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="4zB-av-KSb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0NW-Xm-1cd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="559" y="-6"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h2H-5d-2d4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xmq-7s-xh3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wco-A6-ddd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gFG-f5-qc3" kind="relationship" relationship="rootViewController" id="zea-57-8k1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJY-cp-ex4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-325" y="-10"/>
+        </scene>
+    </scenes>
+</document>

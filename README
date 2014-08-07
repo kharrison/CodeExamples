@@ -3,7 +3,7 @@
 
   See http://useyourloaf.com for details
 
-  This README last updated: 12-May-2014
+  This README last updated: 07-August-2014
 =======================================================================
 
 + INDEX
@@ -20,6 +20,7 @@
   Refresh       - Using a UIRefreshControl in a table view controller
   RemindMe      - Scheduling local notifications with UILocaNotification
   Restorer      - State Preservation and Restoration
+  SelfSize      - iOS 8 Self Sizing Table View Cells (Huckleberry updated)
   SpeakEasy     - Text to speech synthesis
   StaticTable   - Using a storyboard to implement static table views
   Stepper       - Example use of UIStepper control
