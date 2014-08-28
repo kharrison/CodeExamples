@@ -35,7 +35,7 @@
 #import "UYLCaptureViewController.h"
 #import "UYLTableViewController.h"
 
-@interface UYLCaptureViewController () <AVCaptureMetadataOutputObjectsDelegate>
+@interface UYLCaptureViewController () <AVCaptureMetadataOutputObjectsDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *previewLayer;
 @property (nonatomic, strong) CALayer *targetLayer;
@@ -111,6 +111,7 @@ static NSString *UYLSegueToTableView = @"UYLSegueToTableView";
         else
         {
             NSLog(@"Input Device error: %@",[error localizedDescription]);
+            [self showAlertForCameraError:error];
         }
     }
     return _captureSession;
@@ -198,8 +199,42 @@ static NSString *UYLSegueToTableView = @"UYLSegueToTableView";
 }
 
 #pragma mark -
+#pragma mark === UIAlertViewDelegate ===
+#pragma mark -
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1)
+    {
+        NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+        [[UIApplication sharedApplication] openURL:url];
+    }
+}
+
+#pragma mark -
 #pragma mark === Utility methods ===
 #pragma mark -
+
+- (void)showAlertForCameraError:(NSError *)error
+{
+    NSString *buttonTitle = nil;
+    NSString *message = error.localizedFailureReason ? error.localizedFailureReason : error.localizedDescription;
+    
+    if ((error.code == AVErrorApplicationIsNotAuthorizedToUseDevice) &&
+        UIApplicationOpenSettingsURLString)
+    {
+        // Starting with iOS 8 we can directly open the settings bundle
+        // for this App so add a settings button to the alert view.
+        buttonTitle = NSLocalizedString(@"AlertViewSettingsButton", @"Settings");
+    }
+
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"AlertViewTitleCameraError", @"Camera Error")
+                                                        message:message
+                                                       delegate:self
+                                              cancelButtonTitle:NSLocalizedString(@"AlertViewCancelButton", @"Cancel")
+                                              otherButtonTitles:buttonTitle, nil];
+    [alertView show];
+}
 
 - (void)startRunning
 {

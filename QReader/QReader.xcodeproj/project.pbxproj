@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5309FFAE19183E2800ADB15A /* UYLTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5309FFAD19183E2800ADB15A /* UYLTextCell.m */; };
+		53249C0419AF6D8400EA1639 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53249C0219AF6D8400EA1639 /* Localizable.strings */; };
 		532884FD19197D6C00E44C28 /* UYLCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532884FC19197D6C00E44C28 /* UYLCaptureViewController.m */; };
 		5344A59918DF769400C61776 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5344A59818DF769400C61776 /* Foundation.framework */; };
 		5344A59B18DF769400C61776 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5344A59A18DF769400C61776 /* CoreGraphics.framework */; };
@@ -26,6 +27,7 @@
 		5309FFAC19183E2800ADB15A /* UYLTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLTextCell.h; sourceTree = "<group>"; };
 		5309FFAD19183E2800ADB15A /* UYLTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLTextCell.m; sourceTree = "<group>"; };
 		53191C0C1922A774000DCCBB /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		53249C0319AF6D8400EA1639 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		532884FB19197D6C00E44C28 /* UYLCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLCaptureViewController.h; sourceTree = "<group>"; };
 		532884FC19197D6C00E44C28 /* UYLCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLCaptureViewController.m; sourceTree = "<group>"; };
 		5344A59518DF769400C61776 /* QReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 				5344A5A118DF769400C61776 /* InfoPlist.strings */,
 				5344A5A418DF769400C61776 /* main.m */,
 				5344A5A618DF769400C61776 /* QReader-Prefix.pch */,
+				53249C0219AF6D8400EA1639 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53249C0419AF6D8400EA1639 /* Localizable.strings in Resources */,
 				5344A5AF18DF769400C61776 /* Main_iPad.storyboard in Resources */,
 				5344A5B418DF769400C61776 /* Images.xcassets in Resources */,
 				5344A5AC18DF769400C61776 /* Main_iPhone.storyboard in Resources */,
@@ -223,6 +227,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		53249C0219AF6D8400EA1639 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53249C0319AF6D8400EA1639 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		5344A5A118DF769400C61776 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

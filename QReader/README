@@ -1,8 +1,14 @@
 =======================================================================
 QReader - Reading QR Codes
+Version 1.1   28 Aug 2014   Add handling of camera privacys settings.
 Version 1.0   12 May 2014   Initial version.
 =======================================================================
 
 Example of how to use AVFoundation to capture QR codes. See the following post for details:
 
 http://useyourloaf.com/blog/2014/05/13/reading-qr-codes.html
+
+For details on adding an alert view to warn the user when the camera cannot be
+accessed and directly launch the settings (requires iOS 8) see the following post:
+
+http://useyourloaf.com/blog/2014/08/28/open-settings-url.html
