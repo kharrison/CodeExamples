@@ -1,0 +1,11 @@
+=======================================================================
+AlertController - Sample code for UIAlertController
+Version 1.0   05 September 2014   Initial version.
+=======================================================================
+
+Example code covering the use of UIAlertController to create alert and
+action sheet views. The UIAlertController class was introduced in iOS 8
+as a replacement for UIAlertView and UIActionSheet. Full details in the
+following post:
+
+http://useyourloaf.com/blog/2014/09/05/uialertcontroller-changes-in-ios-8.html
