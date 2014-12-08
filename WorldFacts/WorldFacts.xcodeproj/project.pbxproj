@@ -25,6 +25,7 @@
 		53A87BE7157FA30A000DBAC9 /* Country+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A87BE6157FA30A000DBAC9 /* Country+Extensions.m */; };
 		53A87BF1157FAD42000DBAC9 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A87BF0157FAD42000DBAC9 /* Country.m */; };
 		53E7826D1A3658590075A619 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53E7826C1A3658590075A619 /* Images.xcassets */; };
+		53E7826F1A36598D0075A619 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E7826E1A36598D0075A619 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		53A87BEF157FAD42000DBAC9 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
 		53A87BF0157FAD42000DBAC9 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
 		53E7826C1A3658590075A619 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		53E7826E1A36598D0075A619 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		538A799A157E56BF0007B8A5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				53E7826E1A36598D0075A619 /* Main.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				538A7989157E567F0007B8A5 /* InfoPlist.strings in Resources */,
 				538A79B2157E80D40007B8A5 /* countries.plist in Resources */,
 				53E7826D1A3658590075A619 /* Images.xcassets in Resources */,
+				53E7826F1A36598D0075A619 /* Main.storyboard in Resources */,
 				532CADEB158D1286002BEDC8 /* README in Resources */,
 				53524B401691E77100719AF8 /* Default-568h@2x.png in Resources */,
 				53524B411691E77100719AF8 /* Default.png in Resources */,
