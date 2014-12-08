@@ -26,6 +26,7 @@
 		53A87BE7157FA30A000DBAC9 /* Country+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A87BE6157FA30A000DBAC9 /* Country+Extensions.m */; };
 		53A87BF1157FAD42000DBAC9 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A87BF0157FAD42000DBAC9 /* Country.m */; };
 		53AE171015FA5BBE00911A7C /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A87BFA157FD530000DBAC9 /* CountryCell.xib */; };
+		53E7826D1A3658590075A619 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53E7826C1A3658590075A619 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		53A87BF0157FAD42000DBAC9 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
 		53A87BF8157FC55A000DBAC9 /* UYLCountryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UYLCountryTableViewController.xib; sourceTree = "<group>"; };
 		53A87BFA157FD530000DBAC9 /* CountryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
+		53E7826C1A3658590075A619 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				538A7998157E56A30007B8A5 /* Controllers */,
 				538A7985157E567F0007B8A5 /* Supporting Files */,
 				53524B241691D45C00719AF8 /* Resources */,
+				53E7826C1A3658590075A619 /* Images.xcassets */,
 			);
 			path = WorldFacts;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				538A7989157E567F0007B8A5 /* InfoPlist.strings in Resources */,
 				538A79A9157E5ABD0007B8A5 /* Country.storyboard in Resources */,
 				538A79B2157E80D40007B8A5 /* countries.plist in Resources */,
+				53E7826D1A3658590075A619 /* Images.xcassets in Resources */,
 				532CADEB158D1286002BEDC8 /* README in Resources */,
 				53AE171015FA5BBE00911A7C /* CountryCell.xib in Resources */,
 				53524B401691E77100719AF8 /* Default-568h@2x.png in Resources */,
@@ -339,6 +343,8 @@
 		538A7996157E567F0007B8A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = "WorldFacts/WorldFacts-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +356,8 @@
 		538A7997157E567F0007B8A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = "WorldFacts/WorldFacts-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
