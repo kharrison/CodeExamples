@@ -20,10 +20,10 @@
             </objects>
             <point key="canvasLocation" x="-38" y="-630"/>
         </scene>
-        <!--Detail-->
+        <!--Country-->
         <scene sceneID="yUG-lL-AsK">
             <objects>
-                <viewController title="Detail" id="JEX-9P-axG" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UYLCountryViewController" title="Country" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JEX-9P-axG" customClass="UYLCountryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
                         <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
@@ -180,8 +180,6 @@
                         <outlet property="phone" destination="n2M-ZX-p5w" id="eBx-O3-8uP"/>
                         <outlet property="population" destination="f8g-Bz-UEv" id="y9Y-rp-bHR"/>
                         <outlet property="tld" destination="N9c-s9-ZdL" id="YIy-Ub-Rf8"/>
-                        <outletCollection property="HeadlineCollection" destination="s7E-wv-syB" id="CIj-ND-HL9"/>
-                        <outletCollection property="BodyCollection" destination="E8q-No-t25" id="JPH-Qe-5ZS"/>
                         <outletCollection property="headlineCollection" destination="TXI-S5-bhL" id="pPg-8R-o8R"/>
                         <outletCollection property="bodyCollection" destination="toI-tD-zCB" id="GBO-Ee-XJq"/>
                         <outletCollection property="headlineCollection" destination="bQM-OT-jlm" id="MfB-vG-Qv9"/>
@@ -219,7 +217,7 @@
         <!--World-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
-                <tableViewController autoresizesArchivedViewToFullSize="NO" title="World" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="UYLCountryTableViewController" autoresizesArchivedViewToFullSize="NO" title="World" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="UYLCountryTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -269,7 +267,7 @@
                                     <outlet property="capitalLabel" destination="vsL-py-cNz" id="hS1-2Z-wXm"/>
                                     <outlet property="countryLabel" destination="BXz-JQ-J7M" id="24g-LM-NHE"/>
                                     <outlet property="populationLabel" destination="srZ-4X-ZJ4" id="RQv-xQ-RAo"/>
-                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
+                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="UYLSegueShowCountry" id="6S0-TO-JiA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
