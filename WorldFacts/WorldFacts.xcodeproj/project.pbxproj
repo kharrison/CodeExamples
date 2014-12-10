@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		532CADEB158D1286002BEDC8 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 532CADEA158D1286002BEDC8 /* README */; };
 		532CADF5158D19D1002BEDC8 /* UYLCountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532CADF4158D19D1002BEDC8 /* UYLCountryViewController.m */; };
-		53524B401691E77100719AF8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53524B391691E77100719AF8 /* Default-568h@2x.png */; };
-		53524B411691E77100719AF8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 53524B3A1691E77100719AF8 /* Default.png */; };
-		53524B421691E77100719AF8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53524B3B1691E77100719AF8 /* Default@2x.png */; };
 		538A7989157E567F0007B8A5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 538A7987157E567F0007B8A5 /* InfoPlist.strings */; };
 		538A798B157E567F0007B8A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 538A798A157E567F0007B8A5 /* main.m */; };
 		538A798F157E567F0007B8A5 /* UYLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 538A798E157E567F0007B8A5 /* UYLAppDelegate.m */; };
@@ -29,9 +26,6 @@
 		532CADEA158D1286002BEDC8 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		532CADF3158D19D1002BEDC8 /* UYLCountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLCountryViewController.h; sourceTree = "<group>"; };
 		532CADF4158D19D1002BEDC8 /* UYLCountryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLCountryViewController.m; sourceTree = "<group>"; };
-		53524B391691E77100719AF8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		53524B3A1691E77100719AF8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		53524B3B1691E77100719AF8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		538A7978157E567F0007B8A5 /* WorldFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		538A7986157E567F0007B8A5 /* WorldFacts-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WorldFacts-Info.plist"; sourceTree = "<group>"; };
 		538A798A157E567F0007B8A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,9 +60,6 @@
 		53524B241691D45C00719AF8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				53524B391691E77100719AF8 /* Default-568h@2x.png */,
-				53524B3A1691E77100719AF8 /* Default.png */,
-				53524B3B1691E77100719AF8 /* Default@2x.png */,
 			);
 			name = Resources;
 			path = ..;
@@ -207,9 +198,6 @@
 				53E7826D1A3658590075A619 /* Images.xcassets in Resources */,
 				53E782701A365AE60075A619 /* Main.storyboard in Resources */,
 				532CADEB158D1286002BEDC8 /* README in Resources */,
-				53524B401691E77100719AF8 /* Default-568h@2x.png in Resources */,
-				53524B411691E77100719AF8 /* Default.png in Resources */,
-				53524B421691E77100719AF8 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
