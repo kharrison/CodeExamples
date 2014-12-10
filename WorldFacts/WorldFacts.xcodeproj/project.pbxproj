@@ -15,6 +15,7 @@
 		538A7992157E567F0007B8A5 /* WorldFacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 538A7990157E567F0007B8A5 /* WorldFacts.xcdatamodeld */; };
 		538A79A4157E5A730007B8A5 /* UYLCountryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538A79A3157E5A730007B8A5 /* UYLCountryTableViewController.m */; };
 		538A79B2157E80D40007B8A5 /* countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = 538A79B1157E80D40007B8A5 /* countries.plist */; };
+		5391E1CD1A38F80700218F41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5391E1CC1A38F80700218F41 /* LaunchScreen.xib */; };
 		53A87BE7157FA30A000DBAC9 /* Country+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A87BE6157FA30A000DBAC9 /* Country+Extensions.m */; };
 		53A87BF1157FAD42000DBAC9 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A87BF0157FAD42000DBAC9 /* Country.m */; };
 		53E7826D1A3658590075A619 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53E7826C1A3658590075A619 /* Images.xcassets */; };
@@ -35,6 +36,7 @@
 		538A79A2157E5A730007B8A5 /* UYLCountryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLCountryTableViewController.h; sourceTree = "<group>"; };
 		538A79A3157E5A730007B8A5 /* UYLCountryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLCountryTableViewController.m; sourceTree = "<group>"; };
 		538A79B1157E80D40007B8A5 /* countries.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = countries.plist; sourceTree = "<group>"; };
+		5391E1CC1A38F80700218F41 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		53A87BE5157FA30A000DBAC9 /* Country+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Country+Extensions.h"; sourceTree = "<group>"; };
 		53A87BE6157FA30A000DBAC9 /* Country+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Country+Extensions.m"; sourceTree = "<group>"; };
 		53A87BEF157FAD42000DBAC9 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				53E782721A365AE60075A619 /* Main.storyboard */,
 				53EDC98F1A37AF03005CDB68 /* CountryCell.h */,
 				53EDC9901A37AF03005CDB68 /* CountryCell.m */,
+				5391E1CC1A38F80700218F41 /* LaunchScreen.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				538A79B2157E80D40007B8A5 /* countries.plist in Resources */,
 				53E7826D1A3658590075A619 /* Images.xcassets in Resources */,
 				53E782701A365AE60075A619 /* Main.storyboard in Resources */,
+				5391E1CD1A38F80700218F41 /* LaunchScreen.xib in Resources */,
 				532CADEB158D1286002BEDC8 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
