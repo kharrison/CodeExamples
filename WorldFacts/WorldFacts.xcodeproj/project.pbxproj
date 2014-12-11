@@ -59,14 +59,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		53524B241691D45C00719AF8 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		538A796D157E567E0007B8A5 = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +85,6 @@
 				538A799A157E56BF0007B8A5 /* Views */,
 				538A7998157E56A30007B8A5 /* Controllers */,
 				538A7985157E567F0007B8A5 /* Supporting Files */,
-				53524B241691D45C00719AF8 /* Resources */,
 				53E7826C1A3658590075A619 /* Images.xcassets */,
 			);
 			path = WorldFacts;
