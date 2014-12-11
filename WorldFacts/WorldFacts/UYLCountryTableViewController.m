@@ -64,7 +64,7 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"World", @"World");
+    self.title = NSLocalizedString(@"WorldTableViewTitle", @"World");
 
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didChangePreferredContentSize:)
@@ -78,7 +78,8 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
     self.searchController.dimsBackgroundDuringPresentation = NO;
     
     // Configure the search bar with scope buttons and add it to the table view header
-    self.searchController.searchBar.scopeButtonTitles = @[@"Country", @"Capital"];
+    self.searchController.searchBar.scopeButtonTitles = @[NSLocalizedString(@"ScopeButtonCountry",@"Country"),
+                                                          NSLocalizedString(@"ScopeButtonCapital",@"Capital")];
     self.searchController.searchBar.delegate = self;
     
     self.tableView.tableHeaderView = self.searchController.searchBar;
@@ -206,7 +207,7 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
     cell.capitalLabel.text = country.capital;
     
     NSString *population = [self.decimalFormatter stringFromNumber:country.population];
-    cell.populationLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Pop: %@", @"Pop:"), population];
+    cell.populationLabel.text = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"PopulationShortLabel", @"Pop:"), population];
     
     cell.countryLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     cell.capitalLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];

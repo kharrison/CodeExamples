@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  WorldFacts
+*/
+
+"WorldTableViewTitle" = "World";
+"ScopeButtonCountry" = "Country";
+"ScopeButtonCapital" = "Capital";
+"PopulationShortLabel" = "Pop:";

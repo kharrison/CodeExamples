@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		532CADEB158D1286002BEDC8 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 532CADEA158D1286002BEDC8 /* README */; };
 		532CADF5158D19D1002BEDC8 /* UYLCountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532CADF4158D19D1002BEDC8 /* UYLCountryViewController.m */; };
-		538A7989157E567F0007B8A5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 538A7987157E567F0007B8A5 /* InfoPlist.strings */; };
 		538A798B157E567F0007B8A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 538A798A157E567F0007B8A5 /* main.m */; };
 		538A798F157E567F0007B8A5 /* UYLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 538A798E157E567F0007B8A5 /* UYLAppDelegate.m */; };
 		538A7992157E567F0007B8A5 /* WorldFacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 538A7990157E567F0007B8A5 /* WorldFacts.xcdatamodeld */; };
@@ -18,6 +17,7 @@
 		5391E1CD1A38F80700218F41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5391E1CC1A38F80700218F41 /* LaunchScreen.xib */; };
 		53A87BE7157FA30A000DBAC9 /* Country+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A87BE6157FA30A000DBAC9 /* Country+Extensions.m */; };
 		53A87BF1157FAD42000DBAC9 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A87BF0157FAD42000DBAC9 /* Country.m */; };
+		53B691731A3A5AE500DDFBE2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53B691751A3A5AE500DDFBE2 /* Localizable.strings */; };
 		53E7826D1A3658590075A619 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53E7826C1A3658590075A619 /* Images.xcassets */; };
 		53E782701A365AE60075A619 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E782721A365AE60075A619 /* Main.storyboard */; };
 		53EDC9911A37AF03005CDB68 /* CountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EDC9901A37AF03005CDB68 /* CountryCell.m */; };
@@ -41,9 +41,9 @@
 		53A87BE6157FA30A000DBAC9 /* Country+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Country+Extensions.m"; sourceTree = "<group>"; };
 		53A87BEF157FAD42000DBAC9 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
 		53A87BF0157FAD42000DBAC9 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
+		53B691741A3A5AE500DDFBE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		53E7826C1A3658590075A619 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		53E782731A365AF30075A619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		53E782741A365B120075A619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53EDC98F1A37AF03005CDB68 /* CountryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryCell.h; sourceTree = "<group>"; };
 		53EDC9901A37AF03005CDB68 /* CountryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,8 +104,8 @@
 			children = (
 				538A79B1157E80D40007B8A5 /* countries.plist */,
 				538A7986157E567F0007B8A5 /* WorldFacts-Info.plist */,
-				538A7987157E567F0007B8A5 /* InfoPlist.strings */,
 				538A798A157E567F0007B8A5 /* main.m */,
+				53B691751A3A5AE500DDFBE2 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -196,9 +196,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				538A7989157E567F0007B8A5 /* InfoPlist.strings in Resources */,
 				538A79B2157E80D40007B8A5 /* countries.plist in Resources */,
 				53E7826D1A3658590075A619 /* Images.xcassets in Resources */,
+				53B691731A3A5AE500DDFBE2 /* Localizable.strings in Resources */,
 				53E782701A365AE60075A619 /* Main.storyboard in Resources */,
 				5391E1CD1A38F80700218F41 /* LaunchScreen.xib in Resources */,
 				532CADEB158D1286002BEDC8 /* README in Resources */,
@@ -226,12 +226,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		538A7987157E567F0007B8A5 /* InfoPlist.strings */ = {
+		53B691751A3A5AE500DDFBE2 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				53E782741A365B120075A619 /* Base */,
+				53B691741A3A5AE500DDFBE2 /* en */,
 			);
-			name = InfoPlist.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		53E782721A365AE60075A619 /* Main.storyboard */ = {
