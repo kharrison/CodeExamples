@@ -72,12 +72,6 @@ static NSString *UYLCellIdentifier = @"UYLTextCell";
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
-//- (void)viewDidAppear:(BOOL)animated
-//{
-//    [super viewDidAppear:animated];
-//    [self.tableView reloadData];
-//}
-
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self
