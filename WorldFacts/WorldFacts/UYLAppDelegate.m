@@ -3,7 +3,7 @@
 //  WorldFacts
 //
 //  Created by Keith Harrison http://useyourloaf.com
-//  Copyright (c) 2012 Keith Harrison. All rights reserved.
+//  Copyright (c) 2012-2014 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -32,14 +32,17 @@
 
 #import "UYLAppDelegate.h"
 #import "UYLCountryTableViewController.h"
+#import "UYLCountryViewController.h"
 #import "Country+Extensions.h"
+
+@interface UYLAppDelegate () <UISplitViewControllerDelegate>
+@end
 
 @implementation UYLAppDelegate
 
-// @synthesize window = _window;
-@synthesize managedObjectContext = __managedObjectContext;
-@synthesize managedObjectModel = __managedObjectModel;
-@synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize managedObjectModel = _managedObjectModel;
+@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 #pragma mark -
 #pragma mark === UIApplicationDelegate Methods ===
@@ -47,35 +50,44 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
+    navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
+    splitViewController.delegate = self;
+    splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModeAllVisible;
     
-    UIStoryboard *countryStoryboard = [UIStoryboard storyboardWithName:@"Country" bundle:nil];
-    UINavigationController *navController = [countryStoryboard instantiateInitialViewController];
-    UYLCountryTableViewController *countryViewController = (UYLCountryTableViewController *)navController.topViewController;
-
-//  The following two lines are used to create the view controllers when not using storyboards
-//    UYLCountryTableViewController *countryViewController = [[UYLCountryTableViewController alloc]
-//                                                            initWithNibName:@"UYLCountryTableViewController"
-//                                                            bundle:nil];
-//    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:countryViewController];
-    
-    countryViewController.managedObjectContext = self.managedObjectContext;   
+    UINavigationController *masterNavigationController = splitViewController.viewControllers[0];
+    UYLCountryTableViewController *controller = (UYLCountryTableViewController *)masterNavigationController.topViewController;
+    controller.managedObjectContext = self.managedObjectContext;
     [Country importDataToMoc:self.managedObjectContext];
-    
-    self.window.rootViewController = navController;
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    [self saveContext];
-}
+#pragma mark -
+#pragma mark === UISplitViewControllerDelegate ===
+#pragma mark -
 
-- (void)applicationWillTerminate:(UIApplication *)application
+// When transitioning to a collapsed interface if our secondary view controller is the detail view
+// controller navigation hierarchy and it does not have a country to display (which is the case on
+// initial launch) we discard and show the master view controller.
+
+- (BOOL)splitViewController:(UISplitViewController *)splitViewController
+collapseSecondaryViewController:(UIViewController *)secondaryViewController
+  ontoPrimaryViewController:(UIViewController *)primaryViewController
 {
-    [self saveContext];
+    if ([secondaryViewController isKindOfClass:[UINavigationController class]]
+        && [[(UINavigationController *)secondaryViewController topViewController] isKindOfClass:[UYLCountryViewController class]]
+        && ([(UYLCountryViewController *)[(UINavigationController *)secondaryViewController topViewController] country] == nil))
+    {
+        // Return YES to indicate that we have handled the collapse by doing nothing
+        // the secondary controller will be discarded.
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
 }
 
 #pragma mark -
@@ -84,59 +96,57 @@
 
 - (NSManagedObjectContext *)managedObjectContext
 {
-    if (__managedObjectContext != nil) {
-        return __managedObjectContext;
+    if (_managedObjectContext != nil)
+    {
+        return _managedObjectContext;
     }
     
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-    if (coordinator != nil) {
-        __managedObjectContext = [[NSManagedObjectContext alloc] init];
-        [__managedObjectContext setPersistentStoreCoordinator:coordinator];
+    if (coordinator != nil)
+    {
+        _managedObjectContext = [[NSManagedObjectContext alloc] init];
+        [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
-    return __managedObjectContext;
+    return _managedObjectContext;
 }
 
 - (NSManagedObjectModel *)managedObjectModel
 {
-    if (__managedObjectModel != nil) {
-        return __managedObjectModel;
+    if (_managedObjectModel != nil)
+    {
+        return _managedObjectModel;
     }
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"WorldFacts" withExtension:@"momd"];
-    __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
-    return __managedObjectModel;
+    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    return _managedObjectModel;
 }
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator
 {
-    if (__persistentStoreCoordinator != nil) {
-        return __persistentStoreCoordinator;
+    if (_persistentStoreCoordinator != nil)
+    {
+        return _persistentStoreCoordinator;
     }
     
     NSURL *storeURL = [[self applicationSupportDirectory] URLByAppendingPathComponent:@"WorldFacts.sqlite"];
     
     NSError *error = nil;
-    __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
+                                                   configuration:nil
+                                                             URL:storeURL
+                                                         options:nil
+                                                           error:&error])
+    {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
     }    
     
-    return __persistentStoreCoordinator;
+    return _persistentStoreCoordinator;
 }
 
 #pragma mark -
 #pragma mark === Utility Methods ===
 #pragma mark -
-
-- (void)saveContext
-{
-    NSError *error = nil;
-    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
-    if (managedObjectContext != nil) {
-        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        } 
-    }
-}
 
 - (NSURL *)applicationSupportDirectory
 {

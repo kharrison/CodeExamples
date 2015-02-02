@@ -3,7 +3,7 @@
 //  WorldFacts
 //
 //  Created by Keith Harrison http://useyourloaf.com
-//  Copyright (c) 2012 Keith Harrison. All rights reserved.
+//  Copyright (c) 2012-2014 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -43,18 +43,48 @@
 @property (nonatomic, weak) IBOutlet UILabel *population;
 @property (nonatomic, weak) IBOutlet UILabel *tld;
 
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *headlineCollection;
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *bodyCollection;
+
 @end
 
 @implementation UYLCountryViewController
 
-//@synthesize country=_country;
-//@synthesize area=_area;
-//@synthesize capital=_capital;
-//@synthesize continent=_continent;
-//@synthesize currency=_currency;
-//@synthesize phone=_phone;
-//@synthesize population=_population;
-//@synthesize tld=_tld;
+- (void)setCountry:(Country *)newCountry
+{
+    if (_country != newCountry)
+    {
+        _country = newCountry;
+        [self configureView];
+    }
+}
+
+- (void)configureView
+{
+    for (UILabel *label in self.headlineCollection)
+    {
+        label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    }
+    
+    for (UILabel *label in self.bodyCollection)
+    {
+        label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    }
+    
+    self.title = self.country.name;
+    
+    NSString *area = [NSNumberFormatter localizedStringFromNumber:self.country.area numberStyle:NSNumberFormatterDecimalStyle];
+    self.area.text = [area length] ? area : @"None";
+    
+    NSString *population = [NSNumberFormatter localizedStringFromNumber:self.country.population numberStyle:NSNumberFormatterDecimalStyle];
+    self.population.text = [population length] ? population: @"None";
+    
+    self.capital.text = [self.country.capital length] ? self.country.capital : @"None";
+    self.continent.text = [self.country.continent length] ? self.country.continent : @"None";
+    self.currency.text = [self.country.currency length] ? self.country.currency : @"None";
+    self.phone.text = [self.country.phone length] ? self.country.phone : @"None";
+    self.tld.text = [self.country.tld length] ? self.country.tld : @"None";
+}
 
 #pragma mark -
 #pragma mark === View Life Cycle Management ===
@@ -63,21 +93,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configureView];
     
-    self.title = self.country.name;
-    self.area.text = [NSNumberFormatter localizedStringFromNumber:self.country.area numberStyle:NSNumberFormatterDecimalStyle];
-    self.population.text = [NSNumberFormatter localizedStringFromNumber:self.country.population numberStyle:NSNumberFormatterDecimalStyle];
-
-    self.capital.text = self.country.capital;
-    self.continent.text = self.country.continent;
-    self.currency.text = self.country.currency;
-    self.phone.text = self.country.phone;
-    self.tld.text = self.country.tld;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didChangePreferredContentSize:)
+                                                 name:UIContentSizeCategoryDidChangeNotification object:nil];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+- (void)didChangePreferredContentSize:(NSNotification *)notification
 {
-    return YES;
+    [self configureView];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIContentSizeCategoryDidChangeNotification
+                                                  object:nil];
 }
 
 @end
