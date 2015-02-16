@@ -30,5 +30,5 @@
   TaskTimer     - Example of UIAccessibility Support
   TCNibLoad     - Example use of UINib class
   TwitterSearch - Example of using NSURLConnection to query Twitter API
-  WorldFacts    - Using storyboards for dynamic table views
+  WorldFacts    - Using an iOS 8 UISearchController to filter a table view
 =======================================================================
