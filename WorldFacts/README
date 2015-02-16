@@ -1,6 +1,7 @@
 =======================================================================
 WorldFacts
 
+Version 2.0 16 Feb  2014    Update for iOS 8 and UISearchController
 Version 1.5 20 Feb  2013    Move core data file to App Support dir
 Version 1.4 31 Dec  2012    Add default launch images to support retina
                             4 inch display
@@ -10,13 +11,10 @@ Version 1.1 21 June 2012    Add Storyboard segue to country view
 Version 1.0  6 June 2012    Initial Version
 =======================================================================
 
-The WorldFacts App demonstrates how to use Storyboards to create a 
-dynamic table view cell using a prototype cell. This is a big
-improvement over iOS 4 where it was necessary to design the cell
-in a separate NIB and then manually load it and instantiate each
-cell.
-
-For further details see:
+The WorldFacts App has gone through a number of iterations over the
+years as the capabilities of iOS have changed. Originally it started
+as an example of how to construct custom table view cells with a
+storyboard. For further details see the post:
 
 useyourloaf.com/blog/2012/06/07/prototype-cells-and-storyboards.html
 
@@ -29,6 +27,20 @@ The steps to add a search bar to the table view controller are covered
 in the following post:
 
 useyourloaf.com/blog/2012/09/06/search-bar-table-view-storyboard.html
+
+The release of iOS 8 saw a number of changes to update and modernise
+the code:
+
++ UISearchDisplayController is deprecated and replaced by the much
+  cleaner UISearchController
++ Modules are now used instead of precompiled headers
++ The Storyboard is now universal
++ Include a launch screen storyboard
++ Autolayout is used
++ Dynamic Type is used for the content
++ Asset Catalogs for the icons and images
++ Base Internationalization
++ Remove old orientation handling code.
 
 The geographic data used in this App is from GeoNames and used under
 the Creative Commons Attributions License (see www.geonames.org).
@@ -59,27 +71,9 @@ to import an initial set of geographic data from countries.plist.
 View
 =======================================================================
 
-Country.storyboard
-The storyboard file used to create the table view and custom prototype
-cell.
+Main.storyboard
+The universal storyboard file used to create the table and details view
 
-UYLCountryTableViewController.xib
-Traditional NIB file used to load the country table view when not using
-a storyboard. This NIB file is not used in the final version of the App
-but is included for reference.  If you want to revert back to
-using this NIB you will need to add it to the target.
-
-CountryCell.xib
-Traditional NIB file used to create the custom table view cell when not
-using a storyboard. This NIB file is not used in the final version of
-the App but is included for reference. If you want to revert back to
-using this NIB you will need to add it to the target.
-
-UYLCountryViewController.xib
-Traditional NIB file used to show the country detail view when not using
-a storyboard. This NIB file is not used in the final version of the App
-but is included for reference. If you want to revert back to using this
-NIB you will need to add it to the target.
 
 =======================================================================
 Controllers
@@ -89,12 +83,9 @@ UYLCountryTableViewController.h
 UYLCountryTableViewController.m
 
 The table view controller used to show the list of countries with
-details on the capital and population in a custom cell layout. The 
-table view controller implementation is a standard implementation of
-an NSFetchResultsController.
-
-The key code showing how the cell NIB is loaded is contained in the
-method -tableView:cellForRowAtIndexPath:.
+details on the capital and population and manage the search interface.
+The table view controller implementation is a standard implementation
+of an NSFetchResultsController.
 
 UYLCountryViewController.h
 UYLCountryViewController.m
