@@ -3,7 +3,7 @@
 
   See http://useyourloaf.com for details
 
-  This README last updated: 05-September-2014
+  This README last updated: 27 March 2015
 =======================================================================
 
 + INDEX
@@ -30,5 +30,5 @@
   TaskTimer     - Example of UIAccessibility Support
   TCNibLoad     - Example use of UINib class
   TwitterSearch - Example of using NSURLConnection to query Twitter API
-  WorldFacts    - Using an iOS 8 UISearchController to filter a table view
+  WorldFacts    - Both iOS 8 and OS X Core Data example
 =======================================================================

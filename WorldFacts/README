@@ -1,6 +1,7 @@
 =======================================================================
 WorldFacts
 
+Version 3.0 27 Mar  2015    Add OS X application to create core data
 Version 2.0 16 Feb  2014    Update for iOS 8 and UISearchController
 Version 1.5 20 Feb  2013    Move core data file to App Support dir
 Version 1.4 31 Dec  2012    Add default launch images to support retina
@@ -41,6 +42,12 @@ the code:
 + Asset Catalogs for the icons and images
 + Base Internationalization
 + Remove old orientation handling code.
+
+An OS X companion app has also been added to create and maintain the core
+data stack. Full details on how to use Cocoa Bindings to create a simple
+interface to Core Data are covered in the following post:
+
+useyourloaf.com/blog/2015/03/25/creating-an-os-x-core-data-helper-app.html
 
 The geographic data used in this App is from GeoNames and used under
 the Creative Commons Attributions License (see www.geonames.org).

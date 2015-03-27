@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5313456D1ABF5FFE000B013F /* CountryWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5313456C1ABF5FFE000B013F /* CountryWindowController.m */; };
+		531D96131AB62FEF00913A78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 531D96121AB62FEF00913A78 /* AppDelegate.m */; };
+		531D96151AB62FEF00913A78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 531D96141AB62FEF00913A78 /* main.m */; };
+		531D961D1AB62FEF00913A78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 531D961C1AB62FEF00913A78 /* Images.xcassets */; };
+		531D96201AB62FEF00913A78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 531D961E1AB62FEF00913A78 /* Main.storyboard */; };
 		532CADEB158D1286002BEDC8 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 532CADEA158D1286002BEDC8 /* README */; };
 		532CADF5158D19D1002BEDC8 /* UYLCountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532CADF4158D19D1002BEDC8 /* UYLCountryViewController.m */; };
+		534EBDA01AC4B0F90014AD9D /* WorldFacts.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 534EBD9F1AC4B0F90014AD9D /* WorldFacts.sqlite */; };
+		536346AE1AC0BE440087214A /* CountryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 536346AD1AC0BE440087214A /* CountryTableViewController.m */; };
+		536346AF1AC0CC980087214A /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A87BF0157FAD42000DBAC9 /* Country.m */; };
+		536346B01AC0CC9C0087214A /* Country+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A87BE6157FA30A000DBAC9 /* Country+Extensions.m */; };
+		536346B11AC0D4570087214A /* countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = 538A79B1157E80D40007B8A5 /* countries.plist */; };
 		538A798B157E567F0007B8A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 538A798A157E567F0007B8A5 /* main.m */; };
 		538A798F157E567F0007B8A5 /* UYLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 538A798E157E567F0007B8A5 /* UYLAppDelegate.m */; };
 		538A7992157E567F0007B8A5 /* WorldFacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 538A7990157E567F0007B8A5 /* WorldFacts.xcdatamodeld */; };
 		538A79A4157E5A730007B8A5 /* UYLCountryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538A79A3157E5A730007B8A5 /* UYLCountryTableViewController.m */; };
-		538A79B2157E80D40007B8A5 /* countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = 538A79B1157E80D40007B8A5 /* countries.plist */; };
+		539851C21ABB76EA00A5598B /* WorldFacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 538A7990157E567F0007B8A5 /* WorldFacts.xcdatamodeld */; };
 		53A87BE7157FA30A000DBAC9 /* Country+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A87BE6157FA30A000DBAC9 /* Country+Extensions.m */; };
 		53A87BF1157FAD42000DBAC9 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A87BF0157FAD42000DBAC9 /* Country.m */; };
 		53B691731A3A5AE500DDFBE2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53B691751A3A5AE500DDFBE2 /* Localizable.strings */; };
@@ -24,9 +34,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5313456B1ABF5FFE000B013F /* CountryWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryWindowController.h; sourceTree = "<group>"; };
+		5313456C1ABF5FFE000B013F /* CountryWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryWindowController.m; sourceTree = "<group>"; };
+		531D960D1AB62FEF00913A78 /* WorldFactsBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldFactsBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		531D96101AB62FEF00913A78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		531D96111AB62FEF00913A78 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		531D96121AB62FEF00913A78 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		531D96141AB62FEF00913A78 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		531D961C1AB62FEF00913A78 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		531D961F1AB62FEF00913A78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		532CADEA158D1286002BEDC8 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		532CADF3158D19D1002BEDC8 /* UYLCountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLCountryViewController.h; sourceTree = "<group>"; };
 		532CADF4158D19D1002BEDC8 /* UYLCountryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLCountryViewController.m; sourceTree = "<group>"; };
+		534EBD9F1AC4B0F90014AD9D /* WorldFacts.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = WorldFacts.sqlite; sourceTree = "<group>"; };
+		536346AC1AC0BE440087214A /* CountryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryTableViewController.h; sourceTree = "<group>"; };
+		536346AD1AC0BE440087214A /* CountryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryTableViewController.m; sourceTree = "<group>"; };
 		538A7978157E567F0007B8A5 /* WorldFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		538A7986157E567F0007B8A5 /* WorldFacts-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WorldFacts-Info.plist"; sourceTree = "<group>"; };
 		538A798A157E567F0007B8A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,6 +71,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		531D960A1AB62FEF00913A78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		538A7975157E567F0007B8A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,11 +88,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		531D960E1AB62FEF00913A78 /* WorldFactsBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				531D96111AB62FEF00913A78 /* AppDelegate.h */,
+				531D96121AB62FEF00913A78 /* AppDelegate.m */,
+				5313456B1ABF5FFE000B013F /* CountryWindowController.h */,
+				5313456C1ABF5FFE000B013F /* CountryWindowController.m */,
+				536346AC1AC0BE440087214A /* CountryTableViewController.h */,
+				536346AD1AC0BE440087214A /* CountryTableViewController.m */,
+				531D961C1AB62FEF00913A78 /* Images.xcassets */,
+				531D961E1AB62FEF00913A78 /* Main.storyboard */,
+				531D960F1AB62FEF00913A78 /* Supporting Files */,
+			);
+			path = WorldFactsBuilder;
+			sourceTree = "<group>";
+		};
+		531D960F1AB62FEF00913A78 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				531D96101AB62FEF00913A78 /* Info.plist */,
+				531D96141AB62FEF00913A78 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		538A796D157E567E0007B8A5 = {
 			isa = PBXGroup;
 			children = (
 				532CADEA158D1286002BEDC8 /* README */,
 				538A7984157E567F0007B8A5 /* WorldFacts */,
+				531D960E1AB62FEF00913A78 /* WorldFactsBuilder */,
 				538A7979157E567F0007B8A5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				538A7978157E567F0007B8A5 /* WorldFacts.app */,
+				531D960D1AB62FEF00913A78 /* WorldFactsBuilder.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +149,7 @@
 		538A7985157E567F0007B8A5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				534EBD9F1AC4B0F90014AD9D /* WorldFacts.sqlite */,
 				538A79B1157E80D40007B8A5 /* countries.plist */,
 				538A7986157E567F0007B8A5 /* WorldFacts-Info.plist */,
 				538A798A157E567F0007B8A5 /* main.m */,
@@ -138,6 +195,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		531D960C1AB62FEF00913A78 /* WorldFactsBuilder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 531D96311AB62FEF00913A78 /* Build configuration list for PBXNativeTarget "WorldFactsBuilder" */;
+			buildPhases = (
+				531D96091AB62FEF00913A78 /* Sources */,
+				531D960A1AB62FEF00913A78 /* Frameworks */,
+				531D960B1AB62FEF00913A78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorldFactsBuilder;
+			productName = WorldFactsBuilder;
+			productReference = 531D960D1AB62FEF00913A78 /* WorldFactsBuilder.app */;
+			productType = "com.apple.product-type.application";
+		};
 		538A7977157E567F0007B8A5 /* WorldFacts */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 538A7995157E567F0007B8A5 /* Build configuration list for PBXNativeTarget "WorldFacts" */;
@@ -163,6 +237,11 @@
 			attributes = {
 				CLASSPREFIX = UYL;
 				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					531D960C1AB62FEF00913A78 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
 			};
 			buildConfigurationList = 538A7972157E567E0007B8A5 /* Build configuration list for PBXProject "WorldFacts" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -178,16 +257,27 @@
 			projectRoot = "";
 			targets = (
 				538A7977157E567F0007B8A5 /* WorldFacts */,
+				531D960C1AB62FEF00913A78 /* WorldFactsBuilder */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		531D960B1AB62FEF00913A78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				531D961D1AB62FEF00913A78 /* Images.xcassets in Resources */,
+				531D96201AB62FEF00913A78 /* Main.storyboard in Resources */,
+				536346B11AC0D4570087214A /* countries.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		538A7976157E567F0007B8A5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				538A79B2157E80D40007B8A5 /* countries.plist in Resources */,
+				534EBDA01AC4B0F90014AD9D /* WorldFacts.sqlite in Resources */,
 				53E7826D1A3658590075A619 /* Images.xcassets in Resources */,
 				53B691731A3A5AE500DDFBE2 /* Localizable.strings in Resources */,
 				53E782701A365AE60075A619 /* Main.storyboard in Resources */,
@@ -199,6 +289,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		531D96091AB62FEF00913A78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				536346AF1AC0CC980087214A /* Country.m in Sources */,
+				5313456D1ABF5FFE000B013F /* CountryWindowController.m in Sources */,
+				531D96151AB62FEF00913A78 /* main.m in Sources */,
+				536346AE1AC0BE440087214A /* CountryTableViewController.m in Sources */,
+				539851C21ABB76EA00A5598B /* WorldFacts.xcdatamodeld in Sources */,
+				536346B01AC0CC9C0087214A /* Country+Extensions.m in Sources */,
+				531D96131AB62FEF00913A78 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		538A7974157E567F0007B8A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +321,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		531D961E1AB62FEF00913A78 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				531D961F1AB62FEF00913A78 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		53B691751A3A5AE500DDFBE2 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -236,6 +348,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		531D962D1AB62FEF00913A78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = WorldFactsBuilder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		531D962E1AB62FEF00913A78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = WorldFactsBuilder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		538A7993157E567F0007B8A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -343,6 +500,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		531D96311AB62FEF00913A78 /* Build configuration list for PBXNativeTarget "WorldFactsBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				531D962D1AB62FEF00913A78 /* Debug */,
+				531D962E1AB62FEF00913A78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		538A7972157E567E0007B8A5 /* Build configuration list for PBXProject "WorldFacts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
