@@ -211,7 +211,7 @@
 }
 
 #pragma mark -
-#pragma mark === UITextFieldTextDidChange Target Action ===
+#pragma mark === UITextField - UIControlEventEditingChanged ===
 #pragma mark -
 
 - (void)alertTextFieldDidChange:(UITextField *)sender
@@ -231,10 +231,6 @@
 
 - (void)didEnterBackground:(NSNotification *)notification
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UITextFieldTextDidChangeNotification
-                                                  object:nil];
-
     [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
 }
 
