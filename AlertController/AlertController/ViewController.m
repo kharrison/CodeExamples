@@ -128,10 +128,9 @@
     [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField)
      {
          textField.placeholder = NSLocalizedString(@"LoginPlaceholder", @"Login");
-         [[NSNotificationCenter defaultCenter] addObserver:self
-                                                  selector:@selector(alertTextFieldDidChange:)
-                                                      name:UITextFieldTextDidChangeNotification
-                                                    object:textField];
+         [textField addTarget:self
+                       action:@selector(alertTextFieldDidChange:)
+             forControlEvents:UIControlEventEditingChanged];
      }];
     
     [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField)
@@ -144,9 +143,6 @@
                                                            style:UIAlertActionStyleCancel
                                                          handler:^(UIAlertAction *action)
                                    {
-                                       [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                                                       name:UITextFieldTextDidChangeNotification
-                                                                                     object:nil];
                                        NSLog(@"Cancel action");
                                    }];
     
@@ -156,9 +152,6 @@
                                {
                                    UITextField *login = alertController.textFields.firstObject;
                                    UITextField *password = alertController.textFields.lastObject;
-                                   [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                                                   name:UITextFieldTextDidChangeNotification
-                                                                                 object:nil];
 
                                    NSLog(@"OK action");
                                    NSLog(@"Login value: %@",login.text);
@@ -218,10 +211,10 @@
 }
 
 #pragma mark -
-#pragma mark === UITextFieldTextDidChangeNotification ===
+#pragma mark === UITextFieldTextDidChange Target Action ===
 #pragma mark -
 
-- (void)alertTextFieldDidChange:(NSNotification *)notification
+- (void)alertTextFieldDidChange:(UITextField *)sender
 {
     UIAlertController *alertController = (UIAlertController *)self.presentedViewController;
     if (alertController)
