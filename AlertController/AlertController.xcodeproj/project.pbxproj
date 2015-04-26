@@ -12,6 +12,7 @@
 		5307C7DB19B6245B00CFD37F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5307C7DA19B6245B00CFD37F /* ViewController.m */; };
 		5307C7DE19B6245B00CFD37F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5307C7DC19B6245B00CFD37F /* Main.storyboard */; };
 		5307C7E019B6245B00CFD37F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5307C7DF19B6245B00CFD37F /* Images.xcassets */; };
+		53AF7FFA1AECFD9C00683F34 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 53AF7FF91AECFD9C00683F34 /* README */; };
 		53D5575019B66F5D005EAFDF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53D5574E19B66F5D005EAFDF /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		5307C7DA19B6245B00CFD37F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5307C7DD19B6245B00CFD37F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5307C7DF19B6245B00CFD37F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		53AF7FF91AECFD9C00683F34 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		53D5574F19B66F5D005EAFDF /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,6 +44,7 @@
 		5307C7C619B6245B00CFD37F = {
 			isa = PBXGroup;
 			children = (
+				53AF7FF91AECFD9C00683F34 /* README */,
 				5307C7D119B6245B00CFD37F /* AlertController */,
 				5307C7D019B6245B00CFD37F /* Products */,
 			);
@@ -136,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53AF7FFA1AECFD9C00683F34 /* README in Resources */,
 				5307C7DE19B6245B00CFD37F /* Main.storyboard in Resources */,
 				53D5575019B66F5D005EAFDF /* Localizable.strings in Resources */,
 				5307C7E019B6245B00CFD37F /* Images.xcassets in Resources */,
