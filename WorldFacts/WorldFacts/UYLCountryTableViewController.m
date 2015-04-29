@@ -85,6 +85,14 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
     self.tableView.tableHeaderView = self.searchController.searchBar;
     
     self.definesPresentationContext = YES;
+    
+    // The search bar does not seem to set its size automatically
+    // which causes it to have zero height when there is no scope
+    // bar. If you remove the scopeButtonTitles above and the
+    // search bar is no longer visible make sure you force the
+    // search bar to size itself (make sure you do this after
+    // you add it to the view hierarchy).
+    [self.searchController.searchBar sizeToFit];
 }
 
 - (void)didChangePreferredContentSize:(NSNotification *)notification
