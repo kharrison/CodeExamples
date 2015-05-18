@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="g2u-EI-Tec">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Animated Constraints-->
+        <scene sceneID="m3U-k1-25Z">
+            <objects>
+                <viewController id="IGj-Oc-4S4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ltd-8A-w4I"/>
+                        <viewControllerLayoutGuide type="bottom" id="MYq-0V-1xT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="whB-3x-VqJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="useyourloaf.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1D-1U-vVx">
+                                <rect key="frame" x="238" y="572" width="124" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="S1D-1U-vVx" secondAttribute="centerX" id="9uQ-YA-zpL"/>
+                            <constraint firstItem="MYq-0V-1xT" firstAttribute="top" secondItem="S1D-1U-vVx" secondAttribute="bottom" constant="8" symbolic="YES" id="RjZ-KX-lZj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Animated Constraints" id="6bs-xw-m7J"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DY2-Nd-GPE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1327" y="472"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ebx-Gk-80r">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g2u-EI-Tec" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a5v-j2-m9w">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IGj-Oc-4S4" kind="relationship" relationship="rootViewController" id="DHF-ID-aUQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eha-EV-YH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="515" y="472"/>
+        </scene>
+    </scenes>
+</document>

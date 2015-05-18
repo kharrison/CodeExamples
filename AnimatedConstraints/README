@@ -1,0 +1,10 @@
+=======================================================================
+AnimatedConstraints
+
+Version 1.0  18 May 2015    Initial Version
+=======================================================================
+
+An example on how to animate changes made to autolayout constraints.
+For further details see the post:
+
+useyourloaf.com/blog/2015/05/18/animating-autolayout-constraints.html

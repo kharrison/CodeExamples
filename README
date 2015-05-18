@@ -3,14 +3,15 @@
 
   See http://useyourloaf.com for details
 
-  This README last updated: 27 March 2015
+  This README last updated: 18 May 2015
 =======================================================================
 
 + INDEX
 
   AirPrinter    - Example of how to print from iOS
   AlertView     - Demo iOS 5 changes to UIAlertView
-  AlertController - UIAlertController changes in iOS 8 
+  AlertController - UIAlertController changes in iOS 8
+  AnimatedConstraints - Animating Autolayout changes 
   Collection    - Simple collection view with popovers
   DynamicText   - Supporting dynamic text size changes
   Huckleberry   - Auto layout table view cells with varying row heights
