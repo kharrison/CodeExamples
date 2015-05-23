@@ -1,6 +1,8 @@
 =======================================================================
 AnimatedConstraints
 
+Version 1.1  21 May 2015    Switch to changing priorities rather than
+                            adding/removing constraints.
 Version 1.0  18 May 2015    Initial Version
 =======================================================================
 

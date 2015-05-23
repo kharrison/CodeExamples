@@ -41,8 +41,8 @@
 @property (weak, nonatomic) IBOutlet UIView *blueView;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewSpacingContraint;
-@property (strong, nonatomic) NSLayoutConstraint *yellowViewConstraint;
-@property (strong, nonatomic) NSLayoutConstraint *blueViewConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *blueViewConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *yellowViewConstraint;
 
 @end
 
@@ -69,43 +69,15 @@ NSString *modeUserDefaultKey = @"modeUserDefaultKey";
     }];
 }
 
-// "[yellowView]-|"
-- (NSLayoutConstraint *)yellowViewConstraint {
-    if (!_yellowViewConstraint) {
-        _yellowViewConstraint = [NSLayoutConstraint constraintWithItem:self.yellowView
-                                                          attribute:NSLayoutAttributeTrailing
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeTrailingMargin
-                                                         multiplier:1.0
-                                                           constant:0.0];
-    }
-    return _yellowViewConstraint;
-}
-
-// "[blueView]-|"
-- (NSLayoutConstraint *)blueViewConstraint {
-    if (!_blueViewConstraint) {
-        _blueViewConstraint = [NSLayoutConstraint constraintWithItem:self.blueView
-                                                          attribute:NSLayoutAttributeTrailing
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeTrailingMargin
-                                                         multiplier:1.0
-                                                           constant:0.0];
-    }
-    return _blueViewConstraint;
-}
-
 - (void)updateConstraintsForMode {
     if (self.modeSwitch.isOn) {
         self.viewSpacingContraint.constant = 8.0;
-        [self.view removeConstraint:self.yellowViewConstraint];
-        [self.view addConstraint:self.blueViewConstraint];
+        self.yellowViewConstraint.priority = 750;
+        self.blueViewConstraint.priority = 751;
     } else {
-        [self.view removeConstraint:self.blueViewConstraint];
-        [self.view addConstraint:self.yellowViewConstraint];
         self.viewSpacingContraint.constant = self.view.frame.size.width;
+        self.blueViewConstraint.priority = 750;
+        self.yellowViewConstraint.priority = 751;
     }
 }
 
