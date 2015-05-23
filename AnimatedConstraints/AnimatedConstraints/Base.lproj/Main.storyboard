@@ -45,7 +45,7 @@
                             <constraint firstItem="Jn4-Fc-5wA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5rH-4Y-RBI"/>
                             <constraint firstItem="hcV-gR-b2V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="6p4-Ep-Ba1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jn4-Fc-5wA" secondAttribute="trailing" priority="750" id="Fhn-Ts-zfQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zC1-3A-yfR" secondAttribute="trailing" priority="751" id="KIk-pT-AKn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zC1-3A-yfR" secondAttribute="trailing" priority="750" id="KIk-pT-AKn"/>
                             <constraint firstItem="hcV-gR-b2V" firstAttribute="leading" secondItem="0eJ-7b-rVL" secondAttribute="trailing" constant="8" symbolic="YES" id="KIy-Ob-1Hz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Jn4-Fc-5wA" secondAttribute="bottom" constant="8" symbolic="YES" id="Kzw-j6-8b9"/>
                             <constraint firstItem="zC1-3A-yfR" firstAttribute="width" secondItem="Jn4-Fc-5wA" secondAttribute="width" id="N4W-NY-y4j"/>
@@ -63,7 +63,6 @@
                         <outlet property="modeSwitch" destination="hcV-gR-b2V" id="L9A-UK-jwZ"/>
                         <outlet property="viewSpacingContraint" destination="tzy-7H-lLE" id="dOn-v5-4bA"/>
                         <outlet property="yellowView" destination="Jn4-Fc-5wA" id="KsK-ud-Zdf"/>
-                        <outlet property="yellowViewConstraint" destination="Fhn-Ts-zfQ" id="i71-cw-SAv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

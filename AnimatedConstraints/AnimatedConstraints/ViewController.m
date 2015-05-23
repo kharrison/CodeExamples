@@ -42,7 +42,6 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewSpacingContraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *blueViewConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *yellowViewConstraint;
 
 @end
 
@@ -72,12 +71,10 @@ NSString *modeUserDefaultKey = @"modeUserDefaultKey";
 - (void)updateConstraintsForMode {
     if (self.modeSwitch.isOn) {
         self.viewSpacingContraint.constant = 8.0;
-        self.yellowViewConstraint.priority = 750;
-        self.blueViewConstraint.priority = 751;
+        self.blueViewConstraint.priority = UILayoutPriorityDefaultHigh+1;
     } else {
         self.viewSpacingContraint.constant = self.view.frame.size.width;
-        self.blueViewConstraint.priority = 750;
-        self.yellowViewConstraint.priority = 751;
+        self.blueViewConstraint.priority = UILayoutPriorityDefaultHigh-1;
     }
 }
 
