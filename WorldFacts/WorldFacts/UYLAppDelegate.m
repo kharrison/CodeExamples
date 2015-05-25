@@ -3,7 +3,7 @@
 //  WorldFacts
 //
 //  Created by Keith Harrison http://useyourloaf.com
-//  Copyright (c) 2012-2014 Keith Harrison. All rights reserved.
+//  Copyright (c) 2012-2015 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -55,6 +55,10 @@
     navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
     splitViewController.delegate = self;
     splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModeAllVisible;
+    
+    CGFloat minimumWidth = MIN(CGRectGetWidth(splitViewController.view.bounds),CGRectGetHeight(splitViewController.view.bounds));
+    splitViewController.minimumPrimaryColumnWidth = minimumWidth / 2;
+    splitViewController.maximumPrimaryColumnWidth = minimumWidth;
     
     UINavigationController *masterNavigationController = splitViewController.viewControllers[0];
     UYLCountryTableViewController *controller = (UYLCountryTableViewController *)masterNavigationController.topViewController;
