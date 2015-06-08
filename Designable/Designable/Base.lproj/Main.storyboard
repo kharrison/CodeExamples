@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Level View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LevelViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiz-YF-A1s">
+                                <rect key="frame" x="254" y="260" width="92" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZV3-Zl-CrS" customClass="LevelView">
+                                <rect key="frame" x="16" y="288" width="568" height="24"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="my1-wR-V4O"/>
+                                </constraints>
+                            </view>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1" stepValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Ia8-BH-iiT">
+                                <rect key="frame" x="253" y="320" width="94" height="29"/>
+                                <connections>
+                                    <action selector="changeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="AcR-0u-XHr"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZV3-Zl-CrS" firstAttribute="top" secondItem="eiz-YF-A1s" secondAttribute="bottom" constant="8" symbolic="YES" id="1Ut-Kt-75R"/>
+                            <constraint firstItem="Ia8-BH-iiT" firstAttribute="top" secondItem="ZV3-Zl-CrS" secondAttribute="bottom" constant="8" symbolic="YES" id="8OA-Kx-6tH"/>
+                            <constraint firstItem="ZV3-Zl-CrS" firstAttribute="centerX" secondItem="eiz-YF-A1s" secondAttribute="centerX" id="F3r-LO-BGP"/>
+                            <constraint firstItem="ZV3-Zl-CrS" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="F88-mL-HrW"/>
+                            <constraint firstItem="ZV3-Zl-CrS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GiI-0k-9Zg"/>
+                            <constraint firstAttribute="centerY" secondItem="ZV3-Zl-CrS" secondAttribute="centerY" id="gWJ-Ry-rV5"/>
+                            <constraint firstItem="ZV3-Zl-CrS" firstAttribute="centerX" secondItem="Ia8-BH-iiT" secondAttribute="centerX" id="qki-hc-Iyr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="levelView" destination="ZV3-Zl-CrS" id="O7h-Fv-FkP"/>
+                        <outlet property="stepper" destination="Ia8-BH-iiT" id="oo2-OP-COH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="478" y="423"/>
+        </scene>
+    </scenes>
+</document>

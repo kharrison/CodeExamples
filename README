@@ -3,7 +3,7 @@
 
   See http://useyourloaf.com for details
 
-  This README last updated: 18 May 2015
+  This README last updated: 08 June 2015
 =======================================================================
 
 + INDEX
@@ -13,6 +13,7 @@
   AlertController - UIAlertController changes in iOS 8
   AnimatedConstraints - Animating Autolayout changes 
   Collection    - Simple collection view with popovers
+  Designable    - IBDESIGNABLE/IB_Inspectable custom views
   DynamicText   - Supporting dynamic text size changes
   Huckleberry   - Auto layout table view cells with varying row heights
   MasterSlide   - Implementing a mail app style split view controller

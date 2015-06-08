@@ -1,0 +1,9 @@
+=======================================================================
+Designable - live custom views in Interface Builder
+Version 1.0   07 June 2015   Initial version.
+=======================================================================
+
+Example of how to use IB_DESIGNABLE and IBInspectable to make custom
+views live in Interface Builder. See following post for more details
+
+http://useyourloaf.com/blog/2015/06/09/ib-designable-custom-views-in-interface-builder.html
