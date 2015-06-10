@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tSH-PG-yq0">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Level View Controller-->
+        <scene sceneID="DMX-Ud-Dnr">
+            <objects>
+                <viewController id="tSH-PG-yq0" customClass="LevelViewController" customModule="DesignableSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bgz-eM-WuN"/>
+                        <viewControllerLayoutGuide type="bottom" id="se1-kV-R9n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="redraw" id="IMd-N4-LNH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb8-Vi-ovw">
+                                <rect key="frame" x="254" y="260" width="92" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="04p-xx-gU4" customClass="LevelView" customModule="DesignableSwift" customModuleProvider="target">
+                                <rect key="frame" x="16" y="288" width="568" height="24"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="hSg-0u-Wev"/>
+                                </constraints>
+                            </view>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1" stepValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="dgT-EZ-aS6">
+                                <rect key="frame" x="253" y="320" width="94" height="29"/>
+                                <connections>
+                                    <action selector="valueChanged:" destination="tSH-PG-yq0" eventType="valueChanged" id="Rs3-f5-cNC"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dgT-EZ-aS6" firstAttribute="top" secondItem="04p-xx-gU4" secondAttribute="bottom" constant="8" symbolic="YES" id="6Fo-nV-hbN"/>
+                            <constraint firstItem="04p-xx-gU4" firstAttribute="leading" secondItem="IMd-N4-LNH" secondAttribute="leadingMargin" id="G33-N0-ldb"/>
+                            <constraint firstItem="04p-xx-gU4" firstAttribute="centerX" secondItem="eb8-Vi-ovw" secondAttribute="centerX" id="Ldt-se-A0c"/>
+                            <constraint firstItem="04p-xx-gU4" firstAttribute="top" secondItem="eb8-Vi-ovw" secondAttribute="bottom" constant="8" symbolic="YES" id="Pta-Tv-FHW"/>
+                            <constraint firstItem="04p-xx-gU4" firstAttribute="trailing" secondItem="IMd-N4-LNH" secondAttribute="trailingMargin" id="Slf-t7-RcS"/>
+                            <constraint firstItem="04p-xx-gU4" firstAttribute="centerX" secondItem="dgT-EZ-aS6" secondAttribute="centerX" id="cOx-YQ-xub"/>
+                            <constraint firstAttribute="centerY" secondItem="04p-xx-gU4" secondAttribute="centerY" id="i5Z-gn-Vp0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="levelView" destination="04p-xx-gU4" id="MxM-lu-uZf"/>
+                        <outlet property="stepper" destination="dgT-EZ-aS6" id="DXh-dU-n1o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVj-88-FVS" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="478" y="423"/>
+        </scene>
+    </scenes>
+</document>

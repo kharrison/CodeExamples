@@ -41,6 +41,10 @@
 @implementation LevelView
 
 - (void)setupDefaults {
+    if (self.barLayer == nil) {
+        self.barLayer = [CAShapeLayer layer];
+        [self.layer addSublayer:self.barLayer];
+    }
     self.value = 1.0f;
     self.threshold = 0.3f;
     self.borderWidth = 2.0f;
@@ -69,10 +73,6 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    if (self.barLayer == nil) {
-        self.barLayer = [CAShapeLayer layer];
-        [self.layer addSublayer:self.barLayer];
-    }
     [self updateLayerProperties];
 }
 

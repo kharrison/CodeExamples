@@ -14,6 +14,12 @@
 		538022021B20EC3900434436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538022001B20EC3900434436 /* Main.storyboard */; };
 		538022041B20EC3900434436 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538022031B20EC3900434436 /* Images.xcassets */; };
 		538022071B20EC3900434436 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538022051B20EC3900434436 /* LaunchScreen.xib */; };
+		53C515ED1B2786EE0062905B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C515EC1B2786EE0062905B /* AppDelegate.swift */; };
+		53C515F21B2786EE0062905B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C515F01B2786EE0062905B /* Main.storyboard */; };
+		53C515F41B2786EE0062905B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53C515F31B2786EE0062905B /* Images.xcassets */; };
+		53C515F71B2786EE0062905B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53C515F51B2786EE0062905B /* LaunchScreen.xib */; };
+		53C5160B1B2788110062905B /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C5160A1B2788110062905B /* LevelViewController.swift */; };
+		53C5160D1B2789A40062905B /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C5160C1B2789A40062905B /* LevelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,10 +49,25 @@
 		538022011B20EC3900434436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		538022031B20EC3900434436 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		538022061B20EC3900434436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		53C515E81B2786ED0062905B /* DesignableSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignableSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53C515EB1B2786EE0062905B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53C515EC1B2786EE0062905B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		53C515F11B2786EE0062905B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		53C515F31B2786EE0062905B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		53C515F61B2786EE0062905B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		53C5160A1B2788110062905B /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
+		53C5160C1B2789A40062905B /* LevelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		538021F01B20EC3900434436 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53C515E51B2786ED0062905B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -61,6 +82,7 @@
 			children = (
 				5321CAA61B26506100CE5924 /* README */,
 				538021F51B20EC3900434436 /* Designable */,
+				53C515E91B2786EE0062905B /* DesignableSwift */,
 				538021F41B20EC3900434436 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				538021F31B20EC3900434436 /* Designable.app */,
+				53C515E81B2786ED0062905B /* DesignableSwift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +122,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		53C515E91B2786EE0062905B /* DesignableSwift */ = {
+			isa = PBXGroup;
+			children = (
+				53C5160C1B2789A40062905B /* LevelView.swift */,
+				53C5160A1B2788110062905B /* LevelViewController.swift */,
+				53C515F01B2786EE0062905B /* Main.storyboard */,
+				53C515EA1B2786EE0062905B /* Supporting Files */,
+			);
+			path = DesignableSwift;
+			sourceTree = "<group>";
+		};
+		53C515EA1B2786EE0062905B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				53C515F51B2786EE0062905B /* LaunchScreen.xib */,
+				53C515F31B2786EE0062905B /* Images.xcassets */,
+				53C515EC1B2786EE0062905B /* AppDelegate.swift */,
+				53C515EB1B2786EE0062905B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,16 +165,37 @@
 			productReference = 538021F31B20EC3900434436 /* Designable.app */;
 			productType = "com.apple.product-type.application";
 		};
+		53C515E71B2786ED0062905B /* DesignableSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53C516081B2786EE0062905B /* Build configuration list for PBXNativeTarget "DesignableSwift" */;
+			buildPhases = (
+				53C515E41B2786ED0062905B /* Sources */,
+				53C515E51B2786ED0062905B /* Frameworks */,
+				53C515E61B2786ED0062905B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DesignableSwift;
+			productName = DesignableSwift;
+			productReference = 53C515E81B2786ED0062905B /* DesignableSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		538021EB1B20EC3900434436 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Keith Harrison";
 				TargetAttributes = {
 					538021F21B20EC3900434436 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					53C515E71B2786ED0062905B = {
 						CreatedOnToolsVersion = 6.3.2;
 					};
 				};
@@ -148,6 +214,7 @@
 			projectRoot = "";
 			targets = (
 				538021F21B20EC3900434436 /* Designable */,
+				53C515E71B2786ED0062905B /* DesignableSwift */,
 			);
 		};
 /* End PBXProject section */
@@ -163,6 +230,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53C515E61B2786ED0062905B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53C515F21B2786EE0062905B /* Main.storyboard in Resources */,
+				53C515F71B2786EE0062905B /* LaunchScreen.xib in Resources */,
+				53C515F41B2786EE0062905B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -174,6 +251,16 @@
 				53182E6E1B24F75E002D441F /* LevelView.m in Sources */,
 				538021F91B20EC3900434436 /* main.m in Sources */,
 				53182E3C1B2460D1002D441F /* LevelViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53C515E41B2786ED0062905B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53C515ED1B2786EE0062905B /* AppDelegate.swift in Sources */,
+				53C5160D1B2789A40062905B /* LevelView.swift in Sources */,
+				53C5160B1B2788110062905B /* LevelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +279,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				538022061B20EC3900434436 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		53C515F01B2786EE0062905B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53C515F11B2786EE0062905B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		53C515F51B2786EE0062905B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53C515F61B2786EE0062905B /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -301,6 +404,31 @@
 			};
 			name = Release;
 		};
+		53C516041B2786EE0062905B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DesignableSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		53C516051B2786EE0062905B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DesignableSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -318,6 +446,15 @@
 			buildConfigurations = (
 				538022171B20EC3A00434436 /* Debug */,
 				538022181B20EC3A00434436 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53C516081B2786EE0062905B /* Build configuration list for PBXNativeTarget "DesignableSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53C516041B2786EE0062905B /* Debug */,
+				53C516051B2786EE0062905B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
