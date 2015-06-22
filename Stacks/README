@@ -1,0 +1,10 @@
+=======================================================================
+Stacks - Using stack views (requires iOS 9)
+
+Version 1.0   22 June 2015   Initial version.
+=======================================================================
+
+Example of how to use UIStackView to simplify layout of horizontal and
+vertical arrangements of views. See the following post for details:
+
+http://useyourloaf.com/blog/2015/06/21/easier-autolayout-with-stackviews.html

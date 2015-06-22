@@ -3,7 +3,7 @@
 
   See http://useyourloaf.com for details
 
-  This README last updated: 08 June 2015
+  This README last updated: 22 June 2015
 =======================================================================
 
 + INDEX
@@ -25,6 +25,7 @@
   Restorer      - State Preservation and Restoration
   SelfSize      - iOS 8 Self Sizing Table View Cells (Huckleberry updated)
   SpeakEasy     - Text to speech synthesis
+  Stacks        - Using UIStackView
   StaticTable   - Using a storyboard to implement static table views
   Stepper       - Example use of UIStepper control
   Styles        - Using UIAppearance proxy to style UIKit controls
