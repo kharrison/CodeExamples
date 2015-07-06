@@ -1,6 +1,7 @@
 =======================================================================
 Stacks - Using stack views (requires iOS 9)
 
+Version 1.1   06 July 2015   Adapting axis to view size classes
 Version 1.0   22 June 2015   Initial version.
 =======================================================================
 
@@ -8,3 +9,8 @@ Example of how to use UIStackView to simplify layout of horizontal and
 vertical arrangements of views. See the following post for details:
 
 http://useyourloaf.com/blog/2015/06/21/easier-autolayout-with-stackviews.html
+
+Also see this post for details on how to have the stack view automatically
+adapt to size class changes:
+
+http://useyourloaf.com/blog/2015/07/06/adapting-stack-views-with-size-classes.html

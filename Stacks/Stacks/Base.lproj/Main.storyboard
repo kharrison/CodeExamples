@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Ps-Yc-5FE">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Animated Constraints-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stacks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Animated Constraints" id="BYZ-38-t0r" customClass="ViewController" customModule="Stacks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -56,12 +57,92 @@
                             <constraint firstItem="YM8-El-Fws" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="jlR-BM-sWo"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="HDc-lh-Tdn"/>
                     <connections>
                         <outlet property="axisSwitch" destination="BLj-0p-2ZH" id="5Sb-iR-6FG"/>
                         <outlet property="stackView" destination="h2h-1x-8Qf" id="JRN-ae-uFP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1125" y="309"/>
+        </scene>
+        <!--Size Class-->
+        <scene sceneID="52R-6N-wcQ">
+            <objects>
+                <viewController storyboardIdentifier="SizeClassVC" title="Size Class" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Uf6-BW-Cwj" customClass="SizeClassViewController" customModule="Stacks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BKk-BK-l2c"/>
+                        <viewControllerLayoutGuide type="bottom" id="nWx-Wh-cfC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tH1-M2-97B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qh8-42-G2A">
+                                <rect key="frame" x="20" y="28" width="560" height="515"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="NaI-Tc-TpP">
+                                        <rect key="frame" x="0.0" y="198" width="280" height="120"/>
+                                        <variation key="heightClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="220" y="0.0" width="120" height="330"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="98" width="180" height="120"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="120" y="0.0" width="120" height="358"/>
+                                        </variation>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="Q8m-kz-QPP">
+                                        <rect key="frame" x="280" y="198" width="280" height="120"/>
+                                        <variation key="heightClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="220" y="350" width="120" height="365"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="180" y="98" width="180" height="120"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="120" y="358" width="120" height="357"/>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="qh8-42-G2A" secondAttribute="trailing" id="SnP-3t-hVZ"/>
+                            <constraint firstItem="nWx-Wh-cfC" firstAttribute="top" secondItem="qh8-42-G2A" secondAttribute="bottom" constant="8" symbolic="YES" id="W4h-Cy-VBI"/>
+                            <constraint firstItem="qh8-42-G2A" firstAttribute="top" secondItem="BKk-BK-l2c" secondAttribute="bottom" constant="8" symbolic="YES" id="aVT-CK-Vq6"/>
+                            <constraint firstItem="qh8-42-G2A" firstAttribute="leading" secondItem="tH1-M2-97B" secondAttribute="leadingMargin" id="c5Z-G1-WeP"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="AZL-pu-RpH"/>
+                    <connections>
+                        <outlet property="stackView" destination="qh8-42-G2A" id="wcz-41-erE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTu-oB-gdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="969" y="963"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="QGD-BM-RSo">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="7Ps-Yc-5FE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="kmp-KP-OFI">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="UMa-AQ-sxv"/>
+                        <segue destination="Uf6-BW-Cwj" kind="relationship" relationship="viewControllers" id="uuf-ye-POF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="61N-zs-u59" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="313" y="309"/>
         </scene>

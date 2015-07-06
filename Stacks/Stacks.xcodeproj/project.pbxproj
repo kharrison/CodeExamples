@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5378799F1B49BA6A004CBDC1 /* SizeClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378799E1B49BA6A004CBDC1 /* SizeClassViewController.swift */; };
 		53DA13EE1B32184600FEEE79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DA13ED1B32184600FEEE79 /* AppDelegate.swift */; };
 		53DA13F01B32184600FEEE79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DA13EF1B32184600FEEE79 /* ViewController.swift */; };
 		53DA13F31B32184600FEEE79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DA13F11B32184600FEEE79 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5378799E1B49BA6A004CBDC1 /* SizeClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeClassViewController.swift; sourceTree = "<group>"; };
 		53DA13EA1B32184600FEEE79 /* Stacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DA13ED1B32184600FEEE79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53DA13EF1B32184600FEEE79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				53DA13ED1B32184600FEEE79 /* AppDelegate.swift */,
 				53DA13EF1B32184600FEEE79 /* ViewController.swift */,
 				53DA13F11B32184600FEEE79 /* Main.storyboard */,
+				5378799E1B49BA6A004CBDC1 /* SizeClassViewController.swift */,
 				53DA13F41B32184600FEEE79 /* Assets.xcassets */,
 				53DA13F61B32184600FEEE79 /* LaunchScreen.storyboard */,
 				53DA13F91B32184600FEEE79 /* Info.plist */,
@@ -259,6 +262,7 @@
 			files = (
 				53DA13F01B32184600FEEE79 /* ViewController.swift in Sources */,
 				53DA13EE1B32184600FEEE79 /* AppDelegate.swift in Sources */,
+				5378799F1B49BA6A004CBDC1 /* SizeClassViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +408,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.useyourloaf.Stacks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -415,6 +420,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.useyourloaf.Stacks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
