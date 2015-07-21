@@ -37,27 +37,31 @@ class SizeClassViewController: UIViewController {
 
     @IBOutlet weak var stackView: UIStackView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configureViewForSize(view.bounds.size)
-    }
+    // The alignment axis of the stack view should be set correctly in the Storyboard
+    // for the given size classes. It should be horizontal except for when the view
+    // has a compact width and a regular height. This did not work in early iOS 9 
+    // beta releases. It was fixed in iOS 9 beta 4.
+    
+    // The following code was a workaround to the bug that was fixed in iOS 9 beta 4.
+    // Uncomment if you want to change the stack view axis when the view changes
+    // size (you can then remove the size class constraints from the stack view in
+    // the Storyboard).
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        configureViewForSize(view.bounds.size)
+//    }
 
-// The alignment axis of the stack view should be set correctly in the Storyboard
-// for the given size classes. It should be horizontal except for when the view
-// has a compact width and a regular height. That does not work when the
-// device traits change due to rotation with beta 2 of iOS 9.
-// As a workaround set the axis based on the size of the view.
+//    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+//        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+//        configureViewForSize(size)
+//    }
 
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
-        configureViewForSize(size)
-    }
-
-    private func configureViewForSize(size: CGSize) {
-        if size.width > size.height {
-            stackView.axis = .Horizontal
-        } else {
-            stackView.axis = .Vertical
-        }
-    }
+//    private func configureViewForSize(size: CGSize) {
+//        if size.width > size.height {
+//            stackView.axis = .Horizontal
+//        } else {
+//            stackView.axis = .Vertical
+//        }
+//    }
 }
