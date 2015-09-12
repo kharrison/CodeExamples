@@ -1,7 +1,7 @@
 //
 //  SearchViewController.m
 //  Created by Keith Harrison on 06-June-2011 http://useyourloaf.com
-//  Copyright (c) 2013 Keith Harrison. All rights reserved.
+//  Copyright (c) 2013-2015 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -29,6 +29,7 @@
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
 
 #import "SearchViewController.h"
+#import "TweetCell.h"
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
 
@@ -94,6 +95,9 @@ typedef NS_ENUM(NSUInteger, UYLTwitterSearchState)
 {
     [super viewDidLoad];
     
+    self.tableView.estimatedRowHeight = 84;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     // Add the target action to the refresh control as it seems not to take
     // effect when set in the storyboard.
     
@@ -112,11 +116,6 @@ typedef NS_ENUM(NSUInteger, UYLTwitterSearchState)
 - (void)dealloc
 {
     [self cancelConnection];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
 }
 
 #pragma mark -
@@ -144,12 +143,14 @@ typedef NS_ENUM(NSUInteger, UYLTwitterSearchState)
     {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LoadCellIdentifier];
         cell.textLabel.text = [self searchMessageForState:self.searchState];
+        cell.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
         return cell;
     }
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ResultCellIdentifier];    
+    TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:ResultCellIdentifier];
     NSDictionary *tweet = (self.results)[indexPath.row];
-    cell.textLabel.text = tweet[@"text"];
+    cell.tweetMessage.text = tweet[@"text"];
+    cell.tweetMessage.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     return cell;
 }
 

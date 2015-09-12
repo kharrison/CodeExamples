@@ -1,7 +1,7 @@
 //
 //  RootViewController.m
 //  Created by Keith Harrison on 06-June-2011 http://useyourloaf.com
-//  Copyright (c) 2011 Keith Harrison. All rights reserved.
+//  Copyright (c) 2011-2015 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -32,12 +32,6 @@
 #import "SearchViewController.h"
 
 @implementation RootViewController
-
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
-}
 
 #pragma mark -
 #pragma mark === Text field delegate methods ===
