@@ -97,12 +97,6 @@ typedef NS_ENUM(NSUInteger, UYLTwitterSearchState)
     
     self.tableView.estimatedRowHeight = 84;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    
-    // Add the target action to the refresh control as it seems not to take
-    // effect when set in the storyboard.
-    
-    [self.refreshControl addTarget:self action:@selector(refreshSearchResults) forControlEvents:UIControlEventValueChanged];
-    
     self.title = self.query;
     [self loadQuery];
 }
