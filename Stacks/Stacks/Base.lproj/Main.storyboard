@@ -1,10 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Ps-Yc-5FE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Ps-Yc-5FE">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Hidden View Controller-->
+        <scene sceneID="fV7-9U-SzP">
+            <objects>
+                <viewController id="I1Y-5H-Dfy" customClass="HiddenViewController" customModule="Stacks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hM5-Va-k5E"/>
+                        <viewControllerLayoutGuide type="bottom" id="7VJ-rT-7G6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GzR-Sg-qqI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cy2-Jm-57O">
+                                <rect key="frame" x="240" y="28" width="120" height="360"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="OFO-Vq-AWn">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="2rl-1g-GOJ">
+                                        <rect key="frame" x="0.0" y="120" width="120" height="120"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="tXh-sf-O5b">
+                                        <rect key="frame" x="0.0" y="240" width="120" height="120"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cy2-Jm-57O" firstAttribute="top" secondItem="hM5-Va-k5E" secondAttribute="bottom" constant="8" symbolic="YES" id="52e-8O-GpC"/>
+                            <constraint firstItem="cy2-Jm-57O" firstAttribute="centerX" secondItem="GzR-Sg-qqI" secondAttribute="centerX" id="cZO-EH-VhZ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="topRated" id="YmW-7s-9nh"/>
+                    <connections>
+                        <outlet property="extraHeart" destination="tXh-sf-O5b" id="JRT-K5-9ef"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97w-lP-BLy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986" y="-383"/>
+        </scene>
         <!--Animated Constraints-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -20,16 +62,16 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YM8-El-Fws">
                                 <rect key="frame" x="172" y="28" width="256" height="167"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Gk4-j0-dHa">
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Gk4-j0-dHa">
                                         <rect key="frame" x="56" y="0.0" width="144" height="31"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Horizontal" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8hz-Gf-xnC">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horizontal" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8hz-Gf-xnC">
                                                 <rect key="frame" x="0.0" y="6" width="79" height="20"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BLj-0p-2ZH">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BLj-0p-2ZH">
                                                 <rect key="frame" x="95" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="axisChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="o7f-Yp-5sG"/>
@@ -37,13 +79,13 @@
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="h2h-1x-8Qf">
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="h2h-1x-8Qf">
                                         <rect key="frame" x="0.0" y="47" width="256" height="120"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="MuA-CH-1ir">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="MuA-CH-1ir">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="5jf-x5-bbg">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="5jf-x5-bbg">
                                                 <rect key="frame" x="136" y="0.0" width="120" height="120"/>
                                             </imageView>
                                         </subviews>
@@ -82,7 +124,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qh8-42-G2A">
                                 <rect key="frame" x="20" y="28" width="560" height="515"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="NaI-Tc-TpP">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="NaI-Tc-TpP">
                                         <rect key="frame" x="0.0" y="198" width="280" height="120"/>
                                         <variation key="heightClass=regular" fixedFrame="YES">
                                             <rect key="frame" x="220" y="0.0" width="120" height="330"/>
@@ -94,7 +136,7 @@
                                             <rect key="frame" x="120" y="0.0" width="120" height="358"/>
                                         </variation>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="Q8m-kz-QPP">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="Q8m-kz-QPP">
                                         <rect key="frame" x="280" y="198" width="280" height="120"/>
                                         <variation key="heightClass=regular" fixedFrame="YES">
                                             <rect key="frame" x="220" y="350" width="120" height="365"/>
@@ -125,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTu-oB-gdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="963"/>
+            <point key="canvasLocation" x="893" y="1111"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QGD-BM-RSo">
@@ -140,6 +182,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="UMa-AQ-sxv"/>
                         <segue destination="Uf6-BW-Cwj" kind="relationship" relationship="viewControllers" id="uuf-ye-POF"/>
+                        <segue destination="I1Y-5H-Dfy" kind="relationship" relationship="viewControllers" id="OWb-k9-PgT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61N-zs-u59" userLabel="First Responder" sceneMemberID="firstResponder"/>
