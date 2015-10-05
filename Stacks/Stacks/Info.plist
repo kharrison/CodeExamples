@@ -44,5 +44,53 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).OpenFavorites</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>shortcutTitleFavorites</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>shortcutSubtitleFavorites</string>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>StarTemplate</string>
+			<key>UIApplicationShortcutItemUserInfo</key>
+			<dict>
+				<key>version</key>
+				<string>2</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).OpenFeatured</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>shortcutTitleFeatured</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>shortcutSubtitleFeatured</string>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>EyeTemplate</string>
+			<key>UIApplicationShortcutItemUserInfo</key>
+			<dict>
+				<key>version</key>
+				<string>2</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).OpenTopRated</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>shortcutTitleTopRated</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>shortcutSubtitleTopRated</string>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>HeartTemplate</string>
+			<key>UIApplicationShortcutItemUserInfo</key>
+			<dict>
+				<key>version</key>
+				<string>2</string>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>

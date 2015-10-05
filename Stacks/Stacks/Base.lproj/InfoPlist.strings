@@ -1,0 +1,15 @@
+/* 
+  InfoPlist.strings
+  Stacks
+
+  Created by Keith Harrison on 04/10/2015.
+  Copyright © 2015 Keith Harrison. All rights reserved.
+*/
+shortcutTitleFavorites = "Favorites";
+shortcutSubtitleFavorites = "What you like";
+
+shortcutTitleFeatured = "Featured";
+shortcutSubtitleFeatured = "What we like";
+
+shortcutTitleTopRated = "Top Rated";
+shortcutSubtitleTopRated = "What others like";

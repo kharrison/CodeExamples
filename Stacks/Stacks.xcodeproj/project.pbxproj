@@ -10,6 +10,8 @@
 		5378799F1B49BA6A004CBDC1 /* SizeClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378799E1B49BA6A004CBDC1 /* SizeClassViewController.swift */; };
 		5395B1371BB48B4700CF54F7 /* HiddenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395B1361BB48B4700CF54F7 /* HiddenViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		5395B1381BB48B4700CF54F7 /* HiddenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395B1361BB48B4700CF54F7 /* HiddenViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		53B55B951BC1B89A0071291E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53B55B981BC1B89A0071291E /* InfoPlist.strings */; };
+		53B55B961BC1B89A0071291E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53B55B981BC1B89A0071291E /* InfoPlist.strings */; };
 		53DA13EE1B32184600FEEE79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DA13ED1B32184600FEEE79 /* AppDelegate.swift */; };
 		53DA13F01B32184600FEEE79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DA13EF1B32184600FEEE79 /* ViewController.swift */; };
 		53DA13F31B32184600FEEE79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DA13F11B32184600FEEE79 /* Main.storyboard */; };
@@ -39,6 +41,7 @@
 /* Begin PBXFileReference section */
 		5378799E1B49BA6A004CBDC1 /* SizeClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeClassViewController.swift; sourceTree = "<group>"; };
 		5395B1361BB48B4700CF54F7 /* HiddenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiddenViewController.swift; sourceTree = "<group>"; };
+		53B55B971BC1B89A0071291E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53DA13EA1B32184600FEEE79 /* Stacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DA13ED1B32184600FEEE79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53DA13EF1B32184600FEEE79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +115,7 @@
 				53DA13F41B32184600FEEE79 /* Assets.xcassets */,
 				53DA13F61B32184600FEEE79 /* LaunchScreen.storyboard */,
 				53DA13F91B32184600FEEE79 /* Info.plist */,
+				53B55B981BC1B89A0071291E /* InfoPlist.strings */,
 			);
 			path = Stacks;
 			sourceTree = "<group>";
@@ -201,6 +205,7 @@
 				TargetAttributes = {
 					53DA13E91B32184600FEEE79 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = LCC2J94N44;
 					};
 					53DA13FD1B32184600FEEE79 = {
 						CreatedOnToolsVersion = 7.0;
@@ -238,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53DA13F81B32184600FEEE79 /* LaunchScreen.storyboard in Resources */,
+				53B55B951BC1B89A0071291E /* InfoPlist.strings in Resources */,
 				53DA13F51B32184600FEEE79 /* Assets.xcassets in Resources */,
 				53DA13F31B32184600FEEE79 /* Main.storyboard in Resources */,
 			);
@@ -254,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53B55B961BC1B89A0071291E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +311,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		53B55B981BC1B89A0071291E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53B55B971BC1B89A0071291E /* Base */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		53DA13F11B32184600FEEE79 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -410,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Stacks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.useyourloaf.Stacks;
@@ -422,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Stacks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.useyourloaf.Stacks;
