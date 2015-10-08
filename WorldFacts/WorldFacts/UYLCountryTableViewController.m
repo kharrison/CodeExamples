@@ -211,16 +211,11 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
         country = [self.fetchedResultsController objectAtIndexPath:indexPath];
     }
     
-    cell.countryLabel.text = country.name;
-    cell.capitalLabel.text = country.capital;
+    cell.name = country.name;
+    cell.capital = country.capital;
     
     NSString *population = [self.decimalFormatter stringFromNumber:country.population];
-    cell.populationLabel.text = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"PopulationShortLabel", @"Pop:"), population];
-    
-    cell.countryLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
-    cell.capitalLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
-    cell.populationLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
-    
+    cell.population = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"PopulationShortLabel", @"Pop:"), population];
     return cell;
 }
 

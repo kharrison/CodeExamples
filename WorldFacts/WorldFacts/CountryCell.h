@@ -36,8 +36,8 @@
 
 @interface CountryCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *countryLabel;
-@property (weak, nonatomic) IBOutlet UILabel *capitalLabel;
-@property (weak, nonatomic) IBOutlet UILabel *populationLabel;
+@property (copy, nonatomic) NSString *name;
+@property (copy, nonatomic) NSString *capital;
+@property (copy, nonatomic) NSString *population;
 
 @end

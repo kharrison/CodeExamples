@@ -34,5 +34,36 @@
 
 #import "CountryCell.h"
 
+@interface CountryCell ()
+@property (weak, nonatomic) IBOutlet UILabel *countryLabel;
+@property (weak, nonatomic) IBOutlet UILabel *capitalLabel;
+@property (weak, nonatomic) IBOutlet UILabel *populationLabel;
+@end
+
 @implementation CountryCell
+
+- (void)setName:(NSString *)name {
+    if (_name != name) {
+        _name = [name copy];
+        _countryLabel.text =_name;
+        _countryLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    }
+}
+
+- (void)setCapital:(NSString *)capital {
+    if (_capital != capital) {
+        _capital = [capital copy];
+        _capitalLabel.text =_capital;
+        _capitalLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+    }
+}
+
+- (void)setPopulation:(NSString *)population {
+    if (_population != population) {
+        _population = [population copy];
+        _populationLabel.text =_capital;
+        _populationLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+    }
+}
+
 @end
