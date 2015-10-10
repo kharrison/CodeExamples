@@ -61,7 +61,7 @@
 - (void)setPopulation:(NSString *)population {
     if (_population != population) {
         _population = [population copy];
-        _populationLabel.text =_capital;
+        _populationLabel.text =_population;
         _populationLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
     }
 }

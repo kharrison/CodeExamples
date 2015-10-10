@@ -3,7 +3,7 @@
 //  WorldFacts
 //
 //  Created by Keith Harrison http://useyourloaf.com
-//  Copyright (c) 2012-2014 Keith Harrison. All rights reserved.
+//  Copyright (c) 2012-2015 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -36,7 +36,7 @@
 #import "CountryCell.h"
 #import "Country+Extensions.h"
 
-@interface UYLCountryTableViewController () <NSFetchedResultsControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating>
+@interface UYLCountryTableViewController () <NSFetchedResultsControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating, UIViewControllerPreviewingDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSNumberFormatter *decimalFormatter;
@@ -93,6 +93,13 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
     // search bar to size itself (make sure you do this after
     // you add it to the view hierarchy).
     [self.searchController.searchBar sizeToFit];
+    
+    // Register for 3D Touch Previewing if available
+    if ([self.traitCollection respondsToSelector:@selector(forceTouchCapability)] &&
+        (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable))
+    {
+        [self registerForPreviewingWithDelegate:self sourceView:self.view];
+    }
 }
 
 - (void)didChangePreferredContentSize:(NSNotification *)notification
@@ -119,20 +126,8 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
     if ([segue.identifier isEqualToString:UYLSegueShowCountry])
     {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-        Country *country = nil;
-        if (self.searchController.isActive)
-        {
-            country = [self.filteredList objectAtIndex:indexPath.row];
-        }
-        else
-        {
-            country = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        }
-        
-        UYLCountryViewController *controller = (UYLCountryViewController *)[[segue destinationViewController] topViewController];
-        [controller setCountry:country];
-        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-        controller.navigationItem.leftItemsSupplementBackButton = YES;
+        Country *country = [self countryForIndexPath:indexPath];
+        [self configureNavigationController:segue.destinationViewController withCountry:country];
     }
 }
 
@@ -166,6 +161,32 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
     [_searchFetchRequest setSortDescriptors:sortDescriptors];
     
     return _searchFetchRequest;
+}
+
+#pragma mark -
+#pragma mark === UIViewControllerPreviewingDelegate Methods ===
+#pragma mark -
+
+- (UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext
+              viewControllerForLocation:(CGPoint)location {
+
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:location];
+    Country *country = [self countryForIndexPath:indexPath];
+    if (country) {
+        CountryCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        if (cell) {
+            previewingContext.sourceRect = cell.frame;
+            UINavigationController *navController = [self.storyboard instantiateViewControllerWithIdentifier:@"UYLCountryNavController"];
+            [self configureNavigationController:navController withCountry:country];
+            return navController;
+        }
+    }
+    return nil;
+}
+
+- (void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit {
+    
+    [self showDetailViewController:viewControllerToCommit sender:self];
 }
 
 #pragma mark -
@@ -349,6 +370,33 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
         {
             NSLog(@"searchFetchRequest failed: %@",[error localizedDescription]);
         }
+    }
+}
+
+#pragma mark -
+#pragma mark === Helper methods ===
+#pragma mark -
+
+- (Country *)countryForIndexPath:(NSIndexPath *)indexPath {
+    
+    Country *country = nil;
+    if (indexPath) {
+        if (self.searchController.isActive) {
+            country = [self.filteredList objectAtIndex:indexPath.row];
+        } else {
+            country = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        }
+    }
+    return country;
+}
+
+- (void)configureNavigationController:(UINavigationController *)navController withCountry:(Country *)country {
+    
+    if ([navController.topViewController isKindOfClass:[UYLCountryViewController class]]) {
+        UYLCountryViewController *controller = (UYLCountryViewController *)navController.topViewController;
+        controller.country = country;
+        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+        controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
 }
 
