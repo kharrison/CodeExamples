@@ -1,6 +1,7 @@
 =======================================================================
 WorldFacts
 
+Version 3.2 12 Oct  2015    Add 3D Touch peek and pop preview
 Version 3.1 25 May  2015    Increase width of split view master view
 Version 3.0 27 Mar  2015    Add OS X application to create core data
 Version 2.0 16 Feb  2014    Update for iOS 8 and UISearchController
