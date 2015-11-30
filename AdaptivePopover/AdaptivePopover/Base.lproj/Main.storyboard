@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IEc-Xg-xqW">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Adaptive Popovers-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="RootViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="RootViewController" customModule="AdaptivePopover" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="dUR-nd-kfc">
+                                <rect key="frame" x="263" y="254" width="75" height="92"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U07-bL-9YR">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Simple"/>
+                                        <connections>
+                                            <segue destination="MSD-Cm-bcv" kind="popoverPresentation" identifier="SimpleSegue" popoverAnchorView="U07-bL-9YR" id="r55-aR-f0X">
+                                                <popoverArrowDirection key="popoverArrowDirection" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZu-eM-LnM">
+                                        <rect key="frame" x="0.0" y="62" width="75" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Embedded"/>
+                                        <connections>
+                                            <segue destination="oA3-PO-zVQ" kind="popoverPresentation" identifier="EmbeddedSegue" popoverAnchorView="HZu-eM-LnM" id="32s-Ld-JsC">
+                                                <popoverArrowDirection key="popoverArrowDirection" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dUR-nd-kfc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6SY-DN-U04"/>
+                            <constraint firstItem="dUR-nd-kfc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZYQ-dc-nsO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Adaptive Popovers" id="f6f-UN-Zjy"/>
+                    <connections>
+                        <outlet property="embeddedButton" destination="HZu-eM-LnM" id="PTC-08-jWw"/>
+                        <outlet property="simpleButton" destination="U07-bL-9YR" id="L3a-Ba-g0d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1346" y="417"/>
+        </scene>
+        <!--Simple View Controller-->
+        <scene sceneID="RF0-ZC-20i">
+            <objects>
+                <viewController id="MSD-Cm-bcv" customClass="SimpleViewController" customModule="AdaptivePopover" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UGa-xE-9PT"/>
+                        <viewControllerLayoutGuide type="bottom" id="gLU-al-fbb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CU6-f7-PwM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A simple view controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbp-BG-PQr">
+                                <rect key="frame" x="194" y="288" width="213" height="24"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vbp-BG-PQr" firstAttribute="centerY" secondItem="CU6-f7-PwM" secondAttribute="centerY" id="9Re-9M-Gvn"/>
+                            <constraint firstItem="Vbp-BG-PQr" firstAttribute="centerX" secondItem="CU6-f7-PwM" secondAttribute="centerX" id="irX-rm-RDj"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="320"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k2B-dg-9sQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2058" y="417"/>
+        </scene>
+        <!--Simple Table-->
+        <scene sceneID="4bK-BO-15j">
+            <objects>
+                <tableViewController storyboardIdentifier="SimpleTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UiC-eg-7aX" customClass="SimpleTableViewController" customModule="AdaptivePopover" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sTw-9a-q6E">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SimpleCell" textLabel="KaP-fP-Txh" style="IBUITableViewCellStyleDefault" id="Ri8-J6-7Oy">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ri8-J6-7Oy" id="pG6-2f-Mog">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KaP-fP-Txh">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <segue destination="wcy-Sh-Ur8" kind="show" identifier="ShowDetailSegue" id="UT4-je-4CM"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UiC-eg-7aX" id="MRs-gE-euW"/>
+                            <outlet property="delegate" destination="UiC-eg-7aX" id="R3u-qR-Cr0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Simple Table" id="Lww-ir-ltb"/>
+                    <connections>
+                        <outlet property="tableView" destination="sTw-9a-q6E" id="Hx1-Yx-m97"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qu7-ck-UkA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1346" y="1193"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="fEr-x5-gVL">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wcy-Sh-Ur8" customClass="DetailViewController" customModule="AdaptivePopover" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ju3-dF-bBT"/>
+                        <viewControllerLayoutGuide type="bottom" id="hfE-uT-8Tj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="keB-Pc-VKb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEw-X3-PV8">
+                                <rect key="frame" x="204" y="288" width="193" height="24"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LEw-X3-PV8" firstAttribute="centerX" secondItem="keB-Pc-VKb" secondAttribute="centerX" id="aaI-qi-NMH"/>
+                            <constraint firstItem="LEw-X3-PV8" firstAttribute="centerY" secondItem="keB-Pc-VKb" secondAttribute="centerY" id="xhb-wB-6mb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailLabel" destination="LEw-X3-PV8" id="0WX-mb-wo4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UuE-rq-E40" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2049" y="1193"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PEs-vb-YYS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IEc-Xg-xqW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zln-BS-RWw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mUJ-re-lgM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4NQ-a7-3fl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="417"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WpM-DT-GDd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oA3-PO-zVQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h0O-VK-aVS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UiC-eg-7aX" kind="relationship" relationship="rootViewController" id="UUF-08-9h7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GIk-Ze-2Hk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="1193"/>
+        </scene>
+    </scenes>
+</document>
