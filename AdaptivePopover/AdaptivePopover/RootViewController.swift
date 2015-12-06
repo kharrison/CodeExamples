@@ -82,13 +82,13 @@ extension RootViewController: UIPopoverPresentationControllerDelegate {
     // Check for when we present in a non modal style and remove the
     // the dismiss button from the navigation bar.
     
-//    func presentationController(presentationController: UIPresentationController, willPresentWithAdaptiveStyle style: UIModalPresentationStyle, transitionCoordinator: UIViewControllerTransitionCoordinator?) {
-//        if style == .None {
-//            if let navController = presentationController.presentedViewController as? UINavigationController {
-//                removeDismissButton(navController)
-//            }
-//        }
-//    }
+    func presentationController(presentationController: UIPresentationController, willPresentWithAdaptiveStyle style: UIModalPresentationStyle, transitionCoordinator: UIViewControllerTransitionCoordinator?) {
+        if style == .None {
+            if let navController = presentationController.presentedViewController as? UINavigationController {
+                removeDismissButton(navController)
+            }
+        }
+    }
     
     func didDismissPresentedView() {
         presentedViewController?.dismissViewControllerAnimated(true, completion: nil)
