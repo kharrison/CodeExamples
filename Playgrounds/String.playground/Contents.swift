@@ -282,9 +282,9 @@ sequences.removeRange(midRange)  // "ABA ABC"
 let welcome = "hello world!"
 welcome.capitalizedString // "Hello World!"
 
-// ==
+// ===
 // Searching for a substring
-//
+// ===
 
 // An example of using NSString methods to perform a
 // search for a substring:
