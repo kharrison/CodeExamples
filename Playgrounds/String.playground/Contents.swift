@@ -211,7 +211,7 @@ let subString4 = template.substringWithRange(indexStartOfText..<indexEndOfText)
 
 let digits = "0123456789"
 let tail = String(digits.characters.dropFirst()) // "123456789"
-let less = String(digits.characters.dropFirst(3)) // "23456789"
+let less = String(digits.characters.dropFirst(3)) // "3456789"
 let head = String(digits.characters.dropLast(3)) // "0123456"
 let prefix = String(digits.characters.prefix(2)) // "01"
 let suffix = String(digits.characters.suffix(2)) // "89"
