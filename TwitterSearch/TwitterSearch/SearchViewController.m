@@ -30,6 +30,7 @@
 
 #import "SearchViewController.h"
 #import "TweetCell.h"
+#import "NSString+URLEncoding.h"
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
 
@@ -169,8 +170,7 @@ typedef NS_ENUM(NSUInteger, UYLTwitterSearchState)
 - (void)loadQuery
 {
     self.searchState = UYLTwitterSearchStateLoading;
-    NSString *encodedQuery = [self.query stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
+    NSString *encodedQuery = [self.query stringByAddingPercentEncodingForURLFormData];
     ACAccountType *accountType = [self.accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
     [self.accountStore requestAccessToAccountsWithType:accountType
                                                options:NULL
