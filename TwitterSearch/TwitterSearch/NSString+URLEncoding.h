@@ -35,38 +35,47 @@
 
 /**
  An NSString category that provides percent encoding of URL
- strings.
+ strings following RFC 3986 or the W3C HTML specification.
  */
 
 @interface NSString (URLEncoding)
 
-/**--------------------------------------
- * @name Instance Methods
- * --------------------------------------
+/**
+ Returns a new string made from the receiver by replacing characters which are
+ reserved in a URI query with percent encoded characters.
+
+ @discussion The following characters are not considered reserved in a URI query
+ by RFC 3986:
+
+ - Alpha "a...z" "A...Z"
+ - Numberic "0...9"
+ - Unreserved "-._~"
+
+ In addition the reserved characters "/" and "?" have no reserved purpose in the
+ query component of a URI so do not need to be percent escaped.
+
+ @return Returns the encoded string, or nil if the transformation is not possible.
  */
+
+- (nullable NSString *)stringByAddingPercentEncodingForRFC3986;
 
 /**
  Returns a new string made from the receiver by replacing characters which are
- reserved in a URL query with percent encoded characters (see RFC 3986).
+ reserved in HTML forms (media type application/x-www-form-urlencoded) with
+ percent encoded characters.
  
- @param plusForSpace A boolean flag which when set replaces spaces by a '+'
- otherwise they are percent escaped as %20.
+ @discussion The W3C HTML5 specification, section 4.10.22.5 URL-encoded form
+ data percent encodes all characters except the following:
+ 
+ - Space (0x20) is replaced by a "+" (0x2B)
+ - Bytes in the range 0x2A, 0x2D, 0x2E, 0x30-0x39, 0x41-0x5A, 0x5F, 0x61-0x7A
+ (alphanumeric + "*-._")
+ 
+ @param plusForSpace Boolean, when true replaces space with a '+'
+ otherwise uses percent encoding (%20). Default is false.
  
  @return Returns the encoded string, or nil if the transformation is not possible.
  */
 
-- (nullable NSString *)stringByAddingPercentEncodingForURLQuery:(BOOL)plusForSpace;
-
-/**
- Returns a new string made from the receiver by replacing characters which are
- reserved in a URL encoded form with percent encoded characters.
- 
- @discussion Unlike -stringByAddingPercentEncodingForURLQuery: this method
- does not escape '*', spaces are always replaced by '+' and the '~' is not
- an allowed character so it is percent escaped.
- 
- @return Returns the encoded string, or nil if the transformation is not possible.
- */
-
-- (nullable NSString *)stringByAddingPercentEncodingForURLFormData;
+- (nullable NSString *)stringByAddingPercentEncodingForFormData:(BOOL)plusForSpace;
 @end

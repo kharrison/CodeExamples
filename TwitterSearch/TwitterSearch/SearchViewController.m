@@ -170,7 +170,7 @@ typedef NS_ENUM(NSUInteger, UYLTwitterSearchState)
 - (void)loadQuery
 {
     self.searchState = UYLTwitterSearchStateLoading;
-    NSString *encodedQuery = [self.query stringByAddingPercentEncodingForURLFormData];
+    NSString *encodedQuery = [self.query stringByAddingPercentEncodingForFormData:NO];
     ACAccountType *accountType = [self.accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
     [self.accountStore requestAccessToAccountsWithType:accountType
                                                options:NULL

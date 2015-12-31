@@ -35,30 +35,26 @@
 
 @implementation NSString (URLEncoding)
 
-- (nullable NSString *)stringByAddingPercentEncodingForURLQuery:(BOOL)plusForSpace {
-  NSString *unreserved = @"-._~";
-  NSMutableCharacterSet *urlQueryAllowedCharacterSet = [NSMutableCharacterSet alphanumericCharacterSet];
-  [urlQueryAllowedCharacterSet addCharactersInString:unreserved];
-  
-  if (plusForSpace) {
-    [urlQueryAllowedCharacterSet addCharactersInString:@" "];
-  }
-  
-  NSString *encodedString = [self stringByAddingPercentEncodingWithAllowedCharacters:urlQueryAllowedCharacterSet];
-  if (plusForSpace) {
-    encodedString = [encodedString stringByReplacingOccurrencesOfString:@" " withString:@"+"];
-  }
-  return encodedString;
+- (nullable NSString *)stringByAddingPercentEncodingForRFC3986 {
+  NSString *unreserved = @"-._~/?";
+  NSMutableCharacterSet *allowedCharacterSet = [NSMutableCharacterSet alphanumericCharacterSet];
+  [allowedCharacterSet addCharactersInString:unreserved];
+  return [self stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacterSet];
 }
 
-- (nullable NSString *)stringByAddingPercentEncodingForURLFormData {
-  NSString *unreserved = @"-._* ";
-  NSMutableCharacterSet *urlQueryAllowedCharacterSet = [NSMutableCharacterSet alphanumericCharacterSet];
-  [urlQueryAllowedCharacterSet addCharactersInString:unreserved];
+- (nullable NSString *)stringByAddingPercentEncodingForFormData:(BOOL)plusForSpace {
+  NSString *unreserved = @"*-._";
+  NSMutableCharacterSet *allowedCharacterSet = [NSMutableCharacterSet alphanumericCharacterSet];
+  [allowedCharacterSet addCharactersInString:unreserved];
+  if (plusForSpace) {
+    [allowedCharacterSet addCharactersInString:@" "];
+  }
   
-  NSString *encodedString = [self stringByAddingPercentEncodingWithAllowedCharacters:urlQueryAllowedCharacterSet];
-  encodedString = [encodedString stringByReplacingOccurrencesOfString:@" " withString:@"+"];
-  return encodedString;
+  NSString *encoded = [self stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacterSet];
+  if (plusForSpace) {
+    encoded = [encoded stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+  }
+  return encoded;
 }
 
 @end

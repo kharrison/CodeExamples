@@ -47,108 +47,94 @@
     [super tearDown];
 }
 
-- (void)testQueryAllowed {
-  NSString *input = @"ABC123abc";
-  NSString *output = [input stringByAddingPercentEncodingForURLQuery:NO];
-  NSString *expected = @"ABC123abc";
-  BOOL result = [expected isEqualToString:output];
-  XCTAssertTrue(result, "Expected: %@ got %@",expected,output);
+- (void)testRFC3986AlphaNumericNotEncoded {
+  NSString *input = @"abcdefghijklmnopqrstuvwxyz"
+                    "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    "0123456789";
+  NSString *output = [input stringByAddingPercentEncodingForRFC3986];
+  XCTAssertEqualObjects(input, output);
 }
 
-- (void)testFormAllowed {
-  NSString *input = @"ABC123abc";
-  NSString *output = [input stringByAddingPercentEncodingForURLFormData];
-  NSString *expected = @"ABC123abc";
-  BOOL result = [expected isEqualToString:output];
-  XCTAssertTrue(result, "Expected: %@ got %@",expected,output);
+- (void)testFormAlphaNumericNotEncoded {
+  NSString *input = @"abcdefghijklmnopqrstuvwxyz"
+                    "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    "0123456789";
+  NSString *output = [input stringByAddingPercentEncodingForFormData:NO];
+  XCTAssertEqualObjects(input, output);
 }
 
-- (void)testQuerySpaceIsPercentEncoded {
-  NSString *input = @"one two";
-  NSString *output = [input stringByAddingPercentEncodingForURLQuery:NO];
-  NSString *expected = @"one%20two";
-  BOOL result = [expected isEqualToString:output];
-  XCTAssertTrue(result, "Expected: %@ got %@",expected,output);
-}
-
-- (void)testQuerySpaceIsPlusEncoded {
-  NSString *input = @"one two";
-  NSString *output = [input stringByAddingPercentEncodingForURLQuery:YES];
-  NSString *expected = @"one+two";
-  BOOL result = [expected isEqualToString:output];
-  XCTAssertTrue(result, "Expected: %@ got %@",expected,output);
-}
-
-- (void)testFormSpaceIsPlusEncoded {
-  NSString *input = @"one two";
-  NSString *output = [input stringByAddingPercentEncodingForURLFormData];
-  NSString *expected = @"one+two";
-  BOOL result = [expected isEqualToString:output];
-  XCTAssertTrue(result, "Expected: %@ got %@",expected,output);
-}
-
-- (void)testQueryPlusIsEncodedWhenUsingPlusForSpaces {
-  NSString *input = @"one+two";
-  NSString *output = [input stringByAddingPercentEncodingForURLQuery:YES];
-  NSString *expected = @"one%2Btwo";
-  BOOL result = [expected isEqualToString:output];
-  XCTAssertTrue(result, "Expected: %@ got %@",expected,output);
-}
-
-- (void)testQueryPercentIsEncoded {
-  NSString *input = @"%";
-  NSString *output = [input stringByAddingPercentEncodingForURLQuery:NO];
-  NSString *expected = @"%25";
-  BOOL result = [expected isEqualToString:output];
-  XCTAssertTrue(result, "Expected: %@ got %@",expected,output);
-}
-
-- (void)testFormPercentIsEncoded {
-  NSString *input = @"%";
-  NSString *output = [input stringByAddingPercentEncodingForURLFormData];
-  NSString *expected = @"%25";
-  BOOL result = [expected isEqualToString:output];
-  XCTAssertTrue(result, "Expected: %@ got %@",expected,output);
-}
-
-- (void)testQueryReservedEncoded {
-  NSString *input = @"!#$&'()*+,/:;=?@[]";
-  NSString *output = [input stringByAddingPercentEncodingForURLQuery:NO];
-  NSString *expected = @"%21%23%24%26%27%28%29%2A%2B%2C%2F%3A%3B%3D%3F%40%5B%5D";
-  BOOL result = [expected isEqualToString:output];
-  XCTAssertTrue(result, "Expected: %@ got %@",expected,output);
-}
-
-- (void)testFormReservedEncoded {
-  NSString *input = @"!#$&'()+,/:;=?@[]";
-  NSString *output = [input stringByAddingPercentEncodingForURLFormData];
-  NSString *expected = @"%21%23%24%26%27%28%29%2B%2C%2F%3A%3B%3D%3F%40%5B%5D";
-  BOOL result = [expected isEqualToString:output];
-  XCTAssertTrue(result, "Expected: %@ got %@",expected,output);
-}
-
-- (void)testQueryUnreservedNotEncoded {
+- (void)testRFC3986UnreservedNotEncoded {
   NSString *input = @"-._~";
-  NSString *output = [input stringByAddingPercentEncodingForURLQuery:NO];
-  NSString *expected = @"-._~";
-  BOOL result = [expected isEqualToString:output];
-  XCTAssertTrue(result, "Expected: %@ got %@",expected,output);
+  NSString *output = [input stringByAddingPercentEncodingForRFC3986];
+  XCTAssertEqualObjects(input, output);
+}
+
+- (void)testRFC3986SlashQuestionNotEncoded {
+  NSString *input = @"/?";
+  NSString *output = [input stringByAddingPercentEncodingForRFC3986];
+  XCTAssertEqualObjects(input, output);
 }
 
 - (void)testFormUnreservedNotEncoded {
-  NSString *input = @"-._*";
-  NSString *output = [input stringByAddingPercentEncodingForURLFormData];
-  NSString *expected = @"-._*";
-  BOOL result = [expected isEqualToString:output];
-  XCTAssertTrue(result, "Expected: %@ got %@",expected,output);
+  NSString *input = @"*-._";
+  NSString *output = [input stringByAddingPercentEncodingForFormData:NO];
+  XCTAssertEqualObjects(input, output);
 }
 
-- (void)testFormTidleEncoded {
-  NSString *input = @"~";
-  NSString *output = [input stringByAddingPercentEncodingForURLFormData];
-  NSString *expected = @"%7E";
-  BOOL result = [expected isEqualToString:output];
-  XCTAssertTrue(result, "Expected: %@ got %@",expected,output);
+- (void)testQuerySpacePercentEncoded {
+  NSString *input = @"one two";
+  NSString *output = [input stringByAddingPercentEncodingForRFC3986];
+  NSString *expected = @"one%20two";
+  XCTAssertEqualObjects(expected, output);
+}
+
+- (void)testFormSpacePercentEncoded {
+  NSString *input = @"one two";
+  NSString *output = [input stringByAddingPercentEncodingForFormData:NO];
+  NSString *expected = @"one%20two";
+  XCTAssertEqualObjects(expected, output);
+}
+
+- (void)testFormSpacePlusEncoded {
+  NSString *input = @"one two";
+  NSString *output = [input stringByAddingPercentEncodingForFormData:YES];
+  NSString *expected = @"one+two";
+  XCTAssertEqualObjects(expected, output);
+}
+
+- (void) testFormPlusIsPercentEncoded {
+  NSString *input = @"one+two";
+  NSString *output = [input stringByAddingPercentEncodingForFormData:YES];
+  NSString *expected = @"one%2Btwo";
+  XCTAssertEqualObjects(expected, output);
+}
+
+- (void) testQueryPercentPercentEncoded {
+  NSString *input = @"%";
+  NSString *output = [input stringByAddingPercentEncodingForRFC3986];
+  NSString *expected = @"%25";
+  XCTAssertEqualObjects(expected, output);
+}
+
+- (void) testFormPercentPercentEncoded {
+  NSString *input = @"%";
+  NSString *output = [input stringByAddingPercentEncodingForFormData:NO];
+  NSString *expected = @"%25";
+  XCTAssertEqualObjects(expected, output);
+}
+
+- (void) testQueryReservedPercentEncoded {
+  NSString *input = @"!#$&'()*+,:;=@[]";
+  NSString *output = [input stringByAddingPercentEncodingForRFC3986];
+  NSString *expected = @"%21%23%24%26%27%28%29%2A%2B%2C%3A%3B%3D%40%5B%5D";
+  XCTAssertEqualObjects(expected, output);
+}
+
+- (void) testFormReservedPercentEncoded {
+  NSString *input = @"!#$&'()+,/:;=?@[]";
+  NSString *output = [input stringByAddingPercentEncodingForFormData:NO];
+  NSString *expected = @"%21%23%24%26%27%28%29%2B%2C%2F%3A%3B%3D%3F%40%5B%5D";
+  XCTAssertEqualObjects(expected, output);
 }
 
 @end
