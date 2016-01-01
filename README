@@ -3,7 +3,7 @@
 
   See http://useyourloaf.com for details
 
-  This README last updated: 30 Nov 2015
+  This README last updated: 01 Jan 2016
 =======================================================================
 
 + INDEX
@@ -15,6 +15,7 @@
   AnimatedConstraints - Animating Autolayout changes 
   Collection    - Simple collection view with popovers
   Designable    - IBDESIGNABLE/IB_Inspectable custom views
+  Encode        - Percent encoding of URL query string
   DynamicText   - Supporting dynamic text size changes
   Huckleberry   - Auto layout table view cells with varying row heights
   MasterSlide   - Implementing a mail app style split view controller
