@@ -76,8 +76,8 @@ class CenterAlignViewController: UIViewController {
 extension UIViewController {
   
     func addImageViewForImageNamed(name: String) -> UIImageView? {
-        if let image = UIImage.init(named: name) {
-            let imageView = UIImageView.init(image: image)
+        if let image = UIImage(named: name) {
+            let imageView = UIImageView(image: image)
             imageView.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview(imageView)
             return imageView
