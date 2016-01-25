@@ -3,7 +3,7 @@
 
   See http://useyourloaf.com for details
 
-  This README last updated: 01 Jan 2016
+  This README last updated: 25 Jan 2016
 =======================================================================
 
 + INDEX
@@ -13,6 +13,7 @@
   AlertView     - Demo iOS 5 changes to UIAlertView
   AlertController - UIAlertController changes in iOS 8
   AnimatedConstraints - Animating Autolayout changes 
+  AutoLayout    - AutoLayout examples
   Collection    - Simple collection view with popovers
   Designable    - IBDESIGNABLE/IB_Inspectable custom views
   Encode        - Percent encoding of URL query string

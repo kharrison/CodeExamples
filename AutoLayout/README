@@ -1,0 +1,8 @@
+### AutoLayout
+Version 1.0  15 Jan 2016    Initial Version
+
+Example of how to use center constraints to proportionally
+space views along horizontal or vertical axis.
+
+Solution is implemented with Interface Builder, in code and
+with a stack view.
