@@ -87,7 +87,7 @@ extension UIViewController {
   
     func addConstraintFromView(subview: UIView?, attribute: NSLayoutAttribute, multiplier: CGFloat, identifier: String) {
         if let subview = subview {
-            let constraint = NSLayoutConstraint.init(item: subview,
+            let constraint = NSLayoutConstraint(item: subview,
                 attribute: attribute,
                 relatedBy: .Equal,
                 toItem: view,
