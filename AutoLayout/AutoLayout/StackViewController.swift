@@ -73,33 +73,10 @@ class StackViewController: UIViewController {
     // Center both stack views
     addConstraintFromView(topStackView, attribute: .CenterX, multiplier: 1.0, identifier: "topSv center X")
     addConstraintFromView(bottomStackView, attribute: .CenterX, multiplier: 1.0, identifier: "bottomSV center X")
-    
-    // Set the widths of each stack view by constraining
-    // the leading edge
-    if let heartTop = heartTop {
-      let offset = heartTop.bounds.width/2
-      let constraint = NSLayoutConstraint(item: topStackView,
-        attribute: .Leading,
-        relatedBy: .Equal,
-        toItem: view,
-        attribute: .CenterXWithinMargins,
-        multiplier: 0.5,
-        constant: -offset)
-      constraint.identifier = "TopStackLeading"
-      view.addConstraint(constraint)
-    }
 
-    if let starBottomLeft = starBottomLeft {
-      let offset = starBottomLeft.bounds.width/2
-      let constraint = NSLayoutConstraint(item: bottomStackView,
-        attribute: .Leading,
-        relatedBy: .Equal,
-        toItem: view,
-        attribute: .CenterXWithinMargins,
-        multiplier: 0.333,
-        constant: -offset)
-      constraint.identifier = "BottomStackLeading"
-      view.addConstraint(constraint)
-    }
+    // Fix the width of the stack view by setting the center
+    // of the left image.
+    addConstraintFromView(heartTop, attribute: .CenterX, multiplier: 0.5, identifier: "heartTop center X")    
+    addConstraintFromView(starBottomLeft, attribute: .CenterX, multiplier: 0.333, identifier: "starBottomLeft center X")
   }
 }
