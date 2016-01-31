@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -209,7 +208,7 @@
         <!--Stack View-->
         <scene sceneID="7nb-W2-rAV">
             <objects>
-                <viewController id="5ZC-oJ-url" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StackViewController" id="5ZC-oJ-url" customClass="StackViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="huf-Pu-FPh"/>
                         <viewControllerLayoutGuide type="bottom" id="kco-B3-MLa"/>
@@ -217,42 +216,7 @@
                     <view key="view" contentMode="scaleToFill" id="auX-z6-QQh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="DFL-7R-g8x" userLabel="Top Stack View">
-                                <rect key="frame" x="100" y="150" width="400" height="100"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="uPg-P7-vuz" userLabel="HeartTop">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="jbA-6e-C8a" userLabel="StarTop">
-                                        <rect key="frame" x="300" y="0.0" width="100" height="100"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="vci-js-4q6" userLabel="Bottom Stack View">
-                                <rect key="frame" x="50" y="350" width="500" height="100"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="olR-dW-R0C" userLabel="StarBottomLeft">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="c9h-Ip-Lbs" userLabel="HeartBottom">
-                                        <rect key="frame" x="200" y="0.0" width="100" height="100"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="tlf-t3-NaG" userLabel="StarBottomRight">
-                                        <rect key="frame" x="400" y="0.0" width="100" height="100"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="DFL-7R-g8x" firstAttribute="centerY" secondItem="auX-z6-QQh" secondAttribute="centerY" multiplier="0.667" identifier="TopStackVertical" id="DaJ-qR-jJD" userLabel="TopSV.centerY = 0.667 × centerY"/>
-                            <constraint firstItem="DFL-7R-g8x" firstAttribute="centerX" secondItem="auX-z6-QQh" secondAttribute="centerX" identifier="TopStackCenter" id="Fqh-Ht-elN" userLabel="TopSV.centerX = centerX"/>
-                            <constraint firstItem="DFL-7R-g8x" firstAttribute="leading" secondItem="auX-z6-QQh" secondAttribute="centerXWithinMargins" multiplier="0.5" constant="-50" identifier="TopStackLeading" id="PaC-0h-R7p" userLabel="TopSV.leading = 0.5 × centerXWithinMargins - 50"/>
-                            <constraint firstItem="vci-js-4q6" firstAttribute="leading" secondItem="auX-z6-QQh" secondAttribute="centerXWithinMargins" multiplier="0.333" constant="-50" identifier="BottomStackLeading" id="fO3-RS-Y04" userLabel="BtmSV.leading = 0.333 × centerXWithinMargins - 50"/>
-                            <constraint firstItem="vci-js-4q6" firstAttribute="centerX" secondItem="auX-z6-QQh" secondAttribute="centerX" identifier="BottomStackCenter" id="x2h-dR-915" userLabel="BtmSV.centerX = centerX"/>
-                            <constraint firstItem="vci-js-4q6" firstAttribute="centerY" secondItem="auX-z6-QQh" secondAttribute="centerY" multiplier="1.333" identifier="BottomStackVertical" id="xLf-Fv-KzI" userLabel="BtmSV.centerY = 1.333 × centerY"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Stack View" id="Igg-Oh-Iag"/>
                 </viewController>

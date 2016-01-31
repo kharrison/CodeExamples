@@ -72,30 +72,3 @@ class CenterAlignViewController: UIViewController {
         addConstraintFromView(starBottomRight, attribute: .CenterX, multiplier: 1.667, identifier: "starBottomRight center X")
     }
 }
-
-extension UIViewController {
-  
-    func addImageViewForImageNamed(name: String) -> UIImageView? {
-        if let image = UIImage(named: name) {
-            let imageView = UIImageView(image: image)
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            view.addSubview(imageView)
-            return imageView
-        }
-        return nil
-    }
-  
-    func addConstraintFromView(subview: UIView?, attribute: NSLayoutAttribute, multiplier: CGFloat, identifier: String) {
-        if let subview = subview {
-            let constraint = NSLayoutConstraint(item: subview,
-                attribute: attribute,
-                relatedBy: .Equal,
-                toItem: view,
-                attribute: attribute,
-                multiplier: multiplier,
-                constant: 0)
-            constraint.identifier = identifier
-            view.addConstraint(constraint)
-        }
-    }
-}

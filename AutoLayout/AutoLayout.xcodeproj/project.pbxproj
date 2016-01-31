@@ -13,6 +13,10 @@
 		53D6A5F81C53BF5200A81A14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D6A5F61C53BF5200A81A14 /* Main.storyboard */; };
 		53D6A5FA1C53BF5200A81A14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D6A5F91C53BF5200A81A14 /* Assets.xcassets */; };
 		53D6A5FD1C53BF5200A81A14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D6A5FB1C53BF5200A81A14 /* LaunchScreen.storyboard */; };
+		53EDF4081C5D5C78009F91EA /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EDF4071C5D5C78009F91EA /* StackViewController.swift */; };
+		53EDF40A1C5D64C1009F91EA /* UIStackView+addView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EDF4091C5D64C0009F91EA /* UIStackView+addView.swift */; };
+		53EDF40C1C5D6641009F91EA /* UIViewController+addView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EDF40B1C5D6641009F91EA /* UIViewController+addView.swift */; };
+		53EDF40F1C5D66AA009F91EA /* UIViewController+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EDF40E1C5D66AA009F91EA /* UIViewController+Constraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		53D6A5F91C53BF5200A81A14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53D6A5FC1C53BF5200A81A14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53D6A5FE1C53BF5200A81A14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53EDF4071C5D5C78009F91EA /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
+		53EDF4091C5D64C0009F91EA /* UIStackView+addView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+addView.swift"; sourceTree = "<group>"; };
+		53EDF40B1C5D6641009F91EA /* UIViewController+addView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+addView.swift"; sourceTree = "<group>"; };
+		53EDF40E1C5D66AA009F91EA /* UIViewController+Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Constraint.swift"; sourceTree = "<group>"; };
+		53EDF4101C5D77A7009F91EA /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +49,7 @@
 		53D6A5E41C53BF5200A81A14 = {
 			isa = PBXGroup;
 			children = (
+				53EDF4101C5D77A7009F91EA /* README */,
 				53D6A5EF1C53BF5200A81A14 /* AutoLayout */,
 				53D6A5EE1C53BF5200A81A14 /* Products */,
 			);
@@ -56,15 +66,27 @@
 		53D6A5EF1C53BF5200A81A14 /* AutoLayout */ = {
 			isa = PBXGroup;
 			children = (
+				53EDF40D1C5D6653009F91EA /* Extensions */,
 				53D6A5F01C53BF5200A81A14 /* AppDelegate.swift */,
 				53D6A5F21C53BF5200A81A14 /* MasterViewController.swift */,
 				5362E7F71C53F1B200DAA88B /* CenterAlignViewController.swift */,
+				53EDF4071C5D5C78009F91EA /* StackViewController.swift */,
 				53D6A5F61C53BF5200A81A14 /* Main.storyboard */,
 				53D6A5F91C53BF5200A81A14 /* Assets.xcassets */,
 				53D6A5FB1C53BF5200A81A14 /* LaunchScreen.storyboard */,
 				53D6A5FE1C53BF5200A81A14 /* Info.plist */,
 			);
 			path = AutoLayout;
+			sourceTree = "<group>";
+		};
+		53EDF40D1C5D6653009F91EA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				53EDF40B1C5D6641009F91EA /* UIViewController+addView.swift */,
+				53EDF4091C5D64C0009F91EA /* UIStackView+addView.swift */,
+				53EDF40E1C5D66AA009F91EA /* UIViewController+Constraint.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53EDF40F1C5D66AA009F91EA /* UIViewController+Constraint.swift in Sources */,
+				53EDF40A1C5D64C1009F91EA /* UIStackView+addView.swift in Sources */,
 				53D6A5F31C53BF5200A81A14 /* MasterViewController.swift in Sources */,
+				53EDF4081C5D5C78009F91EA /* StackViewController.swift in Sources */,
+				53EDF40C1C5D6641009F91EA /* UIViewController+addView.swift in Sources */,
 				5362E7F81C53F1B200DAA88B /* CenterAlignViewController.swift in Sources */,
 				53D6A5F11C53BF5200A81A14 /* AppDelegate.swift in Sources */,
 			);

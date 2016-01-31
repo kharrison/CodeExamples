@@ -1,4 +1,7 @@
-### AutoLayout
+AutoLayout
+==========
+
+Version 1.1  31 Jan 2016    Custom Asset catalog for size classes.
 Version 1.0  15 Jan 2016    Initial Version
 
 Example of how to use center constraints to proportionally
@@ -6,3 +9,7 @@ space views along horizontal or vertical axis.
 
 Solution is implemented with Interface Builder, in code and
 with a stack view.
+
+See this post for further details:
+
+http://useyourloaf.com/blog/proportional-spacing-with-auto-layout.html
