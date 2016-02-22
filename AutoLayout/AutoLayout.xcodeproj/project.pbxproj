@@ -34,7 +34,7 @@
 		53EDF4091C5D64C0009F91EA /* UIStackView+addView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+addView.swift"; sourceTree = "<group>"; };
 		53EDF40B1C5D6641009F91EA /* UIViewController+addView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+addView.swift"; sourceTree = "<group>"; };
 		53EDF40E1C5D66AA009F91EA /* UIViewController+Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Constraint.swift"; sourceTree = "<group>"; };
-		53EDF4101C5D77A7009F91EA /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		53EDF4101C5D77A7009F91EA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 		53D6A5E41C53BF5200A81A14 = {
 			isa = PBXGroup;
 			children = (
-				53EDF4101C5D77A7009F91EA /* README */,
+				53EDF4101C5D77A7009F91EA /* README.md */,
 				53D6A5EF1C53BF5200A81A14 /* AutoLayout */,
 				53D6A5EE1C53BF5200A81A14 /* Products */,
 			);
