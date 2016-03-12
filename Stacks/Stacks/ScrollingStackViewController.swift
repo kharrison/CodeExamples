@@ -16,15 +16,15 @@ class ScrollingStackViewController: UIViewController {
     @IBAction func singleTap(sender: UITapGestureRecognizer) {
         let heartImage = UIImage(named: "Heart")
         let heartImageView = UIImageView(image: heartImage)
-        self.stackView.addArrangedSubview(heartImageView)
-        self.scrollToEnd(heartImageView)
+        stackView.addArrangedSubview(heartImageView)
+        scrollToEnd(heartImageView)
     }
     
     @IBAction func twoFingerTap(sender: UITapGestureRecognizer) {
         let starImage = UIImage(named: "Star")
         let starImageView = UIImageView(image: starImage)
-        self.stackView.addArrangedSubview(starImageView)
-        self.scrollToEnd(starImageView)
+        stackView.addArrangedSubview(starImageView)
+        scrollToEnd(starImageView)
     }
     
     @IBAction func threeFingerTap(sender: UITapGestureRecognizer) {
