@@ -121,81 +121,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tJG-MK-kse" userLabel="Label Stack View">
-                                <rect key="frame" x="207" y="28" width="186" height="76"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fQE-a3-LeZ" userLabel="Content Stack View">
+                                <rect key="frame" x="20" y="28" width="560" height="515"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Single finger tap = Heart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKP-J5-XX9">
-                                        <rect key="frame" x="0.0" y="0.0" width="186" height="20"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two finger tap = Star" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWQ-Ev-8jB">
-                                        <rect key="frame" x="14" y="28" width="159" height="20"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Three finger tap = Clear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmM-aL-IHN">
-                                        <rect key="frame" x="3" y="56" width="180" height="20"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHL-nl-rtj">
-                                <rect key="frame" x="20" y="112" width="560" height="431"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VmJ-2E-c7L" userLabel="Image Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="248"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tJG-MK-kse" userLabel="Label Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="76"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="v3m-Tf-VL0">
-                                                <rect key="frame" x="220" y="0.0" width="120" height="120"/>
-                                                <variation key="heightClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="220" y="0.0" width="120" height="330"/>
-                                                </variation>
-                                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="0.0" y="98" width="180" height="120"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="120" y="0.0" width="120" height="358"/>
-                                                </variation>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="pcw-ld-2ua">
-                                                <rect key="frame" x="220" y="128" width="120" height="120"/>
-                                                <variation key="heightClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="220" y="0.0" width="120" height="330"/>
-                                                </variation>
-                                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="0.0" y="98" width="180" height="120"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="120" y="0.0" width="120" height="358"/>
-                                                </variation>
-                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Single finger tap = Heart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKP-J5-XX9">
+                                                <rect key="frame" x="187" y="0.0" width="186" height="20"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two finger tap = Star" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWQ-Ev-8jB">
+                                                <rect key="frame" x="201" y="28" width="159" height="20"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Three finger tap = Clear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmM-aL-IHN">
+                                                <rect key="frame" x="190" y="56" width="180" height="20"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHL-nl-rtj">
+                                        <rect key="frame" x="0.0" y="84" width="560" height="431"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VmJ-2E-c7L" userLabel="Image Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="248"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="v3m-Tf-VL0">
+                                                        <rect key="frame" x="220" y="0.0" width="120" height="120"/>
+                                                        <variation key="heightClass=regular" fixedFrame="YES">
+                                                            <rect key="frame" x="220" y="0.0" width="120" height="330"/>
+                                                        </variation>
+                                                        <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                                            <rect key="frame" x="0.0" y="98" width="180" height="120"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                            <rect key="frame" x="120" y="0.0" width="120" height="358"/>
+                                                        </variation>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="pcw-ld-2ua">
+                                                        <rect key="frame" x="220" y="128" width="120" height="120"/>
+                                                        <variation key="heightClass=regular" fixedFrame="YES">
+                                                            <rect key="frame" x="220" y="0.0" width="120" height="330"/>
+                                                        </variation>
+                                                        <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                                            <rect key="frame" x="0.0" y="98" width="180" height="120"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                            <rect key="frame" x="120" y="0.0" width="120" height="358"/>
+                                                        </variation>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="VmJ-2E-c7L" firstAttribute="leading" secondItem="vHL-nl-rtj" secondAttribute="leading" id="Hte-76-r4W"/>
+                                            <constraint firstItem="VmJ-2E-c7L" firstAttribute="width" secondItem="vHL-nl-rtj" secondAttribute="width" id="cYX-6k-diz"/>
+                                            <constraint firstAttribute="bottom" secondItem="VmJ-2E-c7L" secondAttribute="bottom" constant="20" symbolic="YES" id="eSY-Fb-ylQ"/>
+                                            <constraint firstItem="VmJ-2E-c7L" firstAttribute="top" secondItem="vHL-nl-rtj" secondAttribute="top" id="m4F-Zp-aKI"/>
+                                            <constraint firstAttribute="trailing" secondItem="VmJ-2E-c7L" secondAttribute="trailing" id="qEa-Pw-JNA"/>
+                                        </constraints>
+                                    </scrollView>
                                 </subviews>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstItem="VmJ-2E-c7L" firstAttribute="leading" secondItem="vHL-nl-rtj" secondAttribute="leading" id="Hte-76-r4W"/>
-                                    <constraint firstItem="VmJ-2E-c7L" firstAttribute="width" secondItem="vHL-nl-rtj" secondAttribute="width" id="cYX-6k-diz"/>
-                                    <constraint firstAttribute="bottom" secondItem="VmJ-2E-c7L" secondAttribute="bottom" constant="20" symbolic="YES" id="eSY-Fb-ylQ"/>
-                                    <constraint firstItem="VmJ-2E-c7L" firstAttribute="top" secondItem="vHL-nl-rtj" secondAttribute="top" id="m4F-Zp-aKI"/>
-                                    <constraint firstAttribute="trailing" secondItem="VmJ-2E-c7L" secondAttribute="trailing" id="qEa-Pw-JNA"/>
-                                </constraints>
-                            </scrollView>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="vHL-nl-rtj" firstAttribute="trailing" secondItem="Xk6-Ka-wE3" secondAttribute="trailingMargin" id="1Sg-lJ-KY3"/>
-                            <constraint firstItem="byv-Tc-7c9" firstAttribute="top" secondItem="vHL-nl-rtj" secondAttribute="bottom" constant="8" symbolic="YES" id="5eM-Sm-w9d"/>
-                            <constraint firstItem="tJG-MK-kse" firstAttribute="centerX" secondItem="Xk6-Ka-wE3" secondAttribute="centerX" id="BaS-tS-03j"/>
-                            <constraint firstItem="vHL-nl-rtj" firstAttribute="top" secondItem="tJG-MK-kse" secondAttribute="bottom" constant="8" symbolic="YES" id="I3C-0Z-oqx"/>
-                            <constraint firstItem="vHL-nl-rtj" firstAttribute="leading" secondItem="Xk6-Ka-wE3" secondAttribute="leadingMargin" id="eTj-ra-SFG"/>
-                            <constraint firstItem="tJG-MK-kse" firstAttribute="top" secondItem="GCq-EZ-xG8" secondAttribute="bottom" constant="8" symbolic="YES" id="tDJ-eB-IXo"/>
+                            <constraint firstItem="byv-Tc-7c9" firstAttribute="top" secondItem="fQE-a3-LeZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Aaz-AS-ffJ"/>
+                            <constraint firstItem="fQE-a3-LeZ" firstAttribute="top" secondItem="GCq-EZ-xG8" secondAttribute="bottom" constant="8" symbolic="YES" id="I4x-9H-5u9"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="fQE-a3-LeZ" secondAttribute="leading" id="fC4-4b-hn3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fQE-a3-LeZ" secondAttribute="trailing" id="v2R-Bw-5Yb"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Ovl-Wc-7F7" appends="YES" id="25z-gL-TI6"/>
