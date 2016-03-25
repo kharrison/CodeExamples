@@ -66,14 +66,16 @@ class LayoutGuideController: UIViewController {
         let redImage = UIImage(named: "redButton")
         noButton.setBackgroundImage(redImage, forState: .Normal)
         noButton.contentEdgeInsets = UIEdgeInsetsMake(8, 16, 8, 16)
-        noButton.addTarget(self, action: "noThanks:", forControlEvents: .TouchUpInside)
+        let noThanksAction = #selector(LayoutGuideController.noThanks(_:))
+        noButton.addTarget(self, action: noThanksAction, forControlEvents: .TouchUpInside)
       
         yesButton.translatesAutoresizingMaskIntoConstraints = false
         yesButton.setTitle("Yes please!", forState: .Normal)
         let greenImage = UIImage(named: "greenButton")
         yesButton.setBackgroundImage(greenImage, forState: .Normal)
         yesButton.contentEdgeInsets = UIEdgeInsetsMake(8, 16, 8, 16)
-        yesButton.addTarget(self, action: "yesPlease:", forControlEvents: .TouchUpInside)
+        let yesPleaseAction = #selector(LayoutGuideController.yesPlease(_:))
+        yesButton.addTarget(self, action: yesPleaseAction, forControlEvents: .TouchUpInside)
         
         view.addSubview(noButton)
         view.addSubview(yesButton)
