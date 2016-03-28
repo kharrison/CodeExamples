@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5319D0191CA6E8C1009E4AFA /* AdaptiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5319D0181CA6E8C1009E4AFA /* AdaptiveViewController.swift */; };
 		5329F1161C79008300A35954 /* LayoutAnchorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5329F1151C79008300A35954 /* LayoutAnchorController.swift */; };
 		53358D6F1C80F0B100C1842A /* LayoutGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53358D6E1C80F0B100C1842A /* LayoutGuideController.swift */; };
 		5362E7F81C53F1B200DAA88B /* CenterAlignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362E7F71C53F1B200DAA88B /* CenterAlignViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5319D0181CA6E8C1009E4AFA /* AdaptiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveViewController.swift; sourceTree = "<group>"; };
 		5329F1151C79008300A35954 /* LayoutAnchorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutAnchorController.swift; sourceTree = "<group>"; };
 		53358D6E1C80F0B100C1842A /* LayoutGuideController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutGuideController.swift; sourceTree = "<group>"; };
 		5362E7F71C53F1B200DAA88B /* CenterAlignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = CenterAlignViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
@@ -79,6 +81,7 @@
 				5329F1151C79008300A35954 /* LayoutAnchorController.swift */,
 				53358D6E1C80F0B100C1842A /* LayoutGuideController.swift */,
 				53EDF4071C5D5C78009F91EA /* StackViewController.swift */,
+				5319D0181CA6E8C1009E4AFA /* AdaptiveViewController.swift */,
 				53D6A5F61C53BF5200A81A14 /* Main.storyboard */,
 				53D6A5F91C53BF5200A81A14 /* Assets.xcassets */,
 				53D6A5FB1C53BF5200A81A14 /* LaunchScreen.storyboard */,
@@ -172,6 +175,7 @@
 				53EDF40A1C5D64C1009F91EA /* UIStackView+addView.swift in Sources */,
 				53D6A5F31C53BF5200A81A14 /* MasterViewController.swift in Sources */,
 				53358D6F1C80F0B100C1842A /* LayoutGuideController.swift in Sources */,
+				5319D0191CA6E8C1009E4AFA /* AdaptiveViewController.swift in Sources */,
 				53EDF4081C5D5C78009F91EA /* StackViewController.swift in Sources */,
 				5329F1161C79008300A35954 /* LayoutAnchorController.swift in Sources */,
 				53EDF40C1C5D6641009F91EA /* UIViewController+addView.swift in Sources */,
