@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='contentMode'/>
+        <page name='ScaleToFill'/>
+        <page name='ScaleAspectFit'/>
+        <page name='ScaleAspectFill'/>
+        <page name='Redraw'/>
+        <page name='Center'/>
+        <page name='Top'/>
+        <page name='Bottom'/>
+        <page name='Left'/>
+        <page name='Right'/>
+        <page name='TopLeft'/>
+        <page name='TopRight'/>
+        <page name='BottomLeft'/>
+        <page name='BottomRight'/>
+    </pages>
+</playground>
