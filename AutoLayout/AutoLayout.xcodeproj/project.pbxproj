@@ -10,6 +10,7 @@
 		5319D0191CA6E8C1009E4AFA /* AdaptiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5319D0181CA6E8C1009E4AFA /* AdaptiveViewController.swift */; };
 		5329F1161C79008300A35954 /* LayoutAnchorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5329F1151C79008300A35954 /* LayoutAnchorController.swift */; };
 		53358D6F1C80F0B100C1842A /* LayoutGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53358D6E1C80F0B100C1842A /* LayoutGuideController.swift */; };
+		535078741CBAD4D400700816 /* RTLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535078731CBAD4D400700816 /* RTLViewController.swift */; };
 		5362E7F81C53F1B200DAA88B /* CenterAlignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362E7F71C53F1B200DAA88B /* CenterAlignViewController.swift */; };
 		53D6A5F11C53BF5200A81A14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D6A5F01C53BF5200A81A14 /* AppDelegate.swift */; };
 		53D6A5F31C53BF5200A81A14 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D6A5F21C53BF5200A81A14 /* MasterViewController.swift */; };
@@ -26,6 +27,9 @@
 		5319D0181CA6E8C1009E4AFA /* AdaptiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveViewController.swift; sourceTree = "<group>"; };
 		5329F1151C79008300A35954 /* LayoutAnchorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutAnchorController.swift; sourceTree = "<group>"; };
 		53358D6E1C80F0B100C1842A /* LayoutGuideController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutGuideController.swift; sourceTree = "<group>"; };
+		535078731CBAD4D400700816 /* RTLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTLViewController.swift; sourceTree = "<group>"; };
+		535078751CBADA0C00700816 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		535078761CBADA0C00700816 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5362E7F71C53F1B200DAA88B /* CenterAlignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = CenterAlignViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
 		53D6A5ED1C53BF5200A81A14 /* AutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D6A5F01C53BF5200A81A14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 				53D6A5F01C53BF5200A81A14 /* AppDelegate.swift */,
 				53D6A5F21C53BF5200A81A14 /* MasterViewController.swift */,
 				5362E7F71C53F1B200DAA88B /* CenterAlignViewController.swift */,
+				535078731CBAD4D400700816 /* RTLViewController.swift */,
 				5329F1151C79008300A35954 /* LayoutAnchorController.swift */,
 				53358D6E1C80F0B100C1842A /* LayoutGuideController.swift */,
 				53EDF4071C5D5C78009F91EA /* StackViewController.swift */,
@@ -177,6 +182,7 @@
 				53358D6F1C80F0B100C1842A /* LayoutGuideController.swift in Sources */,
 				5319D0191CA6E8C1009E4AFA /* AdaptiveViewController.swift in Sources */,
 				53EDF4081C5D5C78009F91EA /* StackViewController.swift in Sources */,
+				535078741CBAD4D400700816 /* RTLViewController.swift in Sources */,
 				5329F1161C79008300A35954 /* LayoutAnchorController.swift in Sources */,
 				53EDF40C1C5D6641009F91EA /* UIViewController+addView.swift in Sources */,
 				5362E7F81C53F1B200DAA88B /* CenterAlignViewController.swift in Sources */,
@@ -191,6 +197,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				53D6A5F71C53BF5200A81A14 /* Base */,
+				535078751CBADA0C00700816 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -199,6 +206,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				53D6A5FC1C53BF5200A81A14 /* Base */,
+				535078761CBADA0C00700816 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

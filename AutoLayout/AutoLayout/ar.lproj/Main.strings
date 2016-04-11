@@ -1,0 +1,78 @@
+
+/* Class = "UINavigationItem"; title = "Layout Guides"; ObjectID = "2N3-RG-3wv"; */
+"2N3-RG-3wv.title" = "Layout Guides";
+
+/* Class = "UINavigationItem"; title = "Right-to-Left Text"; ObjectID = "5f0-UM-BEy"; */
+"5f0-UM-BEy.title" = "Right-to-Left Text";
+
+/* Class = "UILabel"; text = "Adaptive Constraints (Code)"; ObjectID = "6jd-Nf-je0"; */
+"6jd-Nf-je0.text" = "Adaptive Constraints (Code)";
+
+/* Class = "UITableViewController"; title = "Master"; ObjectID = "7bK-jq-Zjz"; */
+"7bK-jq-Zjz.title" = "Master";
+
+/* Class = "UILabel"; text = "The buttons should be arranged horizontallly for regular width"; ObjectID = "8Ox-yu-ipp"; */
+"8Ox-yu-ipp.text" = "The buttons should be arranged horizontallly for regular width";
+
+/* Class = "UILabel"; text = "Center Alignment (IB)"; ObjectID = "Arm-wq-HPj"; */
+"Arm-wq-HPj.text" = "Center Alignment (IB)";
+
+/* Class = "UILabel"; text = "Adaptive Constraints (StackView)"; ObjectID = "C32-Uh-N2Q"; */
+"C32-Uh-N2Q.text" = "Adaptive Constraints (StackView)";
+
+/* Class = "UIViewController"; title = "Layout Guides"; ObjectID = "CNI-hu-MFk"; */
+"CNI-hu-MFk.title" = "Layout Guides";
+
+/* Class = "UINavigationItem"; title = "Stack View"; ObjectID = "Igg-Oh-Iag"; */
+"Igg-Oh-Iag.title" = "Stack View";
+
+/* Class = "UINavigationItem"; title = "Interface Builder"; ObjectID = "J4l-Ce-vy6"; */
+"J4l-Ce-vy6.title" = "Interface Builder";
+
+/* Class = "UILabel"; text = "Center Alignment (Code)"; ObjectID = "Psd-1R-l88"; */
+"Psd-1R-l88.text" = "Center Alignment (Code)";
+
+/* Class = "UILabel"; text = "Tomorrow"; ObjectID = "QHI-p4-xwb"; */
+"QHI-p4-xwb.text" = "يوم غد";
+
+/* Class = "UINavigationController"; title = "Master"; ObjectID = "RMx-3f-FxP"; */
+"RMx-3f-FxP.title" = "Master";
+
+/* Class = "UILabel"; text = "Layout Anchors"; ObjectID = "UuN-2A-3RZ"; */
+"UuN-2A-3RZ.text" = "Layout Anchors";
+
+/* Class = "UINavigationItem"; title = "Layout Anchors"; ObjectID = "XlE-eb-7cw"; */
+"XlE-eb-7cw.title" = "Layout Anchors";
+
+/* Class = "UINavigationItem"; title = "Auto Layout"; ObjectID = "Zdf-7t-Un8"; */
+"Zdf-7t-Un8.title" = "Auto Layout";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "b2a-MG-Gkh"; */
+"b2a-MG-Gkh.normalTitle" = "No";
+
+/* Class = "UILabel"; text = "Today"; ObjectID = "fUe-le-V3b"; */
+"fUe-le-V3b.text" = "اليوم";
+
+/* Class = "UILabel"; text = "Layout Guides"; ObjectID = "hPN-HB-hY7"; */
+"hPN-HB-hY7.text" = "Layout Guides";
+
+/* Class = "UINavigationItem"; title = "Code Layout"; ObjectID = "iHn-Kl-LzN"; */
+"iHn-Kl-LzN.title" = "Code Layout";
+
+/* Class = "UILabel"; text = "Yesterday"; ObjectID = "j9t-ce-jkS"; */
+"j9t-ce-jkS.text" = "اليوم السابق";
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "jAq-dO-Gfh"; */
+"jAq-dO-Gfh.normalTitle" = "Yes";
+
+/* Class = "UINavigationItem"; title = "Adaptive Constraints"; ObjectID = "jg5-Sy-S4h"; */
+"jg5-Sy-S4h.title" = "Adaptive Constraints";
+
+/* Class = "UILabel"; text = "Right To Left Text Alignment"; ObjectID = "pte-Pw-YBO"; */
+"pte-Pw-YBO.text" = "Right To Left Text Alignment";
+
+/* Class = "UINavigationItem"; title = "Adaptive Constraints"; ObjectID = "wSr-Jq-acf"; */
+"wSr-Jq-acf.title" = "Adaptive Constraints";
+
+/* Class = "UILabel"; text = "Center Alignment (StackView)"; ObjectID = "ywh-s2-iBh"; */
+"ywh-s2-iBh.text" = "Center Alignment (StackView)";
