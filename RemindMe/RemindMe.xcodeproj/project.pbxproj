@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		2899E5220DE3E06400AC0155 /* RemindMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* RemindMeViewController.xib */; };
 		28D7ACF80DDB3853001CB0EB /* RemindMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* RemindMeViewController.m */; };
 		534536F21D2706BC00B3C4CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534536F11D2706BC00B3C4CC /* Images.xcassets */; };
 		534536F61D270C3800B3C4CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534536F51D270C3800B3C4CC /* LaunchScreen.storyboard */; };
@@ -21,7 +20,6 @@
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* RemindMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2899E5210DE3E06400AC0155 /* RemindMeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemindMeViewController.xib; sourceTree = "<group>"; };
 		28D7ACF60DDB3853001CB0EB /* RemindMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindMeViewController.h; sourceTree = "<group>"; };
 		28D7ACF70DDB3853001CB0EB /* RemindMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindMeViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				534536F11D2706BC00B3C4CC /* Images.xcassets */,
-				2899E5210DE3E06400AC0155 /* RemindMeViewController.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				5345371C1D272BFA00B3C4CC /* Main.storyboard */,
 				534536F51D270C3800B3C4CC /* LaunchScreen.storyboard */,
@@ -158,7 +155,6 @@
 			files = (
 				534537201D272CB800B3C4CC /* Localizable.strings in Resources */,
 				534536F21D2706BC00B3C4CC /* Images.xcassets in Resources */,
-				2899E5220DE3E06400AC0155 /* RemindMeViewController.xib in Resources */,
 				534536F61D270C3800B3C4CC /* LaunchScreen.storyboard in Resources */,
 				5345371A1D272BFA00B3C4CC /* Main.storyboard in Resources */,
 			);
