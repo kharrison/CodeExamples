@@ -1,5 +1,5 @@
 //
-//  RemindMeViewController.h
+//  AppDelegate.m
 //
 //  Created by Keith Harrison http://useyourloaf.com
 //  Copyright (c) 2016 Keith Harrison. All rights reserved.
@@ -30,8 +30,45 @@
 //  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 //  POSSIBILITY OF SUCH DAMAGE.
 
-#import <UIKit/UIKit.h>
 
-@interface RemindMeViewController : UIViewController
-- (void)showReminder:(UILocalNotification *)notification;
+#import "AppDelegate.h"
+#import "RemindMeViewController.h"
+
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self registerForLocalNotifications];
+    UILocalNotification *notification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+	if (notification)
+    {
+        [self handleNotification:notification];
+	}
+	application.applicationIconBadgeNumber = 0;
+    return YES;
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+	application.applicationIconBadgeNumber = 0;
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+	application.applicationIconBadgeNumber = 0;
+    [self handleNotification:notification];
+}
+
+- (void)registerForLocalNotifications
+{
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings
+                                            settingsForTypes:UIUserNotificationTypeBadge|UIUserNotificationTypeAlert|UIUserNotificationTypeSound
+                                            categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+}
+
+- (void)handleNotification:(UILocalNotification *)notification {
+    if ([self.window.rootViewController isKindOfClass:[RemindMeViewController class]]) {
+        RemindMeViewController *rootController = (RemindMeViewController *)self.window.rootViewController;
+        [rootController showReminder:notification];
+    }
+}
+
 @end

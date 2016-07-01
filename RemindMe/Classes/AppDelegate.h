@@ -1,5 +1,5 @@
 //
-//  RemindMeViewController.h
+//  AppDelegate.h
 //
 //  Created by Keith Harrison http://useyourloaf.com
 //  Copyright (c) 2016 Keith Harrison. All rights reserved.
@@ -32,6 +32,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RemindMeViewController : UIViewController
-- (void)showReminder:(UILocalNotification *)notification;
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (nonatomic, strong) UIWindow *window;
 @end
+

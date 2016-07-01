@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  RemindMe
+
+  Created by Keith Harrison on 01/07/2016.
+  Copyright © 2016 Keith Harrison. All rights reserved.
+*/
+
+"AlertBody" = "Did you forget something?";
+"AlertAction" = "Show me";
+"OK" = "OK";
