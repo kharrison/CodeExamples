@@ -52,11 +52,11 @@ class StackViewController: UIViewController {
   func setupViews() {
 
     topStackView.translatesAutoresizingMaskIntoConstraints = false
-    topStackView.distribution = .EqualSpacing
+    topStackView.distribution = .equalSpacing
     view.addSubview(topStackView)
     
     bottomStackView.translatesAutoresizingMaskIntoConstraints = false
-    bottomStackView.distribution = .EqualSpacing
+    bottomStackView.distribution = .equalSpacing
     view.addSubview(bottomStackView)
     
     heartTop = topStackView.addImageViewForImage("Heart")
@@ -67,16 +67,16 @@ class StackViewController: UIViewController {
     starBottomRight = bottomStackView.addImageViewForImage("Star")
     
     // Set the vertical position of each stack view
-    addConstraintFromView(topStackView, attribute: .CenterY, multiplier: 0.667, identifier: "topSV center Y")
-    addConstraintFromView(bottomStackView, attribute: .CenterY, multiplier: 1.333, identifier: "bottomSV center Y")
+    addConstraintFromView(topStackView, attribute: .centerY, multiplier: 0.667, identifier: "topSV center Y")
+    addConstraintFromView(bottomStackView, attribute: .centerY, multiplier: 1.333, identifier: "bottomSV center Y")
     
     // Center both stack views
-    addConstraintFromView(topStackView, attribute: .CenterX, multiplier: 1.0, identifier: "topSv center X")
-    addConstraintFromView(bottomStackView, attribute: .CenterX, multiplier: 1.0, identifier: "bottomSV center X")
+    addConstraintFromView(topStackView, attribute: .centerX, multiplier: 1.0, identifier: "topSv center X")
+    addConstraintFromView(bottomStackView, attribute: .centerX, multiplier: 1.0, identifier: "bottomSV center X")
 
     // Fix the width of the stack view by setting the center
     // of the left image.
-    addConstraintFromView(heartTop, attribute: .CenterX, multiplier: 0.5, identifier: "heartTop center X")    
-    addConstraintFromView(starBottomLeft, attribute: .CenterX, multiplier: 0.333, identifier: "starBottomLeft center X")
+    addConstraintFromView(heartTop, attribute: .centerX, multiplier: 0.5, identifier: "heartTop center X")    
+    addConstraintFromView(starBottomLeft, attribute: .centerX, multiplier: 0.333, identifier: "starBottomLeft center X")
   }
 }

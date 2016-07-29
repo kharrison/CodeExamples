@@ -46,24 +46,24 @@ class RTLViewController: UIViewController {
     
     private func setupViews() {
         cherryLabel.text = "🍒🍒🍒"
-        cherryLabel.backgroundColor = .greenColor()
-        cherryLabel.textAlignment = .Right
+        cherryLabel.backgroundColor = .green()
+        cherryLabel.textAlignment = .right
         view.addSubview(cherryLabel)
     }
     
     private func setupConstraints() {
         let margins = view.layoutMarginsGuide
         cherryLabel.translatesAutoresizingMaskIntoConstraints = false
-        cherryLabel.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor).active = true
-        cherryLabel.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor).active = true
-        cherryLabel.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor, constant: 20.0).active = true
+        cherryLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
+        cherryLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
+        cherryLabel.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 20.0).isActive = true
     }
     
     private func setupSemanticLayout() {
         let attribute = view.semanticContentAttribute
-        let layoutDirection = UIView.userInterfaceLayoutDirectionForSemanticContentAttribute(attribute)
-        if layoutDirection == .RightToLeft {
-            cherryLabel.textAlignment = .Left
+        let layoutDirection = UIView.userInterfaceLayoutDirection(for: attribute)
+        if layoutDirection == .rightToLeft {
+            cherryLabel.textAlignment = .left
         }
     }
 }

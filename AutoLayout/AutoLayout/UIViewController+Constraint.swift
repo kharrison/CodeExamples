@@ -69,11 +69,11 @@ extension UIViewController {
    - Parameter identifier: A String identifier to aid debugging.
    */
   
-  func addConstraintFromView(subview: UIView?, attribute: NSLayoutAttribute, multiplier: CGFloat, identifier: String) {
+  func addConstraintFromView(_ subview: UIView?, attribute: NSLayoutAttribute, multiplier: CGFloat, identifier: String) {
     if let subview = subview {
       let constraint = NSLayoutConstraint(item: subview,
         attribute: attribute,
-        relatedBy: .Equal,
+        relatedBy: .equal,
         toItem: view,
         attribute: attribute,
         multiplier: multiplier,

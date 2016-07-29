@@ -55,7 +55,7 @@ extension UIViewController {
    - Returns: The newly created UIImageView or nil.
    */
   
-  func addImageViewForImageNamed(name: String) -> UIImageView? {
+  func addImageViewForImageNamed(_ name: String) -> UIImageView? {
     if let image = UIImage(named: name) {
       let imageView = UIImageView(image: image)
       imageView.translatesAutoresizingMaskIntoConstraints = false

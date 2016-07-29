@@ -37,9 +37,9 @@ class AdaptiveViewController: UIViewController {
 
     let textLabel = UILabel()
     let leadingGuide = UILayoutGuide()
-    let redButton = UIButton(type: .Custom)
+    let redButton = UIButton(type: .custom)
     let middleGuide = UILayoutGuide()
-    let greenButton = UIButton(type: .Custom)
+    let greenButton = UIButton(type: .custom)
     let trailingGuide = UILayoutGuide()
     
     var compactConstraints = [NSLayoutConstraint]()
@@ -51,7 +51,7 @@ class AdaptiveViewController: UIViewController {
         setupConstraints()
     }
     
-    override func traitCollectionDidChange(previousTraitCollection: UITraitCollection?) {
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         if traitCollection.horizontalSizeClass != previousTraitCollection?.horizontalSizeClass {
             enableConstraintsForWidth(traitCollection.horizontalSizeClass)
@@ -63,24 +63,24 @@ class AdaptiveViewController: UIViewController {
         textLabel.text = "Vertically align for compact widths"
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         textLabel.numberOfLines = 0
-        textLabel.textAlignment = .Center
-        textLabel.textColor = .grayColor()
+        textLabel.textAlignment = .center
+        textLabel.textColor = .gray()
         
         redButton.translatesAutoresizingMaskIntoConstraints = false
-        redButton.setTitle("No don't do it", forState: .Normal)
+        redButton.setTitle("No don't do it", for: UIControlState())
         let redImage = UIImage(named: "redButton")
-        redButton.setBackgroundImage(redImage, forState: .Normal)
+        redButton.setBackgroundImage(redImage, for: UIControlState())
         redButton.contentEdgeInsets = UIEdgeInsetsMake(8, 16, 8, 16)
         let noAction = #selector(noAction(_:))
-        redButton.addTarget(self, action: noAction, forControlEvents: .TouchUpInside)
+        redButton.addTarget(self, action: noAction, for: .touchUpInside)
         
         greenButton.translatesAutoresizingMaskIntoConstraints = false
-        greenButton.setTitle("Start the Countdown!!!", forState: .Normal)
+        greenButton.setTitle("Start the Countdown!!!", for: UIControlState())
         let greenImage = UIImage(named: "greenButton")
-        greenButton.setBackgroundImage(greenImage, forState: .Normal)
+        greenButton.setBackgroundImage(greenImage, for: UIControlState())
         greenButton.contentEdgeInsets = UIEdgeInsetsMake(8, 16, 8, 16)
         let yesAction = #selector(yesAction(_:))
-        greenButton.addTarget(self, action: yesAction, forControlEvents: .TouchUpInside)
+        greenButton.addTarget(self, action: yesAction, for: .touchUpInside)
 
         view.addSubview(textLabel)
         view.addSubview(redButton)
@@ -97,18 +97,18 @@ class AdaptiveViewController: UIViewController {
         // =========================================
         
         let contentGuide = view.readableContentGuide
-        textLabel.leadingAnchor.constraintEqualToAnchor(contentGuide.leadingAnchor).active = true
-        textLabel.trailingAnchor.constraintEqualToAnchor(contentGuide.trailingAnchor).active = true
-        textLabel.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor, constant: 8.0).active = true
+        textLabel.leadingAnchor.constraint(equalTo: contentGuide.leadingAnchor).isActive = true
+        textLabel.trailingAnchor.constraint(equalTo: contentGuide.trailingAnchor).isActive = true
+        textLabel.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 8.0).isActive = true
 
-        redButton.topAnchor.constraintEqualToAnchor(textLabel.bottomAnchor, constant: 8.0).active = true
-        redButton.widthAnchor.constraintEqualToAnchor(greenButton.widthAnchor).active = true
+        redButton.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 8.0).isActive = true
+        redButton.widthAnchor.constraint(equalTo: greenButton.widthAnchor).isActive = true
        
-        leadingGuide.widthAnchor.constraintEqualToAnchor(middleGuide.widthAnchor).active = true
-        leadingGuide.widthAnchor.constraintEqualToAnchor(trailingGuide.widthAnchor).active = true
+        leadingGuide.widthAnchor.constraint(equalTo: middleGuide.widthAnchor).isActive = true
+        leadingGuide.widthAnchor.constraint(equalTo: trailingGuide.widthAnchor).isActive = true
 
-        view.leadingAnchor.constraintEqualToAnchor(leadingGuide.leadingAnchor).active = true
-        trailingGuide.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor).active = true
+        view.leadingAnchor.constraint(equalTo: leadingGuide.leadingAnchor).isActive = true
+        trailingGuide.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
 
         // =========================================
         // regular width constraints
@@ -123,11 +123,11 @@ class AdaptiveViewController: UIViewController {
         // =  |+  guide  +*  button  *+  guide  +*  button  *+  guide  +| =
         // =  |+++++++++++************+++++++++++************+++++++++++| =
         
-        regularConstraints.append(leadingGuide.trailingAnchor.constraintEqualToAnchor(redButton.leadingAnchor))
-        regularConstraints.append(redButton.trailingAnchor.constraintEqualToAnchor(middleGuide.leadingAnchor))
-        regularConstraints.append(middleGuide.trailingAnchor.constraintEqualToAnchor(greenButton.leadingAnchor))
-        regularConstraints.append(greenButton.trailingAnchor.constraintEqualToAnchor(trailingGuide.leadingAnchor))
-        regularConstraints.append(greenButton.topAnchor.constraintEqualToAnchor(textLabel.bottomAnchor, constant: 8.0))
+        regularConstraints.append(leadingGuide.trailingAnchor.constraint(equalTo: redButton.leadingAnchor))
+        regularConstraints.append(redButton.trailingAnchor.constraint(equalTo: middleGuide.leadingAnchor))
+        regularConstraints.append(middleGuide.trailingAnchor.constraint(equalTo: greenButton.leadingAnchor))
+        regularConstraints.append(greenButton.trailingAnchor.constraint(equalTo: trailingGuide.leadingAnchor))
+        regularConstraints.append(greenButton.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 8.0))
 
         // =========================================
         // compact width constraints
@@ -147,28 +147,28 @@ class AdaptiveViewController: UIViewController {
         // =  |                      ************                       | =
         // =  |+++++++++++************+++++++++++************+++++++++++| =
 
-        compactConstraints.append(redButton.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor))
-        compactConstraints.append(greenButton.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor))
-        compactConstraints.append(greenButton.topAnchor.constraintEqualToAnchor(redButton.bottomAnchor, constant: 8.0))
+        compactConstraints.append(redButton.centerXAnchor.constraint(equalTo: view.centerXAnchor))
+        compactConstraints.append(greenButton.centerXAnchor.constraint(equalTo: view.centerXAnchor))
+        compactConstraints.append(greenButton.topAnchor.constraint(equalTo: redButton.bottomAnchor, constant: 8.0))
         
         enableConstraintsForWidth(traitCollection.horizontalSizeClass)
     }
     
-    private func enableConstraintsForWidth(horizontalSizeClass: UIUserInterfaceSizeClass) {
-        if horizontalSizeClass == .Regular {
-            NSLayoutConstraint.deactivateConstraints(compactConstraints)
-            NSLayoutConstraint.activateConstraints(regularConstraints)
+    private func enableConstraintsForWidth(_ horizontalSizeClass: UIUserInterfaceSizeClass) {
+        if horizontalSizeClass == .regular {
+            NSLayoutConstraint.deactivate(compactConstraints)
+            NSLayoutConstraint.activate(regularConstraints)
         } else {
-            NSLayoutConstraint.deactivateConstraints(regularConstraints)
-            NSLayoutConstraint.activateConstraints(compactConstraints)
+            NSLayoutConstraint.deactivate(regularConstraints)
+            NSLayoutConstraint.activate(compactConstraints)
         }
     }
     
-    func noAction(sender: UIButton) {
+    func noAction(_ sender: UIButton) {
         print("No")
     }
     
-    func yesAction(sender: UIButton) {
+    func yesAction(_ sender: UIButton) {
         print("Yes")
     }
 }

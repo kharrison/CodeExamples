@@ -51,7 +51,7 @@ extension UIStackView {
    - Returns: The newly created UIImageView or nil.
    */
   
-  func addImageViewForImage(name: String) -> UIImageView? {
+  @discardableResult func addImageViewForImage(_ name: String) -> UIImageView? {
     if let image = UIImage(named: name) {
       let imageView = UIImageView(image: image)
       imageView.translatesAutoresizingMaskIntoConstraints = false

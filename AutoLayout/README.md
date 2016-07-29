@@ -21,6 +21,7 @@ See the following posts further details:
 
 #### Version History
 
++ Version 1.6  29 Jul 2016    Update for Xcode 8 and Swift 3
 + Version 1.5  12 Apr 2016    Add example of RTL Language Support
 + Version 1.4  28 Mar 2016    Adapting constraints to size classes
 + Version 1.3  27 Feb 2016    Using layout guides to space views

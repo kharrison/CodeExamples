@@ -56,19 +56,19 @@ class CenterAlignViewController: UIViewController {
     }
   
     func setupConstraints() {
-        addConstraintFromView(heartTop, attribute: .CenterY, multiplier: 0.667, identifier: "heartTop center Y")
-        addConstraintFromView(starTop, attribute: .CenterY, multiplier: 0.667, identifier: "starTop center Y")
+        addConstraintFromView(heartTop, attribute: .centerY, multiplier: 0.667, identifier: "heartTop center Y")
+        addConstraintFromView(starTop, attribute: .centerY, multiplier: 0.667, identifier: "starTop center Y")
     
-        addConstraintFromView(heartTop, attribute: .CenterX, multiplier: 0.5, identifier: "heartTop center X")
-        addConstraintFromView(starTop, attribute: .CenterX, multiplier: 1.5, identifier: "starTop center X")
+        addConstraintFromView(heartTop, attribute: .centerX, multiplier: 0.5, identifier: "heartTop center X")
+        addConstraintFromView(starTop, attribute: .centerX, multiplier: 1.5, identifier: "starTop center X")
     
     
-        addConstraintFromView(starBottomLeft, attribute: .CenterY, multiplier: 1.333, identifier: "startBottomLeft center Y")
-        addConstraintFromView(heartBottom, attribute: .CenterY, multiplier: 1.333, identifier: "heartBottom center Y")
-        addConstraintFromView(starBottomRight, attribute: .CenterY, multiplier: 1.333, identifier: "starBottomRight center Y")
+        addConstraintFromView(starBottomLeft, attribute: .centerY, multiplier: 1.333, identifier: "startBottomLeft center Y")
+        addConstraintFromView(heartBottom, attribute: .centerY, multiplier: 1.333, identifier: "heartBottom center Y")
+        addConstraintFromView(starBottomRight, attribute: .centerY, multiplier: 1.333, identifier: "starBottomRight center Y")
     
-        addConstraintFromView(starBottomLeft, attribute: .CenterX, multiplier: 0.333, identifier: "starBottomLeft center X")
-        addConstraintFromView(heartBottom, attribute: .CenterX, multiplier: 1.0, identifier: "heartBottom center X")
-        addConstraintFromView(starBottomRight, attribute: .CenterX, multiplier: 1.667, identifier: "starBottomRight center X")
+        addConstraintFromView(starBottomLeft, attribute: .centerX, multiplier: 0.333, identifier: "starBottomLeft center X")
+        addConstraintFromView(heartBottom, attribute: .centerX, multiplier: 1.0, identifier: "heartBottom center X")
+        addConstraintFromView(starBottomRight, attribute: .centerX, multiplier: 1.667, identifier: "starBottomRight center X")
     }
 }

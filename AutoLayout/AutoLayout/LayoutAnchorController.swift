@@ -45,7 +45,7 @@ class LayoutAnchorController: UIViewController {
   func setupViews() {
     
     stackView.translatesAutoresizingMaskIntoConstraints = false
-    stackView.distribution = .EqualSpacing
+    stackView.distribution = .equalSpacing
     view.addSubview(stackView)
     
     stackView.addImageViewForImage("Heart")
@@ -111,8 +111,8 @@ class LayoutAnchorController: UIViewController {
 
     let margins = view.layoutMarginsGuide
     
-    stackView.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor).active = true
-    stackView.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor).active = true
-    stackView.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor, constant: 8.0).active = true
+    stackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
+    stackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
+    stackView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 8.0).isActive = true
   }
 }

@@ -46,9 +46,9 @@ class LayoutGuideController: UIViewController {
     // =  |+++++++++++************+++++++++++************+++++++++++| =
     
     let leadingGuide = UILayoutGuide()
-    let noButton = UIButton(type: .Custom)
+    let noButton = UIButton(type: .custom)
     let middleGuide = UILayoutGuide()
-    let yesButton = UIButton(type: .Custom)
+    let yesButton = UIButton(type: .custom)
     let trailingGuide = UILayoutGuide()
     
     override func viewDidLoad() {
@@ -62,20 +62,20 @@ class LayoutGuideController: UIViewController {
         // Configure the buttons and add them to the superview
         
         noButton.translatesAutoresizingMaskIntoConstraints = false
-        noButton.setTitle("No", forState: .Normal)
+        noButton.setTitle("No", for: UIControlState())
         let redImage = UIImage(named: "redButton")
-        noButton.setBackgroundImage(redImage, forState: .Normal)
+        noButton.setBackgroundImage(redImage, for: UIControlState())
         noButton.contentEdgeInsets = UIEdgeInsetsMake(8, 16, 8, 16)
         let noThanksAction = #selector(LayoutGuideController.noThanks(_:))
-        noButton.addTarget(self, action: noThanksAction, forControlEvents: .TouchUpInside)
+        noButton.addTarget(self, action: noThanksAction, for: .touchUpInside)
       
         yesButton.translatesAutoresizingMaskIntoConstraints = false
-        yesButton.setTitle("Yes please!", forState: .Normal)
+        yesButton.setTitle("Yes please!", for: UIControlState())
         let greenImage = UIImage(named: "greenButton")
-        yesButton.setBackgroundImage(greenImage, forState: .Normal)
+        yesButton.setBackgroundImage(greenImage, for: UIControlState())
         yesButton.contentEdgeInsets = UIEdgeInsetsMake(8, 16, 8, 16)
         let yesPleaseAction = #selector(LayoutGuideController.yesPlease(_:))
-        yesButton.addTarget(self, action: yesPleaseAction, forControlEvents: .TouchUpInside)
+        yesButton.addTarget(self, action: yesPleaseAction, for: .touchUpInside)
         
         view.addSubview(noButton)
         view.addSubview(yesButton)
@@ -101,33 +101,33 @@ class LayoutGuideController: UIViewController {
         // leading to trailing constraints
         // working from left to right
         
-        margins.leadingAnchor.constraintEqualToAnchor(leadingGuide.leadingAnchor).active = true
-        leadingGuide.trailingAnchor.constraintEqualToAnchor(noButton.leadingAnchor).active = true
-        noButton.trailingAnchor.constraintEqualToAnchor(middleGuide.leadingAnchor).active = true
-        middleGuide.trailingAnchor.constraintEqualToAnchor(yesButton.leadingAnchor).active = true
-        yesButton.trailingAnchor.constraintEqualToAnchor(trailingGuide.leadingAnchor).active = true
-        trailingGuide.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor).active = true
+        margins.leadingAnchor.constraint(equalTo: leadingGuide.leadingAnchor).isActive = true
+        leadingGuide.trailingAnchor.constraint(equalTo: noButton.leadingAnchor).isActive = true
+        noButton.trailingAnchor.constraint(equalTo: middleGuide.leadingAnchor).isActive = true
+        middleGuide.trailingAnchor.constraint(equalTo: yesButton.leadingAnchor).isActive = true
+        yesButton.trailingAnchor.constraint(equalTo: trailingGuide.leadingAnchor).isActive = true
+        trailingGuide.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
         
         // The buttons should have the same width
-        noButton.widthAnchor.constraintEqualToAnchor(yesButton.widthAnchor).active = true
+        noButton.widthAnchor.constraint(equalTo: yesButton.widthAnchor).isActive = true
         
         // The guides should have the same width
-        leadingGuide.widthAnchor.constraintEqualToAnchor(middleGuide.widthAnchor).active = true
-        leadingGuide.widthAnchor.constraintEqualToAnchor(trailingGuide.widthAnchor).active = true
+        leadingGuide.widthAnchor.constraint(equalTo: middleGuide.widthAnchor).isActive = true
+        leadingGuide.widthAnchor.constraint(equalTo: trailingGuide.widthAnchor).isActive = true
     
         // Center everything vertically in the super view
-        leadingGuide.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor).active = true
-        middleGuide.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor).active = true
-        trailingGuide.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor).active = true
-        noButton.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor).active = true
-        yesButton.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor).active = true
+        leadingGuide.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        middleGuide.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        trailingGuide.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        noButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        yesButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
-    func noThanks(sender: UIButton) {
+    func noThanks(_ sender: UIButton) {
         print("No thanks!")
     }
   
-    func yesPlease(sender: UIButton) {
+    func yesPlease(_ sender: UIButton) {
         print("Yes please!")
     }
 }

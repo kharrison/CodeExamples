@@ -39,13 +39,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
   var window: UIWindow?
 
 
-  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     let splitViewController = self.window!.rootViewController as! UISplitViewController
     splitViewController.delegate = self
     return true
   }
   
-  func splitViewController(svc: UISplitViewController, shouldHideViewController vc: UIViewController, inOrientation orientation: UIInterfaceOrientation) -> Bool {
+  func splitViewController(_ svc: UISplitViewController, shouldHide vc: UIViewController, in orientation: UIInterfaceOrientation) -> Bool {
     return false
   }
 }
