@@ -64,7 +64,7 @@ class AdaptiveViewController: UIViewController {
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         textLabel.numberOfLines = 0
         textLabel.textAlignment = .center
-        textLabel.textColor = .gray()
+        textLabel.textColor = .gray
         
         redButton.translatesAutoresizingMaskIntoConstraints = false
         redButton.setTitle("No don't do it", for: UIControlState())

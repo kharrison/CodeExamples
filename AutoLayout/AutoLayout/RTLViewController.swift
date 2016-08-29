@@ -46,7 +46,7 @@ class RTLViewController: UIViewController {
     
     private func setupViews() {
         cherryLabel.text = "🍒🍒🍒"
-        cherryLabel.backgroundColor = .green()
+        cherryLabel.backgroundColor = .green
         cherryLabel.textAlignment = .right
         view.addSubview(cherryLabel)
     }

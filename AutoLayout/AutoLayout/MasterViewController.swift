@@ -40,9 +40,9 @@ class MasterViewController: UITableViewController {
         super.viewWillAppear(animated)
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let controller = (segue.destinationViewController as! UINavigationController).topViewController {
-            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let controller = (segue.destination as! UINavigationController).topViewController {
+            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
             controller.navigationItem.leftItemsSupplementBackButton = true
         }
     }
