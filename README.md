@@ -6,9 +6,9 @@ See [useyourloaf.com](http://useyourloaf.com) for details.
 
 |Project|Comment|
 |-------|-------|
-|AdaptivePopover|iOS 9|Adapting a popover presentation (iOS 9, Swift)
-|AirPrinter||Example of how to print from iOS
-|AlertView||Demo iOS 5 changes to UIAlertView
+|AdaptivePopover|Adapting a popover presentation (iOS 9, Swift)
+|AirPrinter|Example of how to print from iOS
+|AlertView|Demo iOS 5 changes to UIAlertView
 |AlertController|UIAlertController changes in iOS 8
 |AnimatedConstraints|Animating Autolayout changes
 |AutoLayout|AutoLayout examples
