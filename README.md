@@ -10,6 +10,7 @@ See [useyourloaf.com](http://useyourloaf.com) for details.
 |AirPrinter|Example of how to print from iOS
 |AlertView|Demo iOS 5 changes to UIAlertView
 |AlertController|UIAlertController changes in iOS 8
+|AllVisible|A split view controller template
 |AnimatedConstraints|Animating Autolayout changes
 |AutoLayout|AutoLayout examples
 |Collection|Simple collection view with popovers
