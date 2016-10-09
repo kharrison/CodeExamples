@@ -1,5 +1,6 @@
-// Swift Standard Librray - String
-// Keith Harrison http://useyourloaf.com
+// Swift Standard Library - String Cheat Sheet
+// Keith Harrison
+// See http://useyourloaf.com/blog/swift-string-cheat-sheet/
 
 // Import Foundation if you want to bridge to NSString
 import Foundation
@@ -18,8 +19,19 @@ let c = String(b)           // from character "A"
 let d = String(3.14)        // from Double "3.14"
 let e = String(1000)        // from Int "1000"
 let f = "Result = \(d)"     // Interpolation "Result = 3.14"
-let g = "\u{2126}"          // Unicode Ohm sign Ω
-let h = String(count:3, repeatedValue:b) // Repeated character "AAA"
+let g = "\u{2126}"          // Unicode Ohm sign Ω
+
+// Creating a String by repeating values
+let h = String(repeating:"01", count:3) // 010101
+
+// Creating a String from a file (in the Resources folder)
+if let txtPath = Bundle.main.path(forResource: "lorem", ofType: "txt") {
+  do {
+    let lorem = try String(contentsOfFile: txtPath, encoding: .utf8)
+  } catch {
+    print("Something went wrong")
+  }
+}
 
 // ===
 // Strings are Value Types
@@ -38,7 +50,7 @@ print("\(aString)")   // "Hello\n"
 // Testing for empty String
 // ===
 
-emptyString.isEmpty         // true
+emptyString.isEmpty   // true
 
 // ===
 // Testing for equality
@@ -75,8 +87,8 @@ line.hasSuffix("%%%%")    // true
 // ===
 
 let mixedCase = "AbcDef"
-let upper = mixedCase.uppercaseString // "ABCDEF"
-let lower = mixedCase.lowercaseString // "abcdef"
+let upper = mixedCase.uppercased() // "ABCDEF"
+let lower = mixedCase.lowercased() // "abcdef"
 
 // ===
 // Views
@@ -129,28 +141,48 @@ for character in sentence.characters {
 //   startIndex: the position of the first element if
 //               non-empty, else identical to endIndex.
 //   endIndex: the position just “past the end” of the string.
-//
+
+let hello = "hello"
+let helloStartIndex = hello.characters.startIndex // 0
+
+// If you do not specify a view you get the characters view
+let startIndex = hello.startIndex // 0
+let endIndex = hello.endIndex     // 5
+
 // Note the choice for endIndex means you cannot use it
 // directly as a subscript as it is out of range.
 
+hello[startIndex] // "h"
+
+// Use index(after:) and index(before:) to move
+// forward or backward from an index
+
+hello[hello.index(after: startIndex)] // "e"
+hello[hello.index(before: endIndex)]  // "o"
+
+// Use index(_:offsetBy:) to move in arbitrary steps
+
+hello[hello.index(startIndex, offsetBy: 1)]  // "e"
+hello[hello.index(endIndex, offsetBy: -4)]   // "e"
+
+// To avoid overrunning the end of the string
+if let someIndex = hello.index(startIndex, offsetBy: 4, limitedBy: endIndex) {
+    hello[someIndex] // "o"
+}
+
+// To get the index of first matching element
+let matchedIndex = hello.characters.index(of: "l") // 2
+let nomatchIndex = hello.characters.index(of: "A") // nil
+
+// Using the utf16 view
 let cafe = "café"
-cafe.startIndex // 0
-cafe.endIndex   // 4 - after last char
+let view = cafe.utf16
+let utf16StartIndex = view.startIndex
+let utf16EndIndex = view.endIndex
 
-// The startIndex and endIndex properties become more
-// useful when modified with the following methods:
-//   successor() to get the next element
-//   predecessor() to get the previous element
-//   advancedBy(n) to jump forward/backward by n elements
-//
-// Some examples, note that you can chain operations if required:
-
-cafe[cafe.startIndex] // "c"
-cafe[cafe.startIndex.successor()] // "a"
-cafe[cafe.startIndex.successor().successor()] // "f"
-// Note that cafe[endIndex] is a run time error
-cafe[cafe.endIndex.predecessor()] // "é"
-cafe[cafe.startIndex.advancedBy(2)] // "f"
+view[utf16StartIndex]                          // 99 - "c"
+view[view.index(utf16StartIndex, offsetBy: 1)] // 97 - "a"
+view[view.index(before: utf16EndIndex)]        // 233 - "é"
 
 // The indices property returns a range for all elements
 // in a String that can be useful for iterating through
@@ -166,9 +198,10 @@ for index in cafe.characters.indices {
 
 let word1 = "ABCDEF"
 let word2 = "012345"
-let indexC = word1.startIndex.advancedBy(2)
-let distance = word1.startIndex.distanceTo(indexC) // 2
-let digit = word2[word2.startIndex.advancedBy(distance)] // "2"
+if let indexC = word1.characters.index(of: "C") {
+  let distance = word1.distance(from: word1.startIndex, to: indexC) // 2
+  let digit = word2[word2.index(startIndex, offsetBy: distance)]    // "2"
+}
 
 // ===
 // Using a range
@@ -178,12 +211,20 @@ let digit = word2[word2.startIndex.advancedBy(distance)] // "2"
 // use a range. A range is just a start and end index:
 
 let fqdn = "useyourloaf.com"
-let rangeOfTLD = Range(start: fqdn.endIndex.advancedBy(-3), end: fqdn.endIndex)
-let tld = fqdn[rangeOfTLD] // "com"
+let tldEndIndex = fqdn.endIndex
+let tldStartIndex = fqdn.index(tldEndIndex, offsetBy: -3)
+let range = Range(uncheckedBounds: (lower: tldStartIndex, upper: tldEndIndex))
+fqdn[range]
 
 // Alternate creation of range (... or ..< syntax)
-let rangeOfDomain = fqdn.startIndex..<fqdn.endIndex.advancedBy(-4)
-let domain = fqdn[rangeOfDomain] // "useyourloaf"
+let endOfDomain = fqdn.index(fqdn.endIndex, offsetBy: -4)
+let rangeOfDomain = fqdn.startIndex ..< endOfDomain
+fqdn[rangeOfDomain] // useyourloaf
+
+// Returning a range of matching substring
+if let rangeOfTLD = fqdn.range(of: "com") {
+    let tld = fqdn[rangeOfTLD] // "com"
+}
 
 // ===
 // Getting a substring using index or range
@@ -193,14 +234,18 @@ let domain = fqdn[rangeOfDomain] // "useyourloaf"
 // index or range:
 
 var template = "<<<Hello>>>"
-let indexStartOfText = template.startIndex.advancedBy(3)
-let indexEndOfText = template.endIndex.advancedBy(-3)
-let subString1 = template.substringFromIndex(indexStartOfText)
-let subString2 = template.substringToIndex(indexEndOfText)
+let indexStartOfText = template.index(template.startIndex, offsetBy: 3) // 3
+let indexEndOfText = template.index(template.endIndex, offsetBy: -3)    // 8
+let subString1 = template.substring(from: indexStartOfText)  // "Hello>>>"
+let subString2 = template.substring(to: indexEndOfText)      // "<<<Hello"
 
-let rangeOfHello = indexStartOfText..<indexEndOfText
-let subString3 = template.substringWithRange(rangeOfHello)
-let subString4 = template.substringWithRange(indexStartOfText..<indexEndOfText)
+let rangeOfHello = indexStartOfText ..< indexEndOfText
+let subString3 = template.substring(with: rangeOfHello)      // "Hello"
+let subString4 = template.substring(with: indexStartOfText..<indexEndOfText)
+
+if let range3 = template.range(of: "Hello") {
+    template[range3] // "Hello"
+}
 
 // ===
 // Getting a Prefix or Suffix
@@ -216,10 +261,10 @@ let head = String(digits.characters.dropLast(3)) // "0123456"
 let prefix = String(digits.characters.prefix(2)) // "01"
 let suffix = String(digits.characters.suffix(2)) // "89"
 
-let index4 = digits.startIndex.advancedBy(4)
-let thru4 = String(digits.characters.prefixThrough(index4)) // "01234"
-let upTo4 = String(digits.characters.prefixUpTo(index4)) // "0123"
-let from4 = String(digits.characters.suffixFrom(index4)) // "456789"
+let index4 = digits.index(digits.startIndex, offsetBy: 4)
+let thru4 = String(digits.characters.prefix(through: index4))  // "01234"
+let upTo4 = String(digits.characters.prefix(upTo: index4))     // "0123"
+let from4 = String(digits.characters.suffix(from: index4))     // "456789"
 
 // ===
 // Inserting/removing
@@ -227,17 +272,18 @@ let from4 = String(digits.characters.suffixFrom(index4)) // "456789"
 
 // Insert a character at index
 var stars = "******"
-stars.insert("X", atIndex: stars.startIndex.advancedBy(3)) // "***X***"
+stars.insert("X", at: stars.index(stars.startIndex, offsetBy: 3)) // "***X***"
 
 // Insert a string at index (converting to characters)
-stars.insertContentsOf("YZ".characters, at: stars.endIndex.advancedBy(-3)) // "***XYZ***"
+stars.insert(contentsOf: "YZ".characters, at: stars.index(stars.endIndex, offsetBy: -3)) // "***XYZ***"
 
 // ===
 // Replace with Range
 // ===
 
-let xyzRange = stars.startIndex.advancedBy(3)..<stars.endIndex.advancedBy(-3)
-stars.replaceRange(xyzRange, with: "ABC") // "***ABC***"
+if let xyzRange = stars.range(of: "XYZ") {
+    stars.replaceSubrange(xyzRange, with: "ABC") // "***ABC***"
+}
 
 // ===
 // Append
@@ -245,7 +291,7 @@ stars.replaceRange(xyzRange, with: "ABC") // "***ABC***"
 
 var message = "Welcome"
 message += " Tim" // "Welcome Tim"
-message.appendContentsOf("!!!") // "Welcome Tim!!!
+message.append("!!!")
 
 // ===
 // Remove and return element at index
@@ -254,8 +300,8 @@ message.appendContentsOf("!!!") // "Welcome Tim!!!
 // This invalidates any indices you may have on the string
 
 var grades = "ABCDEF"
-let ch = grades.removeAtIndex(grades.startIndex) // "A"
-print(grades) // "BCDEF"
+let ch = grades.remove(at: grades.startIndex) // "A"
+print(grades)                                 // "BCDEF"
 
 // ===
 // Remove Range
@@ -263,8 +309,10 @@ print(grades) // "BCDEF"
 
 // Invalidates all indices
 var sequences = "ABA BBA ABC"
-let midRange = sequences.startIndex.advancedBy(4)...sequences.endIndex.advancedBy(-4)
-sequences.removeRange(midRange)  // "ABA ABC"
+let lowBound = sequences.index(sequences.startIndex, offsetBy: 4)
+let hiBound = sequences.index(sequences.endIndex, offsetBy: -4)
+let midRange = lowBound ..< hiBound
+sequences.removeSubrange(midRange) // "ABA ABC"
 
 //
 // Bridging to NSString (import Foundation)
@@ -280,7 +328,7 @@ sequences.removeRange(midRange)  // "ABA ABC"
 
 // Don't forget to import Foundation
 let welcome = "hello world!"
-welcome.capitalizedString // "Hello World!"
+welcome.capitalized // "Hello World!
 
 // ===
 // Searching for a substring
@@ -290,7 +338,8 @@ welcome.capitalizedString // "Hello World!"
 // search for a substring:
 
 let text = "123045780984"
-if let rangeOfZero = text.rangeOfString("0",options: NSStringCompareOptions.BackwardsSearch) {
+if let rangeOfZero = text.range(of: "0", options: .backwards) {
   // Found a zero
-  let suffix = String(text.characters.suffixFrom(rangeOfZero.endIndex)) // "984"
+  let suffix = String(text.characters.suffix(from: rangeOfZero.upperBound)) // "984"
 }
+
