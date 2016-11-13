@@ -18,6 +18,7 @@ See [useyourloaf.com](http://useyourloaf.com) for details.
 |Encode|Percent encoding of URL query string
 |DynamicText|Supporting dynamic text size changes
 |Huckleberry|Auto layout table view cells with varying row heights
+|KeyCommand|Adding hardware keyboard shortcuts
 |MasterSlide|Implementing a mail app style split view controller
 |Motion|Adding motion effects to views
 |NibCollection|Example use of IBOutletCollection
