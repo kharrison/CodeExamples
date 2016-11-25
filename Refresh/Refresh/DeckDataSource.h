@@ -1,5 +1,5 @@
 //
-//  UYLTableViewController.m
+//  DeckDataSource.h
 //  Refresh
 //
 //  Created by Keith Harrison http://useyourloaf.com
@@ -31,26 +31,9 @@
 //  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 //  POSSIBILITY OF SUCH DAMAGE.
 
-#import "UYLTableViewController.h"
-#import "DeckDataSource.h"
 
-@interface UYLTableViewController ()
-@property (nonatomic,strong) DeckDataSource *deckDataSource;
-@end
+#import <UIKit/UIKit.h>
 
-@implementation UYLTableViewController
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.deckDataSource = [DeckDataSource new];
-    self.tableView.dataSource = self.deckDataSource;
-}
-
-- (IBAction)refresh:(UIRefreshControl *)sender {
-    [self.deckDataSource shuffle];
-    [self.tableView reloadData];
-    [sender endRefreshing];
-}
-
+@interface DeckDataSource : NSObject <UITableViewDataSource>
+- (void)shuffle;
 @end

@@ -1,5 +1,5 @@
 //
-//  UYLTableViewController.m
+//  DeckDataSource.m
 //  Refresh
 //
 //  Created by Keith Harrison http://useyourloaf.com
@@ -31,26 +31,66 @@
 //  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 //  POSSIBILITY OF SUCH DAMAGE.
 
-#import "UYLTableViewController.h"
+
 #import "DeckDataSource.h"
 
-@interface UYLTableViewController ()
-@property (nonatomic,strong) DeckDataSource *deckDataSource;
+@interface DeckDataSource ()
+@property (nonatomic, strong) NSMutableArray *deck;
 @end
 
-@implementation UYLTableViewController
+@implementation DeckDataSource
 
-- (void)viewDidLoad
+static const NSUInteger UYL_MAXOBJECTS = 52;
+
+#pragma mark -
+#pragma mark Custom Accessors
+#pragma mark -
+
+- (NSMutableArray *)deck
 {
-    [super viewDidLoad];
-    self.deckDataSource = [DeckDataSource new];
-    self.tableView.dataSource = self.deckDataSource;
+    if (_deck == nil)
+    {
+        _deck = [[NSMutableArray alloc] initWithCapacity:UYL_MAXOBJECTS];
+        for (NSInteger index = 0; index < UYL_MAXOBJECTS; index++)
+        {
+            [_deck insertObject:@(index+1) atIndex:index];
+        }
+    }
+    return _deck;
 }
 
-- (IBAction)refresh:(UIRefreshControl *)sender {
-    [self.deckDataSource shuffle];
-    [self.tableView reloadData];
-    [sender endRefreshing];
+#pragma mark -
+#pragma mark Public Interface
+#pragma mark -
+
+- (void)shuffle
+{
+    NSUInteger count = self.deck.count;
+
+    if (count > 1)
+    {
+        for (NSUInteger i = count - 1; i > 0; --i)
+        {
+            [self.deck exchangeObjectAtIndex:i
+                           withObjectAtIndex:arc4random_uniform((int32_t)(i + 1))];
+        }
+    }
+}
+
+#pragma mark -
+#pragma mark UITableViewDataSource
+#pragma mark -
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.deck.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"BasicCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", self.deck[indexPath.row]];
+    return cell;
 }
 
 @end
