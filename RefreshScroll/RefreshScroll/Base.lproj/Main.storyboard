@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ddz-bW-eGF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SignUpVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SignUpViewController" customModule="ScrollView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="AdaptiveScrollView" translatesAutoresizingMaskIntoConstraints="NO" id="n3a-da-OaP" customClass="AdaptiveScrollView" customModule="ScrollView" customModuleProvider="target">
+                                <rect key="frame" x="16" y="64" width="343" height="595"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nd6-bu-okT">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="410"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jut-B2-glf">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="128"/>
+                                                <color key="backgroundColor" red="0.090196078431372548" green="0.45490196078431372" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="999" constant="128" identifier="BlueLabelHeight" id="AWq-Gt-oHB"/>
+                                                </constraints>
+                                                <string key="text">Blue Membership
+The basic package</string>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2m7-v7-VPX">
+                                                <rect key="frame" x="0.0" y="144" width="343" height="53"/>
+                                                <state key="normal" image="BlueSignUp"/>
+                                                <state key="selected" image="BlueSignUpSelected"/>
+                                                <state key="highlighted" image="BlueSignUpSelected"/>
+                                                <state key="focused" image="BlueSignUpSelected"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjO-Bk-Qvf">
+                                                <rect key="frame" x="0.0" y="213" width="343" height="128"/>
+                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="999" constant="128" identifier="OrangeLabelHeight" id="FlO-La-WhP"/>
+                                                </constraints>
+                                                <string key="text">Orange Membership
+For some extra benefits</string>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvh-3c-k4q">
+                                                <rect key="frame" x="0.0" y="357" width="343" height="53"/>
+                                                <state key="normal" image="OrangeSignUp"/>
+                                                <state key="selected" image="OrangeSignUpSelected"/>
+                                                <state key="highlighted" image="OrangeSignUpSelected"/>
+                                                <state key="focused" image="OrangeSignUpSelected"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nd6-bu-okT" firstAttribute="width" secondItem="n3a-da-OaP" secondAttribute="width" identifier="StackViewWidth" id="3f8-qz-5QN"/>
+                                    <constraint firstAttribute="bottom" secondItem="nd6-bu-okT" secondAttribute="bottom" identifier="StackViewBottom" id="8TC-mn-yUe"/>
+                                    <constraint firstItem="nd6-bu-okT" firstAttribute="top" secondItem="n3a-da-OaP" secondAttribute="top" identifier="StackViewTop" id="DKf-qJ-UPV"/>
+                                    <constraint firstItem="nd6-bu-okT" firstAttribute="leading" secondItem="n3a-da-OaP" secondAttribute="leading" identifier="StackViewLeading" id="Qx9-Hj-Jlt"/>
+                                    <constraint firstAttribute="trailing" secondItem="nd6-bu-okT" secondAttribute="trailing" identifier="StackViewTrailing" id="a8Q-y5-Uzx"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="n3a-da-OaP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" identifier="ScrollViewLeading" id="1yq-2f-9SP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n3a-da-OaP" secondAttribute="bottom" constant="8" symbolic="YES" identifier="ScrollViewBottom" id="CK6-Co-RUN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n3a-da-OaP" secondAttribute="trailing" identifier="ScrollViewTrailing" id="cub-HT-Bpc"/>
+                            <constraint firstItem="n3a-da-OaP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rKt-a8-vON"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign Up" id="Flf-w4-Veu"/>
+                    <connections>
+                        <outlet property="orangeButton" destination="Tvh-3c-k4q" id="XE2-ZS-lTH"/>
+                        <outlet property="orangeLabel" destination="MjO-Bk-Qvf" id="Dfs-wq-SVT"/>
+                        <outlet property="scrollView" destination="n3a-da-OaP" id="ykg-E9-mdl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1376" y="-263"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2mu-3q-CA1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ddz-bW-eGF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9cr-jM-NT4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tqY-vz-ooL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jbx-a8-p0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="536" y="-263"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BlueSignUp" width="222" height="53"/>
+        <image name="BlueSignUpSelected" width="222" height="53"/>
+        <image name="OrangeSignUp" width="222" height="53"/>
+        <image name="OrangeSignUpSelected" width="222" height="53"/>
+    </resources>
+</document>
