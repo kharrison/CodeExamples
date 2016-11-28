@@ -1,5 +1,5 @@
 //
-//  SignUpViewController.swift
+//  UIRefreshControl+UYL.swift
 //
 //  Created by Keith Harrison http://useyourloaf.com
 //  Copyright (c) 2016 Keith Harrison. All rights reserved.
@@ -32,35 +32,14 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+extension UIRefreshControl {
 
-    @IBOutlet private weak var scrollView: AdaptiveScrollView!
-    @IBOutlet private weak var orangeLabel: UILabel!
-    @IBOutlet private weak var orangeButton: UIButton!
-
-    private var orangeAvailable = true {
-        didSet {
-            orangeLabel.isHidden = !orangeAvailable
-            orangeButton.isHidden = !orangeAvailable
-        }
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if #available(iOS 10.0, *) {
-            let refreshControl = UIRefreshControl()
-            let title = NSLocalizedString("PullToRefresh", comment: "Pull to refresh")
-            refreshControl.attributedTitle = NSAttributedString(string: title)
-            refreshControl.addTarget(self,
-                                     action: #selector(refreshOptions(sender:)),
-                                     for: .valueChanged)
-            scrollView.refreshControl = refreshControl
-        }
-    }
-
-    @objc private func refreshOptions(sender: UIRefreshControl) {
-        orangeAvailable = !orangeAvailable
-        sender.endRefreshing()
+    // Example class factory method with preset title
+    class func uylDefault(target: Any?, action: Selector) -> UIRefreshControl {
+        let refreshControl = UIRefreshControl()
+        let title = NSLocalizedString("PullToRefresh", comment: "Pull to refresh")
+        refreshControl.attributedTitle = NSAttributedString(string: title)
+        refreshControl.addTarget(target, action: action, for: .valueChanged)
+        return refreshControl
     }
 }

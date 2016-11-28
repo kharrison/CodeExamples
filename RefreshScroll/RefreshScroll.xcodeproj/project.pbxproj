@@ -13,6 +13,8 @@
 		53C353A91DEB6D2200E33073 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C353AB1DEB6D2200E33073 /* Main.storyboard */; };
 		53C353AE1DEB6DB100E33073 /* AdaptiveScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C353AC1DEB6DB100E33073 /* AdaptiveScrollView.swift */; };
 		53C353AF1DEB6DB100E33073 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C353AD1DEB6DB100E33073 /* SignUpViewController.swift */; };
+		53C353B51DEB735B00E33073 /* UIRefreshControl+UYL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C353B41DEB735B00E33073 /* UIRefreshControl+UYL.swift */; };
+		53C353B81DEB767F00E33073 /* UIRefreshControl.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53C353BA1DEB767F00E33073 /* UIRefreshControl.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		53C353AC1DEB6DB100E33073 /* AdaptiveScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveScrollView.swift; sourceTree = "<group>"; };
 		53C353AD1DEB6DB100E33073 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		53C353B21DEB707100E33073 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		53C353B41DEB735B00E33073 /* UIRefreshControl+UYL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+UYL.swift"; sourceTree = "<group>"; };
+		53C353B91DEB767F00E33073 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/UIRefreshControl.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				53C353AD1DEB6DB100E33073 /* SignUpViewController.swift */,
 				53C353951DEB6CA700E33073 /* AppDelegate.swift */,
 				53C353AC1DEB6DB100E33073 /* AdaptiveScrollView.swift */,
+				53C353B41DEB735B00E33073 /* UIRefreshControl+UYL.swift */,
+				53C353BA1DEB767F00E33073 /* UIRefreshControl.strings */,
 				53C3539C1DEB6CA700E33073 /* Assets.xcassets */,
 				53C3539E1DEB6CA700E33073 /* LaunchScreen.storyboard */,
 				53C353AB1DEB6D2200E33073 /* Main.storyboard */,
@@ -131,6 +137,7 @@
 			files = (
 				53C353A91DEB6D2200E33073 /* Main.storyboard in Resources */,
 				53C353A01DEB6CA700E33073 /* LaunchScreen.storyboard in Resources */,
+				53C353B81DEB767F00E33073 /* UIRefreshControl.strings in Resources */,
 				53C3539D1DEB6CA700E33073 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53C353B51DEB735B00E33073 /* UIRefreshControl+UYL.swift in Sources */,
 				53C353AF1DEB6DB100E33073 /* SignUpViewController.swift in Sources */,
 				53C353961DEB6CA700E33073 /* AppDelegate.swift in Sources */,
 				53C353AE1DEB6DB100E33073 /* AdaptiveScrollView.swift in Sources */,
@@ -165,6 +173,14 @@
 				53C353AA1DEB6D2200E33073 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		53C353BA1DEB767F00E33073 /* UIRefreshControl.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53C353B91DEB767F00E33073 /* Base */,
+			);
+			name = UIRefreshControl.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
