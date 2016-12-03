@@ -42,11 +42,11 @@ class ViewController: UIViewController {
         
         // Create a custom button and set title label style
         
-        let orangeButton = UIButton(type: .Custom)
-        orangeButton.setTitle("Orange", forState: .Normal)
-        orangeButton.setTitleColor(.orangeColor(), forState: .Normal)
-        orangeButton.setTitleColor(.whiteColor(), forState: .Highlighted)
-        orangeButton.titleLabel?.font = UIFont.systemFontOfSize(14)
+        let orangeButton = UIButton(type: .custom)
+        orangeButton.setTitle("Orange", for: UIControlState())
+        orangeButton.setTitleColor(.orange, for: UIControlState())
+        orangeButton.setTitleColor(.white, for: .highlighted)
+        orangeButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         orangeButton.contentEdgeInsets = UIEdgeInsetsMake(8, 8, 8, 8)
 
         // Get the pre-sliced template images direct from the
@@ -55,13 +55,13 @@ class ViewController: UIViewController {
         let slicedBorderTemplate = UIImage(named: "slicedBorderTemplate")
         let slicedFillTemplate = UIImage(named: "slicedFillTemplate")
         
-        orangeButton.setBackgroundImage(slicedBorderTemplate, forState: .Normal)
-        orangeButton.setBackgroundImage(slicedFillTemplate, forState: .Highlighted)
+        orangeButton.setBackgroundImage(slicedBorderTemplate, for: UIControlState())
+        orangeButton.setBackgroundImage(slicedFillTemplate, for: .highlighted)
         
         // The tintColor controls the colour used by the template images
         // Defaults to inherited value
         
-        orangeButton.tintColor = .orangeColor()
+        orangeButton.tintColor = .orange
         
         stackView.addArrangedSubview(orangeButton)
     }
