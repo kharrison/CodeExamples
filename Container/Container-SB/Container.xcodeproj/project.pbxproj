@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		534452FA1E61BA1F00649AF9 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534452F91E61BA1F00649AF9 /* LocationTests.swift */; };
 		534452FE1E61DF6200649AF9 /* locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 534452FD1E61DF6100649AF9 /* locations.plist */; };
-		534453071E621BDE00649AF9 /* MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534453061E621BDE00649AF9 /* MapViewDelegate.swift */; };
 		5367B24C1E608B79001744C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5367B24B1E608B79001744C8 /* AppDelegate.swift */; };
 		5367B2511E608B79001744C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5367B24F1E608B79001744C8 /* Main.storyboard */; };
 		5367B2531E608B79001744C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5367B2521E608B79001744C8 /* Assets.xcassets */; };
@@ -40,7 +39,6 @@
 		534452F91E61BA1F00649AF9 /* LocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		534452FD1E61DF6100649AF9 /* locations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = locations.plist; sourceTree = "<group>"; };
 		534452FF1E6216A100649AF9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		534453061E621BDE00649AF9 /* MapViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewDelegate.swift; sourceTree = "<group>"; };
 		5367B2481E608B79001744C8 /* Container.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Container.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5367B24B1E608B79001744C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5367B2501E608B79001744C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 			children = (
 				5367B24B1E608B79001744C8 /* AppDelegate.swift */,
 				5367B2611E60A140001744C8 /* LocationDataSource.swift */,
-				534453061E621BDE00649AF9 /* MapViewDelegate.swift */,
 			);
 			name = "Delegates and DataSources";
 			sourceTree = "<group>";
@@ -303,7 +300,6 @@
 				5367B25E1E608BE4001744C8 /* MasterViewController.swift in Sources */,
 				5367B2721E60A694001744C8 /* Location.swift in Sources */,
 				5367B24C1E608B79001744C8 /* AppDelegate.swift in Sources */,
-				534453071E621BDE00649AF9 /* MapViewDelegate.swift in Sources */,
 				5367B2601E60A129001744C8 /* LocationTableViewController.swift in Sources */,
 				5367B2641E60A1A9001744C8 /* MapViewController.swift in Sources */,
 				5367B2621E60A140001744C8 /* LocationDataSource.swift in Sources */,
