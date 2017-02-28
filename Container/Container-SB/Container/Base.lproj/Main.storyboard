@@ -50,6 +50,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Locations" id="VxE-9C-8ru"/>
+                    <connections>
+                        <outlet property="topStackView" destination="mB3-la-mCm" id="Usx-bU-RwS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

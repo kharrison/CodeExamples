@@ -35,6 +35,7 @@ import UIKit
 
 class MasterViewController: UIViewController {
 
+    @IBOutlet private weak var topStackView: UIStackView!
     fileprivate var locationTableViewController: LocationTableViewController?
     fileprivate var mapViewController: MapViewController?
 
@@ -68,6 +69,15 @@ class MasterViewController: UIViewController {
         if let mapController = destination as? MapViewController {
             mapViewController = mapController
         }
+    }
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        topStackView.axis = axisForSize(size)
+    }
+
+    private func axisForSize(_ size: CGSize) -> UILayoutConstraintAxis {
+        return size.width > size.height ? .horizontal : .vertical
     }
 }
 
