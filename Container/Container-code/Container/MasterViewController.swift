@@ -66,6 +66,7 @@ class MasterViewController: UIViewController {
 
         child.willMove(toParentViewController: nil)
         stackView.removeArrangedSubview(child.view)
+        child.view.removeFromSuperview()
         child.removeFromParentViewController()
     }
 
