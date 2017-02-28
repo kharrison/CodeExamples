@@ -39,9 +39,9 @@ class MasterViewController: UIViewController {
     fileprivate var locationTableViewController: LocationTableViewController?
     fileprivate var mapViewController: MapViewController?
 
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
 //        guard let locationController = childViewControllers.first as? LocationTableViewController else {
 //            fatalError("Check storyboard for missing LocationTableViewController")
 //        }
@@ -53,7 +53,9 @@ class MasterViewController: UIViewController {
 //        locationTableViewController = locationController
 //        mapViewController = mapController
 //        locationController.delegate = self
-//    }
+
+        topStackView.axis = axisForSize(view.bounds.size)
+    }
 
     // Alternative to wiring up the interface in viewDidLoad (above) is to
     // use prepare(for segue:sender:) which is still called for 
