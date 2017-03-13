@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XED-Rb-2Q4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Remind Me View Controller-->
+        <scene sceneID="dsG-B9-2vM">
+            <objects>
+                <viewController id="XED-Rb-2Q4" customClass="RemindMeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GPD-th-fOj"/>
+                        <viewControllerLayoutGuide type="bottom" id="EWL-Ek-lz0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OR8-zA-SWZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VcD-Ih-ZYz">
+                                <rect key="frame" x="16" y="36" width="343" height="392.5"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter reminder text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLS-Xp-rcP">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="XED-Rb-2Q4" id="NZf-PC-ufQ"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22e-9R-eYP">
+                                        <rect key="frame" x="0.0" y="46" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BYS-AH-PLD">
+                                        <rect key="frame" x="0.0" y="82.5" width="343" height="29"/>
+                                        <segments>
+                                            <segment title="None"/>
+                                            <segment title="m"/>
+                                            <segment title="H"/>
+                                            <segment title="D"/>
+                                            <segment title="W"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mch-Y0-dW9">
+                                        <rect key="frame" x="0.0" y="126.5" width="343" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiH-WF-sjN">
+                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Set"/>
+                                                <connections>
+                                                    <action selector="scheduleNotification" destination="XED-Rb-2Q4" eventType="touchUpInside" id="ezL-2h-wAk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLI-TJ-0wS">
+                                                <rect key="frame" x="179.5" y="0.0" width="163.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Clear"/>
+                                                <connections>
+                                                    <action selector="clearNotification" destination="XED-Rb-2Q4" eventType="touchUpInside" id="LPt-dr-CwD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="n7p-fg-3tw">
+                                        <rect key="frame" x="0.0" y="176.5" width="343" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="498425328.75272">
+                                            <!--2016-10-17 19:28:48 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="VcD-Ih-ZYz" secondAttribute="leading" id="afW-Z7-sw2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VcD-Ih-ZYz" secondAttribute="trailing" id="cpe-xk-TQ3"/>
+                            <constraint firstItem="VcD-Ih-ZYz" firstAttribute="top" secondItem="GPD-th-fOj" secondAttribute="bottom" constant="16" id="wGM-uk-KKv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="n7p-fg-3tw" id="ekY-7X-cpn"/>
+                        <outlet property="reminderText" destination="eLS-Xp-rcP" id="RVO-M0-NIo"/>
+                        <outlet property="scheduleControl" destination="BYS-AH-PLD" id="lk3-Pa-d0x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJa-XJ-rBm" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
