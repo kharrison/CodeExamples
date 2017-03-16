@@ -38,21 +38,21 @@ class ScrollingStackViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
     
-    @IBAction func singleTap(sender: UITapGestureRecognizer) {
+    @IBAction func singleTap(_ sender: UITapGestureRecognizer) {
         let heartImage = UIImage(named: "Heart")
         let heartImageView = UIImageView(image: heartImage)
         stackView.addArrangedSubview(heartImageView)
         scrollToEnd(heartImageView)
     }
     
-    @IBAction func twoFingerTap(sender: UITapGestureRecognizer) {
+    @IBAction func twoFingerTap(_ sender: UITapGestureRecognizer) {
         let starImage = UIImage(named: "Star")
         let starImageView = UIImageView(image: starImage)
         stackView.addArrangedSubview(starImageView)
         scrollToEnd(starImageView)
     }
     
-    @IBAction func threeFingerTap(sender: UITapGestureRecognizer) {
+    @IBAction func threeFingerTap(_ sender: UITapGestureRecognizer) {
         let views = stackView.arrangedSubviews
         for entry in views {
             stackView.removeArrangedSubview(entry)
@@ -60,7 +60,7 @@ class ScrollingStackViewController: UIViewController {
         }
     }
     
-    private func scrollToEnd(addedView: UIView) {
+    fileprivate func scrollToEnd(_ addedView: UIView) {
         let contentViewHeight = scrollView.contentSize.height + addedView.bounds.height + stackView.spacing
         let offsetY = contentViewHeight - scrollView.bounds.height
         if (offsetY > 0) {

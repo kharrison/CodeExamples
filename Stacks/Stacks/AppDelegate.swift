@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         case OpenTopRated
         
         init?(fullIdentifier: String) {
-            guard let shortIdentifier = fullIdentifier.componentsSeparatedByString(".").last else {
+            guard let shortIdentifier = fullIdentifier.components(separatedBy: ".").last else {
                 return nil
             }
             self.init(rawValue: shortIdentifier)
@@ -51,9 +51,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsShortcutItemKey] as? UIApplicationShortcutItem {
+        if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
             
             handleShortcut(shortcutItem)
             return false
@@ -62,14 +62,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func application(application: UIApplication,
-        performActionForShortcutItem shortcutItem: UIApplicationShortcutItem,
-        completionHandler: (Bool) -> Void) {
+    func application(_ application: UIApplication,
+        performActionFor shortcutItem: UIApplicationShortcutItem,
+        completionHandler: @escaping (Bool) -> Void) {
         
         completionHandler(handleShortcut(shortcutItem))
     }
     
-    private func handleShortcut(shortcutItem: UIApplicationShortcutItem) -> Bool {
+    @discardableResult fileprivate func handleShortcut(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
         
         let shortcutType = shortcutItem.type
         guard let shortcutIdentifier = ShortcutIdentifier(fullIdentifier: shortcutType) else {
@@ -79,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return selectTabBarItemForIdentifier(shortcutIdentifier)
     }
     
-    private func selectTabBarItemForIdentifier(identifier: ShortcutIdentifier) -> Bool {
+    fileprivate func selectTabBarItemForIdentifier(_ identifier: ShortcutIdentifier) -> Bool {
         
         guard let tabBarController = self.window?.rootViewController as? UITabBarController else {
             return false

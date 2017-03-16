@@ -38,10 +38,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var axisSwitch: UISwitch!
     @IBOutlet weak var stackView: UIStackView!
     
-    @IBAction func axisChange(sender: UISwitch) {
-        UIView.animateWithDuration(1.0) {
+    @IBAction func axisChange(_ sender: UISwitch) {
+        UIView.animate(withDuration: 1.0, animations: {
             self.updateConstraintsForAxis()
-        }
+        }) 
     }
     
     override func viewDidLoad() {
@@ -49,11 +49,11 @@ class ViewController: UIViewController {
         updateConstraintsForAxis()
     }
 
-    private func updateConstraintsForAxis() {
-        if (axisSwitch.on) {
-            stackView.axis = .Horizontal
+    fileprivate func updateConstraintsForAxis() {
+        if (axisSwitch.isOn) {
+            stackView.axis = .horizontal
         } else {
-            stackView.axis = .Vertical
+            stackView.axis = .vertical
         }
     }
 }

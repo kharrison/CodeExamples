@@ -42,15 +42,15 @@ class HiddenViewController: UIViewController {
         configureView(traitCollection.verticalSizeClass)
     }
     
-    override func willTransitionToTraitCollection(newCollection: UITraitCollection, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        super.willTransitionToTraitCollection(newCollection, withTransitionCoordinator: coordinator)
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.willTransition(to: newCollection, with: coordinator)
         configureView(newCollection.verticalSizeClass)
     }
     
-    private func configureView(verticalSizeClass: UIUserInterfaceSizeClass) {
+    fileprivate func configureView(_ verticalSizeClass: UIUserInterfaceSizeClass) {
         guard extraHeart != nil else {
             return
         }
-        extraHeart.hidden = (verticalSizeClass == .Compact)
+        extraHeart.isHidden = (verticalSizeClass == .compact)
     }
 }
