@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gmp-jq-hW1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table Header-->
+        <scene sceneID="QDj-eu-VKK">
+            <objects>
+                <tableViewController id="dkp-Of-qmW" customClass="ListTableViewController" customModule="TableHeader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dTh-W3-V8b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="BF8-XA-x82" customClass="TextTableHeader" customModule="TableHeader" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erU-fu-fNZ">
+                                    <rect key="frame" x="8" y="20" width="359" height="160"/>
+                                    <string key="text">A table header view. This text should never be truncated. It uses the Title 3 dynamic font and should resize when you change the preferred font size in the application settings. </string>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="erU-fu-fNZ" secondAttribute="bottom" constant="20" symbolic="YES" id="OEg-Q2-8rO"/>
+                                <constraint firstItem="erU-fu-fNZ" firstAttribute="leading" secondItem="BF8-XA-x82" secondAttribute="leadingMargin" id="UYK-2w-G8F"/>
+                                <constraint firstItem="erU-fu-fNZ" firstAttribute="top" secondItem="BF8-XA-x82" secondAttribute="top" constant="20" symbolic="YES" id="X3A-VY-eyD"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="erU-fu-fNZ" secondAttribute="trailing" id="eJy-uk-C8O"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="title" destination="erU-fu-fNZ" id="WfJ-iZ-FSF"/>
+                            </connections>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DataCell" id="1R2-oK-DDi" customClass="DataCell" customModule="TableHeader" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="228" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1R2-oK-DDi" id="dCR-N6-lAQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxw-Py-lpg">
+                                            <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="dxw-Py-lpg" secondAttribute="trailing" id="Zqz-5b-jAM"/>
+                                        <constraint firstItem="dxw-Py-lpg" firstAttribute="top" secondItem="dCR-N6-lAQ" secondAttribute="topMargin" id="e2W-Qz-BlI"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="dxw-Py-lpg" secondAttribute="leading" id="fge-cN-mPd"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dxw-Py-lpg" secondAttribute="bottom" id="fhq-et-33t"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="title" destination="dxw-Py-lpg" id="XOi-0L-eMn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dkp-Of-qmW" id="oye-uK-xXc"/>
+                            <outlet property="delegate" destination="dkp-Of-qmW" id="U1u-ke-28k"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Table Header" id="SvC-8K-Dhp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agi-t9-eIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1183.2" y="167.76611694152925"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NBD-U8-KFo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gmp-jq-hW1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q7t-h3-imX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dkp-Of-qmW" kind="relationship" relationship="rootViewController" id="tD6-WI-9RW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="npB-cS-H01" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="167.76611694152925"/>
+        </scene>
+    </scenes>
+</document>
