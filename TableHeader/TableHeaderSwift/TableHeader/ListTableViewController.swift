@@ -103,6 +103,8 @@ class ListTableViewController: UITableViewController {
             // the table view redo its layout so that the cells are
             // correcly positioned for the new header size.
 
+            // This only seems to be necessary on iOS 9.
+
             tableView.layoutIfNeeded()
         }
     }

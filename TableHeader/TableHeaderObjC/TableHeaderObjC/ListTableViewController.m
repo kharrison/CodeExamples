@@ -98,7 +98,9 @@
 
             // Now that the table view header is sized correctly have
             // the table view redo its layout so that the cells are
-            // correcly positioned under the new header size.
+            // correcly positioned for the new header size.
+
+            // This only seems to be necessary on iOS 9.
 
             [self.tableView layoutIfNeeded];
         }
