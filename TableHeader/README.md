@@ -5,7 +5,9 @@ a text label subview. This folder contains both Swift and Objective-C projects.
 
 #### Further Information
 
-blog costing coming shortly...
+See the following blog post:
+
++ [Variable Height Table View Header](https://useyourloaf.com/blog/variable-height-table-view-header/)
 
 #### Version History
 
