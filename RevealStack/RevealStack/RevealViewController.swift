@@ -42,7 +42,6 @@ class RevealViewController: UIViewController {
     private lazy var coverView: UIView = {
         let view = UIView()
         view.backgroundColor = .yellow
-        view.isOpaque = false
         return view
     }()
 
