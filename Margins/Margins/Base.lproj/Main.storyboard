@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gSU-NW-Vv4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Margins-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oX0-Fe-eY0" userLabel="Red View">
+                                <rect key="frame" x="0.0" y="64" width="375" height="301.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6oh-2I-dGi" userLabel="Yellow View">
+                                        <rect key="frame" x="16" y="8" width="343" height="285.5"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="6oh-2I-dGi" secondAttribute="bottom" id="8XI-YI-VJw"/>
+                                    <constraint firstAttribute="topMargin" secondItem="6oh-2I-dGi" secondAttribute="top" id="FGd-Wi-udJ"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="6oh-2I-dGi" secondAttribute="trailing" id="Ijh-fM-Cqn"/>
+                                    <constraint firstAttribute="leadingMargin" secondItem="6oh-2I-dGi" secondAttribute="leading" id="cNG-9k-AmK"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ASO-GL-OA2">
+                                <rect key="frame" x="0.0" y="365.5" width="375" height="301.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pg6-xB-oLj" userLabel="Blue View">
+                                        <rect key="frame" x="16" y="8" width="167.5" height="285.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWV-Dw-acl" userLabel="Green View">
+                                        <rect key="frame" x="191.5" y="8" width="167.5" height="285.5"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ASO-GL-OA2" secondAttribute="trailing" id="K3Y-U5-ZR3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ASO-GL-OA2" secondAttribute="bottom" id="PFs-2N-ef4"/>
+                            <constraint firstAttribute="trailing" secondItem="oX0-Fe-eY0" secondAttribute="trailing" id="Szh-iF-cBQ"/>
+                            <constraint firstItem="oX0-Fe-eY0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cLA-gc-RcN"/>
+                            <constraint firstItem="ASO-GL-OA2" firstAttribute="height" secondItem="oX0-Fe-eY0" secondAttribute="height" id="icl-GG-TMO"/>
+                            <constraint firstItem="oX0-Fe-eY0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j31-AW-agP"/>
+                            <constraint firstItem="ASO-GL-OA2" firstAttribute="top" secondItem="oX0-Fe-eY0" secondAttribute="bottom" id="pfn-zT-Wiv"/>
+                            <constraint firstItem="ASO-GL-OA2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rh9-IH-YXO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Margins" id="4Tv-Ec-9ee"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="-544"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zGN-d7-4Qj">
+            <objects>
+                <navigationController storyboardIdentifier="NVC" automaticallyAdjustsScrollViewInsets="NO" id="gSU-NW-Vv4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OGC-VO-ehI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KlF-fa-nX7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ag5-IT-x8l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.8" y="-543.77811094452773"/>
+        </scene>
+    </scenes>
+</document>
