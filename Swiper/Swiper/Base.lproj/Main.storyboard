@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="59x-Qp-LaW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Swipe-->
+        <scene sceneID="OGk-QD-BkO">
+            <objects>
+                <viewController id="59x-Qp-LaW" customClass="ViewController" customModule="Swiper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6pE-3x-8e9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOV-IA-Os2" userLabel="GameView">
+                                <rect key="frame" x="94.5" y="167" width="187.5" height="333.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGE-gn-jqX">
+                                        <rect key="frame" x="71.5" y="124" width="44" height="86"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                        <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pGE-gn-jqX" firstAttribute="centerX" secondItem="DOV-IA-Os2" secondAttribute="centerX" id="1CF-Kh-u7c"/>
+                                    <constraint firstItem="pGE-gn-jqX" firstAttribute="centerY" secondItem="DOV-IA-Os2" secondAttribute="centerY" id="4a0-Sa-X7Y"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="V0i-pa-XEb" appends="YES" id="NsT-m8-Aa9"/>
+                                    <outletCollection property="gestureRecognizers" destination="4H7-95-4sq" appends="YES" id="LBB-N1-OVW"/>
+                                </connections>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mcp-fK-cTJ">
+                                <rect key="frame" x="102" y="36" width="171.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xc-Hz-gcq">
+                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dDj-MV-CSd">
+                                        <rect key="frame" x="122.5" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="fullScreen:" destination="59x-Qp-LaW" eventType="valueChanged" id="47M-XC-Uex"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Mcp-fK-cTJ" firstAttribute="top" secondItem="KfQ-Bx-pyz" secondAttribute="top" constant="16" id="4TC-XB-uuN"/>
+                            <constraint firstItem="DOV-IA-Os2" firstAttribute="centerY" secondItem="6pE-3x-8e9" secondAttribute="centerY" identifier="GameViewCenterY" id="FRY-hH-sn5"/>
+                            <constraint firstItem="DOV-IA-Os2" firstAttribute="leading" secondItem="KfQ-Bx-pyz" secondAttribute="leading" identifier="GameViewFullScreenLeading" id="GBZ-7I-woi"/>
+                            <constraint firstItem="DOV-IA-Os2" firstAttribute="top" secondItem="6pE-3x-8e9" secondAttribute="top" identifier="GameViewFullScreenTop" id="Pbf-JU-fln"/>
+                            <constraint firstItem="KfQ-Bx-pyz" firstAttribute="trailing" secondItem="DOV-IA-Os2" secondAttribute="trailing" identifier="GameViewFullScreenTrailing" id="nxb-Ok-YrX"/>
+                            <constraint firstAttribute="bottom" secondItem="DOV-IA-Os2" secondAttribute="bottom" identifier="GameViewFullScreenBottom" id="p7C-GT-kxr"/>
+                            <constraint firstItem="DOV-IA-Os2" firstAttribute="width" secondItem="6pE-3x-8e9" secondAttribute="width" multiplier="0.5" identifier="HalfWidth" id="p9p-fK-MYd"/>
+                            <constraint firstItem="DOV-IA-Os2" firstAttribute="height" secondItem="6pE-3x-8e9" secondAttribute="height" multiplier="0.5" identifier="HalfHeight" id="rXs-nJ-1J0"/>
+                            <constraint firstItem="Mcp-fK-cTJ" firstAttribute="centerX" secondItem="KfQ-Bx-pyz" secondAttribute="centerX" id="sJ6-C1-mu2"/>
+                            <constraint firstItem="DOV-IA-Os2" firstAttribute="centerX" secondItem="KfQ-Bx-pyz" secondAttribute="centerX" identifier="GameViewCenterX" id="yEM-NU-rt0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KfQ-Bx-pyz"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nxb-Ok-YrX"/>
+                                <exclude reference="GBZ-7I-woi"/>
+                                <exclude reference="Pbf-JU-fln"/>
+                                <exclude reference="p7C-GT-kxr"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Swipe" id="vrz-YZ-Qyr"/>
+                    <connections>
+                        <outlet property="countDisplay" destination="pGE-gn-jqX" id="IY2-ll-Re9"/>
+                        <outlet property="modeSwitch" destination="dDj-MV-CSd" id="zfV-Xo-Rk0"/>
+                        <outletCollection property="halfScreenConstraints" destination="rXs-nJ-1J0" collectionClass="NSMutableArray" id="n4U-gd-LrH"/>
+                        <outletCollection property="halfScreenConstraints" destination="p9p-fK-MYd" collectionClass="NSMutableArray" id="6kE-6p-OBX"/>
+                        <outletCollection property="fullScreenConstraints" destination="GBZ-7I-woi" collectionClass="NSMutableArray" id="WC4-nu-FWH"/>
+                        <outletCollection property="fullScreenConstraints" destination="nxb-Ok-YrX" collectionClass="NSMutableArray" id="6dR-4Z-6SB"/>
+                        <outletCollection property="fullScreenConstraints" destination="Pbf-JU-fln" collectionClass="NSMutableArray" id="cXp-R9-sIK"/>
+                        <outletCollection property="fullScreenConstraints" destination="p7C-GT-kxr" collectionClass="NSMutableArray" id="L22-ot-AU2"/>
+                        <outletCollection property="halfScreenConstraints" destination="FRY-hH-sn5" collectionClass="NSMutableArray" id="I7n-eR-MyN"/>
+                        <outletCollection property="halfScreenConstraints" destination="yEM-NU-rt0" collectionClass="NSMutableArray" id="NhD-EY-oWB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aBz-LL-RG2" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="V0i-pa-XEb" userLabel="Up Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="swipeUp:" destination="59x-Qp-LaW" id="RUK-Jd-9nH"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="4H7-95-4sq" userLabel="Down Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="swipeDown:" destination="59x-Qp-LaW" id="ggj-Pg-KTw"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="20" y="138"/>
+        </scene>
+    </scenes>
+</document>
