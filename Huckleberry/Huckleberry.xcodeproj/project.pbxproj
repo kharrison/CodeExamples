@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		53512CFC18AC3A0300A74F57 /* UYLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53512CFB18AC3A0300A74F57 /* UYLTableViewController.m */; };
 		535C803818AD71750039A2B3 /* SourceData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 535C803718AD71750039A2B3 /* SourceData.plist */; };
+		536259DA1F41DEFD00616356 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 536259D91F41DEFD00616356 /* README.md */; };
 		5363F6D618AADBF6001CBD3A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5363F6D518AADBF6001CBD3A /* Foundation.framework */; };
 		5363F6D818AADBF6001CBD3A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5363F6D718AADBF6001CBD3A /* CoreGraphics.framework */; };
 		5363F6DA18AADBF6001CBD3A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5363F6D918AADBF6001CBD3A /* UIKit.framework */; };
@@ -24,7 +25,7 @@
 		53512CFA18AC3A0300A74F57 /* UYLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLTableViewController.h; sourceTree = "<group>"; };
 		53512CFB18AC3A0300A74F57 /* UYLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLTableViewController.m; sourceTree = "<group>"; };
 		535C803718AD71750039A2B3 /* SourceData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SourceData.plist; sourceTree = "<group>"; };
-		535C803918AD8AE50039A2B3 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		536259D91F41DEFD00616356 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5363F6D218AADBF6001CBD3A /* Huckleberry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huckleberry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5363F6D518AADBF6001CBD3A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5363F6D718AADBF6001CBD3A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,7 +60,7 @@
 		5363F6C918AADBF6001CBD3A = {
 			isa = PBXGroup;
 			children = (
-				535C803918AD8AE50039A2B3 /* README */,
+				536259D91F41DEFD00616356 /* README.md */,
 				5363F6DB18AADBF6001CBD3A /* Huckleberry */,
 				5363F6D418AADBF6001CBD3A /* Frameworks */,
 				5363F6D318AADBF6001CBD3A /* Products */,
@@ -182,6 +183,7 @@
 			files = (
 				53512CFC18AC3A0300A74F57 /* UYLTableViewController.m in Sources */,
 				5363F6E218AADBF6001CBD3A /* main.m in Sources */,
+				536259DA1F41DEFD00616356 /* README.md in Sources */,
 				53A8DCA618AC37530053ABAF /* UYLTextCell.m in Sources */,
 				5363F6E618AADBF6001CBD3A /* UYLAppDelegate.m in Sources */,
 			);
