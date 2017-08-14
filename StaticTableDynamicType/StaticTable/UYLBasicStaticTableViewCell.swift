@@ -15,6 +15,6 @@ class UYLBasicStaticTableViewCell: UITableViewCell {
 
 extension UYLBasicStaticTableViewCell: UYLPreferredFont {
     func contentSizeChanged() {
-        titleText.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        titleText.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
     }
 }
