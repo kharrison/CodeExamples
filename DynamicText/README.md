@@ -26,6 +26,6 @@ For further details see the following blog post:
 
 ## History
 
-Version 1.2   14 August 2017    Updated for Xcode 8 and iOS 10
-Version 1.1   30 December 2013  Added UYLScaledTextViewController
-Version 1.0   06 October 2013   Initial version.
+Version 1.2   14 August 2017    Updated for Xcode 8 and iOS 10  
+Version 1.1   30 December 2013  Added UYLScaledTextViewController  
+Version 1.0   06 October 2013   Initial version.  
