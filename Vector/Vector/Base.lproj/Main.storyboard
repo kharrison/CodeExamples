@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="btz-aQ-p2x">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fixed-->
+        <scene sceneID="wPM-hv-dUa">
+            <objects>
+                <viewController id="A9j-P9-fbT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PyG-hW-ind">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="9Hm-e8-aWm">
+                                <rect key="frame" x="16" y="20" width="343" height="598"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Hm-e8-aWm" firstAttribute="top" secondItem="5BE-2J-e95" secondAttribute="top" id="2Tz-5q-wNL"/>
+                            <constraint firstItem="9Hm-e8-aWm" firstAttribute="leading" secondItem="PyG-hW-ind" secondAttribute="leadingMargin" id="HKJ-GG-NLR"/>
+                            <constraint firstItem="5BE-2J-e95" firstAttribute="bottom" secondItem="9Hm-e8-aWm" secondAttribute="bottom" id="HgJ-2S-wo1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Hm-e8-aWm" secondAttribute="trailing" id="c3Y-MQ-lV0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5BE-2J-e95"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Fixed" image="cross" largeContentSizeImage="cross-large" selectedImage="cross-fill" id="i0n-bq-rH1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i4x-iA-ad7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+        </scene>
+        <!--Vector-->
+        <scene sceneID="kLh-GU-KaE">
+            <objects>
+                <viewController id="c3x-Xy-Ym4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2s2-PY-H4p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-vector" translatesAutoresizingMaskIntoConstraints="NO" id="3F0-XZ-qKi">
+                                <rect key="frame" x="16" y="20" width="343" height="598"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3F0-XZ-qKi" firstAttribute="top" secondItem="mKi-PD-vDC" secondAttribute="top" id="0L9-6d-prb"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3F0-XZ-qKi" secondAttribute="leading" id="595-v9-QLf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3F0-XZ-qKi" secondAttribute="trailing" id="JB1-pH-h1N"/>
+                            <constraint firstItem="mKi-PD-vDC" firstAttribute="bottom" secondItem="3F0-XZ-qKi" secondAttribute="bottom" id="ooz-Yx-wkU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mKi-PD-vDC"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Vector" image="arrow" largeContentSizeImage="arrow-large" selectedImage="arrow-fill" id="icq-gv-L1m"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x4X-00-Hud" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+        </scene>
+        <!--Adjust-->
+        <scene sceneID="2tB-hk-kbf">
+            <objects>
+                <viewController id="VkP-Wu-gex" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bN-B4-dyh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="star-vector" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dPL-gU-AmU">
+                                <rect key="frame" x="16" y="28" width="343" height="100"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIG-wL-3Gz">
+                                <rect key="frame" x="16" y="136" width="343" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="dPL-gU-AmU" secondAttribute="trailing" id="E5M-lS-IeX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bIG-wL-3Gz" secondAttribute="trailing" id="HFt-ug-lzr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="dPL-gU-AmU" secondAttribute="leading" id="HXI-Ku-9r5"/>
+                            <constraint firstItem="bIG-wL-3Gz" firstAttribute="top" secondItem="dPL-gU-AmU" secondAttribute="bottom" constant="8" symbolic="YES" id="OLr-uf-vLH"/>
+                            <constraint firstItem="dPL-gU-AmU" firstAttribute="top" secondItem="xNv-7P-QDj" secondAttribute="top" constant="8" id="gKh-az-y4E"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="bIG-wL-3Gz" secondAttribute="leading" id="pgV-sg-vF2"/>
+                            <constraint firstItem="xNv-7P-QDj" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bIG-wL-3Gz" secondAttribute="bottom" constant="8" id="vb8-r7-ZRf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xNv-7P-QDj"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Adjust" image="tick" largeContentSizeImage="tick-large" selectedImage="tick-fill" id="b6E-7y-8AS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XtX-UM-YRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.8" y="789.35532233883066"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="p5M-7s-lfw">
+            <objects>
+                <tabBarController id="btz-aQ-p2x" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="tWv-P4-bRY">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="A9j-P9-fbT" kind="relationship" relationship="viewControllers" id="QmQ-fn-5ht"/>
+                        <segue destination="c3x-Xy-Ym4" kind="relationship" relationship="viewControllers" id="LkB-nP-sxj"/>
+                        <segue destination="VkP-Wu-gex" kind="relationship" relationship="viewControllers" id="bZ5-1A-cEc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a3c-Jk-XgF" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow" width="30" height="30"/>
+        <image name="arrow-fill" width="30" height="30"/>
+        <image name="arrow-large" width="30" height="30"/>
+        <image name="cross" width="30" height="30"/>
+        <image name="cross-fill" width="30" height="30"/>
+        <image name="cross-large" width="75" height="75"/>
+        <image name="star" width="100" height="100"/>
+        <image name="star-vector" width="100" height="100"/>
+        <image name="tick" width="30" height="30"/>
+        <image name="tick-fill" width="30" height="30"/>
+        <image name="tick-large" width="75" height="75"/>
+    </resources>
+</document>
