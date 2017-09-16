@@ -52,7 +52,7 @@ class AdaptiveScrollView: UIScrollView {
         setup()
     }
 
-    func keyboardDidChangeFrame(_ notification:Notification) {
+    @objc func keyboardDidChangeFrame(_ notification:Notification) {
         guard let keyboardFrame = notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue else {
             return
         }
