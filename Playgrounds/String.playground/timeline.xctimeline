@@ -3,7 +3,19 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=9874&amp;EndingColumnNumber=20&amp;EndingLineNumber=134&amp;StartingColumnNumber=17&amp;StartingLineNumber=134&amp;Timestamp=497720877.962166"
+         documentLocation = "file:///Users/keith/Developer/iPhone/CodeExamples/Playgrounds/String.playground#CharacterRangeLen=7&amp;CharacterRangeLoc=12033&amp;EndingColumnNumber=32&amp;EndingLineNumber=397&amp;StartingColumnNumber=25&amp;StartingLineNumber=397&amp;Timestamp=527949469.266503"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/keith/Developer/iPhone/CodeExamples/Playgrounds/String.playground#CharacterRangeLen=5&amp;CharacterRangeLoc=1578&amp;EndingColumnNumber=12&amp;EndingLineNumber=46&amp;StartingColumnNumber=7&amp;StartingLineNumber=46&amp;Timestamp=527949469.266625"
+         lockedSize = "{675, 116}"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/keith/Developer/iPhone/CodeExamples/Playgrounds/String.playground#CharacterRangeLen=135&amp;CharacterRangeLoc=2138&amp;EndingColumnNumber=0&amp;EndingLineNumber=61&amp;StartingColumnNumber=2&amp;StartingLineNumber=59&amp;Timestamp=527949469.26673"
+         lockedSize = "{796.3525390625, 50}"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
