@@ -1,0 +1,18 @@
+body {
+    font: -apple-system-body;
+}
+
+h1 {
+    font: -apple-system-headline;
+    color: red;
+}
+
+h2 {
+    font: -apple-system-subheadline;
+    color: blue;
+}
+
+.footnote {
+    font: -apple-system-footnote;
+    color: green;
+}
