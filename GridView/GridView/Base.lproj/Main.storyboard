@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IoD-gR-Vqu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IoD-gR-Vqu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +16,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IoD-gR-Vqu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NBe-M8-2zX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -31,10 +32,6 @@
         <scene sceneID="eC3-AK-Jn6">
             <objects>
                 <viewController id="eJJ-Pg-Fhu" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4Ph-PB-cm0"/>
-                        <viewControllerLayoutGuide type="bottom" id="8oC-Se-Uyw"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qLM-s6-ZRQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,11 +57,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="TV1-zj-JkM" secondAttribute="trailing" id="I1I-Z9-JYq"/>
-                            <constraint firstItem="TV1-zj-JkM" firstAttribute="top" secondItem="4Ph-PB-cm0" secondAttribute="bottom" id="RMH-Bc-QtU"/>
-                            <constraint firstItem="TV1-zj-JkM" firstAttribute="leading" secondItem="qLM-s6-ZRQ" secondAttribute="leading" id="f1Y-d9-mp4"/>
-                            <constraint firstItem="8oC-Se-Uyw" firstAttribute="top" secondItem="TV1-zj-JkM" secondAttribute="bottom" id="npr-y0-ntx"/>
+                            <constraint firstItem="mH0-IW-cPr" firstAttribute="trailing" secondItem="TV1-zj-JkM" secondAttribute="trailing" id="I1I-Z9-JYq"/>
+                            <constraint firstItem="TV1-zj-JkM" firstAttribute="top" secondItem="mH0-IW-cPr" secondAttribute="top" id="RMH-Bc-QtU"/>
+                            <constraint firstItem="TV1-zj-JkM" firstAttribute="leading" secondItem="mH0-IW-cPr" secondAttribute="leading" id="f1Y-d9-mp4"/>
+                            <constraint firstItem="mH0-IW-cPr" firstAttribute="bottom" secondItem="TV1-zj-JkM" secondAttribute="bottom" id="npr-y0-ntx"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="mH0-IW-cPr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Grid View" id="dle-9M-KnO"/>
                 </viewController>
