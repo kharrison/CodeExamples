@@ -45,7 +45,7 @@ extension SegueHandlerType where Self: UIViewController, SegueIdentifier.RawValu
     func segueIdentifierForSegue(segue: UIStoryboardSegue) -> SegueIdentifier {
         guard let identifier = segue.identifier,
             let segueIdentifier = SegueIdentifier(rawValue: identifier) else {
-                fatalError("Unknown Segue Identifier \(segue.identifier)")
+                fatalError("Unknown Segue Identifier \(segue.identifier ?? "Missing")")
         }
         return segueIdentifier
     }

@@ -63,8 +63,8 @@ class OptionViewController: UIViewController {
         ]
     }
 
-    func performCommand(sender: UIKeyCommand) {
-        guard let key = InputKey(rawValue: sender.input) else {
+    @objc func performCommand(sender: UIKeyCommand) {
+        guard let key = InputKey(rawValue: sender.input!) else {
             return
         }
         switch key {
