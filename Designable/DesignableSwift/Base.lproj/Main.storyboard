@@ -38,7 +38,7 @@
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1" stepValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="dgT-EZ-aS6">
                                 <rect key="frame" x="140.5" y="353.5" width="94" height="29"/>
                                 <connections>
-                                    <action selector="valueChanged:" destination="tSH-PG-yq0" eventType="valueChanged" id="Rs3-f5-cNC"/>
+                                    <action selector="valueChangedWithSender:" destination="tSH-PG-yq0" eventType="valueChanged" id="aKY-sE-E2e"/>
                                 </connections>
                             </stepper>
                         </subviews>

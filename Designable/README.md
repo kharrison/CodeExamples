@@ -10,5 +10,6 @@ See the following blog post:
 
 ## Version History
 
++ Version 1.2   26 Oct 2017     Updated for Xcode 9 and Swift 4  
 + Version 1.1   10 June 2015   Added Swift version
 + Version 1.0   07 June 2015   Initial version.
