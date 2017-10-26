@@ -3,7 +3,7 @@
 //  Designable
 //
 //  Created by Keith Harrison http://useyourloaf.com
-//  Copyright (c) 2015 Keith Harrison. All rights reserved.
+//  Copyright (c) 2015-2017 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:

@@ -3,7 +3,7 @@
 //  Designable
 //
 //  Created by Keith Harrison http://useyourloaf.com
-//  Copyright (c) 2015 Keith Harrison. All rights reserved.
+//  Copyright (c) 2015-2017 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -74,7 +74,7 @@ class LevelView: UIView {
     /**
     The color of the bar border. Default is black.
     */
-    @IBInspectable var borderColor = UIColor.blackColor() {
+    @IBInspectable var borderColor: UIColor = .black {
         didSet {
             updateLayoutProperties()
         }
@@ -83,7 +83,7 @@ class LevelView: UIView {
     /**
     The color of the bar when value >= threshold. Default is green.
     */
-    @IBInspectable var fullColor = UIColor.greenColor() {
+    @IBInspectable var fullColor: UIColor = .green {
         didSet {
             updateLayoutProperties()
         }
@@ -92,7 +92,7 @@ class LevelView: UIView {
     /**
     The color of the bar when value < threshold. Default is red.
     */
-    @IBInspectable var emtpyColor = UIColor.redColor() {
+    @IBInspectable var emtpyColor: UIColor = .red {
         didSet {
             updateLayoutProperties()
         }
@@ -109,8 +109,8 @@ class LevelView: UIView {
         super.init(frame: frame)
         setup()
     }
-    
-    required init(coder aDecoder: NSCoder) {
+
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
@@ -121,12 +121,12 @@ class LevelView: UIView {
     }
     
     func updateLayoutProperties() {
-        let barRect = CGRectMake(bounds.origin.x, bounds.origin.y, bounds.size.width * value, bounds.size.height)
+        let barRect = CGRect(x: bounds.origin.x, y: bounds.origin.y, width: bounds.size.width * value, height: bounds.size.height)
         let path = UIBezierPath(rect: barRect)
-        barLayer.path = path.CGPath
-        barLayer.fillColor = value >= threshold ? fullColor.CGColor : emtpyColor.CGColor
+        barLayer.path = path.cgPath
+        barLayer.fillColor = value >= threshold ? fullColor.cgColor : emtpyColor.cgColor
         layer.borderWidth = borderWidth
-        layer.borderColor = borderColor.CGColor
+        layer.borderColor = borderColor.cgColor
         layer.cornerRadius = 5.0
         layer.masksToBounds = true
     }
