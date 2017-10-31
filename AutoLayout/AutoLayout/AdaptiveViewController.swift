@@ -164,11 +164,11 @@ class AdaptiveViewController: UIViewController {
         }
     }
     
-    func noAction(_ sender: UIButton) {
+    @objc func noAction(_ sender: UIButton) {
         print("No")
     }
     
-    func yesAction(_ sender: UIButton) {
+    @objc func yesAction(_ sender: UIButton) {
         print("Yes")
     }
 }

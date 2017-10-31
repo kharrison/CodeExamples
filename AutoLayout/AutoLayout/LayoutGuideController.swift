@@ -123,11 +123,11 @@ class LayoutGuideController: UIViewController {
         yesButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
-    func noThanks(_ sender: UIButton) {
+    @objc func noThanks(_ sender: UIButton) {
         print("No thanks!")
     }
   
-    func yesPlease(_ sender: UIButton) {
+    @objc func yesPlease(_ sender: UIButton) {
         print("Yes please!")
     }
 }
