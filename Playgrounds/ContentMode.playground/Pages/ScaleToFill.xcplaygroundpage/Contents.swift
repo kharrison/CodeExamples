@@ -1,5 +1,5 @@
 import UIKit
-import XCPlayground
+import PlaygroundSupport
 /*:
  ### Scale To Fill
  
@@ -9,9 +9,9 @@ import XCPlayground
  aspect ratio of the image is not maintained.
  */
 let myView = StarView(frame: CGRect(x: 0, y: 0, width:200, height:350))
-myView.starImageView.contentMode = .ScaleToFill
+myView.starImageView.contentMode = .scaleToFill
 myView
-XCPlaygroundPage.currentPage.liveView = myView
+PlaygroundPage.current.liveView = myView
 //: [Previous](@previous)
 //: [Index](contentMode)
 //: [Next](@next)

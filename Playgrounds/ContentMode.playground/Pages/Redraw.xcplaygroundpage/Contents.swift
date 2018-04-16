@@ -1,5 +1,5 @@
 import UIKit
-import XCPlayground
+import PlaygroundSupport
 /*:
  ### Redraw
  
@@ -9,10 +9,10 @@ import XCPlayground
  calling drawRect.
  */
 let myView = CircleView(frame: CGRect(x: 0, y: 0, width:200, height:350))
-myView.backgroundColor = .whiteColor()
-myView.contentMode = .Redraw
+myView.backgroundColor = .white
+myView.contentMode = .redraw
 myView
-XCPlaygroundPage.currentPage.liveView = myView
+PlaygroundPage.current.liveView = myView
 //: [Previous](@previous)
 //: [Index](contentMode)
 //: [Next](@next)

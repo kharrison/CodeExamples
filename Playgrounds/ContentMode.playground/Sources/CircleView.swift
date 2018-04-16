@@ -6,15 +6,15 @@ public class CircleView: UIView {
         didSet { setNeedsDisplay() }
     }
     
-    var color: UIColor = .redColor() {
+    var color: UIColor = .red {
         didSet { setNeedsDisplay() }
     }
-    
-    public override func drawRect(rect: CGRect) {
+
+    public override func draw(_ rect: CGRect) {
         
-        let circleCenter = convertPoint(center, fromView: superview)
+        let circleCenter = convert(center, from: superview)
         let circleRadius = min(bounds.size.width,bounds.size.height)/2 * 0.80
-        let circlePath = UIBezierPath(arcCenter: circleCenter, radius: circleRadius, startAngle: 0, endAngle: CGFloat(2*M_PI), clockwise: true)
+        let circlePath = UIBezierPath(arcCenter: circleCenter, radius: circleRadius, startAngle: 0, endAngle: CGFloat(2*Double.pi), clockwise: true)
         circlePath.lineWidth = lineWidth
         color.set()
         circlePath.stroke()

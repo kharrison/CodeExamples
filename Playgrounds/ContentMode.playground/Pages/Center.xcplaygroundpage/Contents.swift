@@ -1,5 +1,5 @@
 import UIKit
-import XCPlayground
+import PlaygroundSupport
 /*:
  ### Center
  
@@ -7,9 +7,9 @@ import XCPlayground
  or stretch the content.
  */
 let myView = StarView(frame: CGRect(x: 0, y: 0, width:200, height:350))
-myView.starImageView.contentMode = .Center
+myView.starImageView.contentMode = .center
 myView
-XCPlaygroundPage.currentPage.liveView = myView
+PlaygroundPage.current.liveView = myView
 //: [Previous](@previous)
 //: [Index](contentMode)
 //: [Next](@next)

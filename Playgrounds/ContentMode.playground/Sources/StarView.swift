@@ -10,7 +10,7 @@ public class StarView: UIView {
 
         super.init(frame: frame)
         addSubview(starImageView)
-        backgroundColor = .greenColor()
+        backgroundColor = .green
         starImageView.frame = bounds
     }
     
