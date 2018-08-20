@@ -87,7 +87,7 @@ class ViewController: UIViewController {
         return label(forTextStyle: .caption2, text: "Caption 2")
     }()
 
-    private func label(forTextStyle textStyle: UIFontTextStyle, text: String) -> UILabel {
+    private func label(forTextStyle textStyle: UIFont.TextStyle, text: String) -> UILabel {
         let label = UILabel()
         label.font = scaledFont.font(forTextStyle: textStyle)
         label.adjustsFontForContentSizeCategory = true
