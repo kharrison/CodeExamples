@@ -63,7 +63,7 @@ final class ForecastView: UIView {
         addSubview(summaryLabel)
         addSubview(imageView)
 
-        let margin = layoutMarginsGuide
+        let margin = readableContentGuide
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: margin.leadingAnchor),
             titleLabel.topAnchor.constraint(equalTo: margin.topAnchor),

@@ -75,20 +75,19 @@ final class ForecastViewController: UIViewController {
 
     private func setupView() {
         view.backgroundColor = ViewMetrics.backgroundColor
-        view.directionalLayoutMargins = NSDirectionalEdgeInsets(top: ViewMetrics.margin, leading: ViewMetrics.margin, bottom: ViewMetrics.margin, trailing: ViewMetrics.margin)
+        forecastView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: ViewMetrics.margin, leading: ViewMetrics.margin, bottom: ViewMetrics.margin, trailing: ViewMetrics.margin)
         view.addSubview(scrollView)
 
         scrollView.addSubview(infoButton)
 
-        let margin = view.readableContentGuide
         let frameGuide = scrollView.frameLayoutGuide
         let contentGuide = scrollView.contentLayoutGuide
 
         // Classic scroll view setup using scroll view anchors
 //        NSLayoutConstraint.activate([
-//            scrollView.leadingAnchor.constraint(equalTo: margin.leadingAnchor),
+//            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
 //            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
-//            scrollView.trailingAnchor.constraint(equalTo: margin.trailingAnchor),
+//            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 //            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 //
 //            scrollView.leadingAnchor.constraint(equalTo: forecastView.leadingAnchor),
@@ -101,9 +100,9 @@ final class ForecastViewController: UIViewController {
 
         // Scroll view layout guides (iOS 11)
         NSLayoutConstraint.activate([
-            frameGuide.leadingAnchor.constraint(equalTo: margin.leadingAnchor),
+            frameGuide.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             frameGuide.topAnchor.constraint(equalTo: view.topAnchor),
-            frameGuide.trailingAnchor.constraint(equalTo: margin.trailingAnchor),
+            frameGuide.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             frameGuide.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 
             contentGuide.leadingAnchor.constraint(equalTo: forecastView.leadingAnchor),
