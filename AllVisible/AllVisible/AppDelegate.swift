@@ -3,7 +3,7 @@
 //  AllVisible
 //
 //  Created by Keith Harrison http://useyourloaf.com
-//  Copyright (c) 2016 Keith Harrison. All rights reserved.
+//  Copyright (c) 2016-2018 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         // Configure the SplitViewController to prefer to always
         // show both master and detail views and add the display

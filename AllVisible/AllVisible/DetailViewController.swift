@@ -3,7 +3,7 @@
 //  AllVisible
 //
 //  Created by Keith Harrison http://useyourloaf.com
-//  Copyright (c) 2016 Keith Harrison. All rights reserved.
+//  Copyright (c) 2016-2018 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -35,7 +35,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet private weak var detailLabel: UILabel!
+    @IBOutlet private var detailLabel: UILabel!
 
     private func configureView() {
         if let label = detailLabel {
