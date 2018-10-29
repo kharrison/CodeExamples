@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Abort</key>
+	<dict>
+		<key>NSStringVariableWidthRuleType</key>
+		<dict>
+			<key>20</key>
+			<string>Abort</string>
+			<key>25</key>
+			<string>Abort Launch</string>
+			<key>50</key>
+			<string>Abort Launch Sequence</string>
+		</dict>
+	</dict>
+	<key>Start</key>
+	<dict>
+		<key>NSStringVariableWidthRuleType</key>
+		<dict>
+			<key>20</key>
+			<string>Start</string>
+			<key>25</key>
+			<string>Start Countdown</string>
+			<key>50</key>
+			<string>Start Launch Countdown</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
