@@ -2,8 +2,8 @@
 //  MasterViewController.swift
 //  Container
 //
-//  Created by Keith Harrison http://useyourloaf.com
-//  Copyright (c) 2017 Keith Harrison. All rights reserved.
+//  Created by Keith Harrison https://useyourloaf.com
+//  Copyright (c) 2017-2019 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -33,15 +33,14 @@
 
 import UIKit
 
-class MasterViewController: UIViewController {
+final class MasterViewController: UIViewController {
 
-    @IBOutlet private weak var topStackView: UIStackView!
-    fileprivate var locationTableViewController: LocationTableViewController?
-    fileprivate var mapViewController: MapViewController?
+    @IBOutlet private var topStackView: UIStackView!
+    private var locationTableViewController: LocationTableViewController?
+    private var mapViewController: MapViewController?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
 //        guard let locationController = childViewControllers.first as? LocationTableViewController else {
 //            fatalError("Check storyboard for missing LocationTableViewController")
 //        }
@@ -53,8 +52,18 @@ class MasterViewController: UIViewController {
 //        locationTableViewController = locationController
 //        mapViewController = mapController
 //        locationController.delegate = self
+//    }
 
-        topStackView.axis = axisForSize(view.bounds.size)
+    private var initialSetupDone = false
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        if !initialSetupDone {
+            // Set the initial stack view axis here when
+            // we are sure the root view bounds are set.
+            topStackView.axis = axisForSize(view.bounds.size)
+            initialSetupDone = true
+        }
     }
 
     // Alternative to wiring up the interface in viewDidLoad (above) is to
@@ -78,7 +87,7 @@ class MasterViewController: UIViewController {
         topStackView.axis = axisForSize(size)
     }
 
-    private func axisForSize(_ size: CGSize) -> UILayoutConstraintAxis {
+    private func axisForSize(_ size: CGSize) -> NSLayoutConstraint.Axis {
         return size.width > size.height ? .horizontal : .vertical
     }
 }

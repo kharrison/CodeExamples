@@ -37,7 +37,7 @@ protocol LocationProviderDelegate: class {
     func didSelectLocation(_ location: Location)
 }
 
-class LocationTableViewController: UITableViewController {
+final class LocationTableViewController: UITableViewController {
 
     weak var delegate:LocationProviderDelegate?
 
@@ -45,8 +45,8 @@ class LocationTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 64.0
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.delegate = self
 
         if let plistPath = Bundle.main.path(forResource: "locations", ofType: "plist") {

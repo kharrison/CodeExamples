@@ -2,8 +2,8 @@
 //  LocationCell.swift
 //  Container
 //
-//  Created by Keith Harrison http://useyourloaf.com
-//  Copyright (c) 2017 Keith Harrison. All rights reserved.
+//  Created by Keith Harrison https://useyourloaf.com
+//  Copyright (c) 2017-2019 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -33,19 +33,9 @@
 
 import UIKit
 
-class LocationCell: UITableViewCell, ReusableIdentifier {
-
-    @IBOutlet fileprivate weak var name: UILabel!
-    @IBOutlet fileprivate weak var coordinates: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
-        if #available(iOS 10.0, *) {
-            name.adjustsFontForContentSizeCategory = true
-            coordinates.adjustsFontForContentSizeCategory = true
-        }
-    }
+final class LocationCell: UITableViewCell, ReusableIdentifier {
+    @IBOutlet private var name: UILabel!
+    @IBOutlet private var coordinates: UILabel!
 }
 
 extension LocationCell: ConfigurableCell {

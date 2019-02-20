@@ -33,19 +33,9 @@
 
 import UIKit
 
-class LocationCell: UITableViewCell, ReusableIdentifier {
-
-    @IBOutlet fileprivate weak var name: UILabel!
-    @IBOutlet fileprivate weak var coordinates: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
-        if #available(iOS 10.0, *) {
-            name.adjustsFontForContentSizeCategory = true
-            coordinates.adjustsFontForContentSizeCategory = true
-        }
-    }
+final class LocationCell: UITableViewCell, ReusableIdentifier {
+    @IBOutlet private var name: UILabel!
+    @IBOutlet private var coordinates: UILabel!
 }
 
 extension LocationCell: ConfigurableCell {

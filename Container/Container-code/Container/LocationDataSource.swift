@@ -33,10 +33,10 @@
 
 import UIKit
 
-class LocationDataSource: NSObject {
+final class LocationDataSource: NSObject {
 
-    fileprivate let tableView: UITableView
-    fileprivate var locations = [Location]()
+    private let tableView: UITableView
+    private var locations = [Location]()
 
     init(tableView: UITableView, from path: String) {
         self.tableView = tableView

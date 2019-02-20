@@ -33,12 +33,12 @@
 
 import UIKit
 
-class MasterViewController: UIViewController {
+final class MasterViewController: UIViewController {
 
     private let topStackView = UIStackView()
 
-    fileprivate lazy var locationTableViewController: LocationTableViewController = self.buildFromStoryboard("Main")
-    fileprivate lazy var mapViewController: MapViewController = self.buildFromStoryboard("Main")
+    private lazy var locationTableViewController: LocationTableViewController = self.buildFromStoryboard("Main")
+    private lazy var mapViewController: MapViewController = self.buildFromStoryboard("Main")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +49,18 @@ class MasterViewController: UIViewController {
         locationTableViewController.delegate = self
     }
 
+    private var initialSetupDone = false
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        if !initialSetupDone {
+            // Set the initial stack view axis here when
+            // we are sure the root view bounds are set.
+            topStackView.axis = axisForSize(view.bounds.size)
+            initialSetupDone = true
+        }
+    }
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
 
         super.viewWillTransition(to: size, with: coordinator)
@@ -57,22 +69,21 @@ class MasterViewController: UIViewController {
 
     private func addContentController(_ child: UIViewController, to stackView: UIStackView) {
 
-        addChildViewController(child)
+        addChild(child)
         stackView.addArrangedSubview(child.view)
-        child.didMove(toParentViewController: self)
+        child.didMove(toParent: self)
     }
 
     private func removeContentController(_ child: UIViewController, from stackView: UIStackView) {
 
-        child.willMove(toParentViewController: nil)
+        child.willMove(toParent: nil)
         stackView.removeArrangedSubview(child.view)
         child.view.removeFromSuperview()
-        child.removeFromParentViewController()
+        child.removeFromParent()
     }
 
     private func setupStackView() {
 
-        topStackView.axis = axisForSize(view.bounds.size)
         topStackView.alignment = .fill
         topStackView.distribution = .fillEqually
         topStackView.spacing = 8.0
@@ -89,7 +100,7 @@ class MasterViewController: UIViewController {
             ])
     }
 
-    private func axisForSize(_ size: CGSize) -> UILayoutConstraintAxis {
+    private func axisForSize(_ size: CGSize) -> NSLayoutConstraint.Axis {
         return size.width > size.height ? .horizontal : .vertical
     }
 

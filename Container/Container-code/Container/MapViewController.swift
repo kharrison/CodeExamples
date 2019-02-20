@@ -34,9 +34,9 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+final class MapViewController: UIViewController {
 
-    @IBOutlet private weak var mapView: MKMapView!
+    @IBOutlet private var mapView: MKMapView!
 
     /// The zoom level to use when setting the span
     /// of the map region to show. Default is 10 degrees.
@@ -58,7 +58,7 @@ class MapViewController: UIViewController {
     }
 
     private func centerMap(_ coordinate: CLLocationCoordinate2D) {
-        let span = MKCoordinateSpanMake(zoom, zoom)
+        let span = MKCoordinateSpan.init(latitudeDelta: zoom, longitudeDelta: zoom)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         mapView.setRegion(region, animated: true)
     }
