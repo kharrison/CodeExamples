@@ -68,14 +68,12 @@ final class MasterViewController: UIViewController {
     }
 
     private func addContentController(_ child: UIViewController, to stackView: UIStackView) {
-
         addChild(child)
         stackView.addArrangedSubview(child.view)
         child.didMove(toParent: self)
     }
 
     private func removeContentController(_ child: UIViewController, from stackView: UIStackView) {
-
         child.willMove(toParent: nil)
         stackView.removeArrangedSubview(child.view)
         child.view.removeFromSuperview()
@@ -83,7 +81,6 @@ final class MasterViewController: UIViewController {
     }
 
     private func setupStackView() {
-
         topStackView.alignment = .fill
         topStackView.distribution = .fillEqually
         topStackView.spacing = 8.0
@@ -115,7 +112,6 @@ final class MasterViewController: UIViewController {
 }
 
 extension MasterViewController: LocationProviderDelegate {
-
     func didSelectLocation(_ location: Location) {
         mapViewController.coordinate = location.coordinate
     }
