@@ -30,38 +30,38 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
+#import <WebKit/WebKit.h>
 #import "UYLWebViewController.h"
 
 @interface UYLWebViewController () <UIViewControllerRestoration>
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
-@property (nonatomic) BOOL restoringState;
+@property (strong, nonatomic) IBOutlet WKWebView *webView;
 @end
 
 @implementation UYLWebViewController
+
+static NSString *UYLKeyURL = @"UYLKeyURL";
 
 #pragma mark -
 #pragma mark === View Life Cycle Management ===
 #pragma mark -
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    if (self.restoringState)
-    {
-        [self.webView reload];
-        self.restoringState = NO;
+- (void)setUrlString:(NSString *)urlString {
+    if (_urlString != urlString) {
+        _urlString = [urlString copy];
+        [self loadPage];
     }
 }
 
-- (void)showPage:(NSString *)urlString
+- (void)viewDidLoad
 {
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+    [super viewDidLoad];
+    [self loadPage];
+}
+
+- (void)loadPage
+{
+    NSURL *URL = [NSURL URLWithString:self.urlString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     [self.webView loadRequest:request];
 }
 
@@ -69,10 +69,16 @@
 #pragma mark === State Restoration ===
 #pragma mark -
 
+- (void)encodeRestorableStateWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:self.urlString forKey:UYLKeyURL];
+    [super encodeRestorableStateWithCoder:coder];
+}
+
 - (void)decodeRestorableStateWithCoder:(NSCoder *)coder
 {
     [super decodeRestorableStateWithCoder:coder];
-    self.restoringState = YES;
+    self.urlString = [coder decodeObjectForKey:UYLKeyURL];
 }
 
 #pragma mark -

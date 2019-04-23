@@ -34,5 +34,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UYLWebViewController : UIViewController
-- (void)showPage:(NSString *)utlString;
+@property (nonatomic, copy) NSString *urlString;
 @end

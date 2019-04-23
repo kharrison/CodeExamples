@@ -51,11 +51,6 @@
     self.amazingSwitch.on = [defaults boolForKey:kUYLSettingsAmazingKey];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
-}
-
 - (void)didDismissPresentedView
 {
 	[self.presentedViewController dismissViewControllerAnimated:YES completion:NULL];
@@ -70,7 +65,6 @@
     BOOL amazingEnabled = self.amazingSwitch.isOn;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setBool:amazingEnabled forKey:kUYLSettingsAmazingKey];
-    [defaults synchronize];
 }
 
 - (IBAction)pushMe
@@ -78,8 +72,8 @@
     UYLWebViewController *wvc = [[UYLWebViewController alloc] initWithNibName:@"UYLWebViewController" bundle:nil];
     wvc.restorationIdentifier = @"UYLWebViewController";
     wvc.restorationClass = [UYLWebViewController class];
-    [self.navigationController pushViewController:wvc animated:YES];
-    [wvc showPage:@"http://useyourloaf.com"];
+    wvc.urlString = @"https://useyourloaf.com";
+    [self.navigationController showViewController:wvc sender:self];
 }
 
 @end

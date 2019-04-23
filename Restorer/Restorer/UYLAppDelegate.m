@@ -37,7 +37,7 @@
 
 NSString *kUYLSettingsAmazingKey = @"amazing";
 
-#define BUNDLEMINVERSION 2
+#define BUNDLEMINVERSION 3
 
 // Common initilisation code for backward compatibility with iOS 5
 - (void)commonFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -94,7 +94,7 @@ NSString *kUYLSettingsAmazingKey = @"amazing";
     UIUserInterfaceIdiom currentInterfaceIdiom = currentDevice.userInterfaceIdiom;
     if (restorationInterfaceIdiom != currentInterfaceIdiom)
     {
-        NSLog(@"Ignoring restoration data for interface idiom: %d",restorationInterfaceIdiom);
+        NSLog(@"Ignoring restoration data for interface idiom: %ld",(long)restorationInterfaceIdiom);
         return NO;
     }
     

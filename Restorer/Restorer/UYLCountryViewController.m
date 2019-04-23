@@ -51,11 +51,6 @@ static NSString *UYLKeyCapital = @"UYLKeyCapital";
     self.capitalLabel.text = self.capital;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
-}
-
 #pragma mark -
 #pragma mark === State Restoration ===
 #pragma mark -

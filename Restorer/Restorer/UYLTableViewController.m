@@ -55,11 +55,6 @@
 #pragma mark === View Life Cycle Management ===
 #pragma mark -
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
