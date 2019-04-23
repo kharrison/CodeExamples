@@ -31,7 +31,7 @@
 		5320FB202252630D00AADA00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		5320FB21225264E200AADA00 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5320FB242252655800AADA00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		535CDCD1174C2E440021AE7F /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		535CDCD1174C2E440021AE7F /* README */ = {isa = PBXFileReference; explicitFileType = net.daringfireball.markdown; fileEncoding = 4; path = README; sourceTree = "<group>"; };
 		535EBE012252692700EEF01D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UYLWebViewController.xib; sourceTree = "<group>"; };
 		53844B3F16F7B2E0007B7561 /* countries.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = countries.plist; sourceTree = "<group>"; };
 		53844B4116F7B7F0007B7561 /* UYLCountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLCountryViewController.h; sourceTree = "<group>"; };
