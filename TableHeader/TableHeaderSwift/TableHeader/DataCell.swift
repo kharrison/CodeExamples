@@ -34,8 +34,7 @@
 import UIKit
 
 class DataCell: UITableViewCell, ReusableIdentifier {
-
-    @IBOutlet fileprivate weak var title: UILabel!
+    @IBOutlet fileprivate var title: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

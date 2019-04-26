@@ -31,11 +31,10 @@
 //  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 //  POSSIBILITY OF SUCH DAMAGE.
 
-import UIKit;
+import UIKit
 
-class ListDataSource: NSObject {
-
-    fileprivate let tableView: UITableView
+final class ListDataSource: NSObject {
+    private let tableView: UITableView
 
     init(tableView: UITableView) {
         self.tableView = tableView
@@ -46,7 +45,6 @@ class ListDataSource: NSObject {
 }
 
 extension ListDataSource: UITableViewDataSource {
-
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

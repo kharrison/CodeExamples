@@ -33,16 +33,15 @@
 
 import UIKit
 
-class TextTableHeader: UIView {
-
-    @IBOutlet private weak var title: UILabel!
+final class TextTableHeader: UIView {
+    @IBOutlet private var title: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         if #available(iOS 10.0, *) {
             title.adjustsFontForContentSizeCategory = true
         } else {
-            NotificationCenter.default.addObserver(self,selector:#selector(contentSizeDidChange(notification:)),name: NSNotification.Name.UIContentSizeCategoryDidChange,object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(contentSizeDidChange(notification:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
         }
     }
 

@@ -33,26 +33,23 @@
 
 import UIKit
 
-class ListTableViewController: UITableViewController {
-
+final class ListTableViewController: UITableViewController {
     private var listDataSource: ListDataSource?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         listDataSource = ListDataSource(tableView: tableView)
         tableView.dataSource = listDataSource
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 56
 
         guard #available(iOS 10.0, *) else {
-
             // Manually observe the UIContentSizeCategoryDidChange
             // notification for iOS 9.
 
-            NotificationCenter.default.addObserver(self,selector:#selector(contentSizeDidChange(notification:)),name: NSNotification.Name.UIContentSizeCategoryDidChange,object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(contentSizeDidChange(notification:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
             return
         }
-
     }
 
     @objc private func contentSizeDidChange(notification: NSNotification) {
@@ -88,8 +85,8 @@ class ListTableViewController: UITableViewController {
         // Calculate the minimum height of the header view that allows
         // the text label to fit its preferred width.
 
-        let size = headerView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
-        
+        let size = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+
         if headerView.frame.size.height != size.height {
             headerView.frame.size.height = size.height
 
