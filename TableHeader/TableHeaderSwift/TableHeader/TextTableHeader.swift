@@ -41,12 +41,12 @@ final class TextTableHeader: UIView {
         if #available(iOS 10.0, *) {
             title.adjustsFontForContentSizeCategory = true
         } else {
-            NotificationCenter.default.addObserver(self, selector: #selector(contentSizeDidChange(notification:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(contentSizeDidChange(_:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
         }
     }
 
     // Still need to do this manually for iOS 9
-    @objc private func contentSizeDidChange(notification: NSNotification) {
+    @objc private func contentSizeDidChange(_ notification: NSNotification) {
         title.font = UIFont.preferredFont(forTextStyle: .title3)
     }
 }

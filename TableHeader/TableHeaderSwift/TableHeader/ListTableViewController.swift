@@ -47,12 +47,12 @@ final class ListTableViewController: UITableViewController {
             // Manually observe the UIContentSizeCategoryDidChange
             // notification for iOS 9.
 
-            NotificationCenter.default.addObserver(self, selector: #selector(contentSizeDidChange(notification:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(contentSizeDidChange(_:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
             return
         }
     }
 
-    @objc private func contentSizeDidChange(notification: NSNotification) {
+    @objc private func contentSizeDidChange(_ notification: NSNotification) {
         tableView.reloadData()
     }
 
