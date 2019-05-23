@@ -38,7 +38,7 @@ class AdaptiveScrollView: UIScrollView {
         let defaultCenter = NotificationCenter.default
         defaultCenter.addObserver(self,
             selector: #selector(AdaptiveScrollView.keyboardDidChangeFrame(_:)),
-            name: NSNotification.Name.UIKeyboardDidChangeFrame,
+            name: UIResponder.keyboardDidChangeFrameNotification,
             object: nil)
     }
     
@@ -53,12 +53,12 @@ class AdaptiveScrollView: UIScrollView {
     }
 
     @objc func keyboardDidChangeFrame(_ notification:Notification) {
-        guard let keyboardFrame = notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue else {
+        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue else {
             return
         }
         
         let keyboardSize = keyboardFrame.cgRectValue.size
-        let contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0)
+        let contentInsets = UIEdgeInsets.init(top: 0.0, left: 0.0, bottom: keyboardSize.height, right: 0.0)
         adjustContentInsets(contentInsets)        
     }
 
