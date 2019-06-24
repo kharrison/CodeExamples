@@ -60,7 +60,7 @@ class ScrollingStackViewController: UIViewController {
         }
     }
     
-    fileprivate func scrollToEnd(_ addedView: UIView) {
+    private func scrollToEnd(_ addedView: UIView) {
         let contentViewHeight = scrollView.contentSize.height + addedView.bounds.height + stackView.spacing
         let offsetY = contentViewHeight - scrollView.bounds.height
         if (offsetY > 0) {

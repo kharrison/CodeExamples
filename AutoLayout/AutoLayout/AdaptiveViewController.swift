@@ -89,7 +89,16 @@ class AdaptiveViewController: UIViewController {
         view.addLayoutGuide(middleGuide)
         view.addLayoutGuide(trailingGuide)
     }
-    
+
+    private var firstTime = true
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        if firstTime {
+            firstTime = false
+            enableConstraintsForWidth(traitCollection.horizontalSizeClass)
+        }
+    }
+
     private func setupConstraints() {
         
         // =========================================
@@ -150,8 +159,6 @@ class AdaptiveViewController: UIViewController {
         compactConstraints.append(redButton.centerXAnchor.constraint(equalTo: view.centerXAnchor))
         compactConstraints.append(greenButton.centerXAnchor.constraint(equalTo: view.centerXAnchor))
         compactConstraints.append(greenButton.topAnchor.constraint(equalTo: redButton.bottomAnchor, constant: 8.0))
-        
-        enableConstraintsForWidth(traitCollection.horizontalSizeClass)
     }
     
     private func enableConstraintsForWidth(_ horizontalSizeClass: UIUserInterfaceSizeClass) {

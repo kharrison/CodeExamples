@@ -47,7 +47,7 @@ class HiddenViewController: UIViewController {
         configureView(newCollection.verticalSizeClass)
     }
     
-    fileprivate func configureView(_ verticalSizeClass: UIUserInterfaceSizeClass) {
+    private func configureView(_ verticalSizeClass: UIUserInterfaceSizeClass) {
         guard extraHeart != nil else {
             return
         }

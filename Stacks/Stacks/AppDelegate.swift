@@ -51,9 +51,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
+        if let shortcutItem = launchOptions?[UIApplication.LaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
             
             handleShortcut(shortcutItem)
             return false
@@ -69,7 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         completionHandler(handleShortcut(shortcutItem))
     }
     
-    @discardableResult fileprivate func handleShortcut(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
+    @discardableResult private func handleShortcut(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
         
         let shortcutType = shortcutItem.type
         guard let shortcutIdentifier = ShortcutIdentifier(fullIdentifier: shortcutType) else {
@@ -79,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return selectTabBarItemForIdentifier(shortcutIdentifier)
     }
     
-    fileprivate func selectTabBarItemForIdentifier(_ identifier: ShortcutIdentifier) -> Bool {
+    private func selectTabBarItemForIdentifier(_ identifier: ShortcutIdentifier) -> Bool {
         
         guard let tabBarController = self.window?.rootViewController as? UITabBarController else {
             return false

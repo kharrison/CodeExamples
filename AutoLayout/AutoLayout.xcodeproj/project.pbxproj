@@ -137,6 +137,7 @@
 				TargetAttributes = {
 					53D6A5EC1C53BF5200A81A14 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = LCC2J94N44;
 						LastSwiftMigration = 1020;
 					};
 				};
@@ -325,6 +326,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LCC2J94N44;
 				INFOPLIST_FILE = AutoLayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.useyourloaf.AutoLayout;
@@ -337,6 +339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LCC2J94N44;
 				INFOPLIST_FILE = AutoLayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.useyourloaf.AutoLayout;
