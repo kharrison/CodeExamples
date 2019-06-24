@@ -67,18 +67,18 @@ class AdaptiveViewController: UIViewController {
         textLabel.textColor = .gray
         
         redButton.translatesAutoresizingMaskIntoConstraints = false
-        redButton.setTitle("No don't do it", for: UIControlState())
+        redButton.setTitle("No don't do it", for: UIControl.State())
         let redImage = UIImage(named: "redButton")
-        redButton.setBackgroundImage(redImage, for: UIControlState())
-        redButton.contentEdgeInsets = UIEdgeInsetsMake(8, 16, 8, 16)
+        redButton.setBackgroundImage(redImage, for: UIControl.State())
+        redButton.contentEdgeInsets = UIEdgeInsets.init(top: 8, left: 16, bottom: 8, right: 16)
         let noAction = #selector(noAction(_:))
         redButton.addTarget(self, action: noAction, for: .touchUpInside)
         
         greenButton.translatesAutoresizingMaskIntoConstraints = false
-        greenButton.setTitle("Start the Countdown!!!", for: UIControlState())
+        greenButton.setTitle("Start the Countdown!!!", for: UIControl.State())
         let greenImage = UIImage(named: "greenButton")
-        greenButton.setBackgroundImage(greenImage, for: UIControlState())
-        greenButton.contentEdgeInsets = UIEdgeInsetsMake(8, 16, 8, 16)
+        greenButton.setBackgroundImage(greenImage, for: UIControl.State())
+        greenButton.contentEdgeInsets = UIEdgeInsets.init(top: 8, left: 16, bottom: 8, right: 16)
         let yesAction = #selector(yesAction(_:))
         greenButton.addTarget(self, action: yesAction, for: .touchUpInside)
 

@@ -62,18 +62,18 @@ class LayoutGuideController: UIViewController {
         // Configure the buttons and add them to the superview
         
         noButton.translatesAutoresizingMaskIntoConstraints = false
-        noButton.setTitle("No", for: UIControlState())
+        noButton.setTitle("No", for: UIControl.State())
         let redImage = UIImage(named: "redButton")
-        noButton.setBackgroundImage(redImage, for: UIControlState())
-        noButton.contentEdgeInsets = UIEdgeInsetsMake(8, 16, 8, 16)
+        noButton.setBackgroundImage(redImage, for: UIControl.State())
+        noButton.contentEdgeInsets = UIEdgeInsets.init(top: 8, left: 16, bottom: 8, right: 16)
         let noThanksAction = #selector(LayoutGuideController.noThanks(_:))
         noButton.addTarget(self, action: noThanksAction, for: .touchUpInside)
       
         yesButton.translatesAutoresizingMaskIntoConstraints = false
-        yesButton.setTitle("Yes please!", for: UIControlState())
+        yesButton.setTitle("Yes please!", for: UIControl.State())
         let greenImage = UIImage(named: "greenButton")
-        yesButton.setBackgroundImage(greenImage, for: UIControlState())
-        yesButton.contentEdgeInsets = UIEdgeInsetsMake(8, 16, 8, 16)
+        yesButton.setBackgroundImage(greenImage, for: UIControl.State())
+        yesButton.contentEdgeInsets = UIEdgeInsets.init(top: 8, left: 16, bottom: 8, right: 16)
         let yesPleaseAction = #selector(LayoutGuideController.yesPlease(_:))
         yesButton.addTarget(self, action: yesPleaseAction, for: .touchUpInside)
         
