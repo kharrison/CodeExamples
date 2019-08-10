@@ -44,7 +44,7 @@ extension UNMutableNotificationContent {
     ///   - sound: The sound to play when the notification is
     ///            delivered. Defaults to `UNNotificationSound.default()`.
 
-    convenience init(body: String, title: String, sound: UNNotificationSound = UNNotificationSound.default()) {
+    convenience init(body: String, title: String, sound: UNNotificationSound = UNNotificationSound.default) {
         self.init()
         self.title = NSString.localizedUserNotificationString(forKey: title, arguments: nil)
         self.body = body
