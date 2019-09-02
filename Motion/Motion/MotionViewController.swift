@@ -1,5 +1,4 @@
-//
-//  UYLAppDelegate.m
+//  MotionViewController.swift
 //  Motion
 //
 // Created by Keith Harrison http://useyourloaf.com
@@ -30,9 +29,45 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+import UIKit
 
-#import "UYLAppDelegate.h"
+class MotionViewController: UIViewController {
+    @IBOutlet private var pyramidView: UIView!
 
-@implementation UYLAppDelegate
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "grid")!)
 
-@end
+        var tilt: CGFloat = 50.0
+        var view = pyramidView
+        while view != nil {
+            addHorizontalTilt(tilt, verticalTilt: tilt, to: view)
+            tilt += 10
+            view = view?.subviews.first
+        }
+    }
+
+    func addHorizontalTilt(_ x: CGFloat, verticalTilt y: CGFloat, to view: UIView?) {
+        var effects = [UIInterpolatingMotionEffect]()
+
+        if x != 0 {
+            let xAxis = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
+            xAxis.minimumRelativeValue = -x
+            xAxis.maximumRelativeValue = x
+            effects.append(xAxis)
+        }
+
+        if y != 0 {
+            let yAxis = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
+            yAxis.minimumRelativeValue = -y
+            yAxis.maximumRelativeValue = y
+            effects.append(yAxis)
+        }
+
+        if !effects.isEmpty {
+            let group = UIMotionEffectGroup()
+            group.motionEffects = effects
+            view?.addMotionEffect(group)
+        }
+    }
+}

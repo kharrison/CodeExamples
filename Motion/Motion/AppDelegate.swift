@@ -1,5 +1,4 @@
-//
-//  main.m
+//  AppDelegate.swift
 //  Motion
 //
 // Created by Keith Harrison http://useyourloaf.com
@@ -30,14 +29,11 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+import UIKit
 
-#import <UIKit/UIKit.h>
-
-#import "UYLAppDelegate.h"
-
-int main(int argc, char * argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([UYLAppDelegate class]));
-    }
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
+    
 }
