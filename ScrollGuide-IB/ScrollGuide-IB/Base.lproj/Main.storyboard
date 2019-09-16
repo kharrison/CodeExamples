@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oDv-Y2-GcA">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Forecast-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ForecastViewController" customModule="ScrollGuide_IB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DqO-3s-Ai4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NFF-AK-Fer">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="408"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyo-AF-oUY">
+                                                <rect key="frame" x="20" y="20" width="335" height="31.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sun" translatesAutoresizingMaskIntoConstraints="NO" id="mKD-J1-Cp6">
+                                                <rect key="frame" x="20" y="59.5" width="335" height="300"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQi-S4-LT0">
+                                                <rect key="frame" x="20" y="367.5" width="335" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="20" bottom="20" trailing="20"/>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpG-TY-4uc">
+                                        <rect key="frame" x="8" y="8" width="25" height="24"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vpG-TY-4uc" firstAttribute="leading" secondItem="u2L-3c-xbn" secondAttribute="leading" constant="8" id="BlW-TX-MS4"/>
+                                    <constraint firstItem="NFF-AK-Fer" firstAttribute="width" secondItem="Xcy-ux-zCN" secondAttribute="width" id="EZM-lg-teb"/>
+                                    <constraint firstItem="NFF-AK-Fer" firstAttribute="trailing" secondItem="wMS-jo-cnl" secondAttribute="trailing" id="K1w-JO-hEz"/>
+                                    <constraint firstItem="NFF-AK-Fer" firstAttribute="leading" secondItem="wMS-jo-cnl" secondAttribute="leading" id="RPM-EZ-3ey"/>
+                                    <constraint firstItem="NFF-AK-Fer" firstAttribute="top" secondItem="wMS-jo-cnl" secondAttribute="top" id="RxH-G3-slb"/>
+                                    <constraint firstItem="NFF-AK-Fer" firstAttribute="bottom" secondItem="wMS-jo-cnl" secondAttribute="bottom" id="Vkz-c5-a4y"/>
+                                    <constraint firstItem="vpG-TY-4uc" firstAttribute="top" secondItem="u2L-3c-xbn" secondAttribute="top" constant="8" id="vEP-BM-Scm"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="u2L-3c-xbn"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="wMS-jo-cnl"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Xcy-ux-zCN"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" name="SkyBlue"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DqO-3s-Ai4" secondAttribute="trailing" id="C80-aA-5LQ"/>
+                            <constraint firstAttribute="bottom" secondItem="DqO-3s-Ai4" secondAttribute="bottom" id="aUy-xA-0ax"/>
+                            <constraint firstItem="DqO-3s-Ai4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="o2l-lR-W9V"/>
+                            <constraint firstItem="DqO-3s-Ai4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xHu-4J-Zfy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nxa-DI-Rwu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Forecast" id="F68-RW-Qzn"/>
+                    <connections>
+                        <outlet property="imageView" destination="mKD-J1-Cp6" id="0bE-aA-EMG"/>
+                        <outlet property="summaryLabel" destination="sQi-S4-LT0" id="vus-9R-oia"/>
+                        <outlet property="titleLabel" destination="Pyo-AF-oUY" id="Vec-jE-ekd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RUi-cj-fmT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oDv-Y2-GcA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ST4-5B-zV5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BtZ-XO-P0x"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XCH-9W-x0B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Sun" width="150" height="150"/>
+        <namedColor name="SkyBlue">
+            <color red="0.46299999952316284" green="0.83499997854232788" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
