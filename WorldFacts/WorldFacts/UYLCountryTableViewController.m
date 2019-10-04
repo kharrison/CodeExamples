@@ -82,8 +82,12 @@ static NSString *UYLSegueShowCountry = @"UYLSegueShowCountry";
                                                           NSLocalizedString(@"ScopeButtonCapital",@"Capital")];
     self.searchController.searchBar.delegate = self;
     
-    self.tableView.tableHeaderView = self.searchController.searchBar;
-    
+    if (@available(iOS 11.0, *)) {
+        self.navigationItem.searchController = self.searchController;
+        self.navigationItem.hidesSearchBarWhenScrolling = NO;
+    } else {
+        self.tableView.tableHeaderView = self.searchController.searchBar;
+    }
     self.definesPresentationContext = YES;
     
     // The search bar does not seem to set its size automatically

@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H1p-Uh-vWS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--World-->
@@ -11,8 +13,8 @@
             <objects>
                 <navigationController title="World" id="RMx-3f-FxP" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="7bK-jq-Zjz" kind="relationship" relationship="rootViewController" id="tsl-Nk-0bq"/>
@@ -26,115 +28,96 @@
         <scene sceneID="yUG-lL-AsK">
             <objects>
                 <viewController storyboardIdentifier="UYLCountryViewController" title="Country" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JEX-9P-axG" customClass="UYLCountryViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
-                        <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Capital" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bQM-OT-jlm">
-                                <rect key="frame" x="20" y="88" width="276" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="20" y="112" width="183" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Population" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TXI-S5-bhL">
-                                <rect key="frame" x="20" y="116" width="276" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="20" y="140" width="183" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Area" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1SQ-OB-xIE">
-                                <rect key="frame" x="20" y="144" width="276" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="20" y="168" width="183" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Currency" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="s7E-wv-syB">
-                                <rect key="frame" x="20" y="172" width="276" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="20" y="196" width="183" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Continent" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mRc-wM-yzs">
-                                <rect key="frame" x="20" y="200" width="276" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="20" y="224" width="183" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Phone" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lvj-DS-xmg">
-                                <rect key="frame" x="20" y="228" width="276" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="20" y="252" width="183" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="TLD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1ef-At-6b9">
-                                <rect key="frame" x="20" y="256" width="276" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="20" y="280" width="183" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="capital" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="toI-tD-zCB">
-                                <rect key="frame" x="304" y="88" width="276" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="211" y="112" width="183" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="population" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f8g-Bz-UEv">
-                                <rect key="frame" x="304" y="116" width="276" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="211" y="140" width="183" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="area" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="E8q-No-t25">
-                                <rect key="frame" x="304" y="144" width="276" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="211" y="168" width="183" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="currency" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qkL-uC-y3H">
-                                <rect key="frame" x="304" y="172" width="276" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="211" y="196" width="183" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="continent" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jgV-bl-lsA">
-                                <rect key="frame" x="304" y="200" width="276" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="211" y="224" width="183" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="n2M-ZX-p5w">
-                                <rect key="frame" x="304" y="228" width="276" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="211" y="252" width="183" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="tld" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="N9c-s9-ZdL">
-                                <rect key="frame" x="304" y="256" width="276" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="211" y="280" width="183" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="f8g-Bz-UEv" firstAttribute="width" secondItem="TXI-S5-bhL" secondAttribute="width" id="0Jt-Sk-ne8"/>
                             <constraint firstItem="E8q-No-t25" firstAttribute="height" secondItem="1SQ-OB-xIE" secondAttribute="height" id="2XL-fW-Jho"/>
@@ -160,7 +143,7 @@
                             <constraint firstItem="E8q-No-t25" firstAttribute="width" secondItem="1SQ-OB-xIE" secondAttribute="width" id="Tu4-Ff-puD"/>
                             <constraint firstItem="N9c-s9-ZdL" firstAttribute="top" secondItem="n2M-ZX-p5w" secondAttribute="bottom" constant="8" symbolic="YES" id="X3w-MH-fQX"/>
                             <constraint firstItem="lvj-DS-xmg" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="XUw-A3-oUz"/>
-                            <constraint firstItem="toI-tD-zCB" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="24" id="aCa-Ec-uQM"/>
+                            <constraint firstItem="toI-tD-zCB" firstAttribute="top" secondItem="zPf-RX-Lfr" secondAttribute="top" constant="24" id="aCa-Ec-uQM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="n2M-ZX-p5w" secondAttribute="trailing" id="bZQ-q9-bbw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qkL-uC-y3H" secondAttribute="trailing" id="d7S-iN-dTa"/>
                             <constraint firstItem="s7E-wv-syB" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="eVc-WU-hyk"/>
@@ -177,7 +160,7 @@
                             <constraint firstItem="mRc-wM-yzs" firstAttribute="height" secondItem="jgV-bl-lsA" secondAttribute="height" id="t24-kN-Rcg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="N9c-s9-ZdL" secondAttribute="trailing" id="t6D-JX-5oC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="toI-tD-zCB" secondAttribute="trailing" id="tDl-Mr-bOu"/>
-                            <constraint firstItem="bQM-OT-jlm" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="24" id="u03-Rm-PtJ"/>
+                            <constraint firstItem="bQM-OT-jlm" firstAttribute="top" secondItem="zPf-RX-Lfr" secondAttribute="top" constant="24" id="u03-Rm-PtJ"/>
                             <constraint firstItem="1SQ-OB-xIE" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="u9E-3k-Hds"/>
                             <constraint firstItem="bQM-OT-jlm" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="uO3-fs-kCO"/>
                             <constraint firstItem="n2M-ZX-p5w" firstAttribute="leading" secondItem="lvj-DS-xmg" secondAttribute="trailing" constant="8" symbolic="YES" id="xUK-hT-ZA5"/>
@@ -186,6 +169,7 @@
                             <constraint firstItem="lvj-DS-xmg" firstAttribute="top" secondItem="mRc-wM-yzs" secondAttribute="bottom" constant="8" symbolic="YES" id="zaH-ei-sIF"/>
                             <constraint firstItem="1ef-At-6b9" firstAttribute="top" secondItem="lvj-DS-xmg" secondAttribute="bottom" constant="8" symbolic="YES" id="zhr-dk-qZh"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="zPf-RX-Lfr"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Country" id="mOI-FS-AaM"/>
@@ -236,41 +220,36 @@
             <objects>
                 <tableViewController storyboardIdentifier="UYLCountryTableViewController" autoresizesArchivedViewToFullSize="NO" title="World" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="UYLCountryTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UYLCountryCellIdentifier" id="WCw-Qf-5nD" customClass="CountryCell">
-                                <rect key="frame" x="0.0" y="86" width="600" height="64"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="63"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXz-JQ-J7M">
-                                            <rect key="frame" x="8" y="8" width="584" height="22"/>
-                                            <animations/>
+                                            <rect key="frame" x="20" y="11" width="374" height="16"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Capital" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vsL-py-cNz">
-                                            <rect key="frame" x="8" y="38" width="451" height="17"/>
-                                            <animations/>
+                                            <rect key="frame" x="20" y="35" width="233.5" height="18"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pop: 1,234,567,890" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="srZ-4X-ZJ4">
-                                            <rect key="frame" x="467" y="38" width="125" height="17"/>
-                                            <animations/>
+                                            <rect key="frame" x="261.5" y="35" width="132.5" height="18"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <animations/>
                                     <constraints>
                                         <constraint firstItem="srZ-4X-ZJ4" firstAttribute="leading" secondItem="vsL-py-cNz" secondAttribute="trailing" constant="8" symbolic="YES" id="1aj-Ud-hPK"/>
                                         <constraint firstItem="BXz-JQ-J7M" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leadingMargin" id="Mfw-Xg-x8D"/>
@@ -284,8 +263,7 @@
                                         <constraint firstItem="BXz-JQ-J7M" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="topMargin" id="mcm-B7-P6g"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="capitalLabel" destination="vsL-py-cNz" id="hS1-2Z-wXm"/>
                                     <outlet property="countryLabel" destination="BXz-JQ-J7M" id="24g-LM-NHE"/>
@@ -311,8 +289,8 @@
             <objects>
                 <navigationController storyboardIdentifier="UYLCountryNavController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vC3-pB-5Vb" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="GKi-kA-LjT"/>
