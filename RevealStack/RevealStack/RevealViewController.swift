@@ -34,10 +34,9 @@
 import UIKit
 
 class RevealViewController: UIViewController {
-
-    @IBOutlet private weak var rootStackView: UIStackView!
-    @IBOutlet private weak var imageStackView: UIStackView!
-    @IBOutlet private weak var revealSwitch: UISwitch!
+    @IBOutlet private var rootStackView: UIStackView!
+    @IBOutlet private var imageStackView: UIStackView!
+    @IBOutlet private var revealSwitch: UISwitch!
 
     private lazy var coverView: UIView = {
         let view = UIView()
@@ -81,4 +80,3 @@ class RevealViewController: UIViewController {
         view.pin(to: stackView)
     }
 }
-
