@@ -28,8 +28,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
-
+final class SettingsViewController: UIViewController {
     @IBOutlet var stackView: UIStackView!
 
     let backgroundView: UIView = {
@@ -42,6 +41,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        configureView(for: traitCollection)
     }
 
     private func setupView() {
@@ -51,7 +51,7 @@ class SettingsViewController: UIViewController {
             backgroundView.topAnchor.constraint(equalTo: stackView.topAnchor),
             backgroundView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
             backgroundView.bottomAnchor.constraint(equalTo: stackView.bottomAnchor)
-            ])
+        ])
     }
 }
 
