@@ -29,7 +29,6 @@
 import UIKit
 
 final class CodeViewController: UIViewController {
-
     private let chapterLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .headline)
@@ -69,7 +68,7 @@ final class CodeViewController: UIViewController {
             stackView.topAnchor.constraint(equalTo: readable.topAnchor),
             stackView.trailingAnchor.constraint(equalTo: readable.trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: readable.bottomAnchor),
-            ])
+        ])
         return view
     }()
 
@@ -108,7 +107,7 @@ final class CodeViewController: UIViewController {
             scrollView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
 
-            scrollView.widthAnchor.constraint(equalTo: containerView.widthAnchor)
-            ])
+            scrollView.widthAnchor.constraint(equalTo: containerView.widthAnchor),
+        ])
     }
 }

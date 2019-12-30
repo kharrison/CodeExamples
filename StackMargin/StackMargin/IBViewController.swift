@@ -29,7 +29,6 @@
 import UIKit
 
 final class IBViewController: UIViewController {
-
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var chapterLabel: UILabel!
     @IBOutlet var textView: UITextView!
@@ -63,6 +62,6 @@ final class IBViewController: UIViewController {
             backgroundView.topAnchor.constraint(equalTo: stackView.topAnchor),
             backgroundView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
             backgroundView.bottomAnchor.constraint(equalTo: stackView.bottomAnchor)
-            ])
+        ])
     }
 }
