@@ -66,7 +66,6 @@ import UIKit
 /// font.
 
 public final class ScaledFont {
-
     private struct FontDescription: Decodable {
         let fontSize: CGFloat
         let fontName: String
@@ -80,7 +79,7 @@ public final class ScaledFont {
     /// - Parameter fontName: Name of a plist file (without the extension)
     ///   in the main bundle that contains the style dictionary used to
     ///   scale fonts for each text style.
-    
+
     public init(fontName: String) {
         if let url = Bundle.main.url(forResource: fontName, withExtension: "plist"),
             let data = try? Data(contentsOf: url) {
@@ -105,7 +104,7 @@ public final class ScaledFont {
     public func font(forTextStyle textStyle: UIFont.TextStyle) -> UIFont {
         guard let fontDescription = styleDictionary?[textStyle.rawValue],
             let font = UIFont(name: fontDescription.fontName, size: fontDescription.fontSize) else {
-                return UIFont.preferredFont(forTextStyle: textStyle)
+            return UIFont.preferredFont(forTextStyle: textStyle)
         }
 
         let fontMetrics = UIFontMetrics(forTextStyle: textStyle)

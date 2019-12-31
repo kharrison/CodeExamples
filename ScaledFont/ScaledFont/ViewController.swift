@@ -30,7 +30,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
 //    private let fontName = "Default"
 //    private let fontName = "Noteworthy"
     private let fontName = "NotoSerif"
@@ -38,7 +37,7 @@ class ViewController: UIViewController {
     private let defaultSpacing: CGFloat = 8.0
 
     private lazy var scaledFont: ScaledFont = {
-        return ScaledFont(fontName: fontName)
+        ScaledFont(fontName: fontName)
     }()
 
     override func viewDidLoad() {
@@ -48,43 +47,43 @@ class ViewController: UIViewController {
     }
 
     private lazy var title1Label: UILabel = {
-        return label(forTextStyle: .title1, text: "Title 1")
+        label(forTextStyle: .title1, text: "Title 1")
     }()
 
     private lazy var title2Label: UILabel = {
-        return label(forTextStyle: .title2, text: "Title 2")
+        label(forTextStyle: .title2, text: "Title 2")
     }()
 
     private lazy var title3Label: UILabel = {
-        return label(forTextStyle: .title3, text: "Title 3")
+        label(forTextStyle: .title3, text: "Title 3")
     }()
 
     private lazy var headlineLabel: UILabel = {
-        return label(forTextStyle: .headline, text: "Headline")
+        label(forTextStyle: .headline, text: "Headline")
     }()
 
     private lazy var subheadlineLabel: UILabel = {
-        return label(forTextStyle: .subheadline, text: "Subheadline")
+        label(forTextStyle: .subheadline, text: "Subheadline")
     }()
 
     private lazy var bodyLabel: UILabel = {
-        return label(forTextStyle: .body, text: "Body")
+        label(forTextStyle: .body, text: "Body")
     }()
 
     private lazy var calloutLabel: UILabel = {
-        return label(forTextStyle: .callout, text: "Callout")
+        label(forTextStyle: .callout, text: "Callout")
     }()
 
     private lazy var footnoteLabel: UILabel = {
-        return label(forTextStyle: .footnote, text: "Footnote")
+        label(forTextStyle: .footnote, text: "Footnote")
     }()
 
     private lazy var caption1Label: UILabel = {
-        return label(forTextStyle: .caption1, text: "Caption 1")
+        label(forTextStyle: .caption1, text: "Caption 1")
     }()
 
     private lazy var caption2Label: UILabel = {
-        return label(forTextStyle: .caption2, text: "Caption 2")
+        label(forTextStyle: .caption2, text: "Caption 2")
     }()
 
     private func label(forTextStyle textStyle: UIFont.TextStyle, text: String) -> UILabel {
@@ -120,6 +119,6 @@ class ViewController: UIViewController {
             scrollView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
 
             scrollView.widthAnchor.constraint(equalTo: stackView.widthAnchor)
-            ])
+        ])
     }
 }
