@@ -36,7 +36,6 @@ import UIKit
 
 @IBDesignable
 public class GridView: UIView {
-
     /// The number of horizontal rows - default is 1.
     @IBInspectable public var rowCount: Int = 1 { didSet { setNeedsDisplay() } }
 
@@ -49,7 +48,7 @@ public class GridView: UIView {
     /// The grid line width - default is 1 point.
     @IBInspectable public var lineWidth: CGFloat = 1.0 { didSet { setNeedsDisplay() } }
 
-    override public func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         lineColor.set()
         rowPath?.stroke()
         columnPath?.stroke()
