@@ -30,8 +30,7 @@
 import UIKit
 import WebKit
 
-class HTMLViewControler: UIViewController {
-
+final class HTMLViewControler: UIViewController {
     private lazy var webview: WKWebView = {
         let preferences = WKPreferences()
         preferences.javaScriptEnabled = false
@@ -41,15 +40,15 @@ class HTMLViewControler: UIViewController {
         webview.translatesAutoresizingMaskIntoConstraints = false
         return webview
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         loadHTML("readme.html")
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(contentSizeDidChange(_:)), name: NSNotification.Name.UIContentSizeCategoryDidChange, object: nil)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(contentSizeDidChange(_:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
     }
-    
+
     private func setupViews() {
         view.addSubview(webview)
         NSLayoutConstraint.activate([
@@ -57,16 +56,16 @@ class HTMLViewControler: UIViewController {
             webview.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             webview.topAnchor.constraint(equalTo: view.topAnchor),
             webview.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-            ])
+        ])
     }
-    
+
     private func loadHTML(_ file: String) {
         if let baseURL = Bundle.main.resourceURL {
             let fileURL = baseURL.appendingPathComponent(file)
             webview.loadFileURL(fileURL, allowingReadAccessTo: fileURL)
         }
     }
-    
+
     @objc private func contentSizeDidChange(_ notification: Notification) {
         webview.reload()
     }
