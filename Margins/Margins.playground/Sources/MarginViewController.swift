@@ -51,7 +51,7 @@ public class MarginViewController: UIViewController {
     private func setupViews() {
         view.addSubview(redView)
         NSLayoutConstraint.activate([
-            redView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor),
+            redView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             redView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             redView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
             ])
@@ -77,7 +77,7 @@ public class MarginViewController: UIViewController {
 
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: redView.bottomAnchor),
-            stackView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 

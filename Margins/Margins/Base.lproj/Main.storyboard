@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gSU-NW-Vv4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gSU-NW-Vv4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,10 +14,6 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,14 +52,15 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ASO-GL-OA2" secondAttribute="trailing" id="K3Y-U5-ZR3"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ASO-GL-OA2" secondAttribute="bottom" id="PFs-2N-ef4"/>
+                            <constraint firstItem="rcO-d8-Dii" firstAttribute="bottom" secondItem="ASO-GL-OA2" secondAttribute="bottom" id="PFs-2N-ef4"/>
                             <constraint firstAttribute="trailing" secondItem="oX0-Fe-eY0" secondAttribute="trailing" id="Szh-iF-cBQ"/>
-                            <constraint firstItem="oX0-Fe-eY0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cLA-gc-RcN"/>
+                            <constraint firstItem="oX0-Fe-eY0" firstAttribute="top" secondItem="rcO-d8-Dii" secondAttribute="top" id="cLA-gc-RcN"/>
                             <constraint firstItem="ASO-GL-OA2" firstAttribute="height" secondItem="oX0-Fe-eY0" secondAttribute="height" id="icl-GG-TMO"/>
                             <constraint firstItem="oX0-Fe-eY0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j31-AW-agP"/>
                             <constraint firstItem="ASO-GL-OA2" firstAttribute="top" secondItem="oX0-Fe-eY0" secondAttribute="bottom" id="pfn-zT-Wiv"/>
                             <constraint firstItem="ASO-GL-OA2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rh9-IH-YXO"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="rcO-d8-Dii"/>
                     </view>
                     <navigationItem key="navigationItem" title="Margins" id="4Tv-Ec-9ee"/>
                 </viewController>
@@ -77,7 +74,7 @@
                 <navigationController storyboardIdentifier="NVC" automaticallyAdjustsScrollViewInsets="NO" id="gSU-NW-Vv4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OGC-VO-ehI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
