@@ -30,11 +30,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet private var fullScreenConstraints: [NSLayoutConstraint]!
     @IBOutlet private var halfScreenConstraints: [NSLayoutConstraint]!
-    @IBOutlet private weak var modeSwitch: UISwitch!
-    @IBOutlet private weak var countDisplay: UILabel!
+    @IBOutlet private var modeSwitch: UISwitch!
+    @IBOutlet private var countDisplay: UILabel!
 
     override var prefersStatusBarHidden: Bool {
         if #available(iOS 11.0, *) {
@@ -44,8 +43,8 @@ class ViewController: UIViewController {
         }
     }
 
-    override func preferredScreenEdgesDeferringSystemGestures() -> UIRectEdge {
-        return fullScreenMode ? [.bottom,.top] : UIRectEdge()
+    override var preferredScreenEdgesDeferringSystemGestures: UIRectEdge {
+        return fullScreenMode ? [.bottom, .top] : UIRectEdge()
     }
 
     private var count = 0 {
