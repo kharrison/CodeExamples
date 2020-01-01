@@ -33,7 +33,7 @@
 
 import UIKit
 
-protocol LocationProviderDelegate: class {
+protocol LocationProviderDelegate: AnyObject {
     func didSelectLocation(_ location: Location)
 }
 
