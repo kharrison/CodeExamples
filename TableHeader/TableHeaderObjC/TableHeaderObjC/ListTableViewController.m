@@ -46,7 +46,7 @@
     self.listDataSource = [[ListDataSource alloc] init:self.tableView];
     self.tableView.dataSource = self.listDataSource;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 56.0;
+    self.tableView.estimatedRowHeight = UITableViewAutomaticDimension;
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contentSizeDidChange:) name:UIContentSizeCategoryDidChangeNotification object:nil];
 }

@@ -41,7 +41,7 @@ final class ListTableViewController: UITableViewController {
         listDataSource = ListDataSource(tableView: tableView)
         tableView.dataSource = listDataSource
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 56
+        tableView.estimatedRowHeight = UITableView.automaticDimension
 
         guard #available(iOS 10.0, *) else {
             // Manually observe the UIContentSizeCategoryDidChange
