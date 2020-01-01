@@ -33,7 +33,6 @@
 import UIKit
 
 extension UIRefreshControl {
-
     // Example class factory method with preset title
     class func uylDefault(target: Any?, action: Selector) -> UIRefreshControl {
         let refreshControl = UIRefreshControl()

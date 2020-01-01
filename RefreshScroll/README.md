@@ -2,7 +2,7 @@ An example of adding a refresh control to a scroll view. This uses
 the new in iOS 10 refreshControl property of UIScrollView. For
 further details see the following post:
 
-+ [Refresh Control Changes in iOS 10](http://useyourloaf.com/blog/refresh-control-changes-in-ios-10/)
++ [Refresh Control Changes in iOS 10](https://useyourloaf.com/blog/refresh-control-changes-in-ios-10/)
 
 ### Version History
 

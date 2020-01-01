@@ -33,10 +33,9 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
-    @IBOutlet private weak var scrollView: AdaptiveScrollView!
-    @IBOutlet private weak var orangeLabel: UILabel!
-    @IBOutlet private weak var orangeButton: UIButton!
+    @IBOutlet private var scrollView: AdaptiveScrollView!
+    @IBOutlet private var orangeLabel: UILabel!
+    @IBOutlet private var orangeButton: UIButton!
 
     private var orangeAvailable = true {
         didSet {

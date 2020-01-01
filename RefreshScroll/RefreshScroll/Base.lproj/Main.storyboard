@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ddz-bW-eGF">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ddz-bW-eGF">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Sign Up-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="SignUpVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SignUpViewController" customModule="ScrollView" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
+                <viewController storyboardIdentifier="SignUpVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SignUpViewController" customModule="RefreshScroll" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="AdaptiveScrollView" translatesAutoresizingMaskIntoConstraints="NO" id="n3a-da-OaP" customClass="AdaptiveScrollView" customModule="ScrollView" customModuleProvider="target">
-                                <rect key="frame" x="16" y="64" width="343" height="595"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="AdaptiveScrollView" translatesAutoresizingMaskIntoConstraints="NO" id="n3a-da-OaP" customClass="AdaptiveScrollView" customModule="RefreshScroll" customModuleProvider="target">
+                                <rect key="frame" x="16" y="44" width="343" height="623"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nd6-bu-okT">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="410"/>
@@ -81,10 +75,11 @@ For some extra benefits</string>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="n3a-da-OaP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" identifier="ScrollViewLeading" id="1yq-2f-9SP"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n3a-da-OaP" secondAttribute="bottom" constant="8" symbolic="YES" identifier="ScrollViewBottom" id="CK6-Co-RUN"/>
+                            <constraint firstItem="Zti-GV-oo8" firstAttribute="bottom" secondItem="n3a-da-OaP" secondAttribute="bottom" constant="8" symbolic="YES" identifier="ScrollViewBottom" id="CK6-Co-RUN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="n3a-da-OaP" secondAttribute="trailing" identifier="ScrollViewTrailing" id="cub-HT-Bpc"/>
-                            <constraint firstItem="n3a-da-OaP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rKt-a8-vON"/>
+                            <constraint firstItem="n3a-da-OaP" firstAttribute="top" secondItem="Zti-GV-oo8" secondAttribute="top" id="rKt-a8-vON"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zti-GV-oo8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign Up" id="Flf-w4-Veu"/>
                     <connections>
@@ -103,7 +98,7 @@ For some extra benefits</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ddz-bW-eGF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9cr-jM-NT4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
