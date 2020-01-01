@@ -38,8 +38,7 @@ protocol LocationProviderDelegate: class {
 }
 
 final class LocationTableViewController: UITableViewController {
-
-    weak var delegate:LocationProviderDelegate?
+    weak var delegate: LocationProviderDelegate?
 
     private var locationDataSource: LocationDataSource?
 

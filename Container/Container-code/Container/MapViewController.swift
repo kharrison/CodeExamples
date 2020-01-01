@@ -31,11 +31,10 @@
 //  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 //  POSSIBILITY OF SUCH DAMAGE.
 
-import UIKit
 import MapKit
+import UIKit
 
 final class MapViewController: UIViewController {
-
     @IBOutlet private var mapView: MKMapView!
 
     /// The zoom level to use when setting the span
@@ -58,7 +57,7 @@ final class MapViewController: UIViewController {
     }
 
     private func centerMap(_ coordinate: CLLocationCoordinate2D) {
-        let span = MKCoordinateSpan.init(latitudeDelta: zoom, longitudeDelta: zoom)
+        let span = MKCoordinateSpan(latitudeDelta: zoom, longitudeDelta: zoom)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         mapView.setRegion(region, animated: true)
     }
@@ -71,7 +70,6 @@ final class MapViewController: UIViewController {
 }
 
 extension MapViewController: MKMapViewDelegate {
-
     private enum AnnotationView: String {
         case pin = "Pin"
     }

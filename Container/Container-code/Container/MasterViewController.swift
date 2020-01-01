@@ -34,7 +34,6 @@
 import UIKit
 
 final class MasterViewController: UIViewController {
-
     private let topStackView = UIStackView()
 
     private lazy var locationTableViewController: LocationTableViewController = self.buildFromStoryboard("Main")
@@ -49,22 +48,9 @@ final class MasterViewController: UIViewController {
         locationTableViewController.delegate = self
     }
 
-    private var initialSetupDone = false
-
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        if !initialSetupDone {
-            // Set the initial stack view axis here when
-            // we are sure the root view bounds are set.
-            topStackView.axis = axisForSize(view.bounds.size)
-            initialSetupDone = true
-        }
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-
-        super.viewWillTransition(to: size, with: coordinator)
-        topStackView.axis = axisForSize(size)
+        topStackView.axis = axisForSize(view.bounds.size)
     }
 
     private func addContentController(_ child: UIViewController, to stackView: UIStackView) {
@@ -92,9 +78,9 @@ final class MasterViewController: UIViewController {
         NSLayoutConstraint.activate([
             topStackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
             topStackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
-            topStackView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 8.0),
-            bottomLayoutGuide.topAnchor.constraint(equalTo: topStackView.bottomAnchor, constant: 8.0)
-            ])
+            topStackView.topAnchor.constraint(equalTo: margins.topAnchor),
+            topStackView.bottomAnchor.constraint(equalTo: margins.bottomAnchor)
+        ])
     }
 
     private func axisForSize(_ size: CGSize) -> NSLayoutConstraint.Axis {
