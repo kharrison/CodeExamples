@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xzw-a9-VwR">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xzw-a9-VwR">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.47"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,16 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mB3-la-mCm">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <rect key="frame" x="16" y="44" width="343" height="623"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLQ-uL-TaK">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="297.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="307.5"/>
                                         <connections>
                                             <segue destination="U7D-tk-iio" kind="embed" id="cMa-Hy-DRl"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Xa-du-F3W">
-                                        <rect key="frame" x="0.0" y="305.5" width="343" height="297.5"/>
+                                        <rect key="frame" x="0.0" y="315.5" width="343" height="307.5"/>
                                         <connections>
                                             <segue destination="cKy-YD-1zx" kind="embed" id="pzR-GA-VYK"/>
                                         </connections>
@@ -39,10 +37,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Buq-Lk-onu" firstAttribute="bottom" secondItem="mB3-la-mCm" secondAttribute="bottom" symbolic="YES" id="Ly3-ZQ-EB8"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="mB3-la-mCm" secondAttribute="bottom" id="Ly3-ZQ-EB8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mB3-la-mCm" secondAttribute="trailing" id="Y4S-ia-0mR"/>
                             <constraint firstAttribute="leadingMargin" secondItem="mB3-la-mCm" secondAttribute="leading" id="dl0-ml-jpO"/>
-                            <constraint firstItem="mB3-la-mCm" firstAttribute="top" secondItem="Buq-Lk-onu" secondAttribute="top" symbolic="YES" id="qkd-pJ-tUu"/>
+                            <constraint firstItem="mB3-la-mCm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="qkd-pJ-tUu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Buq-Lk-onu"/>
                     </view>
@@ -61,7 +59,7 @@
                 <navigationController storyboardIdentifier="MasterNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Xzw-a9-VwR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GbJ-pp-VsG">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -78,11 +76,11 @@
             <objects>
                 <tableViewController storyboardIdentifier="LocationTableViewController" id="U7D-tk-iio" customClass="LocationTableViewController" customModule="Container" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zae-L4-e7A">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="297.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="307.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="Iqd-5s-m28">
-                            <rect key="frame" x="0.0" y="92" width="343" height="0.0"/>
+                            <rect key="frame" x="0.0" y="120" width="343" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
@@ -91,7 +89,7 @@
                                 <rect key="frame" x="0.0" y="28" width="343" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6mJ-io-EV7" id="iDj-GS-CW4">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="63.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Za8-Oj-Xf1">
@@ -141,11 +139,11 @@
             <objects>
                 <viewController storyboardIdentifier="MapViewController" id="cKy-YD-1zx" customClass="MapViewController" customModule="Container" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AMm-cG-A4E">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="297.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="307.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1cu-uz-D1J">
-                                <rect key="frame" x="0.0" y="0.0" width="343" height="297.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="307.5"/>
                                 <connections>
                                     <outlet property="delegate" destination="cKy-YD-1zx" id="arn-da-fnc"/>
                                 </connections>

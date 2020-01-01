@@ -34,7 +34,6 @@
 import UIKit
 
 final class MasterViewController: UIViewController {
-
     @IBOutlet private var topStackView: UIStackView!
     private var locationTableViewController: LocationTableViewController?
     private var mapViewController: MapViewController?
@@ -54,20 +53,13 @@ final class MasterViewController: UIViewController {
 //        locationController.delegate = self
 //    }
 
-    private var initialSetupDone = false
-
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        if !initialSetupDone {
-            // Set the initial stack view axis here when
-            // we are sure the root view bounds are set.
-            topStackView.axis = axisForSize(view.bounds.size)
-            initialSetupDone = true
-        }
+        topStackView.axis = axisForSize(view.bounds.size)
     }
 
     // Alternative to wiring up the interface in viewDidLoad (above) is to
-    // use prepare(for segue:sender:) which is still called for 
+    // use prepare(for segue:sender:) which is still called for
     // embed segues.
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -82,18 +74,12 @@ final class MasterViewController: UIViewController {
         }
     }
 
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        topStackView.axis = axisForSize(size)
-    }
-
     private func axisForSize(_ size: CGSize) -> NSLayoutConstraint.Axis {
         return size.width > size.height ? .horizontal : .vertical
     }
 }
 
 extension MasterViewController: LocationProviderDelegate {
-
     func didSelectLocation(_ location: Location) {
         mapViewController?.coordinate = location.coordinate
     }
