@@ -34,7 +34,6 @@
 import UIKit
 
 class OptionViewController: UIViewController {
-
     private enum InputKey: String {
         case low = "1"
         case medium = "2"
@@ -46,20 +45,20 @@ class OptionViewController: UIViewController {
 
     override var keyCommands: [UIKeyCommand]? {
         return [
-        UIKeyCommand(input: InputKey.low.rawValue,
-                     modifierFlags: .command,
-                     action: #selector(OptionViewController.performCommand(sender:)),
-                     discoverabilityTitle: NSLocalizedString("LowPriority", comment: "Low priority")),
+            UIKeyCommand(input: InputKey.low.rawValue,
+                         modifierFlags: .command,
+                         action: #selector(OptionViewController.performCommand(sender:)),
+                         discoverabilityTitle: NSLocalizedString("LowPriority", comment: "Low priority")),
 
-        UIKeyCommand(input: InputKey.medium.rawValue,
-                     modifierFlags: .command,
-                     action: #selector(OptionViewController.performCommand(sender:)),
-                     discoverabilityTitle: NSLocalizedString("MediumPriority", comment: "Medium priority")),
+            UIKeyCommand(input: InputKey.medium.rawValue,
+                         modifierFlags: .command,
+                         action: #selector(OptionViewController.performCommand(sender:)),
+                         discoverabilityTitle: NSLocalizedString("MediumPriority", comment: "Medium priority")),
 
-        UIKeyCommand(input: InputKey.high.rawValue,
-                     modifierFlags: .command,
-                     action: #selector(OptionViewController.performCommand(sender:)),
-                     discoverabilityTitle: NSLocalizedString("HighPriority", comment: "High priority"))
+            UIKeyCommand(input: InputKey.high.rawValue,
+                         modifierFlags: .command,
+                         action: #selector(OptionViewController.performCommand(sender:)),
+                         discoverabilityTitle: NSLocalizedString("HighPriority", comment: "High priority"))
         ]
     }
 
@@ -74,9 +73,9 @@ class OptionViewController: UIViewController {
         }
     }
 
-// You can also add key commands without overriding the
-// keyCommands property. For example you could call the
-// following function from viewDidLoad:
+    // You can also add key commands without overriding the
+    // keyCommands property. For example you could call the
+    // following function from viewDidLoad:
 
 //    private func setupCommands() {
 //        let lowCommand = UIKeyCommand(input: InputKey.low.rawValue,
@@ -100,7 +99,6 @@ class OptionViewController: UIViewController {
 }
 
 extension OptionViewController: SegueHandlerType {
-
     enum SegueIdentifier: String {
         case low
         case medium
@@ -108,7 +106,6 @@ extension OptionViewController: SegueHandlerType {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
         guard let navController = segue.destination as? UINavigationController,
             let viewController = navController.topViewController as? DetailViewController else {
             fatalError("Expected embedded DetailViewController")

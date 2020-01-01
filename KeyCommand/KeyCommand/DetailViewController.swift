@@ -34,7 +34,6 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
     var priority = UYLPriority.none {
         didSet {
             configureView()
@@ -43,7 +42,7 @@ class DetailViewController: UIViewController {
 
     override var keyCommands: [UIKeyCommand]? {
         return [
-            UIKeyCommand(input: UIKeyInputEscape,
+            UIKeyCommand(input: UIKeyCommand.inputEscape,
                          modifierFlags: [],
                          action: #selector(DetailViewController.dismissAction),
                          discoverabilityTitle: NSLocalizedString("CloseWindow", comment: "Close window"))

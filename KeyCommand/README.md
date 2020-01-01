@@ -11,5 +11,6 @@ See the following blog post for further details:
 
 #### Version History
 
++ Version 1.2 01 Jan 2020 Updated for Xcode 11
 + Version 1.1 26 Oct 2017 Updated for Xcode 9 and Swift 4
 + Version 1.0 12 Nov 2016 Initial Version
