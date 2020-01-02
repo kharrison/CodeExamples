@@ -33,28 +33,13 @@
 
 import UIKit
 
-class MasterViewController: UIViewController {
-
-    fileprivate var collapseDetailViewController = true
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        splitViewController?.delegate = self
-    }
-
+final class MasterViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
         guard let navController = segue.destination as? UINavigationController,
-              let viewController = navController.topViewController as? DetailViewController
+            let viewController = navController.topViewController as? DetailViewController
         else {
             fatalError("Expected DetailViewController")
         }
-
-        // Once we have something to show in the detail
-        // view allow the default which is to show the 
-        // secondary in a collapsed split view
-
-        collapseDetailViewController = false
 
         viewController.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
         viewController.navigationItem.leftItemsSupplementBackButton = true
@@ -63,11 +48,18 @@ class MasterViewController: UIViewController {
 }
 
 extension MasterViewController: UISplitViewControllerDelegate {
-
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        // Returning true prevents the default of showing
+        // the secondary view controller.
+        guard let navigationController = secondaryViewController as? UINavigationController,
+            let detailViewController = navigationController.topViewController as? DetailViewController else {
+            // Fallback to the default
+            return false
+        }
 
-        // Returning true prevents the default of showing the secondary
-        // view controller.
-        return collapseDetailViewController
+        // Once we have something to show in the detail
+        // view return false to show the secondary in a
+        // collapsed split view
+        return detailViewController.detailItem == nil
     }
 }

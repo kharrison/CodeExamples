@@ -34,5 +34,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UIViewController
+@interface MasterViewController : UIViewController <UISplitViewControllerDelegate>
 @end

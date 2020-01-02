@@ -33,14 +33,21 @@
 
 
 #import "AppDelegate.h"
+#import "MasterViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
     splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModeAllVisible;
+
+    UINavigationController *masterNavigationController = [splitViewController.viewControllers firstObject];
+    MasterViewController *masterViewController = (MasterViewController *)masterNavigationController.topViewController;
+    splitViewController.delegate = masterViewController;
+
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
     navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
+    navigationController.topViewController.navigationItem.leftItemsSupplementBackButton = YES;
     return YES;
 }
 

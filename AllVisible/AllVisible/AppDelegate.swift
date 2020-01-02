@@ -35,23 +35,35 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        guard let splitViewController = self.window?.rootViewController as? UISplitViewController else {
+            fatalError("Missing SplitViewController")
+        }
+
+        guard let masterNavController = splitViewController.viewControllers.first as? UINavigationController,
+            let masterViewController = masterNavController.topViewController as? MasterViewController else {
+            fatalError("Missing MasterViewController")
+        }
+
+        guard let navigationController = splitViewController.viewControllers.last as? UINavigationController,
+            let detailViewController = navigationController.topViewController else {
+            fatalError("Missing detail view controller")
+        }
 
         // Configure the SplitViewController to prefer to always
-        // show both master and detail views and add the display
-        // mode button to the navigation bar of the secondary
-        // view controller.
+        // show both master and detail views.
+        splitViewController.preferredDisplayMode = .allVisible
 
-        if let splitViewController = self.window?.rootViewController as? UISplitViewController {
-            splitViewController.preferredDisplayMode = .allVisible
+        // Make the master view controller the delegate.
+        splitViewController.delegate = masterViewController
 
-            if let navigationController = splitViewController.viewControllers.last as? UINavigationController {
-                navigationController.topViewController?.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
-            }
-        }
+        // Add the display mode button to the navigation bar
+        // of the secondary view controller.
+        detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+        detailViewController.navigationItem.leftItemsSupplementBackButton = true
+
         return true
     }
 }

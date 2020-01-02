@@ -35,30 +35,24 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 
-@interface MasterViewController () <UISplitViewControllerDelegate>
-@property (nonatomic, assign) BOOL collapseDetailViewController;
-@end
-
 @implementation MasterViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.collapseDetailViewController = YES;
-    self.splitViewController.delegate = self;
-}
-
 - (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
-    return self.collapseDetailViewController;
+    if ([secondaryViewController isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *navigationController = (UINavigationController *)secondaryViewController;
+        if ([navigationController.topViewController isKindOfClass:[DetailViewController class]]) {
+            DetailViewController *detailViewController = (DetailViewController *)navigationController.topViewController;
+            return detailViewController.detailItem == NULL;
+        }
+    }
+    return NO;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
-    self.collapseDetailViewController = NO;
-
     if ([segue.destinationViewController isKindOfClass:[UINavigationController class]]) {
-        UINavigationController *navController = segue.destinationViewController;
-        if ([navController.topViewController isKindOfClass:[DetailViewController class]]) {
-            DetailViewController *viewController = (DetailViewController *)navController.topViewController;
+        UINavigationController *navigationController = segue.destinationViewController;
+        if ([navigationController.topViewController isKindOfClass:[DetailViewController class]]) {
+            DetailViewController *viewController = (DetailViewController *)navigationController.topViewController;
             viewController.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
             viewController.navigationItem.leftItemsSupplementBackButton = YES;
             viewController.detailItem = [NSDate date];

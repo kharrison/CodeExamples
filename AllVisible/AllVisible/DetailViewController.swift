@@ -33,8 +33,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
-
+final class DetailViewController: UIViewController {
     @IBOutlet private var detailLabel: UILabel!
 
     private func configureView() {

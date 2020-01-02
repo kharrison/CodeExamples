@@ -35,5 +35,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController
-@property (copy, nonatomic) NSDate *detailItem;
+@property (copy, nonatomic, nullable) NSDate *detailItem;
 @end
