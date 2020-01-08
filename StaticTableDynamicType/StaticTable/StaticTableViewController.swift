@@ -34,12 +34,9 @@
 import UIKit
 
 class StaticTableViewController: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.estimatedRowHeight = 56.0
-    }
-
+    // This is only necessary for iOS 9. If your minimum deployment
+    // target is iOS 10 select the "Automatically Adjusts Font" option
+    // in Interface Builder for each of the text labels.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         if let cell = cell as? UYLPreferredFont {
@@ -47,8 +44,10 @@ class StaticTableViewController: UITableViewController {
         }
         return cell
     }
-    
+
+    // This is only necessary for iOS 9 which seems to ignore the setting
+    // in Interface Builder.
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
 }

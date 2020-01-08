@@ -33,14 +33,14 @@
 
 import UIKit
 
-class UYLSubtitleStaticTableViewCell: UITableViewCell {
-    @IBOutlet fileprivate weak var titleText: UILabel!
-    @IBOutlet fileprivate weak var subtitleText: UILabel!
+final class UYLSubtitleStaticTableViewCell: UITableViewCell {
+    @IBOutlet private weak var titleText: UILabel!
+    @IBOutlet private weak var subtitleText: UILabel!
 }
 
 extension UYLSubtitleStaticTableViewCell: UYLPreferredFont {
     func contentSizeChanged() {
-        titleText.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
-        subtitleText.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
+        titleText.font = UIFont.preferredFont(forTextStyle: .headline)
+        subtitleText.font = UIFont.preferredFont(forTextStyle: .subheadline)
     }
 }

@@ -8,13 +8,12 @@
 
 import UIKit
 
-class UYLBasicStaticTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var titleText: UILabel!
+final class UYLBasicStaticTableViewCell: UITableViewCell {
+    @IBOutlet private weak var titleText: UILabel!
 }
 
 extension UYLBasicStaticTableViewCell: UYLPreferredFont {
     func contentSizeChanged() {
-        titleText.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
+        titleText.font = UIFont.preferredFont(forTextStyle: .headline)
     }
 }
