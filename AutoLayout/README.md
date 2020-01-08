@@ -12,12 +12,12 @@ Auto Layout examples using Interface Builder and in code.
 
 See the following posts further details:
 
-+ [Proportional Spacing with Auto Layout](http://useyourloaf.com/blog/proportional-spacing-with-auto-layout/)
-+ [Adapting Images for Size Classes](http://useyourloaf.com/blog/adapting-images-for-size-classes/)
-+ [Pain Free Constraints with Layout Anchors](http://useyourloaf.com/blog/pain-free-constraints-with-layout-anchors/)
-+ [Goodbye Spacer Views Hello Layout Guides](http://useyourloaf.com/blog/goodbye-spacer-views-hello-layout-guides/)
-+ [Adapting AutoLayout Without Interface Builder](http://useyourloaf.com/blog/adapting-auto-layout-without-interface-builder/)
-+ [Natural Text Alignment for RTL Languages](http://useyourloaf.com/blog/natural-text-alignment-for-rtl-languages/)
++ [Proportional Spacing with Auto Layout](https://useyourloaf.com/blog/proportional-spacing-with-auto-layout/)
++ [Adapting Images for Size Classes](https://useyourloaf.com/blog/adapting-images-for-size-classes/)
++ [Pain Free Constraints with Layout Anchors](https://useyourloaf.com/blog/pain-free-constraints-with-layout-anchors/)
++ [Goodbye Spacer Views Hello Layout Guides](https://useyourloaf.com/blog/goodbye-spacer-views-hello-layout-guides/)
++ [Adapting AutoLayout Without Interface Builder](https://useyourloaf.com/blog/adapting-auto-layout-without-interface-builder/)
++ [Natural Text Alignment for RTL Languages](https://useyourloaf.com/blog/natural-text-alignment-for-rtl-languages/)
 
 #### Version History
 

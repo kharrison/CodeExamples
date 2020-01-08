@@ -43,11 +43,11 @@ class ViewController: UIViewController {
         // Create a custom button and set title label style
         
         let orangeButton = UIButton(type: .custom)
-        orangeButton.setTitle("Orange", for: UIControlState())
-        orangeButton.setTitleColor(.orange, for: UIControlState())
+        orangeButton.setTitle("Orange", for: .normal)
+        orangeButton.setTitleColor(.orange, for: .normal)
         orangeButton.setTitleColor(.white, for: .highlighted)
         orangeButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        orangeButton.contentEdgeInsets = UIEdgeInsetsMake(8, 8, 8, 8)
+        orangeButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
 
         // Get the pre-sliced template images direct from the
         // asset catalog for the default and hightlighted states
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         let slicedBorderTemplate = UIImage(named: "slicedBorderTemplate")
         let slicedFillTemplate = UIImage(named: "slicedFillTemplate")
         
-        orangeButton.setBackgroundImage(slicedBorderTemplate, for: UIControlState())
+        orangeButton.setBackgroundImage(slicedBorderTemplate, for: .normal)
         orangeButton.setBackgroundImage(slicedFillTemplate, for: .highlighted)
         
         // The tintColor controls the colour used by the template images
