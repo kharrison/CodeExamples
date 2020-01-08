@@ -2,8 +2,8 @@
 //  encodeUITests.swift
 //  encodeUITests
 //
-//  Created by Keith Harrison http://useyourloaf.com
-//  Copyright (c) 2016 Keith Harrison. All rights reserved.
+//  Created by Keith Harrison https://useyourloaf.com
+//  Copyright (c) 2016-2020 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -63,7 +63,7 @@ class encodeUITests: XCTestCase {
     let input = "one two"
     let expectedRFC3986 = input.stringByAddingPercentEncodingForRFC3986()
     let expectedForm = input.stringByAddingPercentEncodingForFormData()
-    let expectedPlusForm = input.stringByAddingPercentEncodingForFormData(true)
+    let expectedPlusForm = input.stringByAddingPercentEncodingForFormData(plusForSpace: true)
     
     let textToEncodeTextField = app.textFields["InputText"]
     textToEncodeTextField.tap()

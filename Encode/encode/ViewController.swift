@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  encode
 //
-//  Created by Keith Harrison http://useyourloaf.com
-//  Copyright (c) 2016 Keith Harrison. All rights reserved.
+//  Created by Keith Harrison https://useyourloaf.com
+//  Copyright (c) 2016-2020 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -46,14 +46,14 @@ class ViewController: UIViewController {
   
   func updateOutputLabels() {
     let input = textInput.text
-    let usePlusForSpace = plusSwitch.on
+    let usePlusForSpace = plusSwitch.isOn
     rfc3986Output.text = input?.stringByAddingPercentEncodingForRFC3986()
-    formOutput.text = input?.stringByAddingPercentEncodingForFormData(usePlusForSpace)
+    formOutput.text = input?.stringByAddingPercentEncodingForFormData(plusForSpace: usePlusForSpace)
   }
 }
 
 extension ViewController: UITextFieldDelegate {
-  func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     updateOutputLabels()
     return true
   }

@@ -58,9 +58,9 @@ extension String {
   
   public func stringByAddingPercentEncodingForRFC3986() -> String? {
     let unreserved = "-._~/?"
-    let allowedCharacterSet = NSMutableCharacterSet.alphanumericCharacterSet()
-    allowedCharacterSet.addCharactersInString(unreserved)
-    return stringByAddingPercentEncodingWithAllowedCharacters(allowedCharacterSet)
+    let allowedCharacterSet = NSMutableCharacterSet.alphanumeric()
+    allowedCharacterSet.addCharacters(in: unreserved)
+    return addingPercentEncoding(withAllowedCharacters: allowedCharacterSet as CharacterSet)
   }
   
   /**
@@ -83,16 +83,16 @@ extension String {
 
   public func stringByAddingPercentEncodingForFormData(plusForSpace: Bool=false) -> String? {
     let unreserved = "*-._"
-    let allowedCharacterSet = NSMutableCharacterSet.alphanumericCharacterSet()
-    allowedCharacterSet.addCharactersInString(unreserved)
+    let allowedCharacterSet = NSMutableCharacterSet.alphanumeric()
+    allowedCharacterSet.addCharacters(in: unreserved)
     
     if plusForSpace {
-      allowedCharacterSet.addCharactersInString(" ")
+        allowedCharacterSet.addCharacters(in: " ")
     }
     
-    var encoded = stringByAddingPercentEncodingWithAllowedCharacters(allowedCharacterSet)
+    var encoded = addingPercentEncoding(withAllowedCharacters: allowedCharacterSet as CharacterSet)
     if plusForSpace {
-      encoded = encoded?.stringByReplacingOccurrencesOfString(" ", withString: "+")
+        encoded = encoded?.replacingOccurrences(of: " ", with: "+")
     }
     return encoded
   }

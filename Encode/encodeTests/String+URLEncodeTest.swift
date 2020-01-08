@@ -1,8 +1,8 @@
 //
 //  String+URLEncodeTest.swift
 //
-//  Created by Keith Harrison http://useyourloaf.com
-//  Copyright (c) 2016 Keith Harrison. All rights reserved.
+//  Created by Keith Harrison https://useyourloaf.com
+//  Copyright (c) 2016-2020 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -92,14 +92,14 @@ class URLEncodeTest: XCTestCase {
 
   func testFormSpacePlusEncoded() {
     let input = "one two"
-    let output = input.stringByAddingPercentEncodingForFormData(true)
+    let output = input.stringByAddingPercentEncodingForFormData(plusForSpace: true)
     let expected = "one+two"
     XCTAssertEqual(expected, output)
   }
 
   func testFormPlusIsPercentEncoded() {
     let input = "one+two"
-    let output = input.stringByAddingPercentEncodingForFormData(true)
+    let output = input.stringByAddingPercentEncodingForFormData(plusForSpace: true)
     let expected = "one%2Btwo"
     XCTAssertEqual(expected, output)
   }
