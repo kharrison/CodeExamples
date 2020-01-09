@@ -1,45 +1,41 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="oR1-Ct-cD2">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oR1-Ct-cD2">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Adaptive Popovers-->
         <scene sceneID="vbS-bL-Wov">
             <objects>
                 <viewController storyboardIdentifier="RootViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0h7-De-g0p" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OtC-7o-vTH"/>
-                        <viewControllerLayoutGuide type="bottom" id="b8g-fh-898"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="z26-5d-SYB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="e78-XV-oVY">
-                                <rect key="frame" x="263" y="254" width="75" height="92"/>
+                                <rect key="frame" x="150" y="287.5" width="75" height="92"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccv-b4-hcn">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="30"/>
-                                        <animations/>
                                         <state key="normal" title="Simple"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBD-po-W8j">
                                         <rect key="frame" x="0.0" y="62" width="75" height="30"/>
-                                        <animations/>
                                         <state key="normal" title="Embedded"/>
                                     </button>
                                 </subviews>
-                                <animations/>
                             </stackView>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="e78-XV-oVY" firstAttribute="centerX" secondItem="z26-5d-SYB" secondAttribute="centerX" id="EEa-nW-6iA"/>
+                            <constraint firstItem="e78-XV-oVY" firstAttribute="centerX" secondItem="QCe-6i-3UJ" secondAttribute="centerX" id="EEa-nW-6iA"/>
                             <constraint firstItem="e78-XV-oVY" firstAttribute="centerY" secondItem="z26-5d-SYB" secondAttribute="centerY" id="QN5-RY-iYL"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="QCe-6i-3UJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Adaptive Popovers" id="3di-bR-GhC"/>
                 </viewController>
@@ -53,9 +49,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oR1-Ct-cD2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3gE-EH-led">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

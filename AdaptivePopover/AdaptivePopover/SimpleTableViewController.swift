@@ -33,32 +33,30 @@
 
 import UIKit
 
-class SimpleTableViewController: UIViewController {
-
+final class SimpleTableViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ShowDetailSegue" {
-            if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
-                if let detailViewController = segue.destinationViewController as? DetailViewController {
-                    detailViewController.detailText = "Item \(indexPath.row)"
-                }
-            }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetailSegue",
+            let sender = sender as? UITableViewCell,
+            let indexPath = tableView.indexPath(for: sender),
+            let detailViewController = segue.destination as? DetailViewController {
+            detailViewController.detailText = "Item \(indexPath.row)"
         }
     }
 }
 
 extension SimpleTableViewController: UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SimpleCell", forIndexPath: indexPath)
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SimpleCell", for: indexPath)
         cell.textLabel?.text = "Item \(indexPath.row)"
         return cell
     }
