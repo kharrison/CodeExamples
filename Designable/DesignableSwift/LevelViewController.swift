@@ -33,17 +33,16 @@
 
 import UIKit
 
-class LevelViewController: UIViewController {
+final class LevelViewController: UIViewController {
+    @IBOutlet private var levelView: LevelView!
+    @IBOutlet private var stepper: UIStepper!
 
-    @IBOutlet weak var levelView: LevelView!
-    @IBOutlet weak var stepper: UIStepper!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         stepper.value = Double(levelView.value)
     }
-    
-    @IBAction func valueChanged(sender: UIStepper) {
+
+    @IBAction func valueChanged(_ sender: UIStepper) {
         levelView.value = CGFloat(sender.value)
     }
 }

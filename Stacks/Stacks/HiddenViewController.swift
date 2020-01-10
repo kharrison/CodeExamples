@@ -33,20 +33,19 @@
 
 import UIKit
 
-class HiddenViewController: UIViewController {
-    
-    @IBOutlet weak var extraHeart: UIImageView!
+final class HiddenViewController: UIViewController {
+    @IBOutlet private var extraHeart: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView(traitCollection.verticalSizeClass)
     }
-    
+
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         super.willTransition(to: newCollection, with: coordinator)
         configureView(newCollection.verticalSizeClass)
     }
-    
+
     private func configureView(_ verticalSizeClass: UIUserInterfaceSizeClass) {
         guard extraHeart != nil else {
             return

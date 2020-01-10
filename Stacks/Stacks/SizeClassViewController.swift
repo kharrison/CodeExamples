@@ -33,9 +33,8 @@
 
 import UIKit
 
-class SizeClassViewController: UIViewController {
-
-    @IBOutlet weak var stackView: UIStackView!
+final class SizeClassViewController: UIViewController {
+    @IBOutlet private var stackView: UIStackView!
     
     // The alignment axis of the stack view should be set correctly in the Storyboard
     // for the given size classes. It should be horizontal except for when the view
@@ -51,17 +50,17 @@ class SizeClassViewController: UIViewController {
 //        super.viewDidLoad()
 //        configureViewForSize(view.bounds.size)
 //    }
-
-//    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-//        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+//
+//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+//        super.viewWillTransition(to: size, with: coordinator)
 //        configureViewForSize(size)
 //    }
-
-//    private func configureViewForSize(size: CGSize) {
+//
+//    private func configureViewForSize(_ size: CGSize) {
 //        if size.width > size.height {
-//            stackView.axis = .Horizontal
+//            stackView.axis = .horizontal
 //        } else {
-//            stackView.axis = .Vertical
+//            stackView.axis = .vertical
 //        }
 //    }
 }
