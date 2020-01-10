@@ -7,9 +7,9 @@ Example of using self-sizing table view cells and universal storyboards
 introduced in iOS 8. This is a reworking of the Huckleberry project removing
 code that is no longer required. The full details are in the following post:
 
-http://useyourloaf.com/blog/2014/08/07/self-sizing-table-view-cells.html
+https://useyourloaf.com/blog/self-sizing-table-view-cells/
 
 The original post can also be found here:
 
-http://useyourloaf.com/blog/2014/02/14/table-view-cells-with-varying-row-heights.html
+https://useyourloaf.com/blog/table-view-cells-with-varying-row-heights/
 
