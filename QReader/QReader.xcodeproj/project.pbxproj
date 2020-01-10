@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,7 @@
 		5344A5B218DF769400C61776 /* UYLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5344A5B118DF769400C61776 /* UYLTableViewController.m */; };
 		5344A5B418DF769400C61776 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5344A5B318DF769400C61776 /* Images.xcassets */; };
 		537EB39F18E231FE006B6FF5 /* UYLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 537EB39E18E231FE006B6FF5 /* UYLWebViewController.m */; };
+		53B2CD6523C8ED8C007FF91F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53B2CD6723C8ED8C007FF91F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +38,6 @@
 		5344A5A018DF769400C61776 /* QReader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QReader-Info.plist"; sourceTree = "<group>"; };
 		5344A5A218DF769400C61776 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5344A5A418DF769400C61776 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5344A5A618DF769400C61776 /* QReader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QReader-Prefix.pch"; sourceTree = "<group>"; };
 		5344A5A718DF769400C61776 /* UYLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UYLAppDelegate.h; sourceTree = "<group>"; };
 		5344A5A818DF769400C61776 /* UYLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UYLAppDelegate.m; sourceTree = "<group>"; };
 		5344A5AB18DF769400C61776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -48,6 +48,7 @@
 		5344A5BA18DF769400C61776 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		537EB39D18E231FE006B6FF5 /* UYLWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLWebViewController.h; sourceTree = "<group>"; };
 		537EB39E18E231FE006B6FF5 /* UYLWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLWebViewController.m; sourceTree = "<group>"; };
+		53B2CD6623C8ED8C007FF91F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,12 +132,12 @@
 		5344A59F18DF769400C61776 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				53B2CD6723C8ED8C007FF91F /* LaunchScreen.storyboard */,
 				5344A5A718DF769400C61776 /* UYLAppDelegate.h */,
 				5344A5A818DF769400C61776 /* UYLAppDelegate.m */,
 				5344A5A018DF769400C61776 /* QReader-Info.plist */,
 				5344A5A118DF769400C61776 /* InfoPlist.strings */,
 				5344A5A418DF769400C61776 /* main.m */,
-				5344A5A618DF769400C61776 /* QReader-Prefix.pch */,
 				53249C0219AF6D8400EA1639 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
@@ -169,7 +170,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = UYL;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Keith Harrison";
 				TargetAttributes = {
 					5344A59418DF769400C61776 = {
@@ -178,8 +179,8 @@
 				};
 			};
 			buildConfigurationList = 5344A59018DF769400C61776 /* Build configuration list for PBXProject "QReader" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -203,6 +204,7 @@
 				53249C0419AF6D8400EA1639 /* Localizable.strings in Resources */,
 				5344A5AF18DF769400C61776 /* Main_iPad.storyboard in Resources */,
 				5344A5B418DF769400C61776 /* Images.xcassets in Resources */,
+				53B2CD6523C8ED8C007FF91F /* LaunchScreen.storyboard in Resources */,
 				5344A5AC18DF769400C61776 /* Main_iPhone.storyboard in Resources */,
 				5344A5A318DF769400C61776 /* InfoPlist.strings in Resources */,
 			);
@@ -259,6 +261,14 @@
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
+		53B2CD6723C8ED8C007FF91F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53B2CD6623C8ED8C007FF91F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -266,22 +276,37 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -294,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,29 +330,43 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -338,11 +377,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "QReader/QReader-Prefix.pch";
 				INFOPLIST_FILE = "QReader/QReader-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.useyourloaf.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -352,11 +390,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "QReader/QReader-Prefix.pch";
 				INFOPLIST_FILE = "QReader/QReader-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.useyourloaf.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
