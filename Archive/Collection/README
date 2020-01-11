@@ -1,0 +1,16 @@
+=======================================================================
+Collection - A Simple Collection View
+
+Version 1.0     27 September 2013   Initial version.
+=======================================================================
+
+**THIS BUG WAS RESOLVED IN iOS 9.3**
+
+This is a example project to reproduce a bug in the way that iOS 7
+repostions popovers when a view is rotated.
+
+For further details see the following blog post:
+
+https://useyourloaf.com/blog/uipopover-arrow-not-repositioned-correctly-on-rotation/
+
+You can also view the bug report on Open Radar at https://openradar.appspot.com/14995477
