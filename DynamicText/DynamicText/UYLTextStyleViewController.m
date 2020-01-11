@@ -54,11 +54,6 @@
     [self configureView];
 }
 
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
 - (void)configureView
 {
     self.textSizeLabel.text = [[UIApplication sharedApplication] preferredContentSizeCategory];
