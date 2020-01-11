@@ -22,7 +22,7 @@ as expected.
 
 For further details see the following blog post:
 
-http://useyourloaf.com/blog/2013/04/07/bug-table-view-state-not-restored-when-embedded-in-navigation-controller.html
+https://useyourloaf.com/blog/bug-table-view-state-not-restored-when-embedded-in-navigation-controller/
 
 **************************************************************************
 *** This bug has been tested and reproduced for iOS 6.0 and iOS 6.1.3. ***
