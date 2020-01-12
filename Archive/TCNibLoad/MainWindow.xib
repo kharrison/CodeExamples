@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIApplication">
+            <connections>
+                <outlet property="delegate" destination="3" id="99"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <customObject id="3" customClass="TCNibLoadAppDelegate">
+            <connections>
+                <outlet property="tabBarController" destination="106" id="113"/>
+                <outlet property="window" destination="2" id="9"/>
+            </connections>
+        </customObject>
+        <window opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="34" y="54"/>
+        </window>
+        <tabBarController id="106">
+            <extendedEdge key="edgesForExtendedLayout"/>
+            <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+            <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="107">
+                <rect key="frame" x="129" y="330" width="163" height="49"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            </tabBar>
+            <viewControllers>
+                <viewController nibName="OldViewController" id="108" userLabel="NSBundle" customClass="OldViewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="NSBundle" id="111"/>
+                </viewController>
+                <viewController nibName="OldViewController" id="109" userLabel="UINib" customClass="NewViewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="UINib" id="110"/>
+                </viewController>
+            </viewControllers>
+        </tabBarController>
+    </objects>
+</document>
