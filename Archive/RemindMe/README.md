@@ -8,5 +8,5 @@ The RemindMe App is a demonstration on how to schedule local notifications using
 
 The original posts were written for iOS 4 a long time ago:
 
-+ [Repeating an iOS local notification](http://useyourloaf.com/blog/repeating-an-ios-local-notification/)
-+ [Add Local Notification with iOS 4](http://useyourloaf.com/blog/adding-local-notifications-with-ios-4/)
++ [Repeating an iOS local notification](https://useyourloaf.com/blog/repeating-an-ios-local-notification/)
++ [Add Local Notification with iOS 4](https://useyourloaf.com/blog/adding-local-notifications-with-ios-4/)
