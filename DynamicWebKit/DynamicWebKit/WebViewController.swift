@@ -1,5 +1,5 @@
 //  Created by Keith Harrison https://useyourloaf.com
-//  Copyright (c) 2017 Keith Harrison. All rights reserved.
+//  Copyright (c) 2017-2020 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -30,43 +30,34 @@
 import UIKit
 import WebKit
 
-final class HTMLViewControler: UIViewController {
-    private lazy var webview: WKWebView = {
+final class WebViewController: UIViewController {
+    var html: String = "default" {
+        didSet {
+            loadHTML(html)
+        }
+    }
+
+    private lazy var webView: WKWebView = {
         let preferences = WKPreferences()
         preferences.javaScriptEnabled = false
         let configuration = WKWebViewConfiguration()
         configuration.preferences = preferences
-        let webview = WKWebView(frame: .zero, configuration: configuration)
-        webview.translatesAutoresizingMaskIntoConstraints = false
-        return webview
+        return WKWebView(frame: .zero, configuration: configuration)
     }()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupViews()
-        loadHTML("readme.html")
-
+    override func loadView() {
+        view = webView
+        loadHTML(html)
         NotificationCenter.default.addObserver(self, selector: #selector(contentSizeDidChange(_:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
     }
 
-    private func setupViews() {
-        view.addSubview(webview)
-        NSLayoutConstraint.activate([
-            webview.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            webview.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            webview.topAnchor.constraint(equalTo: view.topAnchor),
-            webview.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
-    }
-
-    private func loadHTML(_ file: String) {
-        if let baseURL = Bundle.main.resourceURL {
-            let fileURL = baseURL.appendingPathComponent(file)
-            webview.loadFileURL(fileURL, allowingReadAccessTo: fileURL)
-        }
-    }
-
     @objc private func contentSizeDidChange(_ notification: Notification) {
-        webview.reload()
+        webView.reload()
+    }
+
+    private func loadHTML(_ name: String) {
+        if let url = Bundle.main.url(forResource: name, withExtension: "html") {
+            webView.loadFileURL(url, allowingReadAccessTo: url)
+        }
     }
 }
