@@ -11,4 +11,4 @@ I've updated this project to support dark mode (requires iOS 13).
 For further details see the following blog posts:
 
 + [Using Dynamic Type With Web Views](https://useyourloaf.com/blog/using-dynamic-type-with-web-views/)
-+ [Supporting Dark Mode In Web Views](https://useyourloaf.com/blog/supporting-dark-mode-in-web-views/)
++ [Supporting Dark Mode In WkWebView](https://useyourloaf.com/blog/supporting-dark-mode-in-wkwebview/)
