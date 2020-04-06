@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		532A2F1D2425823D00A0005F /* String+Blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532A2F1C2425823D00A0005F /* String+Blank.swift */; };
+		5371387A243202D6006CB01D /* TermsViewControllerPreviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53713879243202D6006CB01D /* TermsViewControllerPreviews.swift */; };
 		5385DF762427C259001E63E0 /* AdaptiveScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5385DF752427C259001E63E0 /* AdaptiveScroll.swift */; };
 		539CD53024250D75000E2699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539CD52F24250D75000E2699 /* AppDelegate.swift */; };
 		539CD53224250D75000E2699 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539CD53124250D75000E2699 /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		532A2F1C2425823D00A0005F /* String+Blank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Blank.swift"; sourceTree = "<group>"; };
+		53713879243202D6006CB01D /* TermsViewControllerPreviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewControllerPreviews.swift; sourceTree = "<group>"; };
 		5385DF752427C259001E63E0 /* AdaptiveScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveScroll.swift; sourceTree = "<group>"; };
 		539CD52C24250D75000E2699 /* Validate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Validate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539CD52F24250D75000E2699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				539CD5432425109F000E2699 /* TermsViewController.swift */,
+				53713879243202D6006CB01D /* TermsViewControllerPreviews.swift */,
 				5385DF752427C259001E63E0 /* AdaptiveScroll.swift */,
 				532A2F1C2425823D00A0005F /* String+Blank.swift */,
 				539CD52F24250D75000E2699 /* AppDelegate.swift */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				539CD53024250D75000E2699 /* AppDelegate.swift in Sources */,
+				5371387A243202D6006CB01D /* TermsViewControllerPreviews.swift in Sources */,
 				5385DF762427C259001E63E0 /* AdaptiveScroll.swift in Sources */,
 				539CD5442425109F000E2699 /* TermsViewController.swift in Sources */,
 				539CD53224250D75000E2699 /* SceneDelegate.swift in Sources */,

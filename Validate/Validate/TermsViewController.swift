@@ -63,13 +63,14 @@ final class TermsViewController: UIViewController {
 
     @IBAction private func submitAction(_ sender: UIButton) {
         print("Submit... \(name)")
+        print(view.value(forKey: "_autolayoutTrace")!)
     }
 
     private var validToSubmit: AnyPublisher<Bool, Never> {
         return Publishers.CombineLatest3($acceptedTerms, $acceptedPrivacy, $name)
             .map { terms, privacy, name in
                 terms && privacy && !name.isBlank
-        }.eraseToAnyPublisher()
+            }.eraseToAnyPublisher()
     }
 
     // A longer approach just for fun:
@@ -95,3 +96,20 @@ final class TermsViewController: UIViewController {
     //        }.eraseToAnyPublisher()
     //    }
 }
+
+#if DEBUG
+import SwiftUI
+
+extension TermsViewController: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> TermsViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(identifier: "TermsViewController") as? TermsViewController else {
+            fatalError("Cannot load from storyboard")
+        }
+        return viewController
+    }
+
+    func updateUIViewController(_ uiViewController: TermsViewController, context: Context) {
+    }
+}
+#endif

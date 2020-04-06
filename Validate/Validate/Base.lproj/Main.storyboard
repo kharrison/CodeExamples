@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16095" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ucF-KU-dDs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ucF-KU-dDs">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16084.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,7 +34,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec posuere nul
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ojs-m8-Ph8" userLabel="AcceptTerms Control">
                                                 <rect key="frame" x="8" y="200" width="359" height="47"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="I accept the terms and conditions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNb-V2-xsx">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="751" text="I accept the terms and conditions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNb-V2-xsx">
                                                         <rect key="frame" x="8" y="8" width="286" height="31"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <nil key="textColor"/>
@@ -48,6 +48,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec posuere nul
                                                     </switch>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="UYL-Terms"/>
                                                 <constraints>
                                                     <constraint firstAttribute="leadingMargin" secondItem="rNb-V2-xsx" secondAttribute="leading" id="GAL-dM-qv3"/>
                                                     <constraint firstItem="UK3-Vd-NdR" firstAttribute="top" secondItem="Ojs-m8-Ph8" secondAttribute="topMargin" id="X7n-Ph-yxk"/>
@@ -58,10 +59,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec posuere nul
                                                     <constraint firstItem="UK3-Vd-NdR" firstAttribute="leading" secondItem="rNb-V2-xsx" secondAttribute="trailing" constant="8" symbolic="YES" id="sSv-hm-MMF"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pLT-ws-O8U" userLabel="AcceptPrivacy Control">
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="pLT-ws-O8U" userLabel="AcceptPrivacy Control">
                                                 <rect key="frame" x="8" y="255" width="359" height="47"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="I accept the privacy policy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exk-YM-B1E">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="751" text="I accept the privacy policy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exk-YM-B1E">
                                                         <rect key="frame" x="8" y="8" width="286" height="31"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <nil key="textColor"/>
@@ -75,6 +76,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec posuere nul
                                                     </switch>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="UYL-Privacy"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailingMargin" secondItem="o3m-iT-XzI" secondAttribute="trailing" id="227-JY-wXN"/>
                                                     <constraint firstItem="Exk-YM-B1E" firstAttribute="top" secondItem="pLT-ws-O8U" secondAttribute="topMargin" id="4y4-uA-sEu"/>
@@ -104,6 +106,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec posuere nul
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="UYL-Name"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailingMargin" secondItem="wrf-eZ-eZE" secondAttribute="trailing" id="05B-Ze-ZJN"/>
                                                     <constraint firstItem="wrf-eZ-eZE" firstAttribute="top" secondItem="Q40-by-Mbm" secondAttribute="bottom" constant="8" symbolic="YES" id="1Nu-Gc-gqt"/>
@@ -128,6 +131,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec posuere nul
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <accessibility key="accessibilityConfiguration" identifier="UYL-ContainerView"/>
                                         <constraints>
                                             <constraint firstAttribute="trailingMargin" secondItem="mqc-dX-EpF" secondAttribute="trailing" id="5W9-Oy-xVv"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="mX0-FW-J5u" secondAttribute="trailing" id="84q-4x-rox"/>
