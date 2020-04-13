@@ -2,11 +2,11 @@
 
 ## Using Dynamic Type With Custom Fonts
 
-An example of using custom fonts with dynamic type making use of the `UIFontMetrics` class introduced with iOS 11. It provides examples using the Noteworthy font which is built-in to iOS and the NotoSerif font which was downloaded from google fonts:
+An example of using custom fonts with dynamic type making use of the `UIFontMetrics` class introduced with iOS 11. It provides examples using the Noteworthy font which is built-in to iOS and the Noto Serif font which was downloaded from google fonts:
 
-+ [Noto Sans](https://fonts.google.com/specimen/Noto+Serif?selection.family=Noto+Serif)
++ [Noto Serif](https://fonts.google.com/specimen/Noto+Serif?selection.family=Noto+Serif)
 
-*Refer to LICENSE.txt if you plan on using NotoSans in a shipping application.*
+*Refer to LICENSE.txt if you plan on using Noto Serif in a shipping application.*
 
 **This project requires iOS 11**
 
