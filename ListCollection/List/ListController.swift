@@ -83,7 +83,7 @@ final class ListController: UICollectionViewController {
 
     private func createLayout() {
         var config = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
-        config.backgroundColor = .systemPurple
+        config.backgroundColor = UIColor(named: "BackgroundColor")
         collectionView.collectionViewLayout = UICollectionViewCompositionalLayout.list(using: config)
     }
 
