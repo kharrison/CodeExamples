@@ -2,77 +2,77 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UICTFontTextStyleTitle0</key>
+	<key>largeTitle</key>
 	<dict>
 		<key>fontName</key>
 		<string>Noteworthy-Light</string>
 		<key>fontSize</key>
 		<integer>34</integer>
 	</dict>
-	<key>UICTFontTextStyleTitle1</key>
+	<key>title</key>
 	<dict>
 		<key>fontName</key>
 		<string>Noteworthy-Light</string>
 		<key>fontSize</key>
 		<integer>28</integer>
 	</dict>
-	<key>UICTFontTextStyleTitle2</key>
+	<key>title2</key>
 	<dict>
 		<key>fontName</key>
 		<string>Noteworthy-Light</string>
 		<key>fontSize</key>
 		<integer>22</integer>
 	</dict>
-	<key>UICTFontTextStyleTitle3</key>
+	<key>title3</key>
 	<dict>
 		<key>fontName</key>
 		<string>Noteworthy-Light</string>
 		<key>fontSize</key>
 		<integer>20</integer>
 	</dict>
-	<key>UICTFontTextStyleHeadline</key>
+	<key>headline</key>
 	<dict>
 		<key>fontName</key>
 		<string>Noteworthy-Bold</string>
 		<key>fontSize</key>
 		<integer>17</integer>
 	</dict>
-	<key>UICTFontTextStyleSubhead</key>
+	<key>subheadline</key>
 	<dict>
 		<key>fontName</key>
 		<string>Noteworthy-Light</string>
 		<key>fontSize</key>
 		<integer>15</integer>
 	</dict>
-	<key>UICTFontTextStyleBody</key>
+	<key>body</key>
 	<dict>
 		<key>fontName</key>
 		<string>Noteworthy-Light</string>
 		<key>fontSize</key>
 		<integer>17</integer>
 	</dict>
-	<key>UICTFontTextStyleCallout</key>
+	<key>callout</key>
 	<dict>
 		<key>fontName</key>
 		<string>Noteworthy-Light</string>
 		<key>fontSize</key>
 		<integer>16</integer>
 	</dict>
-	<key>UICTFontTextStyleFootnote</key>
+	<key>footnote</key>
 	<dict>
 		<key>fontName</key>
 		<string>Noteworthy-Light</string>
 		<key>fontSize</key>
 		<integer>13</integer>
 	</dict>
-	<key>UICTFontTextStyleCaption1</key>
+	<key>caption</key>
 	<dict>
 		<key>fontName</key>
 		<string>Noteworthy-Light</string>
 		<key>fontSize</key>
 		<integer>12</integer>
 	</dict>
-	<key>UICTFontTextStyleCaption2</key>
+	<key>caption2</key>
 	<dict>
 		<key>fontName</key>
 		<string>Noteworthy-Light</string>

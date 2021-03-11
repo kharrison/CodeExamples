@@ -3,24 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		537709DB1F4061130041A64F /* Noteworthy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 537919321F3FA0CF00FF9E25 /* Noteworthy.plist */; };
-		537709E21F40B0650041A64F /* NotoSerif-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 537709DE1F40AFD80041A64F /* NotoSerif-Bold.ttf */; };
-		537709E31F40B06B0041A64F /* NotoSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 537709E11F40AFD80041A64F /* NotoSerif-Regular.ttf */; };
-		537709E41F40B06F0041A64F /* NotoSerif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 537709E01F40AFD80041A64F /* NotoSerif-Italic.ttf */; };
-		537709E61F40B18B0041A64F /* NotoSerif.plist in Resources */ = {isa = PBXBuildFile; fileRef = 537709E51F40B18B0041A64F /* NotoSerif.plist */; };
-		5379191F1F3FA05700FF9E25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379191E1F3FA05700FF9E25 /* AppDelegate.swift */; };
-		537919211F3FA05700FF9E25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537919201F3FA05700FF9E25 /* ViewController.swift */; };
-		537919241F3FA05700FF9E25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537919221F3FA05700FF9E25 /* Main.storyboard */; };
-		537919261F3FA05700FF9E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537919251F3FA05700FF9E25 /* Assets.xcassets */; };
-		537919291F3FA05700FF9E25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537919271F3FA05700FF9E25 /* LaunchScreen.storyboard */; };
-		537919311F3FA0B500FF9E25 /* ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537919301F3FA0B500FF9E25 /* ScaledFont.swift */; };
+		53581E7A25F7D6B6000DAD54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53581E7925F7D6B6000DAD54 /* AppDelegate.swift */; };
+		53581E7C25F7D6B6000DAD54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53581E7B25F7D6B6000DAD54 /* SceneDelegate.swift */; };
+		53581E7E25F7D6B6000DAD54 /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53581E7D25F7D6B6000DAD54 /* StyleViewController.swift */; };
+		53581E8125F7D6B6000DAD54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53581E7F25F7D6B6000DAD54 /* Main.storyboard */; };
+		53581E8325F7D6B6000DAD54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53581E8225F7D6B6000DAD54 /* Assets.xcassets */; };
+		53581E8E25F7D6C0000DAD54 /* ScaledFont in Frameworks */ = {isa = PBXBuildFile; productRef = 53581E8D25F7D6C0000DAD54 /* ScaledFont */; };
+		53581E9325F7DEFF000DAD54 /* NotoSerif-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 537709DE1F40AFD80041A64F /* NotoSerif-Bold.ttf */; };
+		53581E9725F7DF07000DAD54 /* NotoSerif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 537709E01F40AFD80041A64F /* NotoSerif-Italic.ttf */; };
+		53581E9925F7DF0A000DAD54 /* NotoSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 537709E11F40AFD80041A64F /* NotoSerif-Regular.ttf */; };
+		53581E9C25F7DF19000DAD54 /* Noteworthy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 537919321F3FA0CF00FF9E25 /* Noteworthy.plist */; };
+		53581E9E25F7DF1B000DAD54 /* NotoSerif.plist in Resources */ = {isa = PBXBuildFile; fileRef = 537709E51F40B18B0041A64F /* NotoSerif.plist */; };
+		53A0BBE925F912AF0061BB67 /* SamplerUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A0BBE825F912AF0061BB67 /* SamplerUIApp.swift */; };
+		53A0BBEB25F912AF0061BB67 /* StyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A0BBEA25F912AF0061BB67 /* StyleView.swift */; };
+		53A0BBED25F912B00061BB67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A0BBEC25F912B00061BB67 /* Assets.xcassets */; };
+		53A0BBF025F912B00061BB67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A0BBEF25F912B00061BB67 /* Preview Assets.xcassets */; };
+		53A0BC0625F916180061BB67 /* ScaledFont in Frameworks */ = {isa = PBXBuildFile; productRef = 53A0BC0525F916180061BB67 /* ScaledFont */; };
+		53A0BC0925F9193F0061BB67 /* Noteworthy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 537919321F3FA0CF00FF9E25 /* Noteworthy.plist */; };
+		53A0BC0C25F919420061BB67 /* NotoSerif.plist in Resources */ = {isa = PBXBuildFile; fileRef = 537709E51F40B18B0041A64F /* NotoSerif.plist */; };
+		53A0BC0F25F919480061BB67 /* NotoSerif-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 537709DE1F40AFD80041A64F /* NotoSerif-Bold.ttf */; };
+		53A0BC1225F9194B0061BB67 /* NotoSerif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 537709E01F40AFD80041A64F /* NotoSerif-Italic.ttf */; };
+		53A0BC1525F9194F0061BB67 /* NotoSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 537709E11F40AFD80041A64F /* NotoSerif-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53581E7725F7D6B6000DAD54 /* Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sampler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53581E7925F7D6B6000DAD54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		53581E7B25F7D6B6000DAD54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		53581E7D25F7D6B6000DAD54 /* StyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewController.swift; sourceTree = "<group>"; };
+		53581E8025F7D6B6000DAD54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		53581E8225F7D6B6000DAD54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		53581E8725F7D6B6000DAD54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		537709DD1F40AFD80041A64F /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		537709DE1F40AFD80041A64F /* NotoSerif-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerif-Bold.ttf"; sourceTree = "<group>"; };
 		537709DF1F40AFD80041A64F /* NotoSerif-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerif-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -28,28 +45,55 @@
 		537709E11F40AFD80041A64F /* NotoSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerif-Regular.ttf"; sourceTree = "<group>"; };
 		537709E51F40B18B0041A64F /* NotoSerif.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NotoSerif.plist; sourceTree = "<group>"; };
 		537709E71F40F3B80041A64F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		5379191B1F3FA05700FF9E25 /* ScaledFont.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScaledFont.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5379191E1F3FA05700FF9E25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		537919201F3FA05700FF9E25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		537919231F3FA05700FF9E25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		537919251F3FA05700FF9E25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		537919281F3FA05700FF9E25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5379192A1F3FA05700FF9E25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		537919301F3FA0B500FF9E25 /* ScaledFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledFont.swift; sourceTree = "<group>"; };
 		537919321F3FA0CF00FF9E25 /* Noteworthy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Noteworthy.plist; sourceTree = "<group>"; };
+		53A0BBE625F912AF0061BB67 /* SamplerUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamplerUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53A0BBE825F912AF0061BB67 /* SamplerUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerUIApp.swift; sourceTree = "<group>"; };
+		53A0BBEA25F912AF0061BB67 /* StyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleView.swift; sourceTree = "<group>"; };
+		53A0BBEC25F912B00061BB67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		53A0BBEF25F912B00061BB67 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		53A0BBF125F912B00061BB67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		537919181F3FA05700FF9E25 /* Frameworks */ = {
+		53581E7425F7D6B6000DAD54 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53581E8E25F7D6C0000DAD54 /* ScaledFont in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53A0BBE325F912AF0061BB67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A0BC0625F916180061BB67 /* ScaledFont in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53581E7825F7D6B6000DAD54 /* Sampler */ = {
+			isa = PBXGroup;
+			children = (
+				53581E7925F7D6B6000DAD54 /* AppDelegate.swift */,
+				53581E7B25F7D6B6000DAD54 /* SceneDelegate.swift */,
+				53581E7D25F7D6B6000DAD54 /* StyleViewController.swift */,
+				53581E7F25F7D6B6000DAD54 /* Main.storyboard */,
+				53581E8225F7D6B6000DAD54 /* Assets.xcassets */,
+				53581E8725F7D6B6000DAD54 /* Info.plist */,
+			);
+			path = Sampler;
+			sourceTree = "<group>";
+		};
+		53581E8C25F7D6C0000DAD54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		537709DC1F40AFD80041A64F /* Noto_Serif */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,54 +110,94 @@
 			isa = PBXGroup;
 			children = (
 				537709E71F40F3B80041A64F /* README.md */,
-				5379191D1F3FA05700FF9E25 /* ScaledFont */,
+				5379191D1F3FA05700FF9E25 /* Fonts */,
+				53581E7825F7D6B6000DAD54 /* Sampler */,
+				53A0BBE725F912AF0061BB67 /* SamplerUI */,
 				5379191C1F3FA05700FF9E25 /* Products */,
+				53581E8C25F7D6C0000DAD54 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		5379191C1F3FA05700FF9E25 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5379191B1F3FA05700FF9E25 /* ScaledFont.app */,
+				53581E7725F7D6B6000DAD54 /* Sampler.app */,
+				53A0BBE625F912AF0061BB67 /* SamplerUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5379191D1F3FA05700FF9E25 /* ScaledFont */ = {
+		5379191D1F3FA05700FF9E25 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				537709DC1F40AFD80041A64F /* Noto_Serif */,
-				5379191E1F3FA05700FF9E25 /* AppDelegate.swift */,
-				537919201F3FA05700FF9E25 /* ViewController.swift */,
-				537919301F3FA0B500FF9E25 /* ScaledFont.swift */,
 				537919321F3FA0CF00FF9E25 /* Noteworthy.plist */,
 				537709E51F40B18B0041A64F /* NotoSerif.plist */,
-				537919221F3FA05700FF9E25 /* Main.storyboard */,
-				537919251F3FA05700FF9E25 /* Assets.xcassets */,
-				537919271F3FA05700FF9E25 /* LaunchScreen.storyboard */,
-				5379192A1F3FA05700FF9E25 /* Info.plist */,
 			);
-			path = ScaledFont;
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		53A0BBE725F912AF0061BB67 /* SamplerUI */ = {
+			isa = PBXGroup;
+			children = (
+				53A0BBE825F912AF0061BB67 /* SamplerUIApp.swift */,
+				53A0BBEA25F912AF0061BB67 /* StyleView.swift */,
+				53A0BBEC25F912B00061BB67 /* Assets.xcassets */,
+				53A0BBF125F912B00061BB67 /* Info.plist */,
+				53A0BBEE25F912B00061BB67 /* Preview Content */,
+			);
+			path = SamplerUI;
+			sourceTree = "<group>";
+		};
+		53A0BBEE25F912B00061BB67 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				53A0BBEF25F912B00061BB67 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5379191A1F3FA05700FF9E25 /* ScaledFont */ = {
+		53581E7625F7D6B6000DAD54 /* Sampler */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5379192D1F3FA05700FF9E25 /* Build configuration list for PBXNativeTarget "ScaledFont" */;
+			buildConfigurationList = 53581E8825F7D6B6000DAD54 /* Build configuration list for PBXNativeTarget "Sampler" */;
 			buildPhases = (
-				537919171F3FA05700FF9E25 /* Sources */,
-				537919181F3FA05700FF9E25 /* Frameworks */,
-				537919191F3FA05700FF9E25 /* Resources */,
+				53581E7325F7D6B6000DAD54 /* Sources */,
+				53581E7425F7D6B6000DAD54 /* Frameworks */,
+				53581E7525F7D6B6000DAD54 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ScaledFont;
-			productName = ScaledFont;
-			productReference = 5379191B1F3FA05700FF9E25 /* ScaledFont.app */;
+			name = Sampler;
+			packageProductDependencies = (
+				53581E8D25F7D6C0000DAD54 /* ScaledFont */,
+			);
+			productName = Sampler;
+			productReference = 53581E7725F7D6B6000DAD54 /* Sampler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		53A0BBE525F912AF0061BB67 /* SamplerUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53A0BBF225F912B00061BB67 /* Build configuration list for PBXNativeTarget "SamplerUI" */;
+			buildPhases = (
+				53A0BBE225F912AF0061BB67 /* Sources */,
+				53A0BBE325F912AF0061BB67 /* Frameworks */,
+				53A0BBE425F912AF0061BB67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SamplerUI;
+			packageProductDependencies = (
+				53A0BC0525F916180061BB67 /* ScaledFont */,
+			);
+			productName = SamplerUI;
+			productReference = 53A0BBE625F912AF0061BB67 /* SamplerUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -122,13 +206,15 @@
 		537919131F3FA05700FF9E25 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0940;
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Keith Harrison";
 				TargetAttributes = {
-					5379191A1F3FA05700FF9E25 = {
-						CreatedOnToolsVersion = 9.0;
-						LastSwiftMigration = 1020;
+					53581E7625F7D6B6000DAD54 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					53A0BBE525F912AF0061BB67 = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
@@ -141,66 +227,129 @@
 				Base,
 			);
 			mainGroup = 537919121F3FA05700FF9E25;
+			packageReferences = (
+				53581E6D25F7D4C1000DAD54 /* XCRemoteSwiftPackageReference "ScaledFont" */,
+			);
 			productRefGroup = 5379191C1F3FA05700FF9E25 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5379191A1F3FA05700FF9E25 /* ScaledFont */,
+				53581E7625F7D6B6000DAD54 /* Sampler */,
+				53A0BBE525F912AF0061BB67 /* SamplerUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		537919191F3FA05700FF9E25 /* Resources */ = {
+		53581E7525F7D6B6000DAD54 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				537919291F3FA05700FF9E25 /* LaunchScreen.storyboard in Resources */,
-				537709E31F40B06B0041A64F /* NotoSerif-Regular.ttf in Resources */,
-				537709E61F40B18B0041A64F /* NotoSerif.plist in Resources */,
-				537709E41F40B06F0041A64F /* NotoSerif-Italic.ttf in Resources */,
-				537709DB1F4061130041A64F /* Noteworthy.plist in Resources */,
-				537709E21F40B0650041A64F /* NotoSerif-Bold.ttf in Resources */,
-				537919261F3FA05700FF9E25 /* Assets.xcassets in Resources */,
-				537919241F3FA05700FF9E25 /* Main.storyboard in Resources */,
+				53581E8325F7D6B6000DAD54 /* Assets.xcassets in Resources */,
+				53581E9925F7DF0A000DAD54 /* NotoSerif-Regular.ttf in Resources */,
+				53581E9725F7DF07000DAD54 /* NotoSerif-Italic.ttf in Resources */,
+				53581E9C25F7DF19000DAD54 /* Noteworthy.plist in Resources */,
+				53581E9325F7DEFF000DAD54 /* NotoSerif-Bold.ttf in Resources */,
+				53581E9E25F7DF1B000DAD54 /* NotoSerif.plist in Resources */,
+				53581E8125F7D6B6000DAD54 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53A0BBE425F912AF0061BB67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A0BC0925F9193F0061BB67 /* Noteworthy.plist in Resources */,
+				53A0BBF025F912B00061BB67 /* Preview Assets.xcassets in Resources */,
+				53A0BC1225F9194B0061BB67 /* NotoSerif-Italic.ttf in Resources */,
+				53A0BC1525F9194F0061BB67 /* NotoSerif-Regular.ttf in Resources */,
+				53A0BC0F25F919480061BB67 /* NotoSerif-Bold.ttf in Resources */,
+				53A0BC0C25F919420061BB67 /* NotoSerif.plist in Resources */,
+				53A0BBED25F912B00061BB67 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		537919171F3FA05700FF9E25 /* Sources */ = {
+		53581E7325F7D6B6000DAD54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				537919311F3FA0B500FF9E25 /* ScaledFont.swift in Sources */,
-				537919211F3FA05700FF9E25 /* ViewController.swift in Sources */,
-				5379191F1F3FA05700FF9E25 /* AppDelegate.swift in Sources */,
+				53581E7E25F7D6B6000DAD54 /* StyleViewController.swift in Sources */,
+				53581E7A25F7D6B6000DAD54 /* AppDelegate.swift in Sources */,
+				53581E7C25F7D6B6000DAD54 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53A0BBE225F912AF0061BB67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A0BBEB25F912AF0061BB67 /* StyleView.swift in Sources */,
+				53A0BBE925F912AF0061BB67 /* SamplerUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		537919221F3FA05700FF9E25 /* Main.storyboard */ = {
+		53581E7F25F7D6B6000DAD54 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				537919231F3FA05700FF9E25 /* Base */,
+				53581E8025F7D6B6000DAD54 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		537919271F3FA05700FF9E25 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				537919281F3FA05700FF9E25 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		53581E8925F7D6B6000DAD54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LCC2J94N44;
+				INFOPLIST_FILE = Sampler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.useyourloaf.Sampler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		53581E8A25F7D6B6000DAD54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LCC2J94N44;
+				INFOPLIST_FILE = Sampler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.useyourloaf.Sampler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		5379192B1F3FA05700FF9E25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -226,6 +375,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -285,6 +435,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -313,34 +464,49 @@
 			};
 			name = Release;
 		};
-		5379192E1F3FA05700FF9E25 /* Debug */ = {
+		53A0BBF325F912B00061BB67 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SamplerUI/Preview Content\"";
 				DEVELOPMENT_TEAM = LCC2J94N44;
-				INFOPLIST_FILE = ScaledFont/Info.plist;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SamplerUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.useyourloaf.ScaledFont;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.useyourloaf.SamplerUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		5379192F1F3FA05700FF9E25 /* Release */ = {
+		53A0BBF425F912B00061BB67 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SamplerUI/Preview Content\"";
 				DEVELOPMENT_TEAM = LCC2J94N44;
-				INFOPLIST_FILE = ScaledFont/Info.plist;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SamplerUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.useyourloaf.ScaledFont;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.useyourloaf.SamplerUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -350,6 +516,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		53581E8825F7D6B6000DAD54 /* Build configuration list for PBXNativeTarget "Sampler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53581E8925F7D6B6000DAD54 /* Debug */,
+				53581E8A25F7D6B6000DAD54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		537919161F3FA05700FF9E25 /* Build configuration list for PBXProject "ScaledFont" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -359,16 +534,40 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5379192D1F3FA05700FF9E25 /* Build configuration list for PBXNativeTarget "ScaledFont" */ = {
+		53A0BBF225F912B00061BB67 /* Build configuration list for PBXNativeTarget "SamplerUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5379192E1F3FA05700FF9E25 /* Debug */,
-				5379192F1F3FA05700FF9E25 /* Release */,
+				53A0BBF325F912B00061BB67 /* Debug */,
+				53A0BBF425F912B00061BB67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		53581E6D25F7D4C1000DAD54 /* XCRemoteSwiftPackageReference "ScaledFont" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:kharrison/ScaledFont.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		53581E8D25F7D6C0000DAD54 /* ScaledFont */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53581E6D25F7D4C1000DAD54 /* XCRemoteSwiftPackageReference "ScaledFont" */;
+			productName = ScaledFont;
+		};
+		53A0BC0525F916180061BB67 /* ScaledFont */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53581E6D25F7D4C1000DAD54 /* XCRemoteSwiftPackageReference "ScaledFont" */;
+			productName = ScaledFont;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 537919131F3FA05700FF9E25 /* Project object */;
 }

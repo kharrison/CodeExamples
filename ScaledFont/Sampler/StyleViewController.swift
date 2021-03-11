@@ -1,5 +1,4 @@
-//  Created by Keith Harrison https://useyourloaf.com
-//  Copyright (c) 2017 Keith Harrison. All rights reserved.
+//  Copyright © 2021 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -27,9 +26,10 @@
 //  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 //  POSSIBILITY OF SUCH DAMAGE.
 
+import ScaledFont
 import UIKit
 
-class ViewController: UIViewController {
+final class StyleViewController: UIViewController {
 //    private let fontName = "Default"
 //    private let fontName = "Noteworthy"
     private let fontName = "NotoSerif"
