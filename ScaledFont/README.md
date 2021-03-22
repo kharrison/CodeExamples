@@ -81,6 +81,7 @@ Text("Headline")
 ```
 ## Further Details
 
-See this blog post for further details:
+See these blog posts for further details:
 
 + [Using A Custom Font With Dynamic Type](https://useyourloaf.com/blog/using-a-custom-font-with-dynamic-type/)
++ [Scaling Custom SwiftUI Fonts With Dynamic Type](https://useyourloaf.com/blog/scaling-custom-swiftui-fonts-with-dynamic-type/)
