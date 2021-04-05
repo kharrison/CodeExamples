@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RDe-io-89z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RDe-io-89z">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,10 +15,27 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="User Guide" id="Wl6-kS-uoo"/>
+                    <navigationItem key="navigationItem" title="User Guide" id="Wl6-kS-uoo">
+                        <rightBarButtonItems>
+                            <barButtonItem enabled="NO" title="Forward" image="chevron.forward" id="7DZ-bM-q1v">
+                                <connections>
+                                    <action selector="forwardAction:" destination="BYZ-38-t0r" id="GrK-OO-oaY"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem enabled="NO" title="Backward" image="chevron.backward" id="gyJ-yM-u67">
+                                <connections>
+                                    <action selector="backwardAction:" destination="BYZ-38-t0r" id="7yM-JF-Od9"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backwardButton" destination="gyJ-yM-u67" id="fVU-YT-rlX"/>
+                        <outlet property="forwardButton" destination="7DZ-bM-q1v" id="CKV-Tc-Cl7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,4 +60,8 @@
             <point key="canvasLocation" x="-235.19999999999999" y="107.94602698650675"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chevron.backward" width="7" height="11"/>
+        <image name="chevron.forward" width="7" height="11"/>
+    </resources>
 </document>

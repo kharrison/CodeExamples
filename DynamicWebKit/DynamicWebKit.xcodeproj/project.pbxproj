@@ -31,6 +31,7 @@
 		53A2B54C1F94DC9700095FAD /* default.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = default.html; sourceTree = "<group>"; };
 		53A2B54E1F94DD8200095FAD /* stylesheet.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = stylesheet.css; sourceTree = "<group>"; };
 		53A2B5501F94F14800095FAD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		53C25DE92617A45300E8BC02 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		53E34DFF2403D67600EE575E /* 001-dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "001-dark@2x.png"; sourceTree = "<group>"; };
 		53E34E002403D67600EE575E /* 001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "001@2x.png"; sourceTree = "<group>"; };
 		53E34E012403D67600EE575E /* 001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 001.png; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 				53A2B5501F94F14800095FAD /* README.md */,
 				53A2B5391F94DBE500095FAD /* DynamicWebKit */,
 				53A2B5381F94DBE500095FAD /* Products */,
+				53C25DE82617A45300E8BC02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +79,14 @@
 				53A2B5461F94DBE500095FAD /* Info.plist */,
 			);
 			path = DynamicWebKit;
+			sourceTree = "<group>";
+		};
+		53C25DE82617A45300E8BC02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53C25DE92617A45300E8BC02 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		53E34DFE2403D58400EE575E /* HTML */ = {
@@ -249,7 +259,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -303,7 +313,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

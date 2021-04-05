@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>WKAppBoundDomains</key>
+	<array>
+		<string>useyourloaf.com</string>
+		<string>github.com</string>
+		<string>apple.com</string>
+	</array>
 </dict>
 </plist>

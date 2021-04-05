@@ -31,6 +31,9 @@ import UIKit
 import WebKit
 
 final class WebViewController: UIViewController {
+    @IBOutlet private var backwardButton: UIBarButtonItem!
+    @IBOutlet private var forwardButton: UIBarButtonItem!
+
     var html: String = "default" {
         didSet {
             loadHTML(html)
@@ -38,17 +41,38 @@ final class WebViewController: UIViewController {
     }
 
     private lazy var webView: WKWebView = {
-        let preferences = WKPreferences()
-        preferences.javaScriptEnabled = false
         let configuration = WKWebViewConfiguration()
-        configuration.preferences = preferences
-        return WKWebView(frame: .zero, configuration: configuration)
+
+        if #available(iOS 14.0, *) {
+            // Allow restricted API access on the
+            // app-bound domains (cookies, etc).
+            // Doesn't seem to be required
+            // configuration.limitsNavigationsToAppBoundDomains = true
+        } else {
+            // Fallback to WKPreferences for iOS 13 to
+            // disable javascript.
+            let preferences = WKPreferences()
+            // preferences.javaScriptEnabled = false
+            configuration.preferences = preferences
+        }
+
+        let webView = WKWebView(frame: .zero, configuration: configuration)
+        webView.navigationDelegate = self
+        return webView
     }()
 
     override func loadView() {
         view = webView
         loadHTML(html)
         NotificationCenter.default.addObserver(self, selector: #selector(contentSizeDidChange(_:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
+    }
+
+    @IBAction func forwardAction(_ sender: UIBarButtonItem) {
+        webView.goForward()
+    }
+
+    @IBAction func backwardAction(_ sender: UIBarButtonItem) {
+        webView.goBack()
     }
 
     @objc private func contentSizeDidChange(_ notification: Notification) {
@@ -59,5 +83,33 @@ final class WebViewController: UIViewController {
         if let url = Bundle.main.url(forResource: name, withExtension: "html") {
             webView.loadFileURL(url, allowingReadAccessTo: url)
         }
+    }
+}
+
+extension WebViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, preferences: WKWebpagePreferences, decisionHandler: @escaping (WKNavigationActionPolicy, WKWebpagePreferences) -> Void) {
+        if #available(iOS 14.0, *) {
+            // To disable all javascript content
+            // preferences.allowsContentJavaScript = true
+        }
+        decisionHandler(.allow, preferences)
+    }
+
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        print(error)
+        updateNavigationState(webView)
+    }
+
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        updateNavigationState(webView)
+    }
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        updateNavigationState(webView)
+    }
+
+    private func updateNavigationState(_ webView: WKWebView) {
+        backwardButton.isEnabled = webView.canGoBack
+        forwardButton.isEnabled = webView.canGoForward
     }
 }
