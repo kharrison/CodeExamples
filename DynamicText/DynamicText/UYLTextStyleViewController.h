@@ -1,9 +1,4 @@
-//
-//  UYLTableViewController.h
-//  DynamicText
-//
-// Created by Keith Harrison http://useyourloaf.com
-// Copyright (c) 2013 Keith Harrison. All rights reserved.
+// Copyright (c) 2013-2021 Keith Harrison. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are met:
@@ -30,17 +25,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface UYLTextStyleViewController : UIViewController
-
-@property (weak, nonatomic) IBOutlet UILabel *textSizeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *headlineLabel;
-@property (weak, nonatomic) IBOutlet UILabel *subheadLabel;
-@property (weak, nonatomic) IBOutlet UILabel *bodyLabel;
-@property (weak, nonatomic) IBOutlet UILabel *caption1Label;
-@property (weak, nonatomic) IBOutlet UILabel *caption2Label;
-@property (weak, nonatomic) IBOutlet UILabel *footnoteLabel;
-
 @end

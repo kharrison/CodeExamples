@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vTa-TL-5zi">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -13,7 +12,7 @@
         <!--Scaled Font-->
         <scene sceneID="H8K-fY-4FE">
             <objects>
-                <viewController id="ARa-ec-XcE" customClass="UYLScaledTextStyleViewController" sceneMemberID="viewController">
+                <viewController id="ARa-ec-XcE" customClass="UYLScaledTextStyleViewController" customModule="DynamicTextSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Lh-pG-52c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -117,16 +116,7 @@
                         <outlet property="title1Label" destination="pbJ-5Z-VgN" id="OJX-5T-wph"/>
                         <outlet property="title2Label" destination="937-VT-VKx" id="qsY-7E-WL4"/>
                         <outlet property="title3Label" destination="3sh-ty-Rle" id="hux-ja-ADh"/>
-                        <outletCollection property="allLabels" destination="pbJ-5Z-VgN" id="o7D-2u-qNU"/>
-                        <outletCollection property="allLabels" destination="937-VT-VKx" id="Alf-oG-Ihz"/>
-                        <outletCollection property="allLabels" destination="3sh-ty-Rle" id="uvL-hC-d7G"/>
-                        <outletCollection property="allLabels" destination="8hO-rT-UmC" id="MjN-0w-ZUa"/>
-                        <outletCollection property="allLabels" destination="Wrq-lp-dRK" id="hrf-Ad-4fW"/>
-                        <outletCollection property="allLabels" destination="nxM-FI-5JY" id="c6u-PI-Mf8"/>
-                        <outletCollection property="allLabels" destination="RAH-WA-qYa" id="85W-bm-4zp"/>
-                        <outletCollection property="allLabels" destination="cJT-NG-7Qu" id="xgH-ES-Vi6"/>
-                        <outletCollection property="allLabels" destination="04g-RC-r5V" id="Ocq-7o-kiW"/>
-                        <outletCollection property="allLabels" destination="npp-St-iYw" id="UFp-8j-yJT"/>
+                        <outletCollection property="allLabels" destination="pbJ-5Z-VgN" id="Fdd-hi-W0c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-pl-3Ft" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -136,7 +126,7 @@
         <!--Dynamic Type-->
         <scene sceneID="fCF-uj-7qN">
             <objects>
-                <viewController storyboardIdentifier="UYLTextStyleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RCD-I9-Hwv" customClass="UYLTextStyleViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UYLTextStyleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RCD-I9-Hwv" customClass="UYLTextStyleViewController" customModule="DynamicTextSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iNq-Cq-Om9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
