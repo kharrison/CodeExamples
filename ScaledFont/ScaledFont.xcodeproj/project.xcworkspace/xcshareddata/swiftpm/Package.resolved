@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ScaledFont",
+        "repositoryURL": "git@github.com:kharrison/ScaledFont.git",
+        "state": {
+          "branch": null,
+          "revision": "1dd4fad0ef73a62141231b604a4b1f2e50f71152",
+          "version": "1.0.4"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
