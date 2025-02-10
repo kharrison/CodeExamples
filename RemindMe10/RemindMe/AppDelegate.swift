@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let notificationDelegate = UYLNotificationDelegate()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        let options: UNAuthorizationOptions = [.alert, .sound];
+        let options: UNAuthorizationOptions = [.alert, .sound]
         registerForLocalNotifications(options: options)
         let center = UNUserNotificationCenter.current()
         center.delegate = notificationDelegate
